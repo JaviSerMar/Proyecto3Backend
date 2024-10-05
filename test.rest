@@ -1,0 +1,31 @@
+### Crear las tablas de sensores
+GET http://localhost:13000/setup
+
+### Insertar una medición de temperatura
+POST http://localhost:13000/
+Content-Type: application/json
+
+{
+    "type": "temperature",
+    "value": 25.5,
+    "timestamp": "2024-10-05T12:00:00Z"
+}
+
+### Insertar una medición de CO2
+POST http://localhost:13000/
+Content-Type: application/json
+
+{
+    "type": "CO2",
+    "value": 400.0,
+    "timestamp": "2024-10-05T12:05:00Z"
+}
+
+### Obtener las últimas mediciones
+GET http://localhost:13000/latest
+
+### Eliminar todas las mediciones de tipo temperatura
+DELETE http://localhost:13000/temperature
+
+### Eliminar todas las mediciones de tipo CO2
+DELETE http://localhost:13000/CO2
