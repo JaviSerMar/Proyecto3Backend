@@ -13,6 +13,10 @@ app.use(express.json())
 // Crear tablas (setup)
 app.get('/setup', async (req, res) => {
     try {
+        // Eliminar la tabla "schools" si existe
+        await pool.query(`DROP TABLE IF EXISTS schools;`);
+
+        // Crear la tabla "sensors" si no existe
         await pool.query(`
             CREATE TABLE IF NOT EXISTS sensors (
                 id SERIAL PRIMARY KEY,
@@ -21,13 +25,12 @@ app.get('/setup', async (req, res) => {
                 timestamp TIMESTAMP
             );
         `);
-        res.status(200).send({ message: "Successfully created sensors table or it already exists" });
+        res.status(200).send({ message: "Successfully created sensors table" });
     } catch (err) {
-        console.log(err);
+        console.error(err);
         res.sendStatus(500);
     }
 });
-
 
 
 // Obtener las últimas mediciones de temperatura y CO2
