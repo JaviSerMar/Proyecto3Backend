@@ -13,9 +13,10 @@ app.use(express.json())
 // Crear tablas (setup)
 app.get('/setup', async (req, res) => {
     try {
-        // Eliminar la tabla "schools" si existe
+        
         await pool.query(`DROP TABLE IF EXISTS schools;`);
-
+        console.log("Tabla 'schools' eliminada si existía.");
+    
         // Crear la tabla "sensors" si no existe
         await pool.query(`
             CREATE TABLE IF NOT EXISTS sensors (

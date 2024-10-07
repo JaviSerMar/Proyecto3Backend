@@ -7,7 +7,6 @@ services:
       POSTGRES_USER: user123
       POSTGRES_DB: db123
   app:
-    build:
-      context: .  # Usar el Dockerfile en el directorio actual
+    image: servidor
     ports:
       - 13000:3000
