@@ -1,0 +1,539 @@
+\doxysection{Referencia del archivo node\+\_\+modules/express/lib/request.js}
+\hypertarget{request_8js}{}\label{request_8js}\index{node\_modules/express/lib/request.js@{node\_modules/express/lib/request.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{request_8js_aa8986459dff9eac7e866fbfdcadb2018}{define\+Getter}} (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \textquotesingle{}protocol\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} protocol()\{ var \mbox{\hyperlink{express_8js_a930fae672851c7e279583e20638e2228}{proto}}=this.\+connection.\+encrypted ? \textquotesingle{}https\textquotesingle{} \+:\textquotesingle{}\mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}\textquotesingle{};var trust=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+app.\+get}}(\textquotesingle{}trust proxy fn\textquotesingle{});\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(!trust(this.\+connection.\+remote\+Address, 0)) \{ return \mbox{\hyperlink{express_8js_a930fae672851c7e279583e20638e2228}{proto}};\} var header=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+get}}(\textquotesingle{}X-\/Forwarded-\/Proto\textquotesingle{})\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}\mbox{\hyperlink{express_8js_a930fae672851c7e279583e20638e2228}{proto}} var index=\mbox{\hyperlink{object-inspect_2index_8js_a68d7a69def043c17acbce4b1b552e522}{header.\+index\+Of}}(\textquotesingle{},\textquotesingle{}) return index !==-\/1 ? header.\+substring(0, index).trim() \+:header.\+trim() \})
+\item 
+\mbox{\hyperlink{request_8js_addbdc40ef134b678163889aeb4a08949}{define\+Getter}} (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \textquotesingle{}secure\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} secure()\{ return this.\+protocol===\textquotesingle{}https\textquotesingle{};\})
+\item 
+\mbox{\hyperlink{request_8js_ab84f8183a2221a1a1d9d40bad41bd808}{define\+Getter}} (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \textquotesingle{}ip\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} ip()\{ var trust=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+app.\+get}}(\textquotesingle{}trust proxy fn\textquotesingle{});return \mbox{\hyperlink{request_8js_adccce5d9fde7ce401d03984f2d2a4715}{proxyaddr}}(this, trust);\})
+\item 
+\mbox{\hyperlink{request_8js_a56b1c69b34cfaf83a129a46b79ce78be}{define\+Getter}} (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \textquotesingle{}ips\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} ips() \{ var trust=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+app.\+get}}(\textquotesingle{}trust proxy fn\textquotesingle{});var addrs=\mbox{\hyperlink{application_8js_adb8f173cc9d0f47e38ae05e7bb965c99}{proxyaddr.\+all}}(this, trust);addrs.\+reverse().pop() return addrs \})
+\item 
+\mbox{\hyperlink{request_8js_ae35cd920979fbf4ed3e969ea48f975d3}{define\+Getter}} (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \textquotesingle{}subdomains\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} subdomains() \{ var hostname=this.\+hostname;\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(!hostname) return\mbox{[}$\,$\mbox{]};var offset=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+app.\+get}}(\textquotesingle{}subdomain offset\textquotesingle{});var subdomains=!\mbox{\hyperlink{request_8js_a4a6ff4913d40907f5438cd21c126a33e}{is\+IP}}(hostname) ? \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{hostname.\+split}}(\textquotesingle{}.\textquotesingle{}).reverse() \+:\mbox{[}hostname\mbox{]};return \mbox{\hyperlink{express_2lib_2router_2index_8js_acab0c09ac73e7a3c85a21fa773e9b8b0}{subdomains.\+slice}}(offset);\})
+\item 
+\mbox{\hyperlink{request_8js_a1bf2b5521ee03138ed77a0acf32461a9}{define\+Getter}} (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \textquotesingle{}path\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} path() \{ return \mbox{\hyperlink{bytes_2index_8js_a28ecd76297a5d556aac05441b295f93c}{parse}}(this).pathname;\})
+\item 
+\mbox{\hyperlink{request_8js_acc60ab1af739cb8e0059ea5b3bc2e0d3}{define\+Getter}} (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \textquotesingle{}hostname\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} hostname()\{ var trust=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+app.\+get}}(\textquotesingle{}trust proxy fn\textquotesingle{});var host=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+get}}(\textquotesingle{}X-\/Forwarded-\/Host\textquotesingle{});\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(!host\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}!trust(this.\+connection.\+remote\+Address, 0)) \{ host=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+get}}(\textquotesingle{}Host\textquotesingle{});\} \mbox{\hyperlink{call-bind_2index_8js_a0544c3fe466e421738dae463968b70ba}{else}} \mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(\mbox{\hyperlink{object-inspect_2index_8js_a68d7a69def043c17acbce4b1b552e522}{host.\+index\+Of}}(\textquotesingle{},\textquotesingle{}) !==-\/1) \{ host=host.\+substring(0, \mbox{\hyperlink{object-inspect_2index_8js_a68d7a69def043c17acbce4b1b552e522}{host.\+index\+Of}}(\textquotesingle{},\textquotesingle{})).trim\+Right() \} \mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(!host) return;var offset=host\mbox{[}0\mbox{]}===\textquotesingle{}\mbox{[}\textquotesingle{} ? \mbox{\hyperlink{object-inspect_2index_8js_a68d7a69def043c17acbce4b1b552e522}{host.\+index\+Of}}(\textquotesingle{}\mbox{]}\textquotesingle{})+1 \+:0;var index=\mbox{\hyperlink{object-inspect_2index_8js_a68d7a69def043c17acbce4b1b552e522}{host.\+index\+Of}}(\textquotesingle{}\+:\textquotesingle{}, offset);return index !==-\/1 ? host.\+substring(0, index) \+:host;\})
+\item 
+\mbox{\hyperlink{request_8js_a4e24a42739a57e5e2a3871aef1ecac14}{define\+Getter}} (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \textquotesingle{}host\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{deprecate.\+function}}(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} host()\{ return this.\+hostname;\}, \textquotesingle{}req.\+host\+:\+Use req.\+hostname instead\textquotesingle{}))
+\item 
+\mbox{\hyperlink{request_8js_a104698b39d413b08bae5c2f051a6d388}{define\+Getter}} (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \textquotesingle{}\mbox{\hyperlink{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}{fresh}}\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}()\{ var method=this.\+method;var \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}=\mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{this.\+res}} var \mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{status}}=res.\+status\+Code \mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(\textquotesingle{}GET\textquotesingle{} !==method \&\& \textquotesingle{}HEAD\textquotesingle{} !==method) return false;\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}((\mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{status}} $>$=200 \&\&\mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{status}}$<$ 300)\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}304===\mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{status}}) \{ return \mbox{\hyperlink{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}{fresh}}(this.\+headers, \{ \textquotesingle{}\mbox{\hyperlink{express_2lib_2utils_8js_aa7b4b88130584154c4a863b71b8a3075}{etag}}\textquotesingle{}\+:\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{res.\+get}}(\textquotesingle{}ETag\textquotesingle{}), \textquotesingle{}last-\/modified\textquotesingle{}\+:\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{res.\+get}}(\textquotesingle{}Last-\/Modified\textquotesingle{}) \}) \} return false;\})
+\item 
+\mbox{\hyperlink{request_8js_a2c0e995f48aa94be6ab194956659b2f7}{define\+Getter}} (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \textquotesingle{}stale\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} stale()\{ return !\mbox{\hyperlink{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}{this.\+fresh}};\})
+\item 
+\mbox{\hyperlink{request_8js_aa265397c19c5cc737cf142a9b4ce4a0a}{define\+Getter}} (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \textquotesingle{}xhr\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} xhr()\{ var val=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+get}}(\textquotesingle{}X-\/Requested-\/With\textquotesingle{})\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}\textquotesingle{}\textquotesingle{};return val.\+to\+Lower\+Case()===\textquotesingle{}xmlhttprequest\textquotesingle{};\})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{request_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{request_8js_acfcd119b39526e732877a941ebeed620}{deprecate}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}depd\textquotesingle{})(\textquotesingle{}\mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\textquotesingle{})
+\item 
+var \mbox{\hyperlink{request_8js_a4a6ff4913d40907f5438cd21c126a33e}{is\+IP}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}net\textquotesingle{}).is\+IP
+\item 
+var \mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}-\/\mbox{\hyperlink{request_8js_a5e3afd97276cc403924d1a449a83ea84}{is}}\textquotesingle{})
+\item 
+var \mbox{\hyperlink{request_8js_a55f22d498ca401fddca364855629d1d3}{http}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}http\textquotesingle{})
+\item 
+var \mbox{\hyperlink{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}{fresh}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}fresh\textquotesingle{})
+\item 
+var \mbox{\hyperlink{request_8js_aaaaf98f51168d5ff2608b0f4752a312f}{parse\+Range}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{request_8js_ac94e8517738efc3d03aa3ce811e2dee3}{range}}-\/parser\textquotesingle{})
+\item 
+var \mbox{\hyperlink{request_8js_afbb224ef64380e0c03fd28ca64a949ab}{parse}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}parseurl\textquotesingle{})
+\item 
+var \mbox{\hyperlink{request_8js_adccce5d9fde7ce401d03984f2d2a4715}{proxyaddr}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}proxy-\/addr\textquotesingle{})
+\item 
+var \mbox{\hyperlink{request_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}
+\item 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} \mbox{\hyperlink{request_8js_ad590a4c822ccf7a8651345f38de5c34a}{accepts\+Encodings}}
+\item 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} \mbox{\hyperlink{request_8js_a35c49f40601e9f31f16471ab9d008ab9}{accepts\+Encoding}}
+\item 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} \mbox{\hyperlink{request_8js_a6029d2a4188dac8f6e0ad604166d5c7f}{accepts\+Charsets}}
+\item 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} \mbox{\hyperlink{request_8js_a96e11499c15709433c941a710da04ca4}{accepts\+Charset}}
+\item 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} \mbox{\hyperlink{request_8js_a04523be7e11c86fa4d5b3b4b90e1fc2e}{accepts\+Languages}}
+\item 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} \mbox{\hyperlink{request_8js_af5fec45eb1d586bd37a859653922d607}{accepts\+Language}}
+\item 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} \mbox{\hyperlink{request_8js_ac94e8517738efc3d03aa3ce811e2dee3}{range}}
+\item 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} \mbox{\hyperlink{request_8js_ac30f03e4827ddd737a83aa6c7e5a5f24}{param}}
+\item 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} \mbox{\hyperlink{request_8js_a5e3afd97276cc403924d1a449a83ea84}{is}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{request_8js_a104698b39d413b08bae5c2f051a6d388}\index{request.js@{request.js}!defineGetter@{defineGetter}}
+\index{defineGetter@{defineGetter}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{defineGetter()}{defineGetter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/11]}}
+{\footnotesize\ttfamily \label{request_8js_a104698b39d413b08bae5c2f051a6d388} 
+define\+Getter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}}]{}{, }\item[{\textquotesingle{}\mbox{\hyperlink{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}{fresh}}\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}()\{ var method=this.\+method;var \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}=\mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{this.\+res}} var \mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{status}}=res.\+status\+Code \mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(\textquotesingle{}GET\textquotesingle{} !==method \&\& \textquotesingle{}HEAD\textquotesingle{} !==method) return false;\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}((\mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{status}} $>$=200 \&\&\mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{status}}$<$ 300)\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}304===\mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{status}}) \{ return \mbox{\hyperlink{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}{fresh}}(this.\+headers, \{ \textquotesingle{}\mbox{\hyperlink{express_2lib_2utils_8js_aa7b4b88130584154c4a863b71b8a3075}{etag}}\textquotesingle{}\+:\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{res.\+get}}(\textquotesingle{}ETag\textquotesingle{}), \textquotesingle{}last-\/modified\textquotesingle{}\+:\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{res.\+get}}(\textquotesingle{}Last-\/Modified\textquotesingle{}) \}) \} return false;\}}]{}{}\end{DoxyParamCaption})}
+
+Check if the request is fresh, aka Last-\/\+Modified and/or the ETag still match.
+
+\begin{DoxyReturn}{Devuelve}
+\{Boolean\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_a4e24a42739a57e5e2a3871aef1ecac14}\index{request.js@{request.js}!defineGetter@{defineGetter}}
+\index{defineGetter@{defineGetter}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{defineGetter()}{defineGetter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/11]}}
+{\footnotesize\ttfamily \label{request_8js_a4e24a42739a57e5e2a3871aef1ecac14} 
+define\+Getter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}}]{}{, }\item[{\textquotesingle{}host\textquotesingle{}}]{}{, }\item[{deprecate.}]{function}{function host()\{ return this.\+hostname;\}, \textquotesingle{}req.\+host\+:\+Use req.\+hostname instead\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{request_8js_acc60ab1af739cb8e0059ea5b3bc2e0d3}\index{request.js@{request.js}!defineGetter@{defineGetter}}
+\index{defineGetter@{defineGetter}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{defineGetter()}{defineGetter()}\hspace{0.1cm}{\footnotesize\ttfamily [3/11]}}
+{\footnotesize\ttfamily \label{request_8js_acc60ab1af739cb8e0059ea5b3bc2e0d3} 
+define\+Getter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}}]{}{, }\item[{\textquotesingle{}hostname\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} hostname()\{ var trust=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+app.\+get}}(\textquotesingle{}trust proxy fn\textquotesingle{});var host=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+get}}(\textquotesingle{}X-\/Forwarded-\/Host\textquotesingle{});\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(!host\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}!trust(this.\+connection.\+remote\+Address, 0)) \{ host=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+get}}(\textquotesingle{}Host\textquotesingle{});\} \mbox{\hyperlink{call-bind_2index_8js_a0544c3fe466e421738dae463968b70ba}{else}} \mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(\mbox{\hyperlink{object-inspect_2index_8js_a68d7a69def043c17acbce4b1b552e522}{host.\+index\+Of}}(\textquotesingle{},\textquotesingle{}) !==-\/1) \{ host=host.\+substring(0, \mbox{\hyperlink{object-inspect_2index_8js_a68d7a69def043c17acbce4b1b552e522}{host.\+index\+Of}}(\textquotesingle{},\textquotesingle{})).trim\+Right() \} \mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(!host) return;var offset=host\mbox{[}0\mbox{]}===\textquotesingle{}\mbox{[}\textquotesingle{} ? \mbox{\hyperlink{object-inspect_2index_8js_a68d7a69def043c17acbce4b1b552e522}{host.\+index\+Of}}(\textquotesingle{}\mbox{]}\textquotesingle{})+1 \+:0;var index=\mbox{\hyperlink{object-inspect_2index_8js_a68d7a69def043c17acbce4b1b552e522}{host.\+index\+Of}}(\textquotesingle{}\+:\textquotesingle{}, offset);return index !==-\/1 ? host.\+substring(0, index) \+:host;\}}]{}{}\end{DoxyParamCaption})}
+
+Parse the "{}\+Host"{} header field to a hostname.
+
+When the "{}trust proxy"{} setting trusts the socket address, the "{}\+X-\/\+Forwarded-\/\+Host"{} header field will be trusted.
+
+\begin{DoxyReturn}{Devuelve}
+\{String\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_ab84f8183a2221a1a1d9d40bad41bd808}\index{request.js@{request.js}!defineGetter@{defineGetter}}
+\index{defineGetter@{defineGetter}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{defineGetter()}{defineGetter()}\hspace{0.1cm}{\footnotesize\ttfamily [4/11]}}
+{\footnotesize\ttfamily \label{request_8js_ab84f8183a2221a1a1d9d40bad41bd808} 
+define\+Getter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}}]{}{, }\item[{\textquotesingle{}ip\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} ip()\{ var trust=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+app.\+get}}(\textquotesingle{}trust proxy fn\textquotesingle{});return \mbox{\hyperlink{request_8js_adccce5d9fde7ce401d03984f2d2a4715}{proxyaddr}}(this, trust);\}}]{}{}\end{DoxyParamCaption})}
+
+Return the remote address from the trusted proxy.
+
+The is the remote address on the socket unless "{}trust proxy"{} is set.
+
+\begin{DoxyReturn}{Devuelve}
+\{String\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_a56b1c69b34cfaf83a129a46b79ce78be}\index{request.js@{request.js}!defineGetter@{defineGetter}}
+\index{defineGetter@{defineGetter}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{defineGetter()}{defineGetter()}\hspace{0.1cm}{\footnotesize\ttfamily [5/11]}}
+{\footnotesize\ttfamily \label{request_8js_a56b1c69b34cfaf83a129a46b79ce78be} 
+define\+Getter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}}]{}{, }\item[{\textquotesingle{}ips\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} ips() \{ var trust=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+app.\+get}}(\textquotesingle{}trust proxy fn\textquotesingle{});var addrs=\mbox{\hyperlink{application_8js_adb8f173cc9d0f47e38ae05e7bb965c99}{proxyaddr.\+all}}(this, trust);addrs.\+reverse().pop() return addrs \}}]{}{}\end{DoxyParamCaption})}
+
+When "{}trust proxy"{} is set, trusted proxy addresses + client.
+
+For example if the value were "{}client, proxy1, proxy2"{} you would receive the array {\ttfamily \mbox{[}"{}client"{}, "{}proxy1"{}, "{}proxy2"{}\mbox{]}} where "{}proxy2"{} is the furthest down-\/stream and "{}proxy1"{} and "{}proxy2"{} were trusted.
+
+\begin{DoxyReturn}{Devuelve}
+\{Array\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_a1bf2b5521ee03138ed77a0acf32461a9}\index{request.js@{request.js}!defineGetter@{defineGetter}}
+\index{defineGetter@{defineGetter}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{defineGetter()}{defineGetter()}\hspace{0.1cm}{\footnotesize\ttfamily [6/11]}}
+{\footnotesize\ttfamily \label{request_8js_a1bf2b5521ee03138ed77a0acf32461a9} 
+define\+Getter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}}]{}{, }\item[{\textquotesingle{}path\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} path() \{ return \mbox{\hyperlink{bytes_2index_8js_a28ecd76297a5d556aac05441b295f93c}{parse}}(this).pathname;\}}]{}{}\end{DoxyParamCaption})}
+
+Short-\/hand for {\ttfamily url.\+parse(req.\+url).pathname}.
+
+\begin{DoxyReturn}{Devuelve}
+\{String\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_aa8986459dff9eac7e866fbfdcadb2018}\index{request.js@{request.js}!defineGetter@{defineGetter}}
+\index{defineGetter@{defineGetter}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{defineGetter()}{defineGetter()}\hspace{0.1cm}{\footnotesize\ttfamily [7/11]}}
+{\footnotesize\ttfamily \label{request_8js_aa8986459dff9eac7e866fbfdcadb2018} 
+define\+Getter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}}]{}{, }\item[{\textquotesingle{}protocol\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} protocol()\{ var \mbox{\hyperlink{express_8js_a930fae672851c7e279583e20638e2228}{proto}}=this.\+connection.\+encrypted ? \textquotesingle{}https\textquotesingle{} \+:\textquotesingle{}\mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}\textquotesingle{};var trust=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+app.\+get}}(\textquotesingle{}trust proxy fn\textquotesingle{});\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(!trust(this.\+connection.\+remote\+Address, 0)) \{ return \mbox{\hyperlink{express_8js_a930fae672851c7e279583e20638e2228}{proto}};\} var header=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+get}}(\textquotesingle{}X-\/Forwarded-\/Proto\textquotesingle{})\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}\mbox{\hyperlink{express_8js_a930fae672851c7e279583e20638e2228}{proto}} var index=\mbox{\hyperlink{object-inspect_2index_8js_a68d7a69def043c17acbce4b1b552e522}{header.\+index\+Of}}(\textquotesingle{},\textquotesingle{}) return index !==-\/1 ? header.\+substring(0, index).trim() \+:header.\+trim() \}}]{}{}\end{DoxyParamCaption})}
+
+Return the protocol string "{}http"{} or "{}https"{} when requested with TLS. When the "{}trust proxy"{} setting trusts the socket address, the "{}\+X-\/\+Forwarded-\/\+Proto"{} header field will be trusted and used if present.
+
+If you\textquotesingle{}re running behind a reverse proxy that supplies https for you this may be enabled.
+
+\begin{DoxyReturn}{Devuelve}
+\{String\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_addbdc40ef134b678163889aeb4a08949}\index{request.js@{request.js}!defineGetter@{defineGetter}}
+\index{defineGetter@{defineGetter}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{defineGetter()}{defineGetter()}\hspace{0.1cm}{\footnotesize\ttfamily [8/11]}}
+{\footnotesize\ttfamily \label{request_8js_addbdc40ef134b678163889aeb4a08949} 
+define\+Getter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}}]{}{, }\item[{\textquotesingle{}secure\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} secure()\{ return this.\+protocol===\textquotesingle{}https\textquotesingle{};\}}]{}{}\end{DoxyParamCaption})}
+
+Short-\/hand for\+:
+
+req.\+protocol === \textquotesingle{}https\textquotesingle{}
+
+\begin{DoxyReturn}{Devuelve}
+\{Boolean\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_a2c0e995f48aa94be6ab194956659b2f7}\index{request.js@{request.js}!defineGetter@{defineGetter}}
+\index{defineGetter@{defineGetter}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{defineGetter()}{defineGetter()}\hspace{0.1cm}{\footnotesize\ttfamily [9/11]}}
+{\footnotesize\ttfamily \label{request_8js_a2c0e995f48aa94be6ab194956659b2f7} 
+define\+Getter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}}]{}{, }\item[{\textquotesingle{}stale\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} stale()\{ return !\mbox{\hyperlink{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}{this.\+fresh}};\}}]{}{}\end{DoxyParamCaption})}
+
+Check if the request is stale, aka "{}\+Last-\/\+Modified"{} and / or the "{}\+ETag"{} for the resource has changed.
+
+\begin{DoxyReturn}{Devuelve}
+\{Boolean\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_ae35cd920979fbf4ed3e969ea48f975d3}\index{request.js@{request.js}!defineGetter@{defineGetter}}
+\index{defineGetter@{defineGetter}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{defineGetter()}{defineGetter()}\hspace{0.1cm}{\footnotesize\ttfamily [10/11]}}
+{\footnotesize\ttfamily \label{request_8js_ae35cd920979fbf4ed3e969ea48f975d3} 
+define\+Getter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}}]{}{, }\item[{\textquotesingle{}subdomains\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} subdomains() \{ var hostname=this.\+hostname;\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(!hostname) return\mbox{[}$\,$\mbox{]};var offset=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+app.\+get}}(\textquotesingle{}subdomain offset\textquotesingle{});var subdomains=!\mbox{\hyperlink{request_8js_a4a6ff4913d40907f5438cd21c126a33e}{is\+IP}}(hostname) ? \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{hostname.\+split}}(\textquotesingle{}.\textquotesingle{}).reverse() \+:\mbox{[}hostname\mbox{]};return \mbox{\hyperlink{express_2lib_2router_2index_8js_acab0c09ac73e7a3c85a21fa773e9b8b0}{subdomains.\+slice}}(offset);\}}]{}{}\end{DoxyParamCaption})}
+
+Return subdomains as an array.
+
+Subdomains are the dot-\/separated parts of the host before the main domain of the app. By default, the domain of the app is assumed to be the last two parts of the host. This can be changed by setting "{}subdomain offset"{}.
+
+For example, if the domain is "{}tobi.\+ferrets.\+example.\+com"{}\+: If "{}subdomain offset"{} is not set, req.\+subdomains is {\ttfamily \mbox{[}"{}ferrets"{}, "{}tobi"{}\mbox{]}}. If "{}subdomain offset"{} is 3, req.\+subdomains is {\ttfamily \mbox{[}"{}tobi"{}\mbox{]}}.
+
+\begin{DoxyReturn}{Devuelve}
+\{Array\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_aa265397c19c5cc737cf142a9b4ce4a0a}\index{request.js@{request.js}!defineGetter@{defineGetter}}
+\index{defineGetter@{defineGetter}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{defineGetter()}{defineGetter()}\hspace{0.1cm}{\footnotesize\ttfamily [11/11]}}
+{\footnotesize\ttfamily \label{request_8js_aa265397c19c5cc737cf142a9b4ce4a0a} 
+define\+Getter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}}]{}{, }\item[{\textquotesingle{}xhr\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} xhr()\{ var val=\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{this.\+get}}(\textquotesingle{}X-\/Requested-\/With\textquotesingle{})\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}\textquotesingle{}\textquotesingle{};return val.\+to\+Lower\+Case()===\textquotesingle{}xmlhttprequest\textquotesingle{};\}}]{}{}\end{DoxyParamCaption})}
+
+Check if the request was an {\itshape XMLHttp\+Request}.
+
+\begin{DoxyReturn}{Devuelve}
+\{Boolean\} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{request_8js_a96e11499c15709433c941a710da04ca4}\index{request.js@{request.js}!acceptsCharset@{acceptsCharset}}
+\index{acceptsCharset@{acceptsCharset}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{acceptsCharset}{acceptsCharset}}
+{\footnotesize\ttfamily \label{request_8js_a96e11499c15709433c941a710da04ca4} 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} accepts\+Charset}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{request_8js_acfcd119b39526e732877a941ebeed620}{deprecate}}.function(\mbox{\hyperlink{request_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}.acceptsCharsets,}
+\DoxyCodeLine{\ \ \textcolor{stringliteral}{'req.acceptsCharset:\ Use\ acceptsCharsets\ instead'})}
+
+\end{DoxyCode}
+\Hypertarget{request_8js_a6029d2a4188dac8f6e0ad604166d5c7f}\index{request.js@{request.js}!acceptsCharsets@{acceptsCharsets}}
+\index{acceptsCharsets@{acceptsCharsets}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{acceptsCharsets}{acceptsCharsets}}
+{\footnotesize\ttfamily \label{request_8js_a6029d2a4188dac8f6e0ad604166d5c7f} 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} accepts\+Charsets}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}()\{}
+\DoxyCodeLine{\ \ var\ accept\ =\ accepts(\textcolor{keyword}{this});}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ accept.charsets.apply(accept,\ arguments);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Check if the given {\ttfamily charset}s are acceptable, otherwise you should respond with 406 "{}\+Not Acceptable"{}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & ...charset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{String\texorpdfstring{$\vert$}{|}\+Array\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_a35c49f40601e9f31f16471ab9d008ab9}\index{request.js@{request.js}!acceptsEncoding@{acceptsEncoding}}
+\index{acceptsEncoding@{acceptsEncoding}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{acceptsEncoding}{acceptsEncoding}}
+{\footnotesize\ttfamily \label{request_8js_a35c49f40601e9f31f16471ab9d008ab9} 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} accepts\+Encoding}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{request_8js_acfcd119b39526e732877a941ebeed620}{deprecate}}.function(\mbox{\hyperlink{request_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}.acceptsEncodings,}
+\DoxyCodeLine{\ \ \textcolor{stringliteral}{'req.acceptsEncoding:\ Use\ acceptsEncodings\ instead'})}
+
+\end{DoxyCode}
+\Hypertarget{request_8js_ad590a4c822ccf7a8651345f38de5c34a}\index{request.js@{request.js}!acceptsEncodings@{acceptsEncodings}}
+\index{acceptsEncodings@{acceptsEncodings}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{acceptsEncodings}{acceptsEncodings}}
+{\footnotesize\ttfamily \label{request_8js_ad590a4c822ccf7a8651345f38de5c34a} 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} accepts\+Encodings}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}()\{}
+\DoxyCodeLine{\ \ var\ accept\ =\ accepts(\textcolor{keyword}{this});}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ accept.encodings.apply(accept,\ arguments);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Check if the given {\ttfamily encoding}s are accepted.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & ...encoding \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{String\texorpdfstring{$\vert$}{|}\+Array\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_af5fec45eb1d586bd37a859653922d607}\index{request.js@{request.js}!acceptsLanguage@{acceptsLanguage}}
+\index{acceptsLanguage@{acceptsLanguage}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{acceptsLanguage}{acceptsLanguage}}
+{\footnotesize\ttfamily \label{request_8js_af5fec45eb1d586bd37a859653922d607} 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} accepts\+Language}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{request_8js_acfcd119b39526e732877a941ebeed620}{deprecate}}.function(\mbox{\hyperlink{request_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}.acceptsLanguages,}
+\DoxyCodeLine{\ \ \textcolor{stringliteral}{'req.acceptsLanguage:\ Use\ acceptsLanguages\ instead'})}
+
+\end{DoxyCode}
+\Hypertarget{request_8js_a04523be7e11c86fa4d5b3b4b90e1fc2e}\index{request.js@{request.js}!acceptsLanguages@{acceptsLanguages}}
+\index{acceptsLanguages@{acceptsLanguages}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{acceptsLanguages}{acceptsLanguages}}
+{\footnotesize\ttfamily \label{request_8js_a04523be7e11c86fa4d5b3b4b90e1fc2e} 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} accepts\+Languages}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}()\{}
+\DoxyCodeLine{\ \ var\ accept\ =\ accepts(\textcolor{keyword}{this});}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ accept.languages.apply(accept,\ arguments);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Check if the given {\ttfamily lang}s are acceptable, otherwise you should respond with 406 "{}\+Not Acceptable"{}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & ...lang \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{String\texorpdfstring{$\vert$}{|}\+Array\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_acfcd119b39526e732877a941ebeed620}\index{request.js@{request.js}!deprecate@{deprecate}}
+\index{deprecate@{deprecate}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{deprecate}{deprecate}}
+{\footnotesize\ttfamily \label{request_8js_acfcd119b39526e732877a941ebeed620} 
+var deprecate = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}depd\textquotesingle{})(\textquotesingle{}\mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\textquotesingle{})}
+
+\Hypertarget{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}\index{request.js@{request.js}!fresh@{fresh}}
+\index{fresh@{fresh}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{fresh}{fresh}}
+{\footnotesize\ttfamily \label{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a} 
+var fresh = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}fresh\textquotesingle{})}
+
+\Hypertarget{request_8js_a55f22d498ca401fddca364855629d1d3}\index{request.js@{request.js}!http@{http}}
+\index{http@{http}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{http}{http}}
+{\footnotesize\ttfamily \label{request_8js_a55f22d498ca401fddca364855629d1d3} 
+var http = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}http\textquotesingle{})}
+
+\Hypertarget{request_8js_a5e3afd97276cc403924d1a449a83ea84}\index{request.js@{request.js}!is@{is}}
+\index{is@{is}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{is}{is}}
+{\footnotesize\ttfamily \label{request_8js_a5e3afd97276cc403924d1a449a83ea84} 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} is}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{request_8js_a5e3afd97276cc403924d1a449a83ea84}{is}}(\mbox{\hyperlink{build_8js_a5802f014ed8e96d3a513f114faa91d12}{types}})\ \{}
+\DoxyCodeLine{\ \ var\ arr\ =\ \mbox{\hyperlink{build_8js_a5802f014ed8e96d3a513f114faa91d12}{types}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (!Array.isArray(\mbox{\hyperlink{build_8js_a5802f014ed8e96d3a513f114faa91d12}{types}}))\ \{}
+\DoxyCodeLine{\ \ \ \ arr\ =\ \textcolor{keyword}{new}\ Array(arguments.length);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ arr.length;\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ arr[i]\ =\ arguments[i];}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}(\textcolor{keyword}{this},\ arr);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Check if the incoming request contains the "{}\+Content-\/\+Type"{} header field, and it contains the given mime {\ttfamily type}.
+
+Examples\+: \begin{DoxyVerb} // With Content-Type: text/html; charset=utf-8
+ req.is('html');
+ req.is('text/html');
+ req.is('text/*');
+ // => true
+
+ // When Content-Type is application/json
+ req.is('json');
+ req.is('application/json');
+ req.is('application/*');
+ // => true
+
+ req.is('html');
+ // => false
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\texorpdfstring{$\vert$}{|}\+Array\}} & types... \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{String\texorpdfstring{$\vert$}{|}false\texorpdfstring{$\vert$}{|}null\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_a4a6ff4913d40907f5438cd21c126a33e}\index{request.js@{request.js}!isIP@{isIP}}
+\index{isIP@{isIP}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{isIP}{isIP}}
+{\footnotesize\ttfamily \label{request_8js_a4a6ff4913d40907f5438cd21c126a33e} 
+var is\+IP = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}net\textquotesingle{}).is\+IP}
+
+\Hypertarget{request_8js_ac30f03e4827ddd737a83aa6c7e5a5f24}\index{request.js@{request.js}!param@{param}}
+\index{param@{param}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{param}{param}}
+{\footnotesize\ttfamily \label{request_8js_ac30f03e4827ddd737a83aa6c7e5a5f24} 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} param}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{request_8js_ac30f03e4827ddd737a83aa6c7e5a5f24}{param}}(\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}},\ defaultValue)\ \{}
+\DoxyCodeLine{\ \ var\ params\ =\ this.params\ ||\ \{\};}
+\DoxyCodeLine{\ \ var\ body\ =\ this.body\ ||\ \{\};}
+\DoxyCodeLine{\ \ var\ \mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{query}}\ =\ this.query\ ||\ \{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ var\ args\ =\ arguments.length\ ===\ 1}
+\DoxyCodeLine{\ \ \ \ ?\ \textcolor{stringliteral}{'name'}}
+\DoxyCodeLine{\ \ \ \ :\ \textcolor{stringliteral}{'name,\ default'};}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{request_8js_acfcd119b39526e732877a941ebeed620}{deprecate}}(\textcolor{stringliteral}{'req.param('}\ +\ args\ +\ \textcolor{stringliteral}{'):\ Use\ req.params,\ req.body,\ or\ req.query\ instead'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (null\ !=\ params[\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}]\ \&\&\ params.hasOwnProperty(\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}))\ \textcolor{keywordflow}{return}\ params[\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}];}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (null\ !=\ body[\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}])\ \textcolor{keywordflow}{return}\ body[\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}];}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (null\ !=\ \mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{query}}[\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}])\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{query}}[\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ defaultValue;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Return the value of param {\ttfamily name} when present or {\ttfamily default\+Value}.
+
+
+\begin{DoxyItemize}
+\item Checks route placeholders, ex\+: \+\_\+/user/\+:id\+\_\+
+\item Checks body params, ex\+: id=12, \{"{}id"{}\+:12\}
+\item Checks query string params, ex\+: ?id=12
+\end{DoxyItemize}
+
+To utilize request bodies, {\ttfamily req.\+body} should be an object. This can be done by using the {\ttfamily \doxylink{express_8js_a2f18df3edfa1cab06177ab4917a1d17e}{body\+Parser()}} middleware.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & name \\
+\hline
+{\em \{\+Mixed\}} & \mbox{[}default\+Value\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{String\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_afbb224ef64380e0c03fd28ca64a949ab}\index{request.js@{request.js}!parse@{parse}}
+\index{parse@{parse}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{parse}{parse}}
+{\footnotesize\ttfamily \label{request_8js_afbb224ef64380e0c03fd28ca64a949ab} 
+var parse = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}parseurl\textquotesingle{})}
+
+\Hypertarget{request_8js_aaaaf98f51168d5ff2608b0f4752a312f}\index{request.js@{request.js}!parseRange@{parseRange}}
+\index{parseRange@{parseRange}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{parseRange}{parseRange}}
+{\footnotesize\ttfamily \label{request_8js_aaaaf98f51168d5ff2608b0f4752a312f} 
+var parse\+Range = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{request_8js_ac94e8517738efc3d03aa3ce811e2dee3}{range}}-\/parser\textquotesingle{})}
+
+\Hypertarget{request_8js_adccce5d9fde7ce401d03984f2d2a4715}\index{request.js@{request.js}!proxyaddr@{proxyaddr}}
+\index{proxyaddr@{proxyaddr}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{proxyaddr}{proxyaddr}}
+{\footnotesize\ttfamily \label{request_8js_adccce5d9fde7ce401d03984f2d2a4715} 
+var proxyaddr = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}proxy-\/addr\textquotesingle{})}
+
+\Hypertarget{request_8js_ac94e8517738efc3d03aa3ce811e2dee3}\index{request.js@{request.js}!range@{range}}
+\index{range@{range}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{range}{range}}
+{\footnotesize\ttfamily \label{request_8js_ac94e8517738efc3d03aa3ce811e2dee3} 
+\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}} range}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{request_8js_ac94e8517738efc3d03aa3ce811e2dee3}{range}}(size,\ options)\ \{}
+\DoxyCodeLine{\ \ var\ \mbox{\hyperlink{request_8js_ac94e8517738efc3d03aa3ce811e2dee3}{range}}\ =\ this.\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{get}}(\textcolor{stringliteral}{'Range'});}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (!range)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{request_8js_aaaaf98f51168d5ff2608b0f4752a312f}{parseRange}}(size,\ \mbox{\hyperlink{request_8js_ac94e8517738efc3d03aa3ce811e2dee3}{range}},\ options);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Parse Range header field, capping to the given {\ttfamily size}.
+
+Unspecified ranges such as "{}0-\/"{} require knowledge of your resource length. In the case of a byte range this is of course the total number of bytes. If the Range header field is not given {\ttfamily undefined} is returned, {\ttfamily -\/1} when unsatisfiable, and {\ttfamily -\/2} when syntactically invalid.
+
+When ranges are returned, the array has a "{}type"{} property which is the type of range that is required (most commonly, "{}bytes"{}). Each array element is an object with a "{}start"{} and "{}end"{} property for the portion of the range.
+
+The "{}combine"{} option can be set to {\ttfamily true} and overlapping \& adjacent ranges will be combined into a single range.
+
+NOTE\+: remember that ranges are inclusive, so for example "{}\+Range\+: users=0-\/3"{} should respond with 4 users when available, not 3.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{number\}} & size \\
+\hline
+{\em \{object\}} & \mbox{[}options\mbox{]} \\
+\hline
+{\em \{boolean\}} & \mbox{[}options.\+combine=false\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{number\texorpdfstring{$\vert$}{|}array\} 
+\end{DoxyReturn}
+\Hypertarget{request_8js_a42c43c76081a7df8ae2954f16ee9338b}\index{request.js@{request.js}!req@{req}}
+\index{req@{req}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{req}{req}}
+{\footnotesize\ttfamily \label{request_8js_a42c43c76081a7df8ae2954f16ee9338b} 
+var req}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ Object.create(\mbox{\hyperlink{request_8js_a55f22d498ca401fddca364855629d1d3}{http}}.IncomingMessage.prototype)}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{module}.exports\ =\ req}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{req.get\ =}
+\DoxyCodeLine{req.header\ =\ function\ header(name)\ \{}
+\DoxyCodeLine{\ \ if\ (!name)\ \{}
+\DoxyCodeLine{\ \ \ \ throw\ new\ TypeError('name\ argument\ is\ required\ to\ req.get');}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (typeof\ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}\ !==\ \textcolor{stringliteral}{'string'})\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ TypeError(\textcolor{stringliteral}{'name\ must\ be\ a\ string\ to\ req.get'});}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ var\ lc\ =\ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}.toLowerCase();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{switch}\ (lc)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'referer'}:}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'referrer'}:}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.headers.referrer}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ||\ this.headers.referer;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.headers[lc];}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Request prototype. \Hypertarget{request_8js_ae2475e10618961c050dcba04e8c42331}\index{request.js@{request.js}!strict@{strict}}
+\index{strict@{strict}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{request_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+express Copyright(c) 2009-\/2013 TJ Holowaychuk Copyright(c) 2013 Roman Shtylman Copyright(c) 2014-\/2015 Douglas Christopher Wilson MIT Licensed \Hypertarget{request_8js_a2efc67136068229eaf03e7ae371b6b25}\index{request.js@{request.js}!typeis@{typeis}}
+\index{typeis@{typeis}!request.js@{request.js}}
+\doxysubsubsection{\texorpdfstring{typeis}{typeis}}
+{\footnotesize\ttfamily \label{request_8js_a2efc67136068229eaf03e7ae371b6b25} 
+var typeis = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}-\/\mbox{\hyperlink{request_8js_a5e3afd97276cc403924d1a449a83ea84}{is}}\textquotesingle{})}
+

@@ -1,0 +1,43 @@
+\chapter{set-\/function-\/length \texorpdfstring{$<$}{<}sup\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}a href="{}https\+://npmjs.\+org/package/set-\/function-\/length"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://versionbadg.\+es/ljharb/set-\/function-\/length.\+svg"{} alt="{}\+Version Badge"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/sup\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2set-function-length_2_r_e_a_d_m_e}{}\label{md_node__modules_2set-function-length_2_r_e_a_d_m_e}\index{set-\/function-\/length $<$sup$>$$<$a href="{}https://npmjs.org/package/set-\/function-\/length"{} $>$$<$img src="{}https://versionbadg.es/ljharb/set-\/function-\/length.svg"{} alt="{}Version Badge"{}/$>$$<$/a$>$$<$/sup$>$@{set-\/function-\/length $<$sup$>$$<$a href=""https://npmjs.org/package/set-\/function-\/length"" $>$$<$img src=""https://versionbadg.es/ljharb/set-\/function-\/length.svg"" alt=""Version Badge""/$>$$<$/a$>$$<$/sup$>$}}
+\label{md_node__modules_2set-function-length_2_r_e_a_d_m_e_autotoc_md2070}%
+\Hypertarget{md_node__modules_2set-function-length_2_r_e_a_d_m_e_autotoc_md2070}%
+
+
+\href{https://github.com/ljharb/set-function-length/actions}{\texttt{ }} \href{https://app.codecov.io/gh/ljharb/set-function-length/}{\texttt{ }} \mbox{[}\mbox{]}\mbox{[}license-\/url\mbox{]} \href{https://npm-stat.com/charts.html?package=set-function-length}{\texttt{ }}
+
+\href{https://npmjs.org/package/set-function-length}{\texttt{ }}
+
+Set a function’s length.
+
+Arguments\+:
+\begin{DoxyItemize}
+\item {\ttfamily fn}\+: the function
+\item {\ttfamily length}\+: the new length. Must be an integer between 0 and 2\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}32.
+\item {\ttfamily loose}\+: Optional. If true, and the length fails to be set, do not throw. Default false.
+\end{DoxyItemize}
+
+Returns {\ttfamily fn}.\hypertarget{md_node__modules_2set-function-length_2_r_e_a_d_m_e_autotoc_md2071}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2set-function-length_2_r_e_a_d_m_e_autotoc_md2071}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{call-bind_2index_8js_a3534cc2550d6bd4e495fca1a5517071d}{setFunctionLength}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'set-\/function-\/length'});}
+\DoxyCodeLine{var\ \mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'assert'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{function}\ zero()\ \{\}}
+\DoxyCodeLine{\textcolor{keyword}{function}\ one(\_)\ \{\}}
+\DoxyCodeLine{\textcolor{keyword}{function}\ two(\_,\ \_\_)\ \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(zero.length,\ 0);}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(one.length,\ 1);}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(two.length,\ 2);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(\mbox{\hyperlink{call-bind_2index_8js_a3534cc2550d6bd4e495fca1a5517071d}{setFunctionLength}}(zero,\ 10),\ zero);}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(\mbox{\hyperlink{call-bind_2index_8js_a3534cc2550d6bd4e495fca1a5517071d}{setFunctionLength}}(one,\ 11),\ one);}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(\mbox{\hyperlink{call-bind_2index_8js_a3534cc2550d6bd4e495fca1a5517071d}{setFunctionLength}}(two,\ 12),\ two);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(zero.length,\ 10);}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(one.length,\ 11);}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(two.length,\ 12);}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,282 @@
+\doxysection{Referencia del archivo node\+\_\+modules/pgpass/lib/helper.js}
+\hypertarget{helper_8js}{}\label{helper_8js}\index{node\_modules/pgpass/lib/helper.js@{node\_modules/pgpass/lib/helper.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{helper_8js_abde768243de3b0bd87e130337bf5727a}{is\+Reg\+File}} (mode)
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{helper_8js_a38a427e846d66d6d195a2cb4513457ff}{warn}} ()
+\item 
+Object \mbox{\hyperlink{helper_8js_a79ad53e3fa9e9371549faa551e6c9f3d}{define\+Property}} (\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{module.\+exports}}, \textquotesingle{}\mbox{\hyperlink{helper_8js_a1ad6eb1c7b36bdb89149042003c144d3}{is\+Win}}\textquotesingle{}, \{ \mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{get}} \+:\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ return \mbox{\hyperlink{helper_8js_a1ad6eb1c7b36bdb89149042003c144d3}{is\+Win}};\}, \mbox{\hyperlink{application_8js_aea3662ebceec6f02ef3aec57683086a6}{set}} \+:\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(val) \{ \mbox{\hyperlink{helper_8js_a1ad6eb1c7b36bdb89149042003c144d3}{is\+Win}}=val;\} \})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{helper_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{helper_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}path\textquotesingle{})
+\item 
+var \mbox{\hyperlink{helper_8js_a2ad0cbec59ce1e4920545b10498bf9f5}{Stream}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}}\textquotesingle{}).Stream
+\item 
+var \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}split2\textquotesingle{})
+\item 
+var \mbox{\hyperlink{helper_8js_a8f5b2e09d5197e9d28f6032dff542d44}{util}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}util\textquotesingle{})
+\item 
+var \mbox{\hyperlink{helper_8js_a1ee5b2dd6c5cbc2ef1b499b8c478b00d}{default\+Port}} = 5432
+\item 
+var \mbox{\hyperlink{helper_8js_a1ad6eb1c7b36bdb89149042003c144d3}{is\+Win}} = (process.\+platform === \textquotesingle{}win32\textquotesingle{})
+\item 
+var \mbox{\hyperlink{helper_8js_a4e3133f4ee9c32b1acb0a7c1c09c0aec}{warn\+Stream}} = process.\+stderr
+\item 
+var \mbox{\hyperlink{helper_8js_a227fbe1638bb62b9b4eccd16f9cc1a8d}{S\+\_\+\+IRWXG}} = 56
+\item 
+var \mbox{\hyperlink{helper_8js_a7bcc812518627d397e7ce46bfbc35514}{S\+\_\+\+IRWXO}} = 7
+\item 
+var \mbox{\hyperlink{helper_8js_a4df30ba5df63058d320d1b8ef03daedc}{S\+\_\+\+IFMT}} = 61440
+\item 
+var \mbox{\hyperlink{helper_8js_af3fa1005caaceccf8418e22902058d37}{S\+\_\+\+IFREG}} = 32768
+\item 
+var \mbox{\hyperlink{helper_8js_a057bb93d12e52a8d209456cc9be0ffe8}{field\+Names}} = \mbox{[} \textquotesingle{}host\textquotesingle{}, \textquotesingle{}port\textquotesingle{}, \textquotesingle{}database\textquotesingle{}, \textquotesingle{}user\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{serializer_8js_abd7c13acac876da8bdefce825ee1fa0b}{password}}\textquotesingle{} \mbox{]}
+\item 
+var \mbox{\hyperlink{helper_8js_aeb0764c78d143a70f828376260fe4437}{nr\+Of\+Fields}} = field\+Names.\+length
+\item 
+var \mbox{\hyperlink{helper_8js_a84f2fd6b52551c7ca3cb918db34ba6aa}{pass\+Key}} = \mbox{\hyperlink{helper_8js_a057bb93d12e52a8d209456cc9be0ffe8}{field\+Names}}\mbox{[} \mbox{\hyperlink{helper_8js_aeb0764c78d143a70f828376260fe4437}{nr\+Of\+Fields}} -\/1 \mbox{]}
+\item 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{helper_8js_abb7ca8358e24ae1be757dfee3cb85b54}{warn\+To}}
+\item 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{helper_8js_a1c6fb10b94ec025ddb9fbc6ddd4fc719}{get\+File\+Name}}
+\item 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{helper_8js_abf5386a97582ef1ce11c029c29d1350d}{use\+Pg\+Pass}}
+\item 
+var \mbox{\hyperlink{helper_8js_a0b1de5fd50abc5a82e17ab08b2553a04}{matcher}}
+\item 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{helper_8js_a934bd24941cad385c2d96505fea95f59}{get\+Password}}
+\item 
+var \mbox{\hyperlink{helper_8js_a5ceb9c7b32209d972f2467b98e0f70a6}{parse\+Line}}
+\item 
+var \mbox{\hyperlink{helper_8js_a1ae8f354eb01a6a608850c65f0b426df}{is\+Valid\+Entry}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{helper_8js_a79ad53e3fa9e9371549faa551e6c9f3d}\index{helper.js@{helper.js}!defineProperty@{defineProperty}}
+\index{defineProperty@{defineProperty}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{defineProperty()}{defineProperty()}}
+{\footnotesize\ttfamily \label{helper_8js_a79ad53e3fa9e9371549faa551e6c9f3d} 
+Object define\+Property (\begin{DoxyParamCaption}\item[{module.}]{exports}{, }\item[{\textquotesingle{}\mbox{\hyperlink{helper_8js_a1ad6eb1c7b36bdb89149042003c144d3}{is\+Win}}\textquotesingle{}}]{}{, }\item[{\{ \mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{get}} \+:\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ return \mbox{\hyperlink{helper_8js_a1ad6eb1c7b36bdb89149042003c144d3}{is\+Win}};\}, \mbox{\hyperlink{application_8js_aea3662ebceec6f02ef3aec57683086a6}{set}} \+:\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(val) \{ \mbox{\hyperlink{helper_8js_a1ad6eb1c7b36bdb89149042003c144d3}{is\+Win}}=val;\} \}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{helper_8js_abde768243de3b0bd87e130337bf5727a}\index{helper.js@{helper.js}!isRegFile@{isRegFile}}
+\index{isRegFile@{isRegFile}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{isRegFile()}{isRegFile()}}
+{\footnotesize\ttfamily \label{helper_8js_abde768243de3b0bd87e130337bf5727a} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} is\+Reg\+File (\begin{DoxyParamCaption}\item[{mode}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{helper_8js_a38a427e846d66d6d195a2cb4513457ff}\index{helper.js@{helper.js}!warn@{warn}}
+\index{warn@{warn}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{warn()}{warn()}}
+{\footnotesize\ttfamily \label{helper_8js_a38a427e846d66d6d195a2cb4513457ff} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} warn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{helper_8js_a1ee5b2dd6c5cbc2ef1b499b8c478b00d}\index{helper.js@{helper.js}!defaultPort@{defaultPort}}
+\index{defaultPort@{defaultPort}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{defaultPort}{defaultPort}}
+{\footnotesize\ttfamily \label{helper_8js_a1ee5b2dd6c5cbc2ef1b499b8c478b00d} 
+var default\+Port = 5432}
+
+\Hypertarget{helper_8js_a057bb93d12e52a8d209456cc9be0ffe8}\index{helper.js@{helper.js}!fieldNames@{fieldNames}}
+\index{fieldNames@{fieldNames}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{fieldNames}{fieldNames}}
+{\footnotesize\ttfamily \label{helper_8js_a057bb93d12e52a8d209456cc9be0ffe8} 
+var field\+Names = \mbox{[} \textquotesingle{}host\textquotesingle{}, \textquotesingle{}port\textquotesingle{}, \textquotesingle{}database\textquotesingle{}, \textquotesingle{}user\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{serializer_8js_abd7c13acac876da8bdefce825ee1fa0b}{password}}\textquotesingle{} \mbox{]}}
+
+\Hypertarget{helper_8js_a1c6fb10b94ec025ddb9fbc6ddd4fc719}\index{helper.js@{helper.js}!getFileName@{getFileName}}
+\index{getFileName@{getFileName}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{getFileName}{getFileName}}
+{\footnotesize\ttfamily \label{helper_8js_a1c6fb10b94ec025ddb9fbc6ddd4fc719} 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} get\+File\+Name}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(rawEnv)\{}
+\DoxyCodeLine{\ \ \ \ var\ env\ =\ rawEnv\ ||\ process.env;}
+\DoxyCodeLine{\ \ \ \ var\ \mbox{\hyperlink{cli_8js_a14523cb74edc3f6175c54e598a379c27}{file}}\ =\ env.PGPASSFILE\ ||\ (}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{helper_8js_a1ad6eb1c7b36bdb89149042003c144d3}{isWin}}\ ?}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{helper_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path}}.join(\ env.APPDATA\ ||\ \textcolor{stringliteral}{'./'}\ ,\ \textcolor{stringliteral}{'postgresql'},\ \textcolor{stringliteral}{'pgpass.conf'}\ )\ :}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{helper_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path}}.join(\ env.HOME\ ||\ \textcolor{stringliteral}{'./'},\ \textcolor{stringliteral}{'.pgpass'}\ )}
+\DoxyCodeLine{\ \ \ \ );}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{cli_8js_a14523cb74edc3f6175c54e598a379c27}{file}};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{helper_8js_a934bd24941cad385c2d96505fea95f59}\index{helper.js@{helper.js}!getPassword@{getPassword}}
+\index{getPassword@{getPassword}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{getPassword}{getPassword}}
+{\footnotesize\ttfamily \label{helper_8js_a934bd24941cad385c2d96505fea95f59} 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} get\+Password}
+
+\Hypertarget{helper_8js_a1ae8f354eb01a6a608850c65f0b426df}\index{helper.js@{helper.js}!isValidEntry@{isValidEntry}}
+\index{isValidEntry@{isValidEntry}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{isValidEntry}{isValidEntry}}
+{\footnotesize\ttfamily \label{helper_8js_a1ae8f354eb01a6a608850c65f0b426df} 
+var is\+Valid\+Entry}
+
+\Hypertarget{helper_8js_a1ad6eb1c7b36bdb89149042003c144d3}\index{helper.js@{helper.js}!isWin@{isWin}}
+\index{isWin@{isWin}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{isWin}{isWin}}
+{\footnotesize\ttfamily \label{helper_8js_a1ad6eb1c7b36bdb89149042003c144d3} 
+var is\+Win = (process.\+platform === \textquotesingle{}win32\textquotesingle{})}
+
+\Hypertarget{helper_8js_a0b1de5fd50abc5a82e17ab08b2553a04}\index{helper.js@{helper.js}!matcher@{matcher}}
+\index{matcher@{matcher}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{matcher}{matcher}}
+{\footnotesize\ttfamily \label{helper_8js_a0b1de5fd50abc5a82e17ab08b2553a04} 
+var matcher}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{module}.exports.match\ =\ function(connInfo,\ entry)\ \{}
+\DoxyCodeLine{\ \ \ \ return\ fieldNames.slice(0,\ -\/1).reduce(function(prev,\ field,\ idx)\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (idx\ ==\ 1)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ if\ (\ Number(\ connInfo[field]\ ||\ defaultPort\ )\ ===\ Number(\ entry[field]\ )\ )\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ prev\ \&\&\ true;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ prev\ \&\&\ (}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ entry[field]\ ===\ \textcolor{charliteral}{'*'}\ ||}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ entry[field]\ ===\ connInfo[field]}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\ \ \ \ \},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{helper_8js_aeb0764c78d143a70f828376260fe4437}\index{helper.js@{helper.js}!nrOfFields@{nrOfFields}}
+\index{nrOfFields@{nrOfFields}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{nrOfFields}{nrOfFields}}
+{\footnotesize\ttfamily \label{helper_8js_aeb0764c78d143a70f828376260fe4437} 
+var nr\+Of\+Fields = field\+Names.\+length}
+
+\Hypertarget{helper_8js_a5ceb9c7b32209d972f2467b98e0f70a6}\index{helper.js@{helper.js}!parseLine@{parseLine}}
+\index{parseLine@{parseLine}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{parseLine}{parseLine}}
+{\footnotesize\ttfamily \label{helper_8js_a5ceb9c7b32209d972f2467b98e0f70a6} 
+var parse\+Line}
+
+\Hypertarget{helper_8js_a84f2fd6b52551c7ca3cb918db34ba6aa}\index{helper.js@{helper.js}!passKey@{passKey}}
+\index{passKey@{passKey}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{passKey}{passKey}}
+{\footnotesize\ttfamily \label{helper_8js_a84f2fd6b52551c7ca3cb918db34ba6aa} 
+var pass\+Key = \mbox{\hyperlink{helper_8js_a057bb93d12e52a8d209456cc9be0ffe8}{field\+Names}}\mbox{[} \mbox{\hyperlink{helper_8js_aeb0764c78d143a70f828376260fe4437}{nr\+Of\+Fields}} -\/1 \mbox{]}}
+
+\Hypertarget{helper_8js_aa72e0c8a20e6bcc571d3a1c51846e627}\index{helper.js@{helper.js}!path@{path}}
+\index{path@{path}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{helper_8js_aa72e0c8a20e6bcc571d3a1c51846e627} 
+var path = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}path\textquotesingle{})}
+
+\Hypertarget{helper_8js_a4df30ba5df63058d320d1b8ef03daedc}\index{helper.js@{helper.js}!S\_IFMT@{S\_IFMT}}
+\index{S\_IFMT@{S\_IFMT}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{S\_IFMT}{S\_IFMT}}
+{\footnotesize\ttfamily \label{helper_8js_a4df30ba5df63058d320d1b8ef03daedc} 
+var S\+\_\+\+IFMT = 61440}
+
+\Hypertarget{helper_8js_af3fa1005caaceccf8418e22902058d37}\index{helper.js@{helper.js}!S\_IFREG@{S\_IFREG}}
+\index{S\_IFREG@{S\_IFREG}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{S\_IFREG}{S\_IFREG}}
+{\footnotesize\ttfamily \label{helper_8js_af3fa1005caaceccf8418e22902058d37} 
+var S\+\_\+\+IFREG = 32768}
+
+\Hypertarget{helper_8js_a227fbe1638bb62b9b4eccd16f9cc1a8d}\index{helper.js@{helper.js}!S\_IRWXG@{S\_IRWXG}}
+\index{S\_IRWXG@{S\_IRWXG}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{S\_IRWXG}{S\_IRWXG}}
+{\footnotesize\ttfamily \label{helper_8js_a227fbe1638bb62b9b4eccd16f9cc1a8d} 
+var S\+\_\+\+IRWXG = 56}
+
+\Hypertarget{helper_8js_a7bcc812518627d397e7ce46bfbc35514}\index{helper.js@{helper.js}!S\_IRWXO@{S\_IRWXO}}
+\index{S\_IRWXO@{S\_IRWXO}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{S\_IRWXO}{S\_IRWXO}}
+{\footnotesize\ttfamily \label{helper_8js_a7bcc812518627d397e7ce46bfbc35514} 
+var S\+\_\+\+IRWXO = 7}
+
+\Hypertarget{helper_8js_a02757733e12d272f36eb88bf5eb0df12}\index{helper.js@{helper.js}!split@{split}}
+\index{split@{split}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{split}{split}}
+{\footnotesize\ttfamily \label{helper_8js_a02757733e12d272f36eb88bf5eb0df12} 
+var split = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}split2\textquotesingle{})}
+
+\Hypertarget{helper_8js_a2ad0cbec59ce1e4920545b10498bf9f5}\index{helper.js@{helper.js}!Stream@{Stream}}
+\index{Stream@{Stream}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{Stream}{Stream}}
+{\footnotesize\ttfamily \label{helper_8js_a2ad0cbec59ce1e4920545b10498bf9f5} 
+var Stream = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}}\textquotesingle{}).Stream}
+
+\Hypertarget{helper_8js_ae2475e10618961c050dcba04e8c42331}\index{helper.js@{helper.js}!strict@{strict}}
+\index{strict@{strict}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{helper_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+\Hypertarget{helper_8js_abf5386a97582ef1ce11c029c29d1350d}\index{helper.js@{helper.js}!usePgPass@{usePgPass}}
+\index{usePgPass@{usePgPass}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{usePgPass}{usePgPass}}
+{\footnotesize\ttfamily \label{helper_8js_abf5386a97582ef1ce11c029c29d1350d} 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} use\+Pg\+Pass}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(stats,\ fname)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (Object.prototype.hasOwnProperty.call(process.env,\ \textcolor{stringliteral}{'PGPASSWORD'}))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{helper_8js_a1ad6eb1c7b36bdb89149042003c144d3}{isWin}})\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ fname\ =\ fname\ ||\ \textcolor{stringliteral}{'<unkn>'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (!\ \mbox{\hyperlink{helper_8js_abde768243de3b0bd87e130337bf5727a}{isRegFile}}(stats.mode))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{helper_8js_a38a427e846d66d6d195a2cb4513457ff}{warn}}(\textcolor{stringliteral}{'WARNING:\ password\ file\ "{}\%s"{}\ is\ not\ a\ plain\ file'},\ fname);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (stats.mode\ \&\ (\mbox{\hyperlink{helper_8js_a227fbe1638bb62b9b4eccd16f9cc1a8d}{S\_IRWXG}}\ |\ \mbox{\hyperlink{helper_8js_a7bcc812518627d397e7ce46bfbc35514}{S\_IRWXO}}))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{helper_8js_a38a427e846d66d6d195a2cb4513457ff}{warn}}(\textcolor{stringliteral}{'WARNING:\ password\ file\ "{}\%s"{}\ has\ group\ or\ world\ access;\ permissions\ should\ be\ u=rw\ (0600)\ or\ less'},\ fname);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{helper_8js_a8f5b2e09d5197e9d28f6032dff542d44}\index{helper.js@{helper.js}!util@{util}}
+\index{util@{util}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{util}{util}}
+{\footnotesize\ttfamily \label{helper_8js_a8f5b2e09d5197e9d28f6032dff542d44} 
+var util = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}util\textquotesingle{})}
+
+\Hypertarget{helper_8js_a4e3133f4ee9c32b1acb0a7c1c09c0aec}\index{helper.js@{helper.js}!warnStream@{warnStream}}
+\index{warnStream@{warnStream}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{warnStream}{warnStream}}
+{\footnotesize\ttfamily \label{helper_8js_a4e3133f4ee9c32b1acb0a7c1c09c0aec} 
+var warn\+Stream = process.\+stderr}
+
+\Hypertarget{helper_8js_abb7ca8358e24ae1be757dfee3cb85b54}\index{helper.js@{helper.js}!warnTo@{warnTo}}
+\index{warnTo@{warnTo}!helper.js@{helper.js}}
+\doxysubsubsection{\texorpdfstring{warnTo}{warnTo}}
+{\footnotesize\ttfamily \label{helper_8js_abb7ca8358e24ae1be757dfee3cb85b54} 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} warn\+To}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(\mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}})\ \{}
+\DoxyCodeLine{\ \ \ \ var\ old\ =\ \mbox{\hyperlink{helper_8js_a4e3133f4ee9c32b1acb0a7c1c09c0aec}{warnStream}};}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{helper_8js_a4e3133f4ee9c32b1acb0a7c1c09c0aec}{warnStream}}\ =\ \mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ old;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

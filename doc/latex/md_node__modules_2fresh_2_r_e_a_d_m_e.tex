@@ -1,0 +1,79 @@
+\chapter{fresh}
+\hypertarget{md_node__modules_2fresh_2_r_e_a_d_m_e}{}\label{md_node__modules_2fresh_2_r_e_a_d_m_e}\index{fresh@{fresh}}
+\label{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md895}%
+\Hypertarget{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md895}%
+
+
+\href{https://npmjs.org/package/fresh}{\texttt{ }} \href{https://npmjs.org/package/fresh}{\texttt{ }} \href{https://nodejs.org/en/}{\texttt{ }} \href{https://travis-ci.org/jshttp/fresh}{\texttt{ }} \href{https://coveralls.io/r/jshttp/fresh?branch=master}{\texttt{ }}
+
+HTTP response freshness testing\hypertarget{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md896}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md896}
+This is a \href{https://nodejs.org/en/}{\texttt{ Node.\+js}} module available through the \href{https://www.npmjs.com/}{\texttt{ npm registry}}. Installation is done using the \href{https://docs.npmjs.com/getting-started/installing-npm-packages-locally}{\texttt{ {\ttfamily npm install} command}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ fresh}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md897}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md897}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}{fresh}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'fresh'})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md898}{}\doxysubsection{\texorpdfstring{fresh(req\+Headers, res\+Headers)}{fresh(req\+Headers, res\+Headers)}}\label{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md898}
+Check freshness of the response using request and response headers.
+
+When the response is still "{}fresh"{} in the client\textquotesingle{}s cache {\ttfamily true} is returned, otherwise {\ttfamily false} is returned to indicate that the client cache is now stale and the full response should be sent.
+
+When a client sends the {\ttfamily Cache-\/\+Control\+: no-\/cache} request header to indicate an end-\/to-\/end reload request, this module will return {\ttfamily false} to make handling these requests transparent.\hypertarget{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md899}{}\doxysection{\texorpdfstring{Known Issues}{Known Issues}}\label{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md899}
+This module is designed to only follow the HTTP specifications, not to work-\/around all kinda of client bugs (especially since this module typically does not recieve enough information to understand what the client actually is).
+
+There is a known issue that in certain versions of Safari, Safari will incorrectly make a request that allows this module to validate freshness of the resource even when Safari does not have a representation of the resource in the cache. The module \href{https://www.npmjs.com/package/jumanji}{\texttt{ jumanji}} can be used in an Express application to work-\/around this issue and also provides links to further reading on this Safari bug.\hypertarget{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md900}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md900}
+\hypertarget{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md901}{}\doxysubsection{\texorpdfstring{API usage}{API usage}}\label{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md901}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ reqHeaders\ =\ \{\ \textcolor{stringliteral}{'if-\/none-\/match'}:\ \textcolor{stringliteral}{'"{}foo"{}'}\ \}}
+\DoxyCodeLine{var\ resHeaders\ =\ \{\ \textcolor{stringliteral}{'etag'}:\ \textcolor{stringliteral}{'"{}bar"{}'}\ \}}
+\DoxyCodeLine{\mbox{\hyperlink{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}{fresh}}(reqHeaders,\ resHeaders)}
+\DoxyCodeLine{\textcolor{comment}{//\ =>\ false}}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ reqHeaders\ =\ \{\ \textcolor{stringliteral}{'if-\/none-\/match'}:\ \textcolor{stringliteral}{'"{}foo"{}'}\ \}}
+\DoxyCodeLine{var\ resHeaders\ =\ \{\ \textcolor{stringliteral}{'etag'}:\ \textcolor{stringliteral}{'"{}foo"{}'}\ \}}
+\DoxyCodeLine{\mbox{\hyperlink{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}{fresh}}(reqHeaders,\ resHeaders)}
+\DoxyCodeLine{\textcolor{comment}{//\ =>\ true}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md902}{}\doxysubsection{\texorpdfstring{Using with Node.\+js http server}{Using with Node.\+js http server}}\label{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md902}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}{fresh}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'fresh'})}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('\mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}')}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ server\ =\ \mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}.createServer(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ perform\ server\ logic}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ ...\ including\ adding\ ETag\ /\ Last-\/Modified\ response\ headers}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (isFresh(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ client\ has\ a\ fresh\ copy\ of\ resource}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.statusCode\ =\ 304}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.end()}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ send\ the\ resource}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.statusCode\ =\ 200}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.end(\textcolor{stringliteral}{'hello,\ world!'})}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ isFresh\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{request_8js_ac6bf5484b5676a3edfddf7ca77caa54a}{fresh}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}.headers,\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'etag'}:\ res.getHeader(\textcolor{stringliteral}{'ETag'}),}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'last-\/modified'}:\ res.getHeader(\textcolor{stringliteral}{'Last-\/Modified'})}
+\DoxyCodeLine{\ \ \})}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{server.listen(3000)}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md903}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2fresh_2_r_e_a_d_m_e_autotoc_md903}
+\mbox{[}MIT\mbox{]}(LICENSE) 

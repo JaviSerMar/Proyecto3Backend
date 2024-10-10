@@ -1,0 +1,627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: Referencia del archivo node_modules/pg-types/lib/textParsers.js</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_acd06b18086a0dd2ae699b1e0b775be8.html">node_modules</a></li><li class="navelem"><a class="el" href="dir_b48e79ef622ae54e8b39e6023f0339b2.html">pg-types</a></li><li class="navelem"><a class="el" href="dir_9f124ef94e9f0e068f79119fecd3e8b9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo textParsers.js</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a7b350c56e01fa70a479750e0f6f58b11" id="r_a7b350c56e01fa70a479750e0f6f58b11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b350c56e01fa70a479750e0f6f58b11">allowNull</a> (fn)</td></tr>
+<tr class="separator:a7b350c56e01fa70a479750e0f6f58b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a009e6556b738f8d273f6bc8a5fda9a9f" id="r_a009e6556b738f8d273f6bc8a5fda9a9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a009e6556b738f8d273f6bc8a5fda9a9f">parseBool</a> (<a class="el" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>)</td></tr>
+<tr class="separator:a009e6556b738f8d273f6bc8a5fda9a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec14e01be6446d54e0e4e9268e84662" id="r_adec14e01be6446d54e0e4e9268e84662"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adec14e01be6446d54e0e4e9268e84662">parseBoolArray</a> (<a class="el" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>)</td></tr>
+<tr class="separator:adec14e01be6446d54e0e4e9268e84662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fe65dae2b3ea4a6c3e4d11b586e1560" id="r_a5fe65dae2b3ea4a6c3e4d11b586e1560"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fe65dae2b3ea4a6c3e4d11b586e1560">parseBaseTenInt</a> (string)</td></tr>
+<tr class="separator:a5fe65dae2b3ea4a6c3e4d11b586e1560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56c8aca4fdcd7b3ed26ffa463fe8b654" id="r_a56c8aca4fdcd7b3ed26ffa463fe8b654"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56c8aca4fdcd7b3ed26ffa463fe8b654">parseIntegerArray</a> (<a class="el" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>)</td></tr>
+<tr class="separator:a56c8aca4fdcd7b3ed26ffa463fe8b654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84a3b3b9aebfa3479180dc4d0239a3b" id="r_ab84a3b3b9aebfa3479180dc4d0239a3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab84a3b3b9aebfa3479180dc4d0239a3b">parseBigIntegerArray</a> (<a class="el" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>)</td></tr>
+<tr class="separator:ab84a3b3b9aebfa3479180dc4d0239a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa26ea275a7c12c30df9334d66ece8a65" id="r_aa26ea275a7c12c30df9334d66ece8a65"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa26ea275a7c12c30df9334d66ece8a65">array</a></td></tr>
+<tr class="separator:aa26ea275a7c12c30df9334d66ece8a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46910ff5893d4196874921e379f80b00" id="r_a46910ff5893d4196874921e379f80b00"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46910ff5893d4196874921e379f80b00">parseDate</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('postgres-date')</td></tr>
+<tr class="separator:a46910ff5893d4196874921e379f80b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bbb0ef66914d2f53b8926a5677199ff" id="r_a1bbb0ef66914d2f53b8926a5677199ff"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bbb0ef66914d2f53b8926a5677199ff">parseInterval</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('postgres-interval')</td></tr>
+<tr class="separator:a1bbb0ef66914d2f53b8926a5677199ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0139264e20f733aa7ceeb8717c1b221" id="r_aa0139264e20f733aa7ceeb8717c1b221"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0139264e20f733aa7ceeb8717c1b221">parseByteA</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('postgres-bytea')</td></tr>
+<tr class="separator:aa0139264e20f733aa7ceeb8717c1b221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c921f17dccd94a6bd5fa84974dc362" id="r_a64c921f17dccd94a6bd5fa84974dc362"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64c921f17dccd94a6bd5fa84974dc362">parsePointArray</a></td></tr>
+<tr class="separator:a64c921f17dccd94a6bd5fa84974dc362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24eacbd180d37ca07513da3d7bfe7c63" id="r_a24eacbd180d37ca07513da3d7bfe7c63"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24eacbd180d37ca07513da3d7bfe7c63">parseFloatArray</a></td></tr>
+<tr class="separator:a24eacbd180d37ca07513da3d7bfe7c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462b4728376baf9e8bd54bd98c2bd6f9" id="r_a462b4728376baf9e8bd54bd98c2bd6f9"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a462b4728376baf9e8bd54bd98c2bd6f9">parseStringArray</a></td></tr>
+<tr class="separator:a462b4728376baf9e8bd54bd98c2bd6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a425534da55a81092903ced2c73167b45" id="r_a425534da55a81092903ced2c73167b45"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a425534da55a81092903ced2c73167b45">parseDateArray</a></td></tr>
+<tr class="separator:a425534da55a81092903ced2c73167b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d51832cd7e36c917ab479f1389561b" id="r_a80d51832cd7e36c917ab479f1389561b"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80d51832cd7e36c917ab479f1389561b">parseIntervalArray</a></td></tr>
+<tr class="separator:a80d51832cd7e36c917ab479f1389561b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb4050d1de035b673ceefa2e8beccbb" id="r_a5fb4050d1de035b673ceefa2e8beccbb"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fb4050d1de035b673ceefa2e8beccbb">parseByteAArray</a></td></tr>
+<tr class="separator:a5fb4050d1de035b673ceefa2e8beccbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c8fe66e9c2691aae4117de76aaf205" id="r_a17c8fe66e9c2691aae4117de76aaf205"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17c8fe66e9c2691aae4117de76aaf205">parseInteger</a></td></tr>
+<tr class="separator:a17c8fe66e9c2691aae4117de76aaf205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad61d9b0bc3640c0ae6d22c9678358c7f" id="r_ad61d9b0bc3640c0ae6d22c9678358c7f"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad61d9b0bc3640c0ae6d22c9678358c7f">parseBigInteger</a></td></tr>
+<tr class="separator:ad61d9b0bc3640c0ae6d22c9678358c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28961a4ce26b9e2d416482096d03053d" id="r_a28961a4ce26b9e2d416482096d03053d"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28961a4ce26b9e2d416482096d03053d">parseJsonArray</a></td></tr>
+<tr class="separator:a28961a4ce26b9e2d416482096d03053d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf81655e289f4f0ccc398a01eb0c29b8" id="r_aaf81655e289f4f0ccc398a01eb0c29b8"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf81655e289f4f0ccc398a01eb0c29b8">parsePoint</a></td></tr>
+<tr class="separator:aaf81655e289f4f0ccc398a01eb0c29b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9560ae62411cf43860dc8ac211e68ee7" id="r_a9560ae62411cf43860dc8ac211e68ee7"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9560ae62411cf43860dc8ac211e68ee7">parseCircle</a></td></tr>
+<tr class="separator:a9560ae62411cf43860dc8ac211e68ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8925a317299daf39d8500f1e56e5216b" id="r_a8925a317299daf39d8500f1e56e5216b"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8925a317299daf39d8500f1e56e5216b">init</a></td></tr>
+<tr class="separator:a8925a317299daf39d8500f1e56e5216b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4072ba4b6b56b0fb6f4801f17ab2b34" id="r_aa4072ba4b6b56b0fb6f4801f17ab2b34"><td class="memItemLeft" align="right" valign="top">module&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4072ba4b6b56b0fb6f4801f17ab2b34">exports</a></td></tr>
+<tr class="separator:aa4072ba4b6b56b0fb6f4801f17ab2b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a7b350c56e01fa70a479750e0f6f58b11" name="a7b350c56e01fa70a479750e0f6f58b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b350c56e01fa70a479750e0f6f58b11">&#9670;&#160;</a></span>allowNull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> allowNull </td>
+          <td>(</td>
+          <td class="paramtype">fn</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fe65dae2b3ea4a6c3e4d11b586e1560" name="a5fe65dae2b3ea4a6c3e4d11b586e1560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fe65dae2b3ea4a6c3e4d11b586e1560">&#9670;&#160;</a></span>parseBaseTenInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> parseBaseTenInt </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab84a3b3b9aebfa3479180dc4d0239a3b" name="ab84a3b3b9aebfa3479180dc4d0239a3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab84a3b3b9aebfa3479180dc4d0239a3b">&#9670;&#160;</a></span>parseBigIntegerArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> parseBigIntegerArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a009e6556b738f8d273f6bc8a5fda9a9f" name="a009e6556b738f8d273f6bc8a5fda9a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a009e6556b738f8d273f6bc8a5fda9a9f">&#9670;&#160;</a></span>parseBool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> parseBool </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adec14e01be6446d54e0e4e9268e84662" name="adec14e01be6446d54e0e4e9268e84662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec14e01be6446d54e0e4e9268e84662">&#9670;&#160;</a></span>parseBoolArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> parseBoolArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56c8aca4fdcd7b3ed26ffa463fe8b654" name="a56c8aca4fdcd7b3ed26ffa463fe8b654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56c8aca4fdcd7b3ed26ffa463fe8b654">&#9670;&#160;</a></span>parseIntegerArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> parseIntegerArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="aa26ea275a7c12c30df9334d66ece8a65" name="aa26ea275a7c12c30df9334d66ece8a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa26ea275a7c12c30df9334d66ece8a65">&#9670;&#160;</a></span>array</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var array</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;postgres-array&#39;</span>)</div>
+<div class="line">var <a class="code hl_variable" href="pg-types_2index_8js.html#ae69268f8a534eb785e51eec474291443">arrayParser</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;./<a class="code hl_variable" href="pg-types_2index_8js.html#ae69268f8a534eb785e51eec474291443">arrayParser</a>&#39;)</div>
+<div class="ttc" id="apg-types_2index_8js_html_ae69268f8a534eb785e51eec474291443"><div class="ttname"><a href="pg-types_2index_8js.html#ae69268f8a534eb785e51eec474291443">arrayParser</a></div><div class="ttdeci">var arrayParser</div><div class="ttdef"><b>Definition</b> index.js:3</div></div>
+<div class="ttc" id="atest-core-js_8js_html_a2fc998a372f1531668f7047d0878effe"><div class="ttname"><a href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a></div><div class="ttdeci">require('core-js')</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa4072ba4b6b56b0fb6f4801f17ab2b34" name="aa4072ba4b6b56b0fb6f4801f17ab2b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4072ba4b6b56b0fb6f4801f17ab2b34">&#9670;&#160;</a></span>exports</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">module exports</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  <a class="code hl_variable" href="#a8925a317299daf39d8500f1e56e5216b">init</a>: <a class="code hl_variable" href="#a8925a317299daf39d8500f1e56e5216b">init</a></div>
+<div class="line">}</div>
+<div class="ttc" id="atext_parsers_8js_html_a8925a317299daf39d8500f1e56e5216b"><div class="ttname"><a href="#a8925a317299daf39d8500f1e56e5216b">init</a></div><div class="ttdeci">var init</div><div class="ttdef"><b>Definition</b> textParsers.js:166</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8925a317299daf39d8500f1e56e5216b" name="a8925a317299daf39d8500f1e56e5216b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8925a317299daf39d8500f1e56e5216b">&#9670;&#160;</a></span>init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var init</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad61d9b0bc3640c0ae6d22c9678358c7f" name="ad61d9b0bc3640c0ae6d22c9678358c7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad61d9b0bc3640c0ae6d22c9678358c7f">&#9670;&#160;</a></span>parseBigInteger</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseBigInteger</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) {</div>
+<div class="line">  var valStr = String(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>);</div>
+<div class="line">  <span class="keywordflow">if</span> (/^\<a class="code hl_variable" href="ms_2index_8js.html#aeb337d295abaddb5ec3cb34cc2e2bbc9">d</a>+$/.<a class="code hl_variable" href="test_2call_bound_8js.html#a3a897d91c374db023efd4ed28e633ade">test</a>(valStr)) { <span class="keywordflow">return</span> valStr; }</div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>;</div>
+<div class="line">}</div>
+<div class="ttc" id="acors_2lib_2index_8js_html_ac2ffb26d6f42d3bbcd7847b0873403f4"><div class="ttname"><a href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a></div><div class="ttdeci">function()</div><div class="ttdef"><b>Definition</b> index.js:1</div></div>
+<div class="ttc" id="aget-intrinsic_2index_8js_html_aacce635d68067370c70caa2381ea1040"><div class="ttname"><a href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a></div><div class="ttdeci">return value</div><div class="ttdef"><b>Definition</b> index.js:358</div></div>
+<div class="ttc" id="ams_2index_8js_html_aeb337d295abaddb5ec3cb34cc2e2bbc9"><div class="ttname"><a href="ms_2index_8js.html#aeb337d295abaddb5ec3cb34cc2e2bbc9">d</a></div><div class="ttdeci">var d</div><div class="ttdef"><b>Definition</b> index.js:8</div></div>
+<div class="ttc" id="atest_2call_bound_8js_html_a3a897d91c374db023efd4ed28e633ade"><div class="ttname"><a href="test_2call_bound_8js.html#a3a897d91c374db023efd4ed28e633ade">test</a></div><div class="ttdeci">var test</div><div class="ttdef"><b>Definition</b> callBound.js:3</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa0139264e20f733aa7ceeb8717c1b221" name="aa0139264e20f733aa7ceeb8717c1b221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0139264e20f733aa7ceeb8717c1b221">&#9670;&#160;</a></span>parseByteA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseByteA = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('postgres-bytea')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fb4050d1de035b673ceefa2e8beccbb" name="a5fb4050d1de035b673ceefa2e8beccbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fb4050d1de035b673ceefa2e8beccbb">&#9670;&#160;</a></span>parseByteAArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseByteAArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) {</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) { <span class="keywordflow">return</span> null; }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa26ea275a7c12c30df9334d66ece8a65">array</a>.parse(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>, <a class="code hl_function" href="#a7b350c56e01fa70a479750e0f6f58b11">allowNull</a>(<a class="code hl_variable" href="#aa0139264e20f733aa7ceeb8717c1b221">parseByteA</a>));</div>
+<div class="line">}</div>
+<div class="ttc" id="atext_parsers_8js_html_a7b350c56e01fa70a479750e0f6f58b11"><div class="ttname"><a href="#a7b350c56e01fa70a479750e0f6f58b11">allowNull</a></div><div class="ttdeci">function allowNull(fn)</div><div class="ttdef"><b>Definition</b> textParsers.js:7</div></div>
+<div class="ttc" id="atext_parsers_8js_html_aa0139264e20f733aa7ceeb8717c1b221"><div class="ttname"><a href="#aa0139264e20f733aa7ceeb8717c1b221">parseByteA</a></div><div class="ttdeci">var parseByteA</div><div class="ttdef"><b>Definition</b> textParsers.js:5</div></div>
+<div class="ttc" id="atext_parsers_8js_html_aa26ea275a7c12c30df9334d66ece8a65"><div class="ttname"><a href="#aa26ea275a7c12c30df9334d66ece8a65">array</a></div><div class="ttdeci">var array</div><div class="ttdef"><b>Definition</b> textParsers.js:1</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9560ae62411cf43860dc8ac211e68ee7" name="a9560ae62411cf43860dc8ac211e68ee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9560ae62411cf43860dc8ac211e68ee7">&#9670;&#160;</a></span>parseCircle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseCircle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) {</div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>[0] !== <span class="charliteral">&#39;&lt;&#39;</span> &amp;&amp; <a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>[1] !== <span class="charliteral">&#39;(&#39;</span>) { <span class="keywordflow">return</span> null; }</div>
+<div class="line"> </div>
+<div class="line">  var point = <span class="charliteral">&#39;(&#39;</span>;</div>
+<div class="line">  var radius = <span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line">  var pointParsed = <span class="keyword">false</span>;</div>
+<div class="line">  <span class="keywordflow">for</span> (var i = 2; i &lt; <a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>.length - 1; i++){</div>
+<div class="line">    <span class="keywordflow">if</span> (!pointParsed) {</div>
+<div class="line">      point += <a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>[i];</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>[i] === <span class="charliteral">&#39;)&#39;</span>) {</div>
+<div class="line">      pointParsed = <span class="keyword">true</span>;</div>
+<div class="line">      <span class="keywordflow">continue</span>;</div>
+<div class="line">    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!pointParsed) {</div>
+<div class="line">      <span class="keywordflow">continue</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>[i] === <span class="charliteral">&#39;,&#39;</span>){</div>
+<div class="line">      <span class="keywordflow">continue</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    radius += <a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>[i];</div>
+<div class="line">  }</div>
+<div class="line">  var result = <a class="code hl_variable" href="#aaf81655e289f4f0ccc398a01eb0c29b8">parsePoint</a>(point);</div>
+<div class="line">  result.radius = parseFloat(radius);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> result;</div>
+<div class="line">}</div>
+<div class="ttc" id="atext_parsers_8js_html_aaf81655e289f4f0ccc398a01eb0c29b8"><div class="ttname"><a href="#aaf81655e289f4f0ccc398a01eb0c29b8">parsePoint</a></div><div class="ttdeci">var parsePoint</div><div class="ttdef"><b>Definition</b> textParsers.js:125</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a46910ff5893d4196874921e379f80b00" name="a46910ff5893d4196874921e379f80b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46910ff5893d4196874921e379f80b00">&#9670;&#160;</a></span>parseDate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseDate = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('postgres-date')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a425534da55a81092903ced2c73167b45" name="a425534da55a81092903ced2c73167b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a425534da55a81092903ced2c73167b45">&#9670;&#160;</a></span>parseDateArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseDateArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) {</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) { <span class="keywordflow">return</span> null; }</div>
+<div class="line"> </div>
+<div class="line">  var p = <a class="code hl_variable" href="pg-types_2index_8js.html#ae69268f8a534eb785e51eec474291443">arrayParser</a>.create(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>, <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(entry) {</div>
+<div class="line">    <span class="keywordflow">if</span> (entry !== null) {</div>
+<div class="line">      entry = <a class="code hl_variable" href="#a46910ff5893d4196874921e379f80b00">parseDate</a>(entry);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> entry;</div>
+<div class="line">  });</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> p.parse();</div>
+<div class="line">}</div>
+<div class="ttc" id="atext_parsers_8js_html_a46910ff5893d4196874921e379f80b00"><div class="ttname"><a href="#a46910ff5893d4196874921e379f80b00">parseDate</a></div><div class="ttdeci">var parseDate</div><div class="ttdef"><b>Definition</b> textParsers.js:3</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a24eacbd180d37ca07513da3d7bfe7c63" name="a24eacbd180d37ca07513da3d7bfe7c63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24eacbd180d37ca07513da3d7bfe7c63">&#9670;&#160;</a></span>parseFloatArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseFloatArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) {</div>
+<div class="line">  <span class="keywordflow">if</span>(!<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) { <span class="keywordflow">return</span> null; }</div>
+<div class="line">  var p = <a class="code hl_variable" href="pg-types_2index_8js.html#ae69268f8a534eb785e51eec474291443">arrayParser</a>.create(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>, <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(entry) {</div>
+<div class="line">    <span class="keywordflow">if</span>(entry !== null) {</div>
+<div class="line">      entry = parseFloat(entry);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> entry;</div>
+<div class="line">  });</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> p.parse();</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a17c8fe66e9c2691aae4117de76aaf205" name="a17c8fe66e9c2691aae4117de76aaf205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17c8fe66e9c2691aae4117de76aaf205">&#9670;&#160;</a></span>parseInteger</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseInteger</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) {</div>
+<div class="line">  <span class="keywordflow">return</span> parseInt(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>, 10);</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1bbb0ef66914d2f53b8926a5677199ff" name="a1bbb0ef66914d2f53b8926a5677199ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bbb0ef66914d2f53b8926a5677199ff">&#9670;&#160;</a></span>parseInterval</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseInterval = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('postgres-interval')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80d51832cd7e36c917ab479f1389561b" name="a80d51832cd7e36c917ab479f1389561b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d51832cd7e36c917ab479f1389561b">&#9670;&#160;</a></span>parseIntervalArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseIntervalArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) {</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) { <span class="keywordflow">return</span> null; }</div>
+<div class="line"> </div>
+<div class="line">  var p = <a class="code hl_variable" href="pg-types_2index_8js.html#ae69268f8a534eb785e51eec474291443">arrayParser</a>.create(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>, <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(entry) {</div>
+<div class="line">    <span class="keywordflow">if</span> (entry !== null) {</div>
+<div class="line">      entry = <a class="code hl_variable" href="#a1bbb0ef66914d2f53b8926a5677199ff">parseInterval</a>(entry);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> entry;</div>
+<div class="line">  });</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> p.parse();</div>
+<div class="line">}</div>
+<div class="ttc" id="atext_parsers_8js_html_a1bbb0ef66914d2f53b8926a5677199ff"><div class="ttname"><a href="#a1bbb0ef66914d2f53b8926a5677199ff">parseInterval</a></div><div class="ttdeci">var parseInterval</div><div class="ttdef"><b>Definition</b> textParsers.js:4</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a28961a4ce26b9e2d416482096d03053d" name="a28961a4ce26b9e2d416482096d03053d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28961a4ce26b9e2d416482096d03053d">&#9670;&#160;</a></span>parseJsonArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseJsonArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) {</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) { <span class="keywordflow">return</span> null; }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code hl_variable" href="#aa26ea275a7c12c30df9334d66ece8a65">array</a>.parse(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>, <a class="code hl_function" href="#a7b350c56e01fa70a479750e0f6f58b11">allowNull</a>(JSON.parse));</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaf81655e289f4f0ccc398a01eb0c29b8" name="aaf81655e289f4f0ccc398a01eb0c29b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf81655e289f4f0ccc398a01eb0c29b8">&#9670;&#160;</a></span>parsePoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parsePoint</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) {</div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>[0] !== <span class="charliteral">&#39;(&#39;</span>) { <span class="keywordflow">return</span> null; }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a> = <a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>.substring( 1, <a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>.length - 1 ).split(<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> {</div>
+<div class="line">    x: parseFloat(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>[0])</div>
+<div class="line">  , <a class="code hl_variable" href="ms_2index_8js.html#a0b31909b1cae9ed1db6ff042057fce60">y</a>: parseFloat(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>[1])</div>
+<div class="line">  };</div>
+<div class="line">}</div>
+<div class="ttc" id="ams_2index_8js_html_a0b31909b1cae9ed1db6ff042057fce60"><div class="ttname"><a href="ms_2index_8js.html#a0b31909b1cae9ed1db6ff042057fce60">y</a></div><div class="ttdeci">var y</div><div class="ttdef"><b>Definition</b> index.js:9</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a64c921f17dccd94a6bd5fa84974dc362" name="a64c921f17dccd94a6bd5fa84974dc362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64c921f17dccd94a6bd5fa84974dc362">&#9670;&#160;</a></span>parsePointArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parsePointArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) {</div>
+<div class="line">  <span class="keywordflow">if</span>(!<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) { <span class="keywordflow">return</span> null; }</div>
+<div class="line">  var p = <a class="code hl_variable" href="pg-types_2index_8js.html#ae69268f8a534eb785e51eec474291443">arrayParser</a>.create(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>, <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(entry) {</div>
+<div class="line">    <span class="keywordflow">if</span>(entry !== null) {</div>
+<div class="line">      entry = <a class="code hl_variable" href="#aaf81655e289f4f0ccc398a01eb0c29b8">parsePoint</a>(entry);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> entry;</div>
+<div class="line">  });</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> p.parse();</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a462b4728376baf9e8bd54bd98c2bd6f9" name="a462b4728376baf9e8bd54bd98c2bd6f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a462b4728376baf9e8bd54bd98c2bd6f9">&#9670;&#160;</a></span>parseStringArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseStringArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) {</div>
+<div class="line">  <span class="keywordflow">if</span>(!<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>) { <span class="keywordflow">return</span> null; }</div>
+<div class="line"> </div>
+<div class="line">  var p = <a class="code hl_variable" href="pg-types_2index_8js.html#ae69268f8a534eb785e51eec474291443">arrayParser</a>.create(<a class="code hl_variable" href="get-intrinsic_2index_8js.html#aacce635d68067370c70caa2381ea1040">value</a>);</div>
+<div class="line">  <span class="keywordflow">return</span> p.parse();</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

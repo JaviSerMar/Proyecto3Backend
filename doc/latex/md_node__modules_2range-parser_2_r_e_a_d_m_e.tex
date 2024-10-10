@@ -1,0 +1,60 @@
+\chapter{range-\/parser}
+\hypertarget{md_node__modules_2range-parser_2_r_e_a_d_m_e}{}\label{md_node__modules_2range-parser_2_r_e_a_d_m_e}\index{range-\/parser@{range-\/parser}}
+\label{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1730}%
+\Hypertarget{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1730}%
+
+
+\href{https://npmjs.org/package/range-parser}{\texttt{ }} \href{https://npmjs.org/package/range-parser}{\texttt{ }} \href{https://nodejs.org/en/download}{\texttt{ }} \href{https://travis-ci.org/jshttp/range-parser}{\texttt{ }} \href{https://coveralls.io/r/jshttp/range-parser?branch=master}{\texttt{ }}
+
+Range header field parser.\hypertarget{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1731}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1731}
+This is a \href{https://nodejs.org/en/}{\texttt{ Node.\+js}} module available through the \href{https://www.npmjs.com/}{\texttt{ npm registry}}. Installation is done using the \href{https://docs.npmjs.com/getting-started/installing-npm-packages-locally}{\texttt{ {\ttfamily npm install} command}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ range-\/parser}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1732}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1732}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{request_8js_aaaaf98f51168d5ff2608b0f4752a312f}{parseRange}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'range-\/parser'})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1733}{}\doxysubsection{\texorpdfstring{parse\+Range(size, header, options)}{parse\+Range(size, header, options)}}\label{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1733}
+Parse the given {\ttfamily header} string where {\ttfamily size} is the maximum size of the resource. An array of ranges will be returned or negative numbers indicating an error parsing.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily -\/2} signals a malformed header string
+\item {\ttfamily -\/1} signals an unsatisfiable range
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ parse\ header\ from\ request}}
+\DoxyCodeLine{var\ \mbox{\hyperlink{request_8js_ac94e8517738efc3d03aa3ce811e2dee3}{range}}\ =\ \mbox{\hyperlink{request_8js_aaaaf98f51168d5ff2608b0f4752a312f}{parseRange}}(size,\ \mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}.headers.range)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ the\ type\ of\ the\ range}}
+\DoxyCodeLine{\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}\ (\mbox{\hyperlink{request_8js_ac94e8517738efc3d03aa3ce811e2dee3}{range}}.\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}\ ===\ '\mbox{\hyperlink{bytes_2index_8js_adeb1431b84efe09355bbd01e42326838}{bytes}}')\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ the\ ranges}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{request_8js_ac94e8517738efc3d03aa3ce811e2dee3}{range}}.forEach(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (r)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ do\ something\ with\ r.start\ and\ r.end}}
+\DoxyCodeLine{\ \ \})}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1734}{}\doxysubsubsection{\texorpdfstring{Options}{Options}}\label{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1734}
+These properties are accepted in the options object.\hypertarget{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1735}{}\doxysubsubsubsection{\texorpdfstring{combine}{combine}}\label{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1735}
+Specifies if overlapping \& adjacent ranges should be combined, defaults to {\ttfamily false}. When {\ttfamily true}, ranges will be combined and returned as if they were specified that way in the header.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{request_8js_aaaaf98f51168d5ff2608b0f4752a312f}{parseRange}}(100,\ \textcolor{stringliteral}{'bytes=50-\/55,0-\/10,5-\/10,56-\/60'},\ \{\ \mbox{\hyperlink{qs_2lib_2utils_8js_a842ccc9f567b37443c4bce53f1cdec48}{combine}}:\ \textcolor{keyword}{true}\ \})}
+\DoxyCodeLine{\textcolor{comment}{//\ =>\ [}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ \ \ \{\ start:\ 0,\ \ end:\ 10\ \},}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ \ \ \{\ start:\ 50,\ end:\ 60\ \}}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ ]}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1736}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2range-parser_2_r_e_a_d_m_e_autotoc_md1736}
+\mbox{[}MIT\mbox{]}(LICENSE) 

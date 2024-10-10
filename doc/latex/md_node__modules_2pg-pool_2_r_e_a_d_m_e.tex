@@ -1,0 +1,372 @@
+\chapter{pg-\/pool}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e}{}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e}\index{pg-\/pool@{pg-\/pool}}
+\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1515}%
+\Hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1515}%
+
+
+\href{https://travis-ci.org/brianc/node-pg-pool}{\texttt{ }}
+
+A connection pool for node-\/postgres\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1516}{}\doxysection{\texorpdfstring{install}{install}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1516}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ i\ pg-\/pool\ pg}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1517}{}\doxysection{\texorpdfstring{use}{use}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1517}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1518}{}\doxysubsection{\texorpdfstring{create}{create}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1518}
+to use pg-\/pool you must first create an instance of a pool
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ Pool\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'pg-\/pool'})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ by\ default\ the\ pool\ uses\ the\ same}}
+\DoxyCodeLine{\textcolor{comment}{//\ configuration\ as\ whatever\ \`{}pg`\ version\ you\ have\ installed}}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}\ =\ new\ Pool()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ you\ can\ pass\ properties\ to\ the\ pool}}
+\DoxyCodeLine{\textcolor{comment}{//\ these\ properties\ are\ passed\ unchanged\ to\ both\ the\ node-\/postgres\ Client\ constructor}}
+\DoxyCodeLine{\textcolor{comment}{//\ and\ the\ node-\/pool\ (https://github.com/coopernurse/node-\/pool)\ constructor}}
+\DoxyCodeLine{\textcolor{comment}{//\ allowing\ you\ to\ fully\ configure\ the\ behavior\ of\ both}}
+\DoxyCodeLine{var\ pool2\ =\ new\ Pool(\{}
+\DoxyCodeLine{\ \ database:\ \textcolor{stringliteral}{'postgres'},}
+\DoxyCodeLine{\ \ user:\ \textcolor{stringliteral}{'brianc'},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{serializer_8js_abd7c13acac876da8bdefce825ee1fa0b}{password}}:\ \textcolor{stringliteral}{'secret!'},}
+\DoxyCodeLine{\ \ port:\ 5432,}
+\DoxyCodeLine{\ \ ssl:\ \textcolor{keyword}{true},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{implementation_8js_a04fa2ea575d5471ca09e1b344ec4a69e}{max}}:\ 20,\ \textcolor{comment}{//\ set\ pool\ max\ size\ to\ 20}}
+\DoxyCodeLine{\ \ idleTimeoutMillis:\ 1000,\ \textcolor{comment}{//\ close\ idle\ clients\ after\ 1\ second}}
+\DoxyCodeLine{\ \ connectionTimeoutMillis:\ 1000,\ \textcolor{comment}{//\ return\ an\ error\ after\ 1\ second\ if\ connection\ could\ not\ be\ established}}
+\DoxyCodeLine{\ \ maxUses:\ 7500,\ \textcolor{comment}{//\ close\ (and\ replace)\ a\ connection\ after\ it\ has\ been\ used\ 7500\ times\ (see\ below\ for\ discussion)}}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//you\ can\ supply\ a\ custom\ client\ constructor}}
+\DoxyCodeLine{\textcolor{comment}{//if\ you\ want\ to\ use\ the\ native\ postgres\ client}}
+\DoxyCodeLine{var\ NativeClient\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'pg'}).native.Client}
+\DoxyCodeLine{var\ nativePool\ =\ \textcolor{keyword}{new}\ Pool(\{\ Client:\ NativeClient\ \})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//you\ can\ even\ pool\ pg-\/native\ clients\ directly}}
+\DoxyCodeLine{var\ PgNativeClient\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'pg-\/native'})}
+\DoxyCodeLine{var\ pgNativePool\ =\ new\ Pool(\{\ Client:\ PgNativeClient\ \})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1519}{}\doxysubsubsubsection{\texorpdfstring{Note\+:}{Note\+:}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1519}
+The Pool constructor does not support passing a Database URL as the parameter. To use pg-\/pool on heroku, for example, you need to parse the URL into a config object. Here is an example of how to parse a Database URL.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const}\ Pool\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'pg-\/pool'});}
+\DoxyCodeLine{\textcolor{keyword}{const}\ url\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'url'})}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ params\ =\ url.\mbox{\hyperlink{bytes_2index_8js_a28ecd76297a5d556aac05441b295f93c}{parse}}(process.env.DATABASE\_URL);}
+\DoxyCodeLine{const\ auth\ =\ params.auth.\mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}}(':');}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ config\ =\ \{}
+\DoxyCodeLine{\ \ user:\ auth[0],}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{serializer_8js_abd7c13acac876da8bdefce825ee1fa0b}{password}}:\ auth[1],}
+\DoxyCodeLine{\ \ host:\ params.hostname,}
+\DoxyCodeLine{\ \ port:\ params.port,}
+\DoxyCodeLine{\ \ database:\ params.pathname.split(\textcolor{charliteral}{'/'})[1],}
+\DoxyCodeLine{\ \ ssl:\ \textcolor{keyword}{true}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}\ =\ \textcolor{keyword}{new}\ Pool(config);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{/*}}
+\DoxyCodeLine{\textcolor{comment}{\ \ Transforms,\ 'postgres://DBuser:secret@DBHost:\#\#\#\#\#/myDB',\ into}}
+\DoxyCodeLine{\textcolor{comment}{\ \ config\ =\ \{}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ user:\ 'DBuser',}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ password:\ 'secret',}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ host:\ 'DBHost',}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ port:\ '\#\#\#\#\#',}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ database:\ 'myDB',}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ ssl:\ true}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \}}}
+\DoxyCodeLine{\textcolor{comment}{*/}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1520}{}\doxysubsection{\texorpdfstring{acquire clients with a promise}{acquire clients with a promise}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1520}
+pg-\/pool supports a fully promise-\/based api for acquiring clients
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}\ =\ \textcolor{keyword}{new}\ Pool()}
+\DoxyCodeLine{\mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.connect().then(client\ =>\ \{}
+\DoxyCodeLine{\ \ client.query(\textcolor{stringliteral}{'select\ \$1::text\ as\ name'},\ [\textcolor{stringliteral}{'pg-\/pool'}]).then(\mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ client.release()}
+\DoxyCodeLine{\ \ \ \ console.log(\textcolor{stringliteral}{'hello\ from'},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.rows[0].name)}
+\DoxyCodeLine{\ \ \})}
+\DoxyCodeLine{\ \ .catch(e\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ client.release()}
+\DoxyCodeLine{\ \ \ \ console.error(\textcolor{stringliteral}{'query\ error'},\ e.message,\ e.stack)}
+\DoxyCodeLine{\ \ \})}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1521}{}\doxysubsection{\texorpdfstring{plays nice with async/await}{plays nice with async/await}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1521}
+this ends up looking much nicer if you\textquotesingle{}re using \href{https://github.com/tj/co}{\texttt{ co}} or async/await\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ with\ async/await}}
+\DoxyCodeLine{(\mbox{\hyperlink{server_8js_ae1bff8c68b572fc576b50c4e5ace656f}{async}}\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ var\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}\ =\ \textcolor{keyword}{new}\ Pool()}
+\DoxyCodeLine{\ \ var\ client\ =\ await\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.connect()}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{inherits_8js_abe4cc9788f52e49485473dc699537388}{try}}\ \{}
+\DoxyCodeLine{\ \ \ \ var\ result\ =\ await\ client.query(\textcolor{stringliteral}{'select\ \$1::text\ as\ name'},\ [\textcolor{stringliteral}{'brianc'}])}
+\DoxyCodeLine{\ \ \ \ console.log(\textcolor{stringliteral}{'hello\ from'},\ result.rows[0])}
+\DoxyCodeLine{\ \ \}\ \textcolor{keywordflow}{finally}\ \{}
+\DoxyCodeLine{\ \ \ \ client.release()}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\})().catch(e\ =>\ console.error(e.message,\ e.stack))}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ with\ co}}
+\DoxyCodeLine{co(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ *\ ()\ \{}
+\DoxyCodeLine{\ \ var\ client\ =\ yield\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.connect()}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\ \ \ \ var\ result\ =\ yield\ client.query(\textcolor{stringliteral}{'select\ \$1::text\ as\ name'},\ [\textcolor{stringliteral}{'brianc'}])}
+\DoxyCodeLine{\ \ \ \ console.log(\textcolor{stringliteral}{'hello\ from'},\ result.rows[0])}
+\DoxyCodeLine{\ \ \}\ \textcolor{keywordflow}{finally}\ \{}
+\DoxyCodeLine{\ \ \ \ client.release()}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}).\textcolor{keywordflow}{catch}(e\ =>\ console.error(e.message,\ e.stack))}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1522}{}\doxysubsection{\texorpdfstring{your new favorite helper method}{your new favorite helper method}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1522}
+because its so common to just run a query and return the client to the pool afterward pg-\/pool has this built-\/in\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}\ =\ \textcolor{keyword}{new}\ Pool()}
+\DoxyCodeLine{var\ time\ =\ await\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.\mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{query}}('SELECT\ NOW()')}
+\DoxyCodeLine{var\ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}\ =\ await\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.\mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{query}}('select\ \$1::text\ as\ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}',\ ['brianc'])}
+\DoxyCodeLine{console.\mbox{\hyperlink{browser_8js_abd96780d5def5a58be64a80192702ca8}{log}}(\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}.rows[0].\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}},\ 'says\ hello\ at',\ time.rows[0].now)}
+
+\end{DoxyCode}
+
+
+you can also use a callback here if you\textquotesingle{}d like\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}\ =\ \textcolor{keyword}{new}\ Pool()}
+\DoxyCodeLine{\mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.\mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{query}}('SELECT\ \$1::text\ as\ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}',\ ['brianc'],\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (err,\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})\ \{}
+\DoxyCodeLine{\ \ console.log(\mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.rows[0].name)\ \textcolor{comment}{//\ brianc}}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+
+
+{\bfseries{pro tip\+:}} unless you need to run a transaction (which requires a single client for multiple queries) or you have some other edge case like \href{https://github.com/brianc/node-pg-query-stream}{\texttt{ streaming rows}} or using a \href{https://github.com/brianc/node-pg-cursor}{\texttt{ cursor}} you should almost always just use {\ttfamily pool.\+query}. Its easy, it does the right thing \+:tm\+:, and wont ever forget to return clients back to the pool after the query is done.\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1523}{}\doxysubsection{\texorpdfstring{drop-\/in backwards compatible}{drop-\/in backwards compatible}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1523}
+pg-\/pool still and will always support the traditional callback api for acquiring a client. This is the exact API node-\/postgres has shipped with for years\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}\ =\ \textcolor{keyword}{new}\ Pool()}
+\DoxyCodeLine{\mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.connect((err,\ client,\ done)\ =>\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (err)\ \textcolor{keywordflow}{return}\ done(err)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ client.query(\textcolor{stringliteral}{'SELECT\ \$1::text\ as\ name'},\ [\textcolor{stringliteral}{'pg-\/pool'}],\ (err,\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ done()}
+\DoxyCodeLine{\ \ \ \ if\ (err)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ return\ console.error(\textcolor{stringliteral}{'query\ error'},\ e.message,\ e.stack)}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ console.log(\textcolor{stringliteral}{'hello\ from'},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.rows[0].name)}
+\DoxyCodeLine{\ \ \})}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1524}{}\doxysubsection{\texorpdfstring{shut it down}{shut it down}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1524}
+When you are finished with the pool if all the clients are idle the pool will close them after {\ttfamily config.\+idle\+Timeout\+Millis} and your app will shutdown gracefully. If you don\textquotesingle{}t want to wait for the timeout you can end the pool as follows\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}\ =\ \textcolor{keyword}{new}\ Pool()}
+\DoxyCodeLine{var\ client\ =\ await\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.connect()}
+\DoxyCodeLine{console.\mbox{\hyperlink{browser_8js_abd96780d5def5a58be64a80192702ca8}{log}}(await\ client.\mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{query}}('select\ now()'))}
+\DoxyCodeLine{client.release()}
+\DoxyCodeLine{await\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.end()}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1525}{}\doxysubsection{\texorpdfstring{a note on instances}{a note on instances}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1525}
+The pool should be a {\bfseries{long-\/lived object}} in your application. Generally you\textquotesingle{}ll want to instantiate one pool when your app starts up and use the same instance of the pool throughout the lifetime of your application. If you are frequently creating a new pool within your code you likely don\textquotesingle{}t have your pool initialization code in the correct place. Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ assume\ this\ is\ a\ file\ in\ your\ program\ at\ ./your-\/app/lib/db.js}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ correct\ usage:\ create\ the\ pool\ and\ let\ it\ live}}
+\DoxyCodeLine{\textcolor{comment}{//\ 'globally'\ here,\ controlling\ access\ to\ it\ through\ exported\ methods}}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}\ =\ \textcolor{keyword}{new}\ pg.Pool()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ this\ is\ the\ right\ way\ to\ export\ the\ query\ method}}
+\DoxyCodeLine{\textcolor{keyword}{module}.exports.query\ =\ (text,\ values)\ =>\ \{}
+\DoxyCodeLine{\ \ console.log('query:',\ text,\ values)}
+\DoxyCodeLine{\ \ return\ pool.query(text,\ values)}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ this\ would\ be\ the\ WRONG\ way\ to\ export\ the\ connect\ method}}
+\DoxyCodeLine{module.exports.connect\ =\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ notice\ how\ we\ would\ be\ creating\ a\ pool\ instance\ here}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ every\ time\ we\ called\ 'connect'\ to\ get\ a\ new\ client?}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ that's\ a\ bad\ thing\ \&\ results\ in\ creating\ an\ unbounded}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ number\ of\ pools\ \&\ therefore\ connections}}
+\DoxyCodeLine{\ \ var\ aPool\ =\ new\ pg.Pool()}
+\DoxyCodeLine{\ \ return\ aPool.connect()}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1526}{}\doxysubsection{\texorpdfstring{events}{events}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1526}
+Every instance of a {\ttfamily Pool} is an event emitter. These instances emit the following events\+:\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1527}{}\doxysubsubsection{\texorpdfstring{error}{error}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1527}
+Emitted whenever an idle client in the pool encounters an error. This is common when your Postgre\+SQL server shuts down, reboots, or a network partition otherwise causes it to become unavailable while your pool has connected clients.
+
+Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const}\ Pool\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'pg-\/pool'})}
+\DoxyCodeLine{const\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}\ =\ new\ Pool()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ attach\ an\ error\ handler\ to\ the\ pool\ for\ when\ a\ connected,\ idle\ client}}
+\DoxyCodeLine{\textcolor{comment}{//\ receives\ an\ error\ by\ being\ disconnected,\ etc}}
+\DoxyCodeLine{\mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.on('error',\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(error,\ client)\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ handle\ this\ in\ the\ same\ way\ you\ would\ treat\ process.on('uncaughtException')}}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ it\ is\ supplied\ the\ error\ as\ well\ as\ the\ idle\ client\ which\ received\ the\ error}}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1528}{}\doxysubsubsection{\texorpdfstring{connect}{connect}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1528}
+Fired whenever the pool creates a {\bfseries{new}} {\ttfamily pg.\+Client} instance and successfully connects it to the backend.
+
+Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const}\ Pool\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'pg-\/pool'})}
+\DoxyCodeLine{const\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}\ =\ new\ Pool()}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ \mbox{\hyperlink{b_8js_aa8808e1c6d5fc017e61f5b78127ff466}{count}}\ =\ 0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.on('connect',\ client\ =>\ \{}
+\DoxyCodeLine{\ \ client.count\ =\ \mbox{\hyperlink{b_8js_aa8808e1c6d5fc017e61f5b78127ff466}{count}}++}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}}
+\DoxyCodeLine{\ \ .connect()}
+\DoxyCodeLine{\ \ .then(client\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ client}
+\DoxyCodeLine{\ \ \ \ \ \ .query(\textcolor{stringliteral}{'SELECT\ \$1::int\ AS\ "{}clientCount"{}'},\ [client.count])}
+\DoxyCodeLine{\ \ \ \ \ \ .then(\mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}\ =>\ console.log(\mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.rows[0].clientCount))\ \textcolor{comment}{//\ outputs\ 0}}
+\DoxyCodeLine{\ \ \ \ \ \ .then(()\ =>\ client)}
+\DoxyCodeLine{\ \ \})}
+\DoxyCodeLine{\ \ .then(client\ =>\ client.release())}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1529}{}\doxysubsubsection{\texorpdfstring{acquire}{acquire}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1529}
+Fired whenever the a client is acquired from the pool
+
+Example\+:
+
+This allows you to count the number of clients which have ever been acquired from the pool.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ Pool\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'pg-\/pool'})}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}\ =\ new\ Pool()}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ acquireCount\ =\ 0}
+\DoxyCodeLine{\mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.on('acquire',\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (client)\ \{}
+\DoxyCodeLine{\ \ acquireCount++}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ connectCount\ =\ 0}
+\DoxyCodeLine{\mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.on(\textcolor{stringliteral}{'connect'},\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ ()\ \{}
+\DoxyCodeLine{\ \ connectCount++}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ 200;\ i++)\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}.query(\textcolor{stringliteral}{'SELECT\ NOW()'})}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{setTimeout(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ ()\ \{}
+\DoxyCodeLine{\ \ console.log(\textcolor{stringliteral}{'connect\ count:'},\ connectCount)\ \textcolor{comment}{//\ output:\ connect\ count:\ 10}}
+\DoxyCodeLine{\ \ console.log(\textcolor{stringliteral}{'acquire\ count:'},\ acquireCount)\ \textcolor{comment}{//\ output:\ acquire\ count:\ 200}}
+\DoxyCodeLine{\},\ 100)}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1530}{}\doxysubsection{\texorpdfstring{environment variables}{environment variables}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1530}
+pg-\/pool \& node-\/postgres support some of the same environment variables as {\ttfamily psql} supports. The most common are\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{PGDATABASE=my\_db}
+\DoxyCodeLine{PGUSER=username}
+\DoxyCodeLine{PGPASSWORD="{}my\ awesome\ password"{}}
+\DoxyCodeLine{PGPORT=5432}
+\DoxyCodeLine{PGSSLMODE=require}
+
+\end{DoxyCode}
+
+
+Usually I will export these into my local environment via a {\ttfamily .env} file with environment settings or export them in {\ttfamily \texorpdfstring{$\sim$}{\string~}/.bash\+\_\+profile} or something similar. This way I get configurability which works with both the postgres suite of tools ({\ttfamily psql}, {\ttfamily pg\+\_\+dump}, {\ttfamily pg\+\_\+restore}) and node, I can vary the environment variables locally and in production, and it supports the concept of a \href{http://12factor.net/}{\texttt{ 12-\/factor app}} out of the box.\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1531}{}\doxysection{\texorpdfstring{bring your own promise}{bring your own promise}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1531}
+In versions of node {\ttfamily \texorpdfstring{$<$}{<}=0.\+12.\+x} there is no native promise implementation available globally. You can polyfill the promise globally like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ first\ run\ \`{}npm\ install\ promise-\/polyfill\ -\/-\/save}}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (typeof\ Promise\ ==\ \textcolor{stringliteral}{'undefined'})\ \{}
+\DoxyCodeLine{\ \ global.Promise\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'promise-\/polyfill'})}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+You can use any other promise implementation you\textquotesingle{}d like. The pool also allows you to configure the promise implementation on a per-\/pool level\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ bluebirdPool\ =\ \textcolor{keyword}{new}\ Pool(\{}
+\DoxyCodeLine{\ \ Promise:\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'bluebird'})}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+
+
+{\bfseries{please note\+:}} in node {\ttfamily \texorpdfstring{$<$}{<}=0.\+12.\+x} the pool will throw if you do not provide a promise constructor in one of the two ways mentioned above. In node {\ttfamily \texorpdfstring{$>$}{>}=4.\+0.\+0} the pool will use the native promise implementation by default; however, the two methods above still allow you to "{}bring your own."{}\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1532}{}\doxysection{\texorpdfstring{max\+Uses and read-\/replica autoscaling (e.\+g. AWS Aurora)}{max\+Uses and read-\/replica autoscaling (e.\+g. AWS Aurora)}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1532}
+The max\+Uses config option can help an application instance rebalance load against a replica set that has been auto-\/scaled after the connection pool is already full of healthy connections.
+
+The mechanism here is that a connection is considered "{}expended"{} after it has been acquired and released {\ttfamily max\+Uses} number of times. Depending on the load on your system, this means there will be an approximate time in which any given connection will live, thus creating a window for rebalancing.
+
+Imagine a scenario where you have 10 app instances providing an API running against a replica cluster of 3 that are accessed via a round-\/robin DNS entry. Each instance runs a connection pool size of 20. With an ambient load of 50 requests per second, the connection pool will likely fill up in a few minutes with healthy connections.
+
+If you have weekly bursts of traffic which peak at 1,000 requests per second, you might want to grow your replicas to 10 during this period. Without setting {\ttfamily max\+Uses}, the new replicas will not be adopted by the app servers without an intervention -- namely, restarting each in turn in order to build up new connection pools that are balanced against all the replicas. Adding additional app server instances will help to some extent because they will adopt all the replicas in an even way, but the initial app servers will continue to focus additional load on the original replicas.
+
+This is where the {\ttfamily max\+Uses} configuration option comes into play. Setting {\ttfamily max\+Uses} to 7500 will ensure that over a period of 30 minutes or so the new replicas will be adopted as the pre-\/existing connections are closed and replaced with new ones, thus creating a window for eventual balance.
+
+You\textquotesingle{}ll want to test based on your own scenarios, but one way to make a first guess at {\ttfamily max\+Uses} is to identify an acceptable window for rebalancing and then solve for the value\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{maxUses\ =\ rebalanceWindowSeconds\ *\ totalRequestsPerSecond\ /\ numAppInstances\ /\ poolSize}
+
+\end{DoxyCode}
+
+
+In the example above, assuming we acquire and release 1 connection per request and we are aiming for a 30 minute rebalancing window\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{maxUses\ =\ rebalanceWindowSeconds\ *\ totalRequestsPerSecond\ /\ numAppInstances\ /\ poolSize}
+\DoxyCodeLine{\ \ \ 7200\ =\ \ \ \ \ \ \ \ 1800\ \ \ \ \ \ \ \ \ \ \ \ *\ \ \ \ \ \ \ \ \ \ 1000\ \ \ \ \ \ \ \ \ \ /\ \ \ \ \ \ \ \ 10\ \ \ \ \ \ \ /\ \ \ \ 25}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1533}{}\doxysection{\texorpdfstring{tests}{tests}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1533}
+To run tests clone the repo, {\ttfamily npm i} in the working dir, and then run {\ttfamily npm test}\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1534}{}\doxysection{\texorpdfstring{contributions}{contributions}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1534}
+I love contributions. Please make sure they have tests, and submit a PR. If you\textquotesingle{}re not sure if the issue is worth it or will be accepted it never hurts to open an issue to begin the conversation. If you\textquotesingle{}re interested in keeping up with node-\/postgres releated stuff, you can follow me on twitter at \href{https://twitter.com/briancarlson}{\texttt{ @briancarlson}} -\/ I generally announce any noteworthy updates there.\hypertarget{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1535}{}\doxysection{\texorpdfstring{license}{license}}\label{md_node__modules_2pg-pool_2_r_e_a_d_m_e_autotoc_md1535}
+The MIT License (MIT) Copyright (c) 2016 Brian M. Carlson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "{}\+Software"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "{}\+AS IS"{}, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 

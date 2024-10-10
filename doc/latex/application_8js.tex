@@ -1,0 +1,533 @@
+\doxysection{Referencia del archivo node\+\_\+modules/express/lib/application.js}
+\hypertarget{application_8js}{}\label{application_8js}\index{node\_modules/express/lib/application.js@{node\_modules/express/lib/application.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a04d30fa6e159a438c5fe8d248cb41845}{methods}} \mbox{\hyperlink{application_8js_a637027551c6fc7c4b6e13a5212082576}{for\+Each}} (\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(method)\{ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\mbox{[}method\mbox{]}=\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(path)\{ \mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(method===\textquotesingle{}\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{get}}\textquotesingle{} \&\&arguments.\+length===1) \{ return \mbox{\hyperlink{application_8js_aea3662ebceec6f02ef3aec57683086a6}{this.\+set}}(path);\} this.\+lazyrouter();var \mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{route}}=\mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{this.\+\_\+router.\+route}}(path);\mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{route}}\mbox{[}method\mbox{]}.apply(\mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{route}}, \mbox{\hyperlink{hasown_2index_8js_af41b23e59e21fbbca9175e1dbd07b54e}{slice.\+call}}(arguments, 1));return this;\};\})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{application_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{application_8js_abba65771981450b82508e4145d73f148}{Router}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./router\textquotesingle{})
+\item 
+var \mbox{\hyperlink{application_8js_a04d30fa6e159a438c5fe8d248cb41845}{methods}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}methods\textquotesingle{})
+\item 
+var \mbox{\hyperlink{application_8js_aaaff85ba61558a052f881cca6a226657}{middleware}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./middleware/\mbox{\hyperlink{src_2node_8js_a1dc0aa163de2e7161fbb52b60824b4c6}{init}}\textquotesingle{})
+\item 
+var \mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{query}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./\mbox{\hyperlink{application_8js_aaaff85ba61558a052f881cca6a226657}{middleware}}/query\textquotesingle{})
+\item 
+var \mbox{\hyperlink{application_8js_a651046067579e48d7f0d03ce38dc7cf8}{debug}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}debug\textquotesingle{})(\textquotesingle{}express\+:application\textquotesingle{})
+\item 
+var \mbox{\hyperlink{application_8js_a2aae9db38f1cc0bfe93e61181d3b9a50}{View}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./view\textquotesingle{})
+\item 
+var \mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}http\textquotesingle{})
+\item 
+var \mbox{\hyperlink{application_8js_abc15ca345237290114cd3c5c8714af3f}{compile\+ETag}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./\mbox{\hyperlink{lib_2parse_8js_a7b58b8887c6d26e09f79fbacfbda7f53}{utils}}\textquotesingle{}).compile\+ETag
+\item 
+var \mbox{\hyperlink{application_8js_ae2370c27ff46124de02255f0c4590a4c}{compile\+Query\+Parser}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./\mbox{\hyperlink{lib_2parse_8js_a7b58b8887c6d26e09f79fbacfbda7f53}{utils}}\textquotesingle{}).compile\+Query\+Parser
+\item 
+var \mbox{\hyperlink{application_8js_a34da2018555e2c0d480cc5d7bf9e6e44}{compile\+Trust}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./\mbox{\hyperlink{lib_2parse_8js_a7b58b8887c6d26e09f79fbacfbda7f53}{utils}}\textquotesingle{}).compile\+Trust
+\item 
+var \mbox{\hyperlink{application_8js_acfcd119b39526e732877a941ebeed620}{deprecate}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}depd\textquotesingle{})(\textquotesingle{}\mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\textquotesingle{})
+\item 
+var \mbox{\hyperlink{application_8js_a19188fd934b073f6bf88119434489ad4}{flatten}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{array_parser_8js_aa26ea275a7c12c30df9334d66ece8a65}{array}}-\/flatten\textquotesingle{})
+\item 
+var \mbox{\hyperlink{application_8js_a3fda54bf53a2d62c0f154400825c4b57}{merge}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{lib_2parse_8js_a7b58b8887c6d26e09f79fbacfbda7f53}{utils}}-\/merge\textquotesingle{})
+\item 
+var \mbox{\hyperlink{application_8js_a2001ea102ec496ebdabe15e68493427a}{resolve}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}path\textquotesingle{}).resolve
+\item 
+var \mbox{\hyperlink{application_8js_aa76cc157afb30404d8bee6cf35ebe8b2}{set\+Prototype\+Of}}
+\item 
+var \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} = \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} = \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{module.\+exports}} = \{\}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{route}}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_a017e4d01df641c6c9830c5471a94cda6}{engine}}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_adde8b8550e5c046446eadb8a9715d706}{param}}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_aea3662ebceec6f02ef3aec57683086a6}{set}}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_a99d07aaa71d58b4d359831c520ebc81b}{enabled}}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_a1c8c0f5dea0786f9f7750c076275f96c}{disabled}}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_ad1e9c3f39836d503170e7d6ab05f5900}{enable}}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_a8d03b01f00ab5602e600d29f8780d4ee}{disable}}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_adb8f173cc9d0f47e38ae05e7bb965c99}{all}}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_a8f72c37919081ee0d853416d11f41f69}{del}} = \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{deprecate.\+function}}(\mbox{\hyperlink{server_8js_af5592b322cf023a990308ac1e32c856d}{app.\+delete}}, \textquotesingle{}app.\+del\+: Use \mbox{\hyperlink{server_8js_af5592b322cf023a990308ac1e32c856d}{app.\+delete}} instead\textquotesingle{})
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_a33b10e770d40c6b603d01132ceb665e8}{render}}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{application_8js_a57e630eaf5f2d94b72288e1cef6edc49}{listen}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{application_8js_a637027551c6fc7c4b6e13a5212082576}\index{application.js@{application.js}!forEach@{forEach}}
+\index{forEach@{forEach}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{forEach()}{forEach()}}
+{\footnotesize\ttfamily \label{application_8js_a637027551c6fc7c4b6e13a5212082576} 
+\mbox{\hyperlink{application_8js_a04d30fa6e159a438c5fe8d248cb41845}{methods}} for\+Each (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(method)\{ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\mbox{[}method\mbox{]}=\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(path)\{ \mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(method===\textquotesingle{}\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{get}}\textquotesingle{} \&\&arguments.\+length===1) \{ return \mbox{\hyperlink{application_8js_aea3662ebceec6f02ef3aec57683086a6}{this.\+set}}(path);\} this.\+lazyrouter();var \mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{route}}=\mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{this.\+\_\+router.\+route}}(path);\mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{route}}\mbox{[}method\mbox{]}.apply(\mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{route}}, \mbox{\hyperlink{hasown_2index_8js_af41b23e59e21fbbca9175e1dbd07b54e}{slice.\+call}}(arguments, 1));return this;\};\}}]{}{}\end{DoxyParamCaption})}
+
+Delegate {\ttfamily .VERB(...)} calls to {\ttfamily router.\+VERB(...)}. 
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{application_8js_adb8f173cc9d0f47e38ae05e7bb965c99}\index{application.js@{application.js}!all@{all}}
+\index{all@{all}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{all}{all}}
+{\footnotesize\ttfamily \label{application_8js_adb8f173cc9d0f47e38ae05e7bb965c99} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} all}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{application_8js_adb8f173cc9d0f47e38ae05e7bb965c99}{all}}(path)\ \{}
+\DoxyCodeLine{\ \ this.lazyrouter();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ var\ \mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{route}}\ =\ this.\_router.route(path);}
+\DoxyCodeLine{\ \ var\ args\ =\ \mbox{\hyperlink{express_2lib_2router_2index_8js_acab0c09ac73e7a3c85a21fa773e9b8b0}{slice}}.call(arguments,\ 1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{application_8js_a04d30fa6e159a438c5fe8d248cb41845}{methods}}.length;\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{route}}[\mbox{\hyperlink{application_8js_a04d30fa6e159a438c5fe8d248cb41845}{methods}}[i]].apply(\mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{route}},\ args);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Special-\/cased "{}all"{} method, applying the given route {\ttfamily path}, middleware, and callback to {\itshape every} HTTP method.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & path \\
+\hline
+{\em \{\+Function\}} & ... \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{app\} for chaining 
+\end{DoxyReturn}
+\Hypertarget{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}\index{application.js@{application.js}!app@{app}}
+\index{app@{app}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily \label{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d} 
+var app = \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} = \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{module.\+exports}} = \{\}}
+
+Application prototype. \Hypertarget{application_8js_abc15ca345237290114cd3c5c8714af3f}\index{application.js@{application.js}!compileETag@{compileETag}}
+\index{compileETag@{compileETag}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{compileETag}{compileETag}}
+{\footnotesize\ttfamily \label{application_8js_abc15ca345237290114cd3c5c8714af3f} 
+var compile\+ETag = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./\mbox{\hyperlink{lib_2parse_8js_a7b58b8887c6d26e09f79fbacfbda7f53}{utils}}\textquotesingle{}).compile\+ETag}
+
+\Hypertarget{application_8js_ae2370c27ff46124de02255f0c4590a4c}\index{application.js@{application.js}!compileQueryParser@{compileQueryParser}}
+\index{compileQueryParser@{compileQueryParser}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{compileQueryParser}{compileQueryParser}}
+{\footnotesize\ttfamily \label{application_8js_ae2370c27ff46124de02255f0c4590a4c} 
+var compile\+Query\+Parser = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./\mbox{\hyperlink{lib_2parse_8js_a7b58b8887c6d26e09f79fbacfbda7f53}{utils}}\textquotesingle{}).compile\+Query\+Parser}
+
+\Hypertarget{application_8js_a34da2018555e2c0d480cc5d7bf9e6e44}\index{application.js@{application.js}!compileTrust@{compileTrust}}
+\index{compileTrust@{compileTrust}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{compileTrust}{compileTrust}}
+{\footnotesize\ttfamily \label{application_8js_a34da2018555e2c0d480cc5d7bf9e6e44} 
+var compile\+Trust = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./\mbox{\hyperlink{lib_2parse_8js_a7b58b8887c6d26e09f79fbacfbda7f53}{utils}}\textquotesingle{}).compile\+Trust}
+
+\Hypertarget{application_8js_a651046067579e48d7f0d03ce38dc7cf8}\index{application.js@{application.js}!debug@{debug}}
+\index{debug@{debug}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{debug}{debug}}
+{\footnotesize\ttfamily \label{application_8js_a651046067579e48d7f0d03ce38dc7cf8} 
+var debug = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}debug\textquotesingle{})(\textquotesingle{}express\+:application\textquotesingle{})}
+
+\Hypertarget{application_8js_a8f72c37919081ee0d853416d11f41f69}\index{application.js@{application.js}!del@{del}}
+\index{del@{del}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{del}{del}}
+{\footnotesize\ttfamily \label{application_8js_a8f72c37919081ee0d853416d11f41f69} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} del = \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{deprecate.\+function}}(\mbox{\hyperlink{server_8js_af5592b322cf023a990308ac1e32c856d}{app.\+delete}}, \textquotesingle{}app.\+del\+: Use \mbox{\hyperlink{server_8js_af5592b322cf023a990308ac1e32c856d}{app.\+delete}} instead\textquotesingle{})}
+
+\Hypertarget{application_8js_acfcd119b39526e732877a941ebeed620}\index{application.js@{application.js}!deprecate@{deprecate}}
+\index{deprecate@{deprecate}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{deprecate}{deprecate}}
+{\footnotesize\ttfamily \label{application_8js_acfcd119b39526e732877a941ebeed620} 
+var deprecate = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}depd\textquotesingle{})(\textquotesingle{}\mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\textquotesingle{})}
+
+\Hypertarget{application_8js_a8d03b01f00ab5602e600d29f8780d4ee}\index{application.js@{application.js}!disable@{disable}}
+\index{disable@{disable}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{disable}{disable}}
+{\footnotesize\ttfamily \label{application_8js_a8d03b01f00ab5602e600d29f8780d4ee} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} disable}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{application_8js_a8d03b01f00ab5602e600d29f8780d4ee}{disable}}(setting)\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ this.\mbox{\hyperlink{application_8js_aea3662ebceec6f02ef3aec57683086a6}{set}}(setting,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Disable {\ttfamily setting}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & setting \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{app\} for chaining 
+\end{DoxyReturn}
+\Hypertarget{application_8js_a1c8c0f5dea0786f9f7750c076275f96c}\index{application.js@{application.js}!disabled@{disabled}}
+\index{disabled@{disabled}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{disabled}{disabled}}
+{\footnotesize\ttfamily \label{application_8js_a1c8c0f5dea0786f9f7750c076275f96c} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} disabled}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{application_8js_a1c8c0f5dea0786f9f7750c076275f96c}{disabled}}(setting)\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ !this.\mbox{\hyperlink{application_8js_aea3662ebceec6f02ef3aec57683086a6}{set}}(setting);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Check if {\ttfamily setting} is disabled.
+
+app.\+disabled(\textquotesingle{}foo\textquotesingle{}) // =\texorpdfstring{$>$}{>} true
+
+app.\+enable(\textquotesingle{}foo\textquotesingle{}) app.\+disabled(\textquotesingle{}foo\textquotesingle{}) // =\texorpdfstring{$>$}{>} false
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & setting \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{Boolean\} 
+\end{DoxyReturn}
+\Hypertarget{application_8js_ad1e9c3f39836d503170e7d6ab05f5900}\index{application.js@{application.js}!enable@{enable}}
+\index{enable@{enable}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{enable}{enable}}
+{\footnotesize\ttfamily \label{application_8js_ad1e9c3f39836d503170e7d6ab05f5900} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} enable}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{application_8js_ad1e9c3f39836d503170e7d6ab05f5900}{enable}}(setting)\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ this.\mbox{\hyperlink{application_8js_aea3662ebceec6f02ef3aec57683086a6}{set}}(setting,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Enable {\ttfamily setting}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & setting \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{app\} for chaining 
+\end{DoxyReturn}
+\Hypertarget{application_8js_a99d07aaa71d58b4d359831c520ebc81b}\index{application.js@{application.js}!enabled@{enabled}}
+\index{enabled@{enabled}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily \label{application_8js_a99d07aaa71d58b4d359831c520ebc81b} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} enabled}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{application_8js_a99d07aaa71d58b4d359831c520ebc81b}{enabled}}(setting)\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ Boolean(this.\mbox{\hyperlink{application_8js_aea3662ebceec6f02ef3aec57683086a6}{set}}(setting));}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Check if {\ttfamily setting} is enabled (truthy).
+
+app.\+enabled(\textquotesingle{}foo\textquotesingle{}) // =\texorpdfstring{$>$}{>} false
+
+app.\+enable(\textquotesingle{}foo\textquotesingle{}) app.\+enabled(\textquotesingle{}foo\textquotesingle{}) // =\texorpdfstring{$>$}{>} true
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & setting \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{Boolean\} 
+\end{DoxyReturn}
+\Hypertarget{application_8js_a017e4d01df641c6c9830c5471a94cda6}\index{application.js@{application.js}!engine@{engine}}
+\index{engine@{engine}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{engine}{engine}}
+{\footnotesize\ttfamily \label{application_8js_a017e4d01df641c6c9830c5471a94cda6} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} engine}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{application_8js_a017e4d01df641c6c9830c5471a94cda6}{engine}}(ext,\ fn)\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (typeof\ fn\ !==\ \textcolor{stringliteral}{'function'})\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_error}{Error}}(\textcolor{stringliteral}{'callback\ function\ required'});}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ var\ \mbox{\hyperlink{mime_8js_a0442fbc62163718c2d1b972be791c68b}{extension}}\ =\ ext[0]\ !==\ \textcolor{charliteral}{'.'}}
+\DoxyCodeLine{\ \ \ \ ?\ \textcolor{charliteral}{'.'}\ +\ ext}
+\DoxyCodeLine{\ \ \ \ :\ ext;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ this.engines[\mbox{\hyperlink{mime_8js_a0442fbc62163718c2d1b972be791c68b}{extension}}]\ =\ fn;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Register the given template engine callback {\ttfamily fn} as {\ttfamily ext}.
+
+By default will {\ttfamily \doxylink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require()}} the engine based on the file extension. For example if you try to render a "{}foo.\+ejs"{} file Express will invoke the following internally\+: \begin{DoxyVerb}app.engine('ejs', require('ejs').__express);
+\end{DoxyVerb}
+
+
+For engines that do not provide {\ttfamily .\+\_\+\+\_\+express} out of the box, or if you wish to "{}map"{} a different extension to the template engine you may use this method. For example mapping the EJS template engine to "{}.\+html"{} files\+: \begin{DoxyVerb}app.engine('html', require('ejs').renderFile);
+\end{DoxyVerb}
+
+
+In this case EJS provides a {\ttfamily .render\+File()} method with the same signature that Express expects\+: {\ttfamily (path, options, callback)}, though note that it aliases this method as {\ttfamily ejs.\+\_\+\+\_\+express} internally so if you\textquotesingle{}re using "{}.\+ejs"{} extensions you don\textquotesingle{}t need to do anything.
+
+Some template engines do not follow this convention, the \href{https://github.com/tj/consolidate.js}{\texttt{ Consolidate.\+js}} library was created to map all of node\textquotesingle{}s popular template engines to follow this convention, thus allowing them to work seamlessly within Express.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & ext \\
+\hline
+{\em \{\+Function\}} & fn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{app\} for chaining 
+\end{DoxyReturn}
+\Hypertarget{application_8js_a19188fd934b073f6bf88119434489ad4}\index{application.js@{application.js}!flatten@{flatten}}
+\index{flatten@{flatten}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{flatten}{flatten}}
+{\footnotesize\ttfamily \label{application_8js_a19188fd934b073f6bf88119434489ad4} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} flatten = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{array_parser_8js_aa26ea275a7c12c30df9334d66ece8a65}{array}}-\/flatten\textquotesingle{})}
+
+Flatten the given {\ttfamily arr}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+Array\}} & arr \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{Array\} @api private 
+\end{DoxyReturn}
+\Hypertarget{application_8js_a55f22d498ca401fddca364855629d1d3}\index{application.js@{application.js}!http@{http}}
+\index{http@{http}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{http}{http}}
+{\footnotesize\ttfamily \label{application_8js_a55f22d498ca401fddca364855629d1d3} 
+var http = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}http\textquotesingle{})}
+
+\Hypertarget{application_8js_a57e630eaf5f2d94b72288e1cef6edc49}\index{application.js@{application.js}!listen@{listen}}
+\index{listen@{listen}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{listen}{listen}}
+{\footnotesize\ttfamily \label{application_8js_a57e630eaf5f2d94b72288e1cef6edc49} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} listen}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{application_8js_a57e630eaf5f2d94b72288e1cef6edc49}{listen}}()\ \{}
+\DoxyCodeLine{\ \ var\ server\ =\ \mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}.createServer(\textcolor{keyword}{this});}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ server.listen.apply(server,\ arguments);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Listen for connections.
+
+A node {\ttfamily http.\+Server} is returned, with this application (which is a {\ttfamily Function}) as its callback. If you wish to create both an HTTP and HTTPS server you may do so with the "{}http"{} and "{}https"{} modules as shown here\+:
+
+var http = require(\textquotesingle{}http\textquotesingle{}) , https = require(\textquotesingle{}https\textquotesingle{}) , express = require(\textquotesingle{}express\textquotesingle{}) , app = \doxylink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express()};
+
+http.\+create\+Server(app).\doxylink{application_8js_a57e630eaf5f2d94b72288e1cef6edc49}{listen(80)}; https.\+create\+Server(\{ ... \}, app).\doxylink{application_8js_a57e630eaf5f2d94b72288e1cef6edc49}{listen(443)};
+
+\begin{DoxyReturn}{Devuelve}
+\{http.\+Server\} 
+\end{DoxyReturn}
+\Hypertarget{application_8js_a3fda54bf53a2d62c0f154400825c4b57}\index{application.js@{application.js}!merge@{merge}}
+\index{merge@{merge}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{merge}{merge}}
+{\footnotesize\ttfamily \label{application_8js_a3fda54bf53a2d62c0f154400825c4b57} 
+var merge = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{lib_2parse_8js_a7b58b8887c6d26e09f79fbacfbda7f53}{utils}}-\/merge\textquotesingle{})}
+
+\Hypertarget{application_8js_a04d30fa6e159a438c5fe8d248cb41845}\index{application.js@{application.js}!methods@{methods}}
+\index{methods@{methods}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{methods}{methods}}
+{\footnotesize\ttfamily \label{application_8js_a04d30fa6e159a438c5fe8d248cb41845} 
+var methods = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}methods\textquotesingle{})}
+
+\Hypertarget{application_8js_aaaff85ba61558a052f881cca6a226657}\index{application.js@{application.js}!middleware@{middleware}}
+\index{middleware@{middleware}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{middleware}{middleware}}
+{\footnotesize\ttfamily \label{application_8js_aaaff85ba61558a052f881cca6a226657} 
+var middleware = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./middleware/\mbox{\hyperlink{src_2node_8js_a1dc0aa163de2e7161fbb52b60824b4c6}{init}}\textquotesingle{})}
+
+\Hypertarget{application_8js_adde8b8550e5c046446eadb8a9715d706}\index{application.js@{application.js}!param@{param}}
+\index{param@{param}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{param}{param}}
+{\footnotesize\ttfamily \label{application_8js_adde8b8550e5c046446eadb8a9715d706} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} param}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{application_8js_adde8b8550e5c046446eadb8a9715d706}{param}}(\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}},\ fn)\ \{}
+\DoxyCodeLine{\ \ this.lazyrouter();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (Array.isArray(\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}.length;\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ this.\mbox{\hyperlink{application_8js_adde8b8550e5c046446eadb8a9715d706}{param}}(\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}[i],\ fn);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ this.\_router.param(\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}},\ fn);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Proxy to {\ttfamily Router\#\doxylink{application_8js_adde8b8550e5c046446eadb8a9715d706}{param()}} with one added api feature. The {\itshape name} parameter can be an array of names.
+
+See the Router\#param() docs for more details.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\texorpdfstring{$\vert$}{|}\+Array\}} & name \\
+\hline
+{\em \{\+Function\}} & fn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{app\} for chaining 
+\end{DoxyReturn}
+\Hypertarget{application_8js_a3934419f0f9a2068c705a0013b77fab3}\index{application.js@{application.js}!query@{query}}
+\index{query@{query}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{query}{query}}
+{\footnotesize\ttfamily \label{application_8js_a3934419f0f9a2068c705a0013b77fab3} 
+var query = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./\mbox{\hyperlink{application_8js_aaaff85ba61558a052f881cca6a226657}{middleware}}/query\textquotesingle{})}
+
+\Hypertarget{application_8js_a33b10e770d40c6b603d01132ceb665e8}\index{application.js@{application.js}!render@{render}}
+\index{render@{render}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{render}{render}}
+{\footnotesize\ttfamily \label{application_8js_a33b10e770d40c6b603d01132ceb665e8} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} render}
+
+Render the given view {\ttfamily name} name with {\ttfamily options} and a callback accepting an error and the rendered template string.
+
+Example\+:
+
+app.\+render(\textquotesingle{}email\textquotesingle{}, \{ name\+: \textquotesingle{}Tobi\textquotesingle{} \}, function(err, html)\{ // ... \})
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & name \\
+\hline
+{\em \{\+Object\texorpdfstring{$\vert$}{|}\+Function\}} & options or fn \\
+\hline
+{\em \{\+Function\}} & callback \\
+\hline
+\end{DoxyParams}
+\Hypertarget{application_8js_a2001ea102ec496ebdabe15e68493427a}\index{application.js@{application.js}!resolve@{resolve}}
+\index{resolve@{resolve}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{resolve}{resolve}}
+{\footnotesize\ttfamily \label{application_8js_a2001ea102ec496ebdabe15e68493427a} 
+\mbox{\hyperlink{application_8js_a2aae9db38f1cc0bfe93e61181d3b9a50}{View}} \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{prototype}} resolve = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}path\textquotesingle{}).resolve}
+
+Resolve the file within the given directory.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{string\}} & dir \\
+\hline
+{\em \{string\}} & file \\
+\hline
+\end{DoxyParams}
+\Hypertarget{application_8js_af3f591f97717ca147d68bee8e75eb44d}\index{application.js@{application.js}!route@{route}}
+\index{route@{route}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{route}{route}}
+{\footnotesize\ttfamily \label{application_8js_af3f591f97717ca147d68bee8e75eb44d} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} route}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{route}}(path)\ \{}
+\DoxyCodeLine{\ \ this.lazyrouter();}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ this.\_router.route(path);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Proxy to the app {\ttfamily Router\#\doxylink{application_8js_af3f591f97717ca147d68bee8e75eb44d}{route()}} Returns a new {\ttfamily Route} instance for the {\itshape path}.
+
+Routes are isolated middleware stacks for specific paths. See the Route api docs for details. \Hypertarget{application_8js_abba65771981450b82508e4145d73f148}\index{application.js@{application.js}!Router@{Router}}
+\index{Router@{Router}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{Router}{Router}}
+{\footnotesize\ttfamily \label{application_8js_abba65771981450b82508e4145d73f148} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} Router = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./router\textquotesingle{})}
+
+\Hypertarget{application_8js_aea3662ebceec6f02ef3aec57683086a6}\index{application.js@{application.js}!set@{set}}
+\index{set@{set}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{set}{set}}
+{\footnotesize\ttfamily \label{application_8js_aea3662ebceec6f02ef3aec57683086a6} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} set}
+
+Assign {\ttfamily setting} to {\ttfamily val}, or return {\ttfamily setting}\textquotesingle{}s value.
+
+app.\+set(\textquotesingle{}foo\textquotesingle{}, \textquotesingle{}bar\textquotesingle{}); app.\+set(\textquotesingle{}foo\textquotesingle{}); // =\texorpdfstring{$>$}{>} "{}bar"{}
+
+Mounted servers inherit their parent server\textquotesingle{}s settings.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & setting \\
+\hline
+{\em \{\texorpdfstring{$\ast$}{*}\}} & \mbox{[}val\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{Server\} for chaining 
+\end{DoxyReturn}
+\Hypertarget{application_8js_aa76cc157afb30404d8bee6cf35ebe8b2}\index{application.js@{application.js}!setPrototypeOf@{setPrototypeOf}}
+\index{setPrototypeOf@{setPrototypeOf}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{setPrototypeOf}{setPrototypeOf}}
+{\footnotesize\ttfamily \label{application_8js_aa76cc157afb30404d8bee6cf35ebe8b2} 
+var set\+Prototype\+Of}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'setprototypeof'})}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ hasOwnProperty\ =\ Object.\mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{prototype}}.hasOwnProperty}
+\DoxyCodeLine{var\ \mbox{\hyperlink{express_2lib_2router_2index_8js_acab0c09ac73e7a3c85a21fa773e9b8b0}{slice}}\ =\ Array.\mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{prototype}}.\mbox{\hyperlink{express_2lib_2router_2index_8js_acab0c09ac73e7a3c85a21fa773e9b8b0}{slice}}}
+
+\end{DoxyCode}
+\Hypertarget{application_8js_ae2475e10618961c050dcba04e8c42331}\index{application.js@{application.js}!strict@{strict}}
+\index{strict@{strict}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{application_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+express Copyright(c) 2009-\/2013 TJ Holowaychuk Copyright(c) 2013 Roman Shtylman Copyright(c) 2014-\/2015 Douglas Christopher Wilson MIT Licensed \Hypertarget{application_8js_a8192500ed5d08ae60d3778b54729bd51}\index{application.js@{application.js}!use@{use}}
+\index{use@{use}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{use}{use}}
+{\footnotesize\ttfamily \label{application_8js_a8192500ed5d08ae60d3778b54729bd51} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} use}
+
+Proxy {\ttfamily Router\#\doxylink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use()}} to add middleware to the app router. See Router\#use() documentation for details.
+
+If the {\itshape fn} parameter is an express app, then it will be mounted at the {\itshape route} specified. \Hypertarget{application_8js_a2aae9db38f1cc0bfe93e61181d3b9a50}\index{application.js@{application.js}!View@{View}}
+\index{View@{View}!application.js@{application.js}}
+\doxysubsubsection{\texorpdfstring{View}{View}}
+{\footnotesize\ttfamily \label{application_8js_a2aae9db38f1cc0bfe93e61181d3b9a50} 
+var View = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./view\textquotesingle{})}
+

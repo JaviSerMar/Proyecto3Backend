@@ -1,0 +1,270 @@
+\doxysection{Referencia del archivo node\+\_\+modules/mime/src/test.js}
+\hypertarget{mime_2src_2test_8js}{}\label{mime_2src_2test_8js}\index{node\_modules/mime/src/test.js@{node\_modules/mime/src/test.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{equal}} (\textquotesingle{}text/plain\textquotesingle{}, mime.\+lookup(\textquotesingle{}text.\+txt\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a1cbb4539e4eab81854e4f2cb716295a4}{equal}} (\textquotesingle{}text/plain\textquotesingle{}, mime.\+lookup(\textquotesingle{}TEXT.\+TXT\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_ae390f406b3677643528955ab38ba3493}{equal}} (\textquotesingle{}text/plain\textquotesingle{}, mime.\+lookup(\textquotesingle{}dir/text.\+txt\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a8635ba5f31cccd6ab36f86b49da8f491}{equal}} (\textquotesingle{}text/plain\textquotesingle{}, mime.\+lookup(\textquotesingle{}.text.\+txt\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a878cac35e489cd14e4e247cbeda4d2b7}{equal}} (\textquotesingle{}text/plain\textquotesingle{}, mime.\+lookup(\textquotesingle{}.txt\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a2a3012fec46e342713d29f1ddd6063ad}{equal}} (\textquotesingle{}text/plain\textquotesingle{}, mime.\+lookup(\textquotesingle{}txt\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_accd17bfe025bdbe5edea8577d8cf0008}{equal}} (\textquotesingle{}text/plain\textquotesingle{}, mime.\+lookup(\textquotesingle{}/txt\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a6922f078b7729d18cf5cf273db1648c3}{equal}} (\textquotesingle{}text/plain\textquotesingle{}, mime.\+lookup(\textquotesingle{}\textbackslash{}\textbackslash{}txt\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_aaffc6d6fbbc14621409bda503188fbc3}{equal}} (\textquotesingle{}\mbox{\hyperlink{express_8js_aa30c9d0e437092b0607b68dee5b2c751}{application}}/octet-\/\mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}}\textquotesingle{}, mime.\+lookup(\textquotesingle{}text.\+nope\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a5d052f4df2095cb190ba6e1b5394c894}{equal}} (\textquotesingle{}fallback\textquotesingle{}, mime.\+lookup(\textquotesingle{}text.\+fallback\textquotesingle{}, \textquotesingle{}fallback\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a2f11ba768a7399946ef1a203a773aab5}{equal}} (\textquotesingle{}txt\textquotesingle{}, \mbox{\hyperlink{mime_8js_a0442fbc62163718c2d1b972be791c68b}{mime.\+extension}}(mime.\+types.\+text))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a1d6551e24fdec5ebd3a867ed43374a22}{equal}} (\textquotesingle{}\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}\textquotesingle{}, \mbox{\hyperlink{mime_8js_a0442fbc62163718c2d1b972be791c68b}{mime.\+extension}}(mime.\+types.\+htm))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a4a2ed30b4a0f0961ea21025b83c1486e}{equal}} (\textquotesingle{}bin\textquotesingle{}, \mbox{\hyperlink{mime_8js_a0442fbc62163718c2d1b972be791c68b}{mime.\+extension}}(\textquotesingle{}\mbox{\hyperlink{express_8js_aa30c9d0e437092b0607b68dee5b2c751}{application}}/octet-\/\mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}}\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_aae8456a80cce76d30cc8bfbd31018dcb}{equal}} (\textquotesingle{}bin\textquotesingle{}, \mbox{\hyperlink{mime_8js_a0442fbc62163718c2d1b972be791c68b}{mime.\+extension}}(\textquotesingle{}\mbox{\hyperlink{express_8js_aa30c9d0e437092b0607b68dee5b2c751}{application}}/octet-\/\mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}} \textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_af78c6832fdc66c69581c2dbd4c6c618b}{equal}} (\textquotesingle{}\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}\textquotesingle{}, \mbox{\hyperlink{mime_8js_a0442fbc62163718c2d1b972be791c68b}{mime.\+extension}}(\textquotesingle{} text/\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}};\mbox{\hyperlink{negotiator_2index_8js_a57f5b60955b20f18ba489a7aad60314b}{charset}}=UTF-\/8\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a220f8b6bcb828080678cdd1852befc8a}{equal}} (\textquotesingle{}\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}\textquotesingle{}, \mbox{\hyperlink{mime_8js_a0442fbc62163718c2d1b972be791c68b}{mime.\+extension}}(\textquotesingle{}text/\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}};\mbox{\hyperlink{negotiator_2index_8js_a57f5b60955b20f18ba489a7aad60314b}{charset}}=UTF-\/8 \textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_aa9bf82f0e665e94dad67468ca9c8fea5}{equal}} (\textquotesingle{}\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}\textquotesingle{}, \mbox{\hyperlink{mime_8js_a0442fbc62163718c2d1b972be791c68b}{mime.\+extension}}(\textquotesingle{}text/\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}};\mbox{\hyperlink{negotiator_2index_8js_a57f5b60955b20f18ba489a7aad60314b}{charset}}=UTF-\/8\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_abb77406379499406bbb7c4047762d46e}{equal}} (\textquotesingle{}\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}\textquotesingle{}, \mbox{\hyperlink{mime_8js_a0442fbc62163718c2d1b972be791c68b}{mime.\+extension}}(\textquotesingle{}text/\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}} ;\mbox{\hyperlink{negotiator_2index_8js_a57f5b60955b20f18ba489a7aad60314b}{charset}}=UTF-\/8\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a84c7c5ad96929ee19aadb2e247dd4ddc}{equal}} (\textquotesingle{}\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}\textquotesingle{}, \mbox{\hyperlink{mime_8js_a0442fbc62163718c2d1b972be791c68b}{mime.\+extension}}(\textquotesingle{}text/Html;\mbox{\hyperlink{negotiator_2index_8js_a57f5b60955b20f18ba489a7aad60314b}{charset}}=UTF-\/8\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_af163fc4e8fcce7ffdfa9a64e2a9898b9}{equal}} (\mbox{\hyperlink{get-intrinsic_2index_8js_ae6aa4817f0f49345b718ea6b4abae197}{undefined}}, \mbox{\hyperlink{mime_8js_a0442fbc62163718c2d1b972be791c68b}{mime.\+extension}}(\textquotesingle{}unrecognized\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a6b6b4a9aeccd074ba1229e2bc7cab498}{equal}} (\textquotesingle{}font/woff\textquotesingle{}, mime.\+lookup(\textquotesingle{}file.\+woff\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a03b2296b7cf821ec14c92d8ed1de8b10}{equal}} (\textquotesingle{}\mbox{\hyperlink{express_8js_aa30c9d0e437092b0607b68dee5b2c751}{application}}/octet-\/\mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}}\textquotesingle{}, mime.\+lookup(\textquotesingle{}\mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{file.\+buffer}}\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a52fbb8a8c1acaa7cf9ffc9717ce414eb}{equal}} (\textquotesingle{}font/otf\textquotesingle{}, mime.\+lookup(\textquotesingle{}file.\+otf\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a41e00e631047613be4d4134b6e3752c6}{equal}} (\textquotesingle{}UTF-\/8\textquotesingle{}, mime.\+charsets.\+lookup(\textquotesingle{}text/plain\textquotesingle{}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a1b63c6c53e1759eb74ffdf1e6f80a007}{equal}} (\textquotesingle{}UTF-\/8\textquotesingle{}, mime.\+charsets.\+lookup(mime.\+types.\+js))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_a90ec57e47e148bef151973b2d099f817}{equal}} (\textquotesingle{}UTF-\/8\textquotesingle{}, mime.\+charsets.\+lookup(\mbox{\hyperlink{express_8js_ac6fdc7f7005e375dc7d7dce4bc785ab4}{mime.\+types.\+json}}))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_ac7206f689dc4a5bbcbb3dffb08f34801}{equal}} (\mbox{\hyperlink{get-intrinsic_2index_8js_ae6aa4817f0f49345b718ea6b4abae197}{undefined}}, mime.\+charsets.\+lookup(mime.\+types.\+bin))
+\item 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} \mbox{\hyperlink{mime_2src_2test_8js_ae7fc8b77a103b44b316303809c920934}{equal}} (\textquotesingle{}fallback\textquotesingle{}, mime.\+charsets.\+lookup(\textquotesingle{}\mbox{\hyperlink{express_8js_aa30c9d0e437092b0607b68dee5b2c751}{application}}/octet-\/\mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}}\textquotesingle{}, \textquotesingle{}fallback\textquotesingle{}))
+\item 
+console \mbox{\hyperlink{mime_2src_2test_8js_a10b9df010ded19c605b918f338f38303}{log}} (\textquotesingle{}\textbackslash{}n\+All tests passed\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \mbox{\hyperlink{mime_2src_2test_8js_ab4d288fe448bcc077971c41ae3797375}{mime}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}../mime\textquotesingle{})
+\item 
+var \mbox{\hyperlink{mime_2src_2test_8js_a5e95655c9188700b16a5488897cecb90}{assert}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}assert\textquotesingle{})
+\item 
+var \mbox{\hyperlink{mime_2src_2test_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}path\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{mime_2src_2test_8js_a03b2296b7cf821ec14c92d8ed1de8b10}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a03b2296b7cf821ec14c92d8ed1de8b10} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{express_8js_aa30c9d0e437092b0607b68dee5b2c751}{application}}/octet-\/\mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}}\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{ \textquotesingle{}file.\+buffer\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_aaffc6d6fbbc14621409bda503188fbc3}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_aaffc6d6fbbc14621409bda503188fbc3} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{express_8js_aa30c9d0e437092b0607b68dee5b2c751}{application}}/octet-\/\mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}}\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{ \textquotesingle{}text.\+nope\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_aae8456a80cce76d30cc8bfbd31018dcb}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [3/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_aae8456a80cce76d30cc8bfbd31018dcb} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}bin\textquotesingle{}}]{}{, }\item[{mime.}]{extension}{ \textquotesingle{}application/octet-\/stream \textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a4a2ed30b4a0f0961ea21025b83c1486e}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [4/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a4a2ed30b4a0f0961ea21025b83c1486e} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}bin\textquotesingle{}}]{}{, }\item[{mime.}]{extension}{ \textquotesingle{}application/octet-\/stream\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_ae7fc8b77a103b44b316303809c920934}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [5/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_ae7fc8b77a103b44b316303809c920934} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}fallback\textquotesingle{}}]{}{, }\item[{mime.\+charsets.}]{lookup}{ \textquotesingle{}application/octet-\/stream\textquotesingle{}, \textquotesingle{}fallback\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a5d052f4df2095cb190ba6e1b5394c894}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [6/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a5d052f4df2095cb190ba6e1b5394c894} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}fallback\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{ \textquotesingle{}text.\+fallback\textquotesingle{}, \textquotesingle{}fallback\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a52fbb8a8c1acaa7cf9ffc9717ce414eb}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [7/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a52fbb8a8c1acaa7cf9ffc9717ce414eb} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}font/otf\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{ \textquotesingle{}file.\+otf\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a6b6b4a9aeccd074ba1229e2bc7cab498}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [8/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a6b6b4a9aeccd074ba1229e2bc7cab498} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}font/woff\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{ \textquotesingle{}file.\+woff\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_af78c6832fdc66c69581c2dbd4c6c618b}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [9/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_af78c6832fdc66c69581c2dbd4c6c618b} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}\textquotesingle{}}]{}{, }\item[{mime.}]{extension}{\textquotesingle{} text/html;charset=\+UTF-\/8\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_abb77406379499406bbb7c4047762d46e}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [10/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_abb77406379499406bbb7c4047762d46e} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}\textquotesingle{}}]{}{, }\item[{mime.}]{extension}{ \textquotesingle{}text/html ;charset=\+UTF-\/8\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a220f8b6bcb828080678cdd1852befc8a}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [11/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a220f8b6bcb828080678cdd1852befc8a} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}\textquotesingle{}}]{}{, }\item[{mime.}]{extension}{ \textquotesingle{}text/html;charset=\+UTF-\/8 \textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a84c7c5ad96929ee19aadb2e247dd4ddc}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [12/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a84c7c5ad96929ee19aadb2e247dd4ddc} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}\textquotesingle{}}]{}{, }\item[{mime.}]{extension}{ \textquotesingle{}text/\+Html;charset=\+UTF-\/8\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_aa9bf82f0e665e94dad67468ca9c8fea5}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [13/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_aa9bf82f0e665e94dad67468ca9c8fea5} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}\textquotesingle{}}]{}{, }\item[{mime.}]{extension}{ \textquotesingle{}text/html;charset=\+UTF-\/8\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a1d6551e24fdec5ebd3a867ed43374a22}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [14/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a1d6551e24fdec5ebd3a867ed43374a22} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}\textquotesingle{}}]{}{, }\item[{mime.}]{extension}{mime.\+types.\+htm}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a8635ba5f31cccd6ab36f86b49da8f491}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [15/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a8635ba5f31cccd6ab36f86b49da8f491} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}text/plain\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{\textquotesingle{}.\+text.\+txt\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a878cac35e489cd14e4e247cbeda4d2b7}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [16/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a878cac35e489cd14e4e247cbeda4d2b7} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}text/plain\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{\textquotesingle{}.\+txt\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_accd17bfe025bdbe5edea8577d8cf0008}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [17/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_accd17bfe025bdbe5edea8577d8cf0008} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}text/plain\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{\textquotesingle{}/txt\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a6922f078b7729d18cf5cf273db1648c3}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [18/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a6922f078b7729d18cf5cf273db1648c3} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}text/plain\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{\textquotesingle{}\textbackslash{}\textbackslash{}txt\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_ae390f406b3677643528955ab38ba3493}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [19/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_ae390f406b3677643528955ab38ba3493} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}text/plain\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{ \textquotesingle{}dir/text.\+txt\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a1cbb4539e4eab81854e4f2cb716295a4}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [20/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a1cbb4539e4eab81854e4f2cb716295a4} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}text/plain\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{ \textquotesingle{}\+TEXT.\+TXT\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [21/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}text/plain\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{ \textquotesingle{}text.\+txt\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a2a3012fec46e342713d29f1ddd6063ad}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [22/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a2a3012fec46e342713d29f1ddd6063ad} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}text/plain\textquotesingle{}}]{}{, }\item[{mime.}]{lookup}{ \textquotesingle{}txt\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a2f11ba768a7399946ef1a203a773aab5}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [23/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a2f11ba768a7399946ef1a203a773aab5} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}txt\textquotesingle{}}]{}{, }\item[{mime.}]{extension}{mime.\+types.\+text}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a41e00e631047613be4d4134b6e3752c6}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [24/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a41e00e631047613be4d4134b6e3752c6} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}UTF-\/8\textquotesingle{}}]{}{, }\item[{mime.\+charsets.}]{lookup}{ \textquotesingle{}text/plain\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a1b63c6c53e1759eb74ffdf1e6f80a007}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [25/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a1b63c6c53e1759eb74ffdf1e6f80a007} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}UTF-\/8\textquotesingle{}}]{}{, }\item[{mime.\+charsets.}]{lookup}{mime.\+types.\+js}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a90ec57e47e148bef151973b2d099f817}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [26/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a90ec57e47e148bef151973b2d099f817} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\textquotesingle{}UTF-\/8\textquotesingle{}}]{}{, }\item[{mime.\+charsets.}]{lookup}{mime.\+types.\+json}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_ac7206f689dc4a5bbcbb3dffb08f34801}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [27/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_ac7206f689dc4a5bbcbb3dffb08f34801} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{get-intrinsic_2index_8js_ae6aa4817f0f49345b718ea6b4abae197}{undefined}}}]{}{, }\item[{mime.\+charsets.}]{lookup}{mime.\+types.\+bin}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_af163fc4e8fcce7ffdfa9a64e2a9898b9}\index{test.js@{test.js}!equal@{equal}}
+\index{equal@{equal}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [28/28]}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_af163fc4e8fcce7ffdfa9a64e2a9898b9} 
+\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}} equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{get-intrinsic_2index_8js_ae6aa4817f0f49345b718ea6b4abae197}{undefined}}}]{}{, }\item[{mime.}]{extension}{ \textquotesingle{}unrecognized\textquotesingle{}}\end{DoxyParamCaption})}
+
+\Hypertarget{mime_2src_2test_8js_a10b9df010ded19c605b918f338f38303}\index{test.js@{test.js}!log@{log}}
+\index{log@{log}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a10b9df010ded19c605b918f338f38303} 
+console log (\begin{DoxyParamCaption}\item[{\textquotesingle{}\textbackslash{}n\+All tests passed\textquotesingle{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{mime_2src_2test_8js_a5e95655c9188700b16a5488897cecb90}\index{test.js@{test.js}!assert@{assert}}
+\index{assert@{assert}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{assert}{assert}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_a5e95655c9188700b16a5488897cecb90} 
+var assert = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}assert\textquotesingle{})}
+
+\Hypertarget{mime_2src_2test_8js_ab4d288fe448bcc077971c41ae3797375}\index{test.js@{test.js}!mime@{mime}}
+\index{mime@{mime}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{mime}{mime}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_ab4d288fe448bcc077971c41ae3797375} 
+var mime = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}../mime\textquotesingle{})}
+
+Usage\+: node test.\+js \Hypertarget{mime_2src_2test_8js_aa72e0c8a20e6bcc571d3a1c51846e627}\index{test.js@{test.js}!path@{path}}
+\index{path@{path}!test.js@{test.js}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{mime_2src_2test_8js_aa72e0c8a20e6bcc571d3a1c51846e627} 
+var path = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}path\textquotesingle{})}
+

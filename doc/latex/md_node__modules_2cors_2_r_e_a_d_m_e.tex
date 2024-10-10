@@ -1,0 +1,225 @@
+\chapter{cors}
+\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e}{}\label{md_node__modules_2cors_2_r_e_a_d_m_e}\index{cors@{cors}}
+\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md340}%
+\Hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md340}%
+
+
+\href{https://npmjs.org/package/cors}{\texttt{ }} \href{https://npmjs.org/package/cors}{\texttt{ }} \href{https://travis-ci.org/expressjs/cors}{\texttt{ }} \href{https://coveralls.io/r/expressjs/cors?branch=master}{\texttt{ }}
+
+CORS is a node.\+js package for providing a \href{http://www.senchalabs.org/connect/}{\texttt{ Connect}}/\href{http://expressjs.com/}{\texttt{ Express}} middleware that can be used to enable \href{http://en.wikipedia.org/wiki/Cross-origin_resource_sharing}{\texttt{ CORS}} with various options.
+
+{\bfseries{\href{https://twitter.com/intent/user?screen_name=troygoode}{\texttt{ Follow me (@troygoode) on Twitter!}}}}
+
+
+\begin{DoxyItemize}
+\item Installation
+\item Usage
+\begin{DoxyItemize}
+\item Simple Usage
+\item Enable CORS for a Single Route
+\item Configuring CORS
+\item Configuring CORS Asynchronously
+\item Enabling CORS Pre-\/\+Flight
+\end{DoxyItemize}
+\item Configuration Options
+\item Demo
+\item License
+\item Author
+\end{DoxyItemize}\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md341}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md341}
+This is a \href{https://nodejs.org/en/}{\texttt{ Node.\+js}} module available through the \href{https://www.npmjs.com/}{\texttt{ npm registry}}. Installation is done using the \href{https://docs.npmjs.com/getting-started/installing-npm-packages-locally}{\texttt{ {\ttfamily npm install} command}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ cors}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md342}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md342}
+\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md343}{}\doxysubsection{\texorpdfstring{Simple Usage (Enable {\itshape All} CORS Requests)}{Simple Usage (Enable {\itshape All} CORS Requests)}}\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md343}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'express'})}
+\DoxyCodeLine{var\ cors\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('cors')}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}}(cors())}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{get}}('/products/:\textcolor{keywordtype}{id}',\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ next)\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.json(\{msg:\ \textcolor{stringliteral}{'This\ is\ CORS-\/enabled\ for\ all\ origins!'}\})}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.listen(80,\ \textcolor{keyword}{function}\ ()\ \{}
+\DoxyCodeLine{\ \ console.log(\textcolor{stringliteral}{'CORS-\/enabled\ web\ server\ listening\ on\ port\ 80'})}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md344}{}\doxysubsection{\texorpdfstring{Enable CORS for a Single Route}{Enable CORS for a Single Route}}\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md344}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'express'})}
+\DoxyCodeLine{var\ cors\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('cors')}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.\mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{get}}('/products/:\textcolor{keywordtype}{id}',\ cors(),\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ next)\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.json(\{msg:\ \textcolor{stringliteral}{'This\ is\ CORS-\/enabled\ for\ a\ Single\ Route'}\})}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.listen(80,\ \textcolor{keyword}{function}\ ()\ \{}
+\DoxyCodeLine{\ \ console.log(\textcolor{stringliteral}{'CORS-\/enabled\ web\ server\ listening\ on\ port\ 80'})}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md345}{}\doxysubsection{\texorpdfstring{Configuring CORS}{Configuring CORS}}\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md345}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'express'})}
+\DoxyCodeLine{var\ cors\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('cors')}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}()}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ corsOptions\ =\ \{}
+\DoxyCodeLine{\ \ origin:\ \textcolor{stringliteral}{'http://example.com'},}
+\DoxyCodeLine{\ \ optionsSuccessStatus:\ 200\ \textcolor{comment}{//\ some\ legacy\ browsers\ (IE11,\ various\ SmartTVs)\ choke\ on\ 204}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.get(\textcolor{stringliteral}{'/products/:id'},\ cors(corsOptions),\ \textcolor{keyword}{function}\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ next)\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.json(\{msg:\ \textcolor{stringliteral}{'This\ is\ CORS-\/enabled\ for\ only\ example.com.'}\})}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.listen(80,\ \textcolor{keyword}{function}\ ()\ \{}
+\DoxyCodeLine{\ \ console.log(\textcolor{stringliteral}{'CORS-\/enabled\ web\ server\ listening\ on\ port\ 80'})}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md346}{}\doxysubsection{\texorpdfstring{Configuring CORS w/ Dynamic Origin}{Configuring CORS w/ Dynamic Origin}}\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md346}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'express'})}
+\DoxyCodeLine{var\ cors\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('cors')}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}()}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ whitelist\ =\ ['\mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}:\textcolor{comment}{//example1.com',\ 'http://example2.com']}}
+\DoxyCodeLine{var\ corsOptions\ =\ \{}
+\DoxyCodeLine{\ \ origin:\ \textcolor{keyword}{function}\ (origin,\ callback)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (whitelist.indexOf(origin)\ !==\ -\/1)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ callback(\textcolor{keyword}{null},\ \textcolor{keyword}{true})}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ callback(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_error}{Error}}(\textcolor{stringliteral}{'Not\ allowed\ by\ CORS'}))}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.get(\textcolor{stringliteral}{'/products/:id'},\ cors(corsOptions),\ \textcolor{keyword}{function}\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ next)\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.json(\{msg:\ \textcolor{stringliteral}{'This\ is\ CORS-\/enabled\ for\ a\ whitelisted\ domain.'}\})}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.listen(80,\ \textcolor{keyword}{function}\ ()\ \{}
+\DoxyCodeLine{\ \ console.log(\textcolor{stringliteral}{'CORS-\/enabled\ web\ server\ listening\ on\ port\ 80'})}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+
+
+If you do not want to block REST tools or server-\/to-\/server requests, add a {\ttfamily !origin} check in the origin function like so\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ corsOptions\ =\ \{}
+\DoxyCodeLine{\ \ origin:\ \textcolor{keyword}{function}\ (origin,\ callback)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (whitelist.indexOf(origin)\ !==\ -\/1\ ||\ !origin)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ callback(\textcolor{keyword}{null},\ \textcolor{keyword}{true})}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ callback(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_error}{Error}}(\textcolor{stringliteral}{'Not\ allowed\ by\ CORS'}))}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md347}{}\doxysubsection{\texorpdfstring{Enabling CORS Pre-\/\+Flight}{Enabling CORS Pre-\/\+Flight}}\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md347}
+Certain CORS requests are considered \textquotesingle{}complex\textquotesingle{} and require an initial {\ttfamily OPTIONS} request (called the "{}pre-\/flight request"{}). An example of a \textquotesingle{}complex\textquotesingle{} CORS request is one that uses an HTTP verb other than GET/\+HEAD/\+POST (such as DELETE) or that uses custom headers. To enable pre-\/flighting, you must add a new OPTIONS handler for the route you want to support\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'express'})}
+\DoxyCodeLine{var\ cors\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('cors')}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.options('/products/:\textcolor{keywordtype}{id}',\ cors())\ \textcolor{comment}{//\ enable\ pre-\/flight\ request\ for\ DELETE\ request}}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.\mbox{\hyperlink{application_8js_a8f72c37919081ee0d853416d11f41f69}{del}}('/products/:\textcolor{keywordtype}{id}',\ cors(),\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ next)\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.json(\{msg:\ \textcolor{stringliteral}{'This\ is\ CORS-\/enabled\ for\ all\ origins!'}\})}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.listen(80,\ \textcolor{keyword}{function}\ ()\ \{}
+\DoxyCodeLine{\ \ console.log(\textcolor{stringliteral}{'CORS-\/enabled\ web\ server\ listening\ on\ port\ 80'})}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+
+
+You can also enable pre-\/flight across-\/the-\/board like so\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.options(\textcolor{charliteral}{'*'},\ cors())\ \textcolor{comment}{//\ include\ before\ other\ routes}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md348}{}\doxysubsection{\texorpdfstring{Configuring CORS Asynchronously}{Configuring CORS Asynchronously}}\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md348}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'express'})}
+\DoxyCodeLine{var\ cors\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('cors')}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}()}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ whitelist\ =\ ['\mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}:\textcolor{comment}{//example1.com',\ 'http://example2.com']}}
+\DoxyCodeLine{var\ corsOptionsDelegate\ =\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ callback)\ \{}
+\DoxyCodeLine{\ \ var\ corsOptions;}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (whitelist.indexOf(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}.header(\textcolor{stringliteral}{'Origin'}))\ !==\ -\/1)\ \{}
+\DoxyCodeLine{\ \ \ \ corsOptions\ =\ \{\ origin:\ true\ \}\ \textcolor{comment}{//\ reflect\ (enable)\ the\ requested\ origin\ in\ the\ CORS\ response}}
+\DoxyCodeLine{\ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ corsOptions\ =\ \{\ origin:\ \textcolor{keyword}{false}\ \}\ \textcolor{comment}{//\ disable\ CORS\ for\ this\ request}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ callback(\textcolor{keyword}{null},\ corsOptions)\ \textcolor{comment}{//\ callback\ expects\ two\ parameters:\ error\ and\ options}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.get(\textcolor{stringliteral}{'/products/:id'},\ cors(corsOptionsDelegate),\ \textcolor{keyword}{function}\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ next)\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.json(\{msg:\ \textcolor{stringliteral}{'This\ is\ CORS-\/enabled\ for\ a\ whitelisted\ domain.'}\})}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.listen(80,\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ ()\ \{}
+\DoxyCodeLine{\ \ console.log(\textcolor{stringliteral}{'CORS-\/enabled\ web\ server\ listening\ on\ port\ 80'})}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md349}{}\doxysection{\texorpdfstring{Configuration Options}{Configuration Options}}\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md349}
+
+\begin{DoxyItemize}
+\item {\ttfamily origin}\+: Configures the {\bfseries{Access-\/\+Control-\/\+Allow-\/\+Origin}} CORS header. Possible values\+:
+\begin{DoxyItemize}
+\item {\ttfamily Boolean} -\/ set {\ttfamily origin} to {\ttfamily true} to reflect the \href{http://tools.ietf.org/html/draft-abarth-origin-09}{\texttt{ request origin}}, as defined by `req.\+header(\textquotesingle{}Origin'){\ttfamily , or set it to}false{\ttfamily to disable CORS. -\/}String{\ttfamily -\/ set}origin{\ttfamily to a specific origin. For example if you set it to}"{}http\+://example.\+com"{}{\ttfamily only requests from "{}http\+://example.\+com"{} will be allowed. -\/}Reg\+Exp{\ttfamily -\/ set}origin{\ttfamily to a regular expression pattern which will be used to test the request origin. If it\textquotesingle{}s a match, the request origin will be reflected. For example the pattern}/example.com\$/{\ttfamily will reflect any request that is coming from an origin ending with "{}example.\+com"{}. -\/}Array{\ttfamily -\/ set}origin{\ttfamily to an array of valid origins. Each origin can be a}String{\ttfamily or a}Reg\+Exp{\ttfamily . For example}\mbox{[}"{}http\+://example1.\+com"{}, /.example2.com\$/\mbox{]}{\ttfamily will accept any request from "{}http\+://example1.\+com"{} or from a subdomain of "{}example2.\+com"{}. -\/}Function{\ttfamily -\/ set}origin{\ttfamily to a function implementing some custom logic. The function takes the request origin as the first parameter and a callback (which expects the signature}err \mbox{[}object\mbox{]}, allow \mbox{[}bool\mbox{]}{\ttfamily ) as the second. \texorpdfstring{$\ast$}{*}}methods`\+: Configures the \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Access-\/\+Control-\/\+Allow-\/\+Methods\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} CORS header. Expects a comma-\/delimited string (ex\+: \textquotesingle{}GET,PUT,POST') or an array (ex\+: `\mbox{[}\textquotesingle{}GET', \textquotesingle{}PUT\textquotesingle{}, \textquotesingle{}POST\textquotesingle{}\mbox{]}{\ttfamily ). \texorpdfstring{$\ast$}{*}}allowed\+Headers`\+: Configures the \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Access-\/\+Control-\/\+Allow-\/\+Headers\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} CORS header. Expects a comma-\/delimited string (ex\+: \textquotesingle{}Content-\/\+Type,Authorization') or an array (ex\+: `\mbox{[}\textquotesingle{}Content-\/\+Type', \textquotesingle{}Authorization\textquotesingle{}\mbox{]}{\ttfamily ). If not specified, defaults to reflecting the headers specified in the request\textquotesingle{}s \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Access-\/\+Control-\/\+Request-\/\+Headers\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} header. \texorpdfstring{$\ast$}{*}}exposed\+Headers`\+: Configures the \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Access-\/\+Control-\/\+Expose-\/\+Headers\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} CORS header. Expects a comma-\/delimited string (ex\+: \textquotesingle{}Content-\/\+Range,X-\/\+Content-\/\+Range') or an array (ex\+: `\mbox{[}\textquotesingle{}Content-\/\+Range', \textquotesingle{}X-\/\+Content-\/\+Range\textquotesingle{}\mbox{]}{\ttfamily ). If not specified, no custom headers are exposed. \texorpdfstring{$\ast$}{*}}credentials{\ttfamily \+: Configures the \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Access-\/\+Control-\/\+Allow-\/\+Credentials\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} CORS header. Set to}true{\ttfamily to pass the header, otherwise it is omitted. \texorpdfstring{$\ast$}{*}}max\+Age{\ttfamily \+: Configures the \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Access-\/\+Control-\/\+Max-\/\+Age\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} CORS header. Set to an integer to pass the header, otherwise it is omitted. \texorpdfstring{$\ast$}{*}}preflight\+Continue{\ttfamily \+: Pass the CORS preflight response to the next handler. \texorpdfstring{$\ast$}{*}}options\+Success\+Status{\ttfamily \+: Provides a status code to use for successful}OPTIONS{\ttfamily requests, since some legacy browsers (IE11, various Smart\+TVs) choke on}204\`{}.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+The default configuration is the equivalent of\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ "{}origin"{}:\ "{}*"{},}
+\DoxyCodeLine{\ \ "{}methods"{}:\ "{}GET,HEAD,PUT,PATCH,POST,DELETE"{},}
+\DoxyCodeLine{\ \ "{}preflightContinue"{}:\ false,}
+\DoxyCodeLine{\ \ "{}optionsSuccessStatus"{}:\ 204}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+For details on the effect of each CORS header, read \href{http://www.html5rocks.com/en/tutorials/cors/}{\texttt{ this}} article on HTML5 Rocks.\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md350}{}\doxysection{\texorpdfstring{Demo}{Demo}}\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md350}
+A demo that illustrates CORS working (and not working) using j\+Query is available here\+: \href{http://node-cors-client.herokuapp.com/}{\texttt{ http\+://node-\/cors-\/client.\+herokuapp.\+com/}}
+
+Code for that demo can be found here\+:
+
+
+\begin{DoxyItemize}
+\item Client\+: \href{https://github.com/TroyGoode/node-cors-client}{\texttt{ https\+://github.\+com/\+Troy\+Goode/node-\/cors-\/client}}
+\item Server\+: \href{https://github.com/TroyGoode/node-cors-server}{\texttt{ https\+://github.\+com/\+Troy\+Goode/node-\/cors-\/server}}
+\end{DoxyItemize}\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md351}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md351}
+\href{http://www.opensource.org/licenses/mit-license.php}{\texttt{ MIT License}}\hypertarget{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md352}{}\doxysection{\texorpdfstring{Author}{Author}}\label{md_node__modules_2cors_2_r_e_a_d_m_e_autotoc_md352}
+\href{https://github.com/TroyGoode}{\texttt{ Troy Goode}} (\href{mailto:troygoode@gmail.com}{\texttt{ troygoode@gmail.\+com}}) 

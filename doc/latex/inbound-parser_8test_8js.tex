@@ -1,0 +1,742 @@
+\doxysection{Referencia del archivo node\+\_\+modules/pg-\/protocol/dist/inbound-\/parser.test.\+js}
+\hypertarget{inbound-parser_8test_8js}{}\label{inbound-parser_8test_8js}\index{node\_modules/pg-\/protocol/dist/inbound-\/parser.test.js@{node\_modules/pg-\/protocol/dist/inbound-\/parser.test.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+Object \mbox{\hyperlink{inbound-parser_8test_8js_a28b393256d5d3dc5b7d5940192da33e5}{define\+Property}} (\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}, "{}\+\_\+\+\_\+es\+Module"{}, \{ value\+:true \})
+\item 
+\mbox{\hyperlink{inbound-parser_8test_8js_a87c6a6b3ca1911acf59151308afeb9bb}{describe}} (\textquotesingle{}Pg\+Packet\+Stream\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a3e6e9c78321fb424a228b8d126757938}{auth\+Ok\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a1eabba9ffebb957cc21b21c437d75d46}{expected\+Authentication\+Okay\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_adba14487241f9d9399c1f79b75729325}{plain\+Password\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a8d61397cf1f575d8ae59ddb81e49eed2}{expected\+Plain\+Password\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a548098af9ea379b1d832e696263f7a35}{md5\+Password\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a0a3db3284ed0072912efaebc27d3b384}{expected\+MD5\+Password\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_acd13eb31ab5dbf1bf42352e7f2595a3c}{SASLBuffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a233a256c28800cfce8d1f52e18e54f48}{expected\+SASLMessage}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a794db65eca7d13adabd7d0ad9259fbf4}{SASLContinue\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_afc115c2c15d55a76f609063df1c12edd}{expected\+SASLContinue\+Message}});const extended\+SASLContinue\+Buffer=\mbox{\hyperlink{express_2lib_2router_2index_8js_a6313f74f769f42d0d5057d4bd32842e9}{Buffer.\+concat}}(\mbox{[}\mbox{\hyperlink{inbound-parser_8test_8js_a794db65eca7d13adabd7d0ad9259fbf4}{SASLContinue\+Buffer}}, Buffer.\+from(\mbox{[}1, 2, 3, 4\mbox{]})\mbox{]});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(extended\+SASLContinue\+Buffer, \mbox{\hyperlink{inbound-parser_8test_8js_afc115c2c15d55a76f609063df1c12edd}{expected\+SASLContinue\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a5315a63d75bd5c9819e3d4cc4f0eaac3}{SASLFinal\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a28244211750174ef4166b285e556596c}{expected\+SASLFinal\+Message}});const extended\+SASLFinal\+Buffer=\mbox{\hyperlink{express_2lib_2router_2index_8js_a6313f74f769f42d0d5057d4bd32842e9}{Buffer.\+concat}}(\mbox{[}\mbox{\hyperlink{inbound-parser_8test_8js_a5315a63d75bd5c9819e3d4cc4f0eaac3}{SASLFinal\+Buffer}}, Buffer.\+from(\mbox{[}1, 2, 4, 5\mbox{]})\mbox{]});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(extended\+SASLFinal\+Buffer, \mbox{\hyperlink{inbound-parser_8test_8js_a28244211750174ef4166b285e556596c}{expected\+SASLFinal\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a05fd0b40cf710260445d70d5aa1b26f7}{param\+Status\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_aeb266d0c2d9517c6babf7aa354aada12}{expected\+Parameter\+Status\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a4cb16c8694196d86603804a2ded21057}{backend\+Key\+Data\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a1cd6fb6e827c300d0bf185e9609ad359}{expected\+Backend\+Key\+Data\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a04fe6555588ba28526273741fa3076d2}{ready\+For\+Query\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a0d9c877ecb0c43f276024d02ea26764e}{expected\+Ready\+For\+Query\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a01b4da431f0d5e3ea8ca8f09ade15e38}{command\+Complete\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_afe049b3e19361cb373fb2a9370ea1d03}{expected\+Command\+Complete\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_aca0b16ccf8c22698333cb37e5294c2d3}{notification\+Response\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a9087883d7d2b5388e99225df4367a7b3}{expected\+Notification\+Response\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{messages_8js_acfa59cd0a9bee842081623360af6308a}{test\+\_\+buffers\+\_\+1.\+default.\+empty\+Query}}(), \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_acfa59cd0a9bee842081623360af6308a}{empty\+Query}}\textquotesingle{}, length\+:4, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(Buffer.\+from(\mbox{[}0x6e, 0, 0, 0, 4\mbox{]}), \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_a08fbef48dce371283f2fb4f4c4f002d9}{no\+Data}}\textquotesingle{}, \});describe(\textquotesingle{}row\+Description messages\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_acebff3f74b4fe3e0c32bf338a1d64528}{empty\+Row\+Description\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_af95a302132df7119e65f8acc8768b535}{expected\+Empty\+Row\+Description\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a1d51b5018d1bc79658bdc4440b4b6a3d}{one\+Row\+Desc\+Buff}}, \mbox{\hyperlink{inbound-parser_8test_8js_a63bc9ad99f034d10c96352f8cd993dd8}{expected\+One\+Row\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a690b25053552bea3c542a15a9d25655d}{two\+Row\+Buf}}, \mbox{\hyperlink{inbound-parser_8test_8js_a91d8b63c956c9bb9a19c43def9b04a01}{expected\+Two\+Row\+Message}});\});describe(\textquotesingle{}parameter\+Description messages\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a67377b5c1bb95b40f8a467aee6ead3b6}{empty\+Parameter\+Description\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a0225d90da67cae0569ca3a404106c511}{expected\+Empty\+Parameter\+Description\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a19b52335ab1d9c7d65723f83f6aaeb31}{one\+Parameter\+Desc\+Buf}}, \mbox{\hyperlink{inbound-parser_8test_8js_a507d380a69b23deb817fc388ef6f7246}{expected\+One\+Parameter\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_aad877473029b93c46b7bf38986f90baa}{two\+Parameter\+Desc\+Buf}}, \mbox{\hyperlink{inbound-parser_8test_8js_add7e6b28b911adcaec7b64494e5c364d}{expected\+Two\+Parameter\+Message}});\});describe(\textquotesingle{}parsing rows\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ describe(\textquotesingle{}parsing empty row\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_adeb65f76f0d5a13bdabfa44d3a07a2fe}{empty\+Row\+Field\+Buf}}, \{ name\+:\textquotesingle{}data\+Row\textquotesingle{}, field\+Count\+:0, \});\});describe(\textquotesingle{}parsing data row with fields\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a75c82b7be5aac54c5932f010f17410cf}{one\+Field\+Buf}}, \{ name\+:\textquotesingle{}data\+Row\textquotesingle{}, field\+Count\+:1, fields\+:\mbox{[}\textquotesingle{}\mbox{\hyperlink{test_2call_bound_8js_a3a897d91c374db023efd4ed28e633ade}{test}}\textquotesingle{}\mbox{]}, \});\});\});describe(\textquotesingle{}notice message\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ var buff=test\+\_\+buffers\+\_\+1.\+default.\+notice(\mbox{[}\{ type\+:\textquotesingle{}C\textquotesingle{}, value\+:\textquotesingle{}code\textquotesingle{} \}\mbox{]});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(buff, \{ name\+:\textquotesingle{}notice\textquotesingle{}, code\+:\textquotesingle{}code\textquotesingle{}, \});\});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(test\+\_\+buffers\+\_\+1.\+default.\+error(\mbox{[}$\,$\mbox{]}), \{ name\+:\textquotesingle{}error\textquotesingle{}, \});describe(\textquotesingle{}with \mbox{\hyperlink{application_8js_adb8f173cc9d0f47e38ae05e7bb965c99}{all}} the fields\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ var \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}=test\+\_\+buffers\+\_\+1.\+default.\+error(\mbox{[}\{ type\+:\textquotesingle{}\mbox{\hyperlink{es-errors_2test_2index_8js_a8bab16140cede5f71c657e8dc46c1887}{S}}\textquotesingle{}, value\+:\textquotesingle{}ERROR\textquotesingle{}, \}, \{ type\+:\textquotesingle{}C\textquotesingle{}, value\+:\textquotesingle{}code\textquotesingle{}, \}, \{ type\+:\textquotesingle{}M\textquotesingle{}, value\+:\textquotesingle{}message\textquotesingle{}, \}, \{ type\+:\textquotesingle{}D\textquotesingle{}, value\+:\textquotesingle{}details\textquotesingle{}, \}, \{ type\+:\textquotesingle{}H\textquotesingle{}, value\+:\textquotesingle{}hint\textquotesingle{}, \}, \{ type\+:\textquotesingle{}P\textquotesingle{}, value\+:\textquotesingle{}100\textquotesingle{}, \}, \{ type\+:\textquotesingle{}p\textquotesingle{}, value\+:\textquotesingle{}101\textquotesingle{}, \}, \{ type\+:\textquotesingle{}q\textquotesingle{}, value\+:\textquotesingle{}\mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{query}}\textquotesingle{}, \}, \{ type\+:\textquotesingle{}W\textquotesingle{}, value\+:\textquotesingle{}where\textquotesingle{}, \}, \{ type\+:\textquotesingle{}F\textquotesingle{}, value\+:\textquotesingle{}\mbox{\hyperlink{cli_8js_a14523cb74edc3f6175c54e598a379c27}{file}}\textquotesingle{}, \}, \{ type\+:\textquotesingle{}L\textquotesingle{}, value\+:\textquotesingle{}line\textquotesingle{}, \}, \{ type\+:\textquotesingle{}\mbox{\hyperlink{es-errors_2test_2index_8js_a09083e327c397ffc75bdc32d72212c70}{R}}\textquotesingle{}, value\+:\textquotesingle{}routine\textquotesingle{}, \}, \{ type\+:\textquotesingle{}Z\textquotesingle{}, value\+:\textquotesingle{}alsdkf\textquotesingle{}, \},\mbox{]});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}, \{ name\+:\textquotesingle{}error\textquotesingle{}, severity\+:\textquotesingle{}ERROR\textquotesingle{}, code\+:\textquotesingle{}code\textquotesingle{}, message\+:\textquotesingle{}message\textquotesingle{}, detail\+:\textquotesingle{}details\textquotesingle{}, hint\+:\textquotesingle{}hint\textquotesingle{}, position\+:\textquotesingle{}100\textquotesingle{}, internal\+Position\+:\textquotesingle{}101\textquotesingle{}, internal\+Query\+:\textquotesingle{}\mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{query}}\textquotesingle{}, where\+:\textquotesingle{}where\textquotesingle{}, file\+:\textquotesingle{}\mbox{\hyperlink{cli_8js_a14523cb74edc3f6175c54e598a379c27}{file}}\textquotesingle{}, line\+:\textquotesingle{}line\textquotesingle{}, routine\+:\textquotesingle{}routine\textquotesingle{}, \});\});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a3d54bff1c20dbb5a42080a87d2463eae}{parse\+Complete\+Buffer}}, \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_a97e53ecef3b958713727affe2304135d}{parse\+Complete}}\textquotesingle{}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a048159ce9c5df0af2b14b7b3ddaf4c91}{bind\+Complete\+Buffer}}, \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_a84be721500fb9aa664a4cad7ca9cd96e}{bind\+Complete}}\textquotesingle{}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a048159ce9c5df0af2b14b7b3ddaf4c91}{bind\+Complete\+Buffer}}, \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_a84be721500fb9aa664a4cad7ca9cd96e}{bind\+Complete}}\textquotesingle{}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{messages_8js_a487cccc44c3911be2c1f6f89e4c3154e}{test\+\_\+buffers\+\_\+1.\+default.\+close\+Complete}}(), \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_a487cccc44c3911be2c1f6f89e4c3154e}{close\+Complete}}\textquotesingle{}, \});describe(\textquotesingle{}parses portal suspended message\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a939c6a89342b23f8414a34fa8c3fa723}{portal\+Suspended\+Buffer}}, \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_afcf183e9b49dac6df878d13c5b5833c6}{portal\+Suspended}}\textquotesingle{}, \});\});describe(\textquotesingle{}parses replication \mbox{\hyperlink{b_8js_a0129af27b4a85bdb6fce06dc23b3450f}{start}} message\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(Buffer.\+from(\mbox{[}0x57, 0x00, 0x00, 0x00, 0x04\mbox{]}), \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_ac11c863e0dde7a06609c3ce230dc1ee5}{replication\+Start}}\textquotesingle{}, length\+:4, \});\});describe(\textquotesingle{}copy\textquotesingle{},()=$>$ \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(test\+\_\+buffers\+\_\+1.\+default.\+copy\+In(0), \{ name\+:\textquotesingle{}copy\+In\+Response\textquotesingle{}, length\+:7, binary\+:false, column\+Types\+:\mbox{[}$\,$\mbox{]}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(test\+\_\+buffers\+\_\+1.\+default.\+copy\+In(2), \{ name\+:\textquotesingle{}copy\+In\+Response\textquotesingle{}, length\+:11, binary\+:false, column\+Types\+:\mbox{[}0, 1\mbox{]}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(test\+\_\+buffers\+\_\+1.\+default.\+copy\+Out(0), \{ name\+:\textquotesingle{}copy\+Out\+Response\textquotesingle{}, length\+:7, binary\+:false, column\+Types\+:\mbox{[}$\,$\mbox{]}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(test\+\_\+buffers\+\_\+1.\+default.\+copy\+Out(3), \{ name\+:\textquotesingle{}copy\+Out\+Response\textquotesingle{}, length\+:13, binary\+:false, column\+Types\+:\mbox{[}0, 1, 2\mbox{]}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{messages_8js_ae7314b0ea8745d3c6adc1934aef49481}{test\+\_\+buffers\+\_\+1.\+default.\+copy\+Done}}(), \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_ae7314b0ea8745d3c6adc1934aef49481}{copy\+Done}}\textquotesingle{}, length\+:4, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{serializer_8js_a2cfedf9409d2ba03632554098c4bc6d9}{test\+\_\+buffers\+\_\+1.\+default.\+copy\+Data}}(Buffer.\+from(\mbox{[}5, 6, 7\mbox{]})), \{ name\+:\textquotesingle{}\mbox{\hyperlink{serializer_8js_a2cfedf9409d2ba03632554098c4bc6d9}{copy\+Data}}\textquotesingle{}, length\+:7, chunk\+:\+Buffer.\+from(\mbox{[}5, 6, 7\mbox{]}), \});\});describe(\textquotesingle{}\mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}} \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}, single message parsing\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ var full\+Buffer=test\+\_\+buffers\+\_\+1.\+default.\+data\+Row(\mbox{[}null, \textquotesingle{}bang\textquotesingle{}, \textquotesingle{}zug zug\textquotesingle{}, null, \textquotesingle{}!\textquotesingle{}\mbox{]});it(\textquotesingle{}parses when full \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}} comes in\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ return \mbox{\hyperlink{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}{\+\_\+\+\_\+awaiter}}(this, void 0, void 0, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \texorpdfstring{$\ast$}{*}() \{ const messages=yield \mbox{\hyperlink{inbound-parser_8test_8js_a3bcb75a676c00f0aae1dc2f2252bc4e1}{parse\+Buffers}}(\mbox{[}full\+Buffer\mbox{]});const message=messages\mbox{[}0\mbox{]};\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields.\+length, 5);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}0\mbox{]}, null);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}1\mbox{]}, \textquotesingle{}bang\textquotesingle{});\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}2\mbox{]}, \textquotesingle{}zug zug\textquotesingle{});\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}3\mbox{]}, null);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}4\mbox{]}, \textquotesingle{}!\textquotesingle{});\});\});var test\+Message\+Recieved\+After\+Spilt\+At=\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(\mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}}) \{ return \mbox{\hyperlink{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}{\+\_\+\+\_\+awaiter}}(this, void 0, void 0, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \texorpdfstring{$\ast$}{*}() \{ var first\+Buffer=Buffer.\+alloc(full\+Buffer.\+length -\/ \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}});var second\+Buffer=Buffer.\+alloc(full\+Buffer.\+length -\/ first\+Buffer.\+length);full\+Buffer.\+copy(first\+Buffer, 0, 0);full\+Buffer.\+copy(second\+Buffer, 0, first\+Buffer.\+length);const messages=yield \mbox{\hyperlink{inbound-parser_8test_8js_a3bcb75a676c00f0aae1dc2f2252bc4e1}{parse\+Buffers}}(\mbox{[}full\+Buffer\mbox{]});const message=messages\mbox{[}0\mbox{]};\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields.\+length, 5);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}0\mbox{]}, null);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}1\mbox{]}, \textquotesingle{}bang\textquotesingle{});\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}2\mbox{]}, \textquotesingle{}zug zug\textquotesingle{});\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}3\mbox{]}, null);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}4\mbox{]}, \textquotesingle{}!\textquotesingle{});\});\};it(\textquotesingle{}parses when \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}} in the middle\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ test\+Message\+Recieved\+After\+Spilt\+At(6);\});it(\textquotesingle{}parses when \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}} at end\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ test\+Message\+Recieved\+After\+Spilt\+At(2);\});it(\textquotesingle{}parses when \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}} at beginning\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ test\+Message\+Recieved\+After\+Spilt\+At(full\+Buffer.\+length -\/ 2);test\+Message\+Recieved\+After\+Spilt\+At(full\+Buffer.\+length -\/ 1);test\+Message\+Recieved\+After\+Spilt\+At(full\+Buffer.\+length -\/ 5);\});\});describe(\textquotesingle{}\mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}} \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}, multiple message parsing\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ var data\+Row\+Buffer=test\+\_\+buffers\+\_\+1.\+default.\+data\+Row(\mbox{[}\textquotesingle{}!\textquotesingle{}\mbox{]});var \mbox{\hyperlink{inbound-parser_8test_8js_a04fe6555588ba28526273741fa3076d2}{ready\+For\+Query\+Buffer}}=test\+\_\+buffers\+\_\+1.\+default.\+ready\+For\+Query();var full\+Buffer=Buffer.\+alloc(data\+Row\+Buffer.\+length+ready\+For\+Query\+Buffer.\+length);data\+Row\+Buffer.\+copy(full\+Buffer, 0, 0);ready\+For\+Query\+Buffer.\+copy(full\+Buffer, data\+Row\+Buffer.\+length, 0);var verify\+Messages=\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(messages) \{ assert\+\_\+1.\+default.\+strict\+Equal(messages.\+length, 2);assert\+\_\+1.\+default.\+deep\+Equal(messages\mbox{[}0\mbox{]}, \{ name\+:\textquotesingle{}data\+Row\textquotesingle{}, field\+Count\+:1, length\+:11, fields\+:\mbox{[}\textquotesingle{}!\textquotesingle{}\mbox{]}, \});\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(messages\mbox{[}0\mbox{]}.fields\mbox{[}0\mbox{]}, \textquotesingle{}!\textquotesingle{});assert\+\_\+1.\+default.\+deep\+Equal(messages\mbox{[}1\mbox{]}, \{ name\+:\textquotesingle{}ready\+For\+Query\textquotesingle{}, length\+:5, status\+:\textquotesingle{}I\textquotesingle{}, \});\};it(\textquotesingle{}recieves both messages when packet \mbox{\hyperlink{request_8js_a5e3afd97276cc403924d1a449a83ea84}{is}} not \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}}\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ return \mbox{\hyperlink{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}{\+\_\+\+\_\+awaiter}}(this, void 0, void 0, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \texorpdfstring{$\ast$}{*}() \{ const messages=yield \mbox{\hyperlink{inbound-parser_8test_8js_a3bcb75a676c00f0aae1dc2f2252bc4e1}{parse\+Buffers}}(\mbox{[}full\+Buffer\mbox{]});verify\+Messages(messages);\});\});var split\+And\+Verify\+Two\+Messages=\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(\mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}}) \{ return \mbox{\hyperlink{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}{\+\_\+\+\_\+awaiter}}(this, void 0, void 0, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \texorpdfstring{$\ast$}{*}() \{ var first\+Buffer=Buffer.\+alloc(full\+Buffer.\+length -\/ \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}});var second\+Buffer=Buffer.\+alloc(full\+Buffer.\+length -\/ first\+Buffer.\+length);full\+Buffer.\+copy(first\+Buffer, 0, 0);full\+Buffer.\+copy(second\+Buffer, 0, first\+Buffer.\+length);const messages=yield \mbox{\hyperlink{inbound-parser_8test_8js_a3bcb75a676c00f0aae1dc2f2252bc4e1}{parse\+Buffers}}(\mbox{[}first\+Buffer, second\+Buffer\mbox{]});verify\+Messages(messages);\});\};describe(\textquotesingle{}recieves both messages when packet \mbox{\hyperlink{request_8js_a5e3afd97276cc403924d1a449a83ea84}{is}} \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}}\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ it(\textquotesingle{}in the middle\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ return split\+And\+Verify\+Two\+Messages(11);\});it(\textquotesingle{}at the front\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ return \mbox{\hyperlink{application_8js_adb8f173cc9d0f47e38ae05e7bb965c99}{Promise.\+all}}(\mbox{[}split\+And\+Verify\+Two\+Messages(full\+Buffer.\+length -\/ 1), split\+And\+Verify\+Two\+Messages(full\+Buffer.\+length -\/ 4), split\+And\+Verify\+Two\+Messages(full\+Buffer.\+length -\/ 6),\mbox{]});\});it(\textquotesingle{}at the end\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ return \mbox{\hyperlink{application_8js_adb8f173cc9d0f47e38ae05e7bb965c99}{Promise.\+all}}(\mbox{[}split\+And\+Verify\+Two\+Messages(8), split\+And\+Verify\+Two\+Messages(1)\mbox{]});\});\});\});\})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{inbound-parser_8test_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}{\+\_\+\+\_\+awaiter}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_aa77bab964373eb2917ab7e271138d9aa}{\+\_\+\+\_\+import\+Default}}
+\item 
+const \mbox{\hyperlink{inbound-parser_8test_8js_ae9ce36b404a16efec1133ba350532f79}{test\+\_\+buffers\+\_\+1}} = \mbox{\hyperlink{inbound-parser_8test_8js_aa77bab964373eb2917ab7e271138d9aa}{\+\_\+\+\_\+import\+Default}}(\mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}./testing/\mbox{\hyperlink{test_2call_bound_8js_a3a897d91c374db023efd4ed28e633ade}{test}}-\/buffers"{}))
+\item 
+const \mbox{\hyperlink{inbound-parser_8test_8js_aa250b1283ed215180bc56b03f36672f9}{buffer\+\_\+list\+\_\+1}} = \mbox{\hyperlink{inbound-parser_8test_8js_aa77bab964373eb2917ab7e271138d9aa}{\+\_\+\+\_\+import\+Default}}(\mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}./testing/\mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}-\/list"{}))
+\item 
+const \mbox{\hyperlink{inbound-parser_8test_8js_a76aa01e4e3ebe86c8dbf548e41385e61}{\+\_\+1}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}."{})
+\item 
+const \mbox{\hyperlink{inbound-parser_8test_8js_ad9535cd8fb66673f53cea356b63e94c1}{assert\+\_\+1}} = \mbox{\hyperlink{inbound-parser_8test_8js_aa77bab964373eb2917ab7e271138d9aa}{\+\_\+\+\_\+import\+Default}}(\mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}assert"{}))
+\item 
+const \mbox{\hyperlink{inbound-parser_8test_8js_a4bf84a2dbc80e17d37c6591ece0577c1}{stream\+\_\+1}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}stream"{})
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a3e6e9c78321fb424a228b8d126757938}{auth\+Ok\+Buffer}} = test\+\_\+buffers\+\_\+1.\+default.\+authentication\+Ok()
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a05fd0b40cf710260445d70d5aa1b26f7}{param\+Status\+Buffer}} = test\+\_\+buffers\+\_\+1.\+default.\+parameter\+Status(\textquotesingle{}client\+\_\+encoding\textquotesingle{}, \textquotesingle{}UTF8\textquotesingle{})
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a04fe6555588ba28526273741fa3076d2}{ready\+For\+Query\+Buffer}} = test\+\_\+buffers\+\_\+1.\+default.\+ready\+For\+Query()
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a4cb16c8694196d86603804a2ded21057}{backend\+Key\+Data\+Buffer}} = test\+\_\+buffers\+\_\+1.\+default.\+backend\+Key\+Data(1, 2)
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a01b4da431f0d5e3ea8ca8f09ade15e38}{command\+Complete\+Buffer}} = test\+\_\+buffers\+\_\+1.\+default.\+command\+Complete(\textquotesingle{}SELECT 3\textquotesingle{})
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a3d54bff1c20dbb5a42080a87d2463eae}{parse\+Complete\+Buffer}} = \mbox{\hyperlink{messages_8js_a97e53ecef3b958713727affe2304135d}{test\+\_\+buffers\+\_\+1.\+default.\+parse\+Complete}}()
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a048159ce9c5df0af2b14b7b3ddaf4c91}{bind\+Complete\+Buffer}} = \mbox{\hyperlink{messages_8js_a84be721500fb9aa664a4cad7ca9cd96e}{test\+\_\+buffers\+\_\+1.\+default.\+bind\+Complete}}()
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a939c6a89342b23f8414a34fa8c3fa723}{portal\+Suspended\+Buffer}} = \mbox{\hyperlink{messages_8js_afcf183e9b49dac6df878d13c5b5833c6}{test\+\_\+buffers\+\_\+1.\+default.\+portal\+Suspended}}()
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a14390ab91d7ba9b6ef942f760d8a86f7}{add\+Row}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_ad5a8dc24a61495d6e103302762046096}{row1}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a1d51b5018d1bc79658bdc4440b4b6a3d}{one\+Row\+Desc\+Buff}} = test\+\_\+buffers\+\_\+1.\+default.\+row\+Description(\mbox{[}\mbox{\hyperlink{inbound-parser_8test_8js_ad5a8dc24a61495d6e103302762046096}{row1}}\mbox{]})
+\item 
+\mbox{\hyperlink{inbound-parser_8test_8js_ad5a8dc24a61495d6e103302762046096}{row1}} \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}} = \textquotesingle{}bang\textquotesingle{}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a690b25053552bea3c542a15a9d25655d}{two\+Row\+Buf}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_adeb65f76f0d5a13bdabfa44d3a07a2fe}{empty\+Row\+Field\+Buf}} = new buffer\+\_\+list\+\_\+1.\+default().\mbox{\hyperlink{buffer-writer_2index_8js_ac764e228a074bc7d8f15becada71232e}{add\+Int16}}(0).\mbox{\hyperlink{buffer-writer_2index_8js_a6224c24496a1edd10ed52a9149e0d28a}{join}}(true, \textquotesingle{}D\textquotesingle{})
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a75c82b7be5aac54c5932f010f17410cf}{one\+Field\+Buf}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a1eabba9ffebb957cc21b21c437d75d46}{expected\+Authentication\+Okay\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_aeb266d0c2d9517c6babf7aa354aada12}{expected\+Parameter\+Status\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a1cd6fb6e827c300d0bf185e9609ad359}{expected\+Backend\+Key\+Data\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a0d9c877ecb0c43f276024d02ea26764e}{expected\+Ready\+For\+Query\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_afe049b3e19361cb373fb2a9370ea1d03}{expected\+Command\+Complete\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_acebff3f74b4fe3e0c32bf338a1d64528}{empty\+Row\+Description\+Buffer}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_af95a302132df7119e65f8acc8768b535}{expected\+Empty\+Row\+Description\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a63bc9ad99f034d10c96352f8cd993dd8}{expected\+One\+Row\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a91d8b63c956c9bb9a19c43def9b04a01}{expected\+Two\+Row\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a67377b5c1bb95b40f8a467aee6ead3b6}{empty\+Parameter\+Description\+Buffer}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a19b52335ab1d9c7d65723f83f6aaeb31}{one\+Parameter\+Desc\+Buf}} = test\+\_\+buffers\+\_\+1.\+default.\+parameter\+Description(\mbox{[}1111\mbox{]})
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_aad877473029b93c46b7bf38986f90baa}{two\+Parameter\+Desc\+Buf}} = test\+\_\+buffers\+\_\+1.\+default.\+parameter\+Description(\mbox{[}2222, 3333\mbox{]})
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a0225d90da67cae0569ca3a404106c511}{expected\+Empty\+Parameter\+Description\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a507d380a69b23deb817fc388ef6f7246}{expected\+One\+Parameter\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_add7e6b28b911adcaec7b64494e5c364d}{expected\+Two\+Parameter\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_adba14487241f9d9399c1f79b75729325}{plain\+Password\+Buffer}} = test\+\_\+buffers\+\_\+1.\+default.\+authentication\+Cleartext\+Password()
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a548098af9ea379b1d832e696263f7a35}{md5\+Password\+Buffer}} = test\+\_\+buffers\+\_\+1.\+default.\+authentication\+MD5\+Password()
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_acd13eb31ab5dbf1bf42352e7f2595a3c}{SASLBuffer}} = test\+\_\+buffers\+\_\+1.\+default.\+authentication\+SASL()
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a794db65eca7d13adabd7d0ad9259fbf4}{SASLContinue\+Buffer}} = test\+\_\+buffers\+\_\+1.\+default.\+authentication\+SASLContinue()
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a5315a63d75bd5c9819e3d4cc4f0eaac3}{SASLFinal\+Buffer}} = test\+\_\+buffers\+\_\+1.\+default.\+authentication\+SASLFinal()
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a8d61397cf1f575d8ae59ddb81e49eed2}{expected\+Plain\+Password\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a0a3db3284ed0072912efaebc27d3b384}{expected\+MD5\+Password\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a233a256c28800cfce8d1f52e18e54f48}{expected\+SASLMessage}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_afc115c2c15d55a76f609063df1c12edd}{expected\+SASLContinue\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a28244211750174ef4166b285e556596c}{expected\+SASLFinal\+Message}}
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_aca0b16ccf8c22698333cb37e5294c2d3}{notification\+Response\+Buffer}} = test\+\_\+buffers\+\_\+1.\+default.\+notification(4, \textquotesingle{}hi\textquotesingle{}, \textquotesingle{}boom\textquotesingle{})
+\item 
+var \mbox{\hyperlink{inbound-parser_8test_8js_a9087883d7d2b5388e99225df4367a7b3}{expected\+Notification\+Response\+Message}}
+\item 
+const \mbox{\hyperlink{inbound-parser_8test_8js_a3bcb75a676c00f0aae1dc2f2252bc4e1}{parse\+Buffers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{inbound-parser_8test_8js_a28b393256d5d3dc5b7d5940192da33e5}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!defineProperty@{defineProperty}}
+\index{defineProperty@{defineProperty}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{defineProperty()}{defineProperty()}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a28b393256d5d3dc5b7d5940192da33e5} 
+Object define\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}}]{}{, }\item[{"{}\+\_\+\+\_\+es\+Module"{}}]{}{, }\item[{\{ value\+:true \}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{inbound-parser_8test_8js_a87c6a6b3ca1911acf59151308afeb9bb}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!describe@{describe}}
+\index{describe@{describe}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{describe()}{describe()}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a87c6a6b3ca1911acf59151308afeb9bb} 
+describe (\begin{DoxyParamCaption}\item[{\textquotesingle{}Pg\+Packet\+Stream\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a3e6e9c78321fb424a228b8d126757938}{auth\+Ok\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a1eabba9ffebb957cc21b21c437d75d46}{expected\+Authentication\+Okay\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_adba14487241f9d9399c1f79b75729325}{plain\+Password\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a8d61397cf1f575d8ae59ddb81e49eed2}{expected\+Plain\+Password\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a548098af9ea379b1d832e696263f7a35}{md5\+Password\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a0a3db3284ed0072912efaebc27d3b384}{expected\+MD5\+Password\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_acd13eb31ab5dbf1bf42352e7f2595a3c}{SASLBuffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a233a256c28800cfce8d1f52e18e54f48}{expected\+SASLMessage}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a794db65eca7d13adabd7d0ad9259fbf4}{SASLContinue\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_afc115c2c15d55a76f609063df1c12edd}{expected\+SASLContinue\+Message}});const extended\+SASLContinue\+Buffer=\mbox{\hyperlink{express_2lib_2router_2index_8js_a6313f74f769f42d0d5057d4bd32842e9}{Buffer.\+concat}}(\mbox{[}\mbox{\hyperlink{inbound-parser_8test_8js_a794db65eca7d13adabd7d0ad9259fbf4}{SASLContinue\+Buffer}}, Buffer.\+from(\mbox{[}1, 2, 3, 4\mbox{]})\mbox{]});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(extended\+SASLContinue\+Buffer, \mbox{\hyperlink{inbound-parser_8test_8js_afc115c2c15d55a76f609063df1c12edd}{expected\+SASLContinue\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a5315a63d75bd5c9819e3d4cc4f0eaac3}{SASLFinal\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a28244211750174ef4166b285e556596c}{expected\+SASLFinal\+Message}});const extended\+SASLFinal\+Buffer=\mbox{\hyperlink{express_2lib_2router_2index_8js_a6313f74f769f42d0d5057d4bd32842e9}{Buffer.\+concat}}(\mbox{[}\mbox{\hyperlink{inbound-parser_8test_8js_a5315a63d75bd5c9819e3d4cc4f0eaac3}{SASLFinal\+Buffer}}, Buffer.\+from(\mbox{[}1, 2, 4, 5\mbox{]})\mbox{]});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(extended\+SASLFinal\+Buffer, \mbox{\hyperlink{inbound-parser_8test_8js_a28244211750174ef4166b285e556596c}{expected\+SASLFinal\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a05fd0b40cf710260445d70d5aa1b26f7}{param\+Status\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_aeb266d0c2d9517c6babf7aa354aada12}{expected\+Parameter\+Status\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a4cb16c8694196d86603804a2ded21057}{backend\+Key\+Data\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a1cd6fb6e827c300d0bf185e9609ad359}{expected\+Backend\+Key\+Data\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a04fe6555588ba28526273741fa3076d2}{ready\+For\+Query\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a0d9c877ecb0c43f276024d02ea26764e}{expected\+Ready\+For\+Query\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a01b4da431f0d5e3ea8ca8f09ade15e38}{command\+Complete\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_afe049b3e19361cb373fb2a9370ea1d03}{expected\+Command\+Complete\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_aca0b16ccf8c22698333cb37e5294c2d3}{notification\+Response\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a9087883d7d2b5388e99225df4367a7b3}{expected\+Notification\+Response\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{messages_8js_acfa59cd0a9bee842081623360af6308a}{test\+\_\+buffers\+\_\+1.\+default.\+empty\+Query}}(), \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_acfa59cd0a9bee842081623360af6308a}{empty\+Query}}\textquotesingle{}, length\+:4, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(Buffer.\+from(\mbox{[}0x6e, 0, 0, 0, 4\mbox{]}), \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_a08fbef48dce371283f2fb4f4c4f002d9}{no\+Data}}\textquotesingle{}, \});describe(\textquotesingle{}row\+Description messages\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_acebff3f74b4fe3e0c32bf338a1d64528}{empty\+Row\+Description\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_af95a302132df7119e65f8acc8768b535}{expected\+Empty\+Row\+Description\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a1d51b5018d1bc79658bdc4440b4b6a3d}{one\+Row\+Desc\+Buff}}, \mbox{\hyperlink{inbound-parser_8test_8js_a63bc9ad99f034d10c96352f8cd993dd8}{expected\+One\+Row\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a690b25053552bea3c542a15a9d25655d}{two\+Row\+Buf}}, \mbox{\hyperlink{inbound-parser_8test_8js_a91d8b63c956c9bb9a19c43def9b04a01}{expected\+Two\+Row\+Message}});\});describe(\textquotesingle{}parameter\+Description messages\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a67377b5c1bb95b40f8a467aee6ead3b6}{empty\+Parameter\+Description\+Buffer}}, \mbox{\hyperlink{inbound-parser_8test_8js_a0225d90da67cae0569ca3a404106c511}{expected\+Empty\+Parameter\+Description\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a19b52335ab1d9c7d65723f83f6aaeb31}{one\+Parameter\+Desc\+Buf}}, \mbox{\hyperlink{inbound-parser_8test_8js_a507d380a69b23deb817fc388ef6f7246}{expected\+One\+Parameter\+Message}});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_aad877473029b93c46b7bf38986f90baa}{two\+Parameter\+Desc\+Buf}}, \mbox{\hyperlink{inbound-parser_8test_8js_add7e6b28b911adcaec7b64494e5c364d}{expected\+Two\+Parameter\+Message}});\});describe(\textquotesingle{}parsing rows\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ describe(\textquotesingle{}parsing empty row\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_adeb65f76f0d5a13bdabfa44d3a07a2fe}{empty\+Row\+Field\+Buf}}, \{ name\+:\textquotesingle{}data\+Row\textquotesingle{}, field\+Count\+:0, \});\});describe(\textquotesingle{}parsing data row with fields\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a75c82b7be5aac54c5932f010f17410cf}{one\+Field\+Buf}}, \{ name\+:\textquotesingle{}data\+Row\textquotesingle{}, field\+Count\+:1, fields\+:\mbox{[}\textquotesingle{}\mbox{\hyperlink{test_2call_bound_8js_a3a897d91c374db023efd4ed28e633ade}{test}}\textquotesingle{}\mbox{]}, \});\});\});describe(\textquotesingle{}notice message\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ var buff=test\+\_\+buffers\+\_\+1.\+default.\+notice(\mbox{[}\{ type\+:\textquotesingle{}C\textquotesingle{}, value\+:\textquotesingle{}code\textquotesingle{} \}\mbox{]});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(buff, \{ name\+:\textquotesingle{}notice\textquotesingle{}, code\+:\textquotesingle{}code\textquotesingle{}, \});\});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(test\+\_\+buffers\+\_\+1.\+default.\+error(\mbox{[}$\,$\mbox{]}), \{ name\+:\textquotesingle{}error\textquotesingle{}, \});describe(\textquotesingle{}with \mbox{\hyperlink{application_8js_adb8f173cc9d0f47e38ae05e7bb965c99}{all}} the fields\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ var \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}=test\+\_\+buffers\+\_\+1.\+default.\+error(\mbox{[}\{ type\+:\textquotesingle{}\mbox{\hyperlink{es-errors_2test_2index_8js_a8bab16140cede5f71c657e8dc46c1887}{S}}\textquotesingle{}, value\+:\textquotesingle{}ERROR\textquotesingle{}, \}, \{ type\+:\textquotesingle{}C\textquotesingle{}, value\+:\textquotesingle{}code\textquotesingle{}, \}, \{ type\+:\textquotesingle{}M\textquotesingle{}, value\+:\textquotesingle{}message\textquotesingle{}, \}, \{ type\+:\textquotesingle{}D\textquotesingle{}, value\+:\textquotesingle{}details\textquotesingle{}, \}, \{ type\+:\textquotesingle{}H\textquotesingle{}, value\+:\textquotesingle{}hint\textquotesingle{}, \}, \{ type\+:\textquotesingle{}P\textquotesingle{}, value\+:\textquotesingle{}100\textquotesingle{}, \}, \{ type\+:\textquotesingle{}p\textquotesingle{}, value\+:\textquotesingle{}101\textquotesingle{}, \}, \{ type\+:\textquotesingle{}q\textquotesingle{}, value\+:\textquotesingle{}\mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{query}}\textquotesingle{}, \}, \{ type\+:\textquotesingle{}W\textquotesingle{}, value\+:\textquotesingle{}where\textquotesingle{}, \}, \{ type\+:\textquotesingle{}F\textquotesingle{}, value\+:\textquotesingle{}\mbox{\hyperlink{cli_8js_a14523cb74edc3f6175c54e598a379c27}{file}}\textquotesingle{}, \}, \{ type\+:\textquotesingle{}L\textquotesingle{}, value\+:\textquotesingle{}line\textquotesingle{}, \}, \{ type\+:\textquotesingle{}\mbox{\hyperlink{es-errors_2test_2index_8js_a09083e327c397ffc75bdc32d72212c70}{R}}\textquotesingle{}, value\+:\textquotesingle{}routine\textquotesingle{}, \}, \{ type\+:\textquotesingle{}Z\textquotesingle{}, value\+:\textquotesingle{}alsdkf\textquotesingle{}, \},\mbox{]});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}, \{ name\+:\textquotesingle{}error\textquotesingle{}, severity\+:\textquotesingle{}ERROR\textquotesingle{}, code\+:\textquotesingle{}code\textquotesingle{}, message\+:\textquotesingle{}message\textquotesingle{}, detail\+:\textquotesingle{}details\textquotesingle{}, hint\+:\textquotesingle{}hint\textquotesingle{}, position\+:\textquotesingle{}100\textquotesingle{}, internal\+Position\+:\textquotesingle{}101\textquotesingle{}, internal\+Query\+:\textquotesingle{}\mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{query}}\textquotesingle{}, where\+:\textquotesingle{}where\textquotesingle{}, file\+:\textquotesingle{}\mbox{\hyperlink{cli_8js_a14523cb74edc3f6175c54e598a379c27}{file}}\textquotesingle{}, line\+:\textquotesingle{}line\textquotesingle{}, routine\+:\textquotesingle{}routine\textquotesingle{}, \});\});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a3d54bff1c20dbb5a42080a87d2463eae}{parse\+Complete\+Buffer}}, \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_a97e53ecef3b958713727affe2304135d}{parse\+Complete}}\textquotesingle{}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a048159ce9c5df0af2b14b7b3ddaf4c91}{bind\+Complete\+Buffer}}, \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_a84be721500fb9aa664a4cad7ca9cd96e}{bind\+Complete}}\textquotesingle{}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a048159ce9c5df0af2b14b7b3ddaf4c91}{bind\+Complete\+Buffer}}, \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_a84be721500fb9aa664a4cad7ca9cd96e}{bind\+Complete}}\textquotesingle{}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{messages_8js_a487cccc44c3911be2c1f6f89e4c3154e}{test\+\_\+buffers\+\_\+1.\+default.\+close\+Complete}}(), \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_a487cccc44c3911be2c1f6f89e4c3154e}{close\+Complete}}\textquotesingle{}, \});describe(\textquotesingle{}parses portal suspended message\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{inbound-parser_8test_8js_a939c6a89342b23f8414a34fa8c3fa723}{portal\+Suspended\+Buffer}}, \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_afcf183e9b49dac6df878d13c5b5833c6}{portal\+Suspended}}\textquotesingle{}, \});\});describe(\textquotesingle{}parses replication \mbox{\hyperlink{b_8js_a0129af27b4a85bdb6fce06dc23b3450f}{start}} message\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(Buffer.\+from(\mbox{[}0x57, 0x00, 0x00, 0x00, 0x04\mbox{]}), \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_ac11c863e0dde7a06609c3ce230dc1ee5}{replication\+Start}}\textquotesingle{}, length\+:4, \});\});describe(\textquotesingle{}copy\textquotesingle{},()=$>$ \{ \mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(test\+\_\+buffers\+\_\+1.\+default.\+copy\+In(0), \{ name\+:\textquotesingle{}copy\+In\+Response\textquotesingle{}, length\+:7, binary\+:false, column\+Types\+:\mbox{[}$\,$\mbox{]}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(test\+\_\+buffers\+\_\+1.\+default.\+copy\+In(2), \{ name\+:\textquotesingle{}copy\+In\+Response\textquotesingle{}, length\+:11, binary\+:false, column\+Types\+:\mbox{[}0, 1\mbox{]}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(test\+\_\+buffers\+\_\+1.\+default.\+copy\+Out(0), \{ name\+:\textquotesingle{}copy\+Out\+Response\textquotesingle{}, length\+:7, binary\+:false, column\+Types\+:\mbox{[}$\,$\mbox{]}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(test\+\_\+buffers\+\_\+1.\+default.\+copy\+Out(3), \{ name\+:\textquotesingle{}copy\+Out\+Response\textquotesingle{}, length\+:13, binary\+:false, column\+Types\+:\mbox{[}0, 1, 2\mbox{]}, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{messages_8js_ae7314b0ea8745d3c6adc1934aef49481}{test\+\_\+buffers\+\_\+1.\+default.\+copy\+Done}}(), \{ name\+:\textquotesingle{}\mbox{\hyperlink{messages_8js_ae7314b0ea8745d3c6adc1934aef49481}{copy\+Done}}\textquotesingle{}, length\+:4, \});\mbox{\hyperlink{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}{test\+For\+Message}}(\mbox{\hyperlink{serializer_8js_a2cfedf9409d2ba03632554098c4bc6d9}{test\+\_\+buffers\+\_\+1.\+default.\+copy\+Data}}(Buffer.\+from(\mbox{[}5, 6, 7\mbox{]})), \{ name\+:\textquotesingle{}\mbox{\hyperlink{serializer_8js_a2cfedf9409d2ba03632554098c4bc6d9}{copy\+Data}}\textquotesingle{}, length\+:7, chunk\+:\+Buffer.\+from(\mbox{[}5, 6, 7\mbox{]}), \});\});describe(\textquotesingle{}\mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}} \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}, single message parsing\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ var full\+Buffer=test\+\_\+buffers\+\_\+1.\+default.\+data\+Row(\mbox{[}null, \textquotesingle{}bang\textquotesingle{}, \textquotesingle{}zug zug\textquotesingle{}, null, \textquotesingle{}!\textquotesingle{}\mbox{]});it(\textquotesingle{}parses when full \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}} comes in\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ return \mbox{\hyperlink{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}{\+\_\+\+\_\+awaiter}}(this, void 0, void 0, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \texorpdfstring{$\ast$}{*}() \{ const messages=yield \mbox{\hyperlink{inbound-parser_8test_8js_a3bcb75a676c00f0aae1dc2f2252bc4e1}{parse\+Buffers}}(\mbox{[}full\+Buffer\mbox{]});const message=messages\mbox{[}0\mbox{]};\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields.\+length, 5);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}0\mbox{]}, null);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}1\mbox{]}, \textquotesingle{}bang\textquotesingle{});\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}2\mbox{]}, \textquotesingle{}zug zug\textquotesingle{});\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}3\mbox{]}, null);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}4\mbox{]}, \textquotesingle{}!\textquotesingle{});\});\});var test\+Message\+Recieved\+After\+Spilt\+At=\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(\mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}}) \{ return \mbox{\hyperlink{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}{\+\_\+\+\_\+awaiter}}(this, void 0, void 0, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \texorpdfstring{$\ast$}{*}() \{ var first\+Buffer=Buffer.\+alloc(full\+Buffer.\+length -\/ \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}});var second\+Buffer=Buffer.\+alloc(full\+Buffer.\+length -\/ first\+Buffer.\+length);full\+Buffer.\+copy(first\+Buffer, 0, 0);full\+Buffer.\+copy(second\+Buffer, 0, first\+Buffer.\+length);const messages=yield \mbox{\hyperlink{inbound-parser_8test_8js_a3bcb75a676c00f0aae1dc2f2252bc4e1}{parse\+Buffers}}(\mbox{[}full\+Buffer\mbox{]});const message=messages\mbox{[}0\mbox{]};\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields.\+length, 5);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}0\mbox{]}, null);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}1\mbox{]}, \textquotesingle{}bang\textquotesingle{});\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}2\mbox{]}, \textquotesingle{}zug zug\textquotesingle{});\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}3\mbox{]}, null);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(message.\+fields\mbox{[}4\mbox{]}, \textquotesingle{}!\textquotesingle{});\});\};it(\textquotesingle{}parses when \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}} in the middle\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ test\+Message\+Recieved\+After\+Spilt\+At(6);\});it(\textquotesingle{}parses when \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}} at end\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ test\+Message\+Recieved\+After\+Spilt\+At(2);\});it(\textquotesingle{}parses when \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}} at beginning\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ test\+Message\+Recieved\+After\+Spilt\+At(full\+Buffer.\+length -\/ 2);test\+Message\+Recieved\+After\+Spilt\+At(full\+Buffer.\+length -\/ 1);test\+Message\+Recieved\+After\+Spilt\+At(full\+Buffer.\+length -\/ 5);\});\});describe(\textquotesingle{}\mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}} \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}, multiple message parsing\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ var data\+Row\+Buffer=test\+\_\+buffers\+\_\+1.\+default.\+data\+Row(\mbox{[}\textquotesingle{}!\textquotesingle{}\mbox{]});var \mbox{\hyperlink{inbound-parser_8test_8js_a04fe6555588ba28526273741fa3076d2}{ready\+For\+Query\+Buffer}}=test\+\_\+buffers\+\_\+1.\+default.\+ready\+For\+Query();var full\+Buffer=Buffer.\+alloc(data\+Row\+Buffer.\+length+ready\+For\+Query\+Buffer.\+length);data\+Row\+Buffer.\+copy(full\+Buffer, 0, 0);ready\+For\+Query\+Buffer.\+copy(full\+Buffer, data\+Row\+Buffer.\+length, 0);var verify\+Messages=\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(messages) \{ assert\+\_\+1.\+default.\+strict\+Equal(messages.\+length, 2);assert\+\_\+1.\+default.\+deep\+Equal(messages\mbox{[}0\mbox{]}, \{ name\+:\textquotesingle{}data\+Row\textquotesingle{}, field\+Count\+:1, length\+:11, fields\+:\mbox{[}\textquotesingle{}!\textquotesingle{}\mbox{]}, \});\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{assert\+\_\+1.\+default.\+equal}}(messages\mbox{[}0\mbox{]}.fields\mbox{[}0\mbox{]}, \textquotesingle{}!\textquotesingle{});assert\+\_\+1.\+default.\+deep\+Equal(messages\mbox{[}1\mbox{]}, \{ name\+:\textquotesingle{}ready\+For\+Query\textquotesingle{}, length\+:5, status\+:\textquotesingle{}I\textquotesingle{}, \});\};it(\textquotesingle{}recieves both messages when packet \mbox{\hyperlink{request_8js_a5e3afd97276cc403924d1a449a83ea84}{is}} not \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}}\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ return \mbox{\hyperlink{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}{\+\_\+\+\_\+awaiter}}(this, void 0, void 0, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \texorpdfstring{$\ast$}{*}() \{ const messages=yield \mbox{\hyperlink{inbound-parser_8test_8js_a3bcb75a676c00f0aae1dc2f2252bc4e1}{parse\+Buffers}}(\mbox{[}full\+Buffer\mbox{]});verify\+Messages(messages);\});\});var split\+And\+Verify\+Two\+Messages=\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(\mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}}) \{ return \mbox{\hyperlink{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}{\+\_\+\+\_\+awaiter}}(this, void 0, void 0, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \texorpdfstring{$\ast$}{*}() \{ var first\+Buffer=Buffer.\+alloc(full\+Buffer.\+length -\/ \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}});var second\+Buffer=Buffer.\+alloc(full\+Buffer.\+length -\/ first\+Buffer.\+length);full\+Buffer.\+copy(first\+Buffer, 0, 0);full\+Buffer.\+copy(second\+Buffer, 0, first\+Buffer.\+length);const messages=yield \mbox{\hyperlink{inbound-parser_8test_8js_a3bcb75a676c00f0aae1dc2f2252bc4e1}{parse\+Buffers}}(\mbox{[}first\+Buffer, second\+Buffer\mbox{]});verify\+Messages(messages);\});\};describe(\textquotesingle{}recieves both messages when packet \mbox{\hyperlink{request_8js_a5e3afd97276cc403924d1a449a83ea84}{is}} \mbox{\hyperlink{helper_8js_a02757733e12d272f36eb88bf5eb0df12}{split}}\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ it(\textquotesingle{}in the middle\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ return split\+And\+Verify\+Two\+Messages(11);\});it(\textquotesingle{}at the front\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ return \mbox{\hyperlink{application_8js_adb8f173cc9d0f47e38ae05e7bb965c99}{Promise.\+all}}(\mbox{[}split\+And\+Verify\+Two\+Messages(full\+Buffer.\+length -\/ 1), split\+And\+Verify\+Two\+Messages(full\+Buffer.\+length -\/ 4), split\+And\+Verify\+Two\+Messages(full\+Buffer.\+length -\/ 6),\mbox{]});\});it(\textquotesingle{}at the end\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ return \mbox{\hyperlink{application_8js_adb8f173cc9d0f47e38ae05e7bb965c99}{Promise.\+all}}(\mbox{[}split\+And\+Verify\+Two\+Messages(8), split\+And\+Verify\+Two\+Messages(1)\mbox{]});\});\});\});\}}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{inbound-parser_8test_8js_a76aa01e4e3ebe86c8dbf548e41385e61}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!\_1@{\_1}}
+\index{\_1@{\_1}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{\_1}{\_1}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a76aa01e4e3ebe86c8dbf548e41385e61} 
+const \+\_\+1 = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}."{})}
+
+\Hypertarget{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!\_\_awaiter@{\_\_awaiter}}
+\index{\_\_awaiter@{\_\_awaiter}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{\_\_awaiter}{\_\_awaiter}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9} 
+var \+\_\+\+\_\+awaiter}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\textcolor{keyword}{this}\ \&\&\ this.\mbox{\hyperlink{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}{\_\_awaiter}})\ ||\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (thisArg,\ \_arguments,\ P,\ generator)\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ adopt(\mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}})\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}\ instanceof\ P\ ?\ \mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}\ :\ \textcolor{keyword}{new}\ P(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (\mbox{\hyperlink{application_8js_a2001ea102ec496ebdabe15e68493427a}{resolve}})\ \{\ \mbox{\hyperlink{application_8js_a2001ea102ec496ebdabe15e68493427a}{resolve}}(\mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}});\ \});\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ (P\ ||\ (P\ =\ Promise))(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (\mbox{\hyperlink{application_8js_a2001ea102ec496ebdabe15e68493427a}{resolve}},\ reject)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ fulfilled(\mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}})\ \{\ \textcolor{keywordflow}{try}\ \{\ step(generator.next(\mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}));\ \}\ \textcolor{keywordflow}{catch}\ (e)\ \{\ reject(e);\ \}\ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ rejected(\mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}})\ \{\ \textcolor{keywordflow}{try}\ \{\ step(generator[\textcolor{stringliteral}{"{}throw"{}}](\mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}));\ \}\ \textcolor{keywordflow}{catch}\ (e)\ \{\ reject(e);\ \}\ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ step(result)\ \{\ result.done\ ?\ \mbox{\hyperlink{application_8js_a2001ea102ec496ebdabe15e68493427a}{resolve}}(result.value)\ :\ adopt(result.\mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}).then(fulfilled,\ rejected);\ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ step((generator\ =\ generator.apply(thisArg,\ \_arguments\ ||\ [])).next());}
+\DoxyCodeLine{\ \ \ \ \});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_aa77bab964373eb2917ab7e271138d9aa}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!\_\_importDefault@{\_\_importDefault}}
+\index{\_\_importDefault@{\_\_importDefault}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{\_\_importDefault}{\_\_importDefault}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_aa77bab964373eb2917ab7e271138d9aa} 
+var \+\_\+\+\_\+import\+Default}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\textcolor{keyword}{this}\ \&\&\ this.\mbox{\hyperlink{inbound-parser_8test_8js_aa77bab964373eb2917ab7e271138d9aa}{\_\_importDefault}})\ ||\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (mod)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ (mod\ \&\&\ mod.\_\_esModule)\ ?\ mod\ :\ \{\ \textcolor{stringliteral}{"{}default"{}}:\ mod\ \};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a14390ab91d7ba9b6ef942f760d8a86f7}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!addRow@{addRow}}
+\index{addRow@{addRow}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{addRow}{addRow}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a14390ab91d7ba9b6ef942f760d8a86f7} 
+var add\+Row}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (bufferList,\ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}},\ offset)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ bufferList}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .addCString(\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}})\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .addInt32(offset++)\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .addInt16(offset++)\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .addInt32(offset++)\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .addInt16(offset++)\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .addInt32(offset++)\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .addInt16(0);\ }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_ad9535cd8fb66673f53cea356b63e94c1}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!assert\_1@{assert\_1}}
+\index{assert\_1@{assert\_1}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{assert\_1}{assert\_1}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_ad9535cd8fb66673f53cea356b63e94c1} 
+const assert\+\_\+1 = \mbox{\hyperlink{inbound-parser_8test_8js_aa77bab964373eb2917ab7e271138d9aa}{\+\_\+\+\_\+import\+Default}}(\mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}assert"{}))}
+
+\Hypertarget{inbound-parser_8test_8js_a3e6e9c78321fb424a228b8d126757938}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!authOkBuffer@{authOkBuffer}}
+\index{authOkBuffer@{authOkBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{authOkBuffer}{authOkBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a3e6e9c78321fb424a228b8d126757938} 
+var auth\+Ok\+Buffer = test\+\_\+buffers\+\_\+1.\+default.\+authentication\+Ok()}
+
+\Hypertarget{inbound-parser_8test_8js_a4cb16c8694196d86603804a2ded21057}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!backendKeyDataBuffer@{backendKeyDataBuffer}}
+\index{backendKeyDataBuffer@{backendKeyDataBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{backendKeyDataBuffer}{backendKeyDataBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a4cb16c8694196d86603804a2ded21057} 
+var backend\+Key\+Data\+Buffer = test\+\_\+buffers\+\_\+1.\+default.\+backend\+Key\+Data(1, 2)}
+
+\Hypertarget{inbound-parser_8test_8js_a048159ce9c5df0af2b14b7b3ddaf4c91}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!bindCompleteBuffer@{bindCompleteBuffer}}
+\index{bindCompleteBuffer@{bindCompleteBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{bindCompleteBuffer}{bindCompleteBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a048159ce9c5df0af2b14b7b3ddaf4c91} 
+var bind\+Complete\+Buffer = \mbox{\hyperlink{messages_8js_a84be721500fb9aa664a4cad7ca9cd96e}{test\+\_\+buffers\+\_\+1.\+default.\+bind\+Complete}}()}
+
+\Hypertarget{inbound-parser_8test_8js_aa250b1283ed215180bc56b03f36672f9}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!buffer\_list\_1@{buffer\_list\_1}}
+\index{buffer\_list\_1@{buffer\_list\_1}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{buffer\_list\_1}{buffer\_list\_1}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_aa250b1283ed215180bc56b03f36672f9} 
+const buffer\+\_\+list\+\_\+1 = \mbox{\hyperlink{inbound-parser_8test_8js_aa77bab964373eb2917ab7e271138d9aa}{\+\_\+\+\_\+import\+Default}}(\mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}./testing/\mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}-\/list"{}))}
+
+\Hypertarget{inbound-parser_8test_8js_a01b4da431f0d5e3ea8ca8f09ade15e38}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!commandCompleteBuffer@{commandCompleteBuffer}}
+\index{commandCompleteBuffer@{commandCompleteBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{commandCompleteBuffer}{commandCompleteBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a01b4da431f0d5e3ea8ca8f09ade15e38} 
+var command\+Complete\+Buffer = test\+\_\+buffers\+\_\+1.\+default.\+command\+Complete(\textquotesingle{}SELECT 3\textquotesingle{})}
+
+\Hypertarget{inbound-parser_8test_8js_a67377b5c1bb95b40f8a467aee6ead3b6}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!emptyParameterDescriptionBuffer@{emptyParameterDescriptionBuffer}}
+\index{emptyParameterDescriptionBuffer@{emptyParameterDescriptionBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{emptyParameterDescriptionBuffer}{emptyParameterDescriptionBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a67377b5c1bb95b40f8a467aee6ead3b6} 
+var empty\+Parameter\+Description\+Buffer}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{new}\ \mbox{\hyperlink{inbound-parser_8test_8js_aa250b1283ed215180bc56b03f36672f9}{buffer\_list\_1}}.default()}
+\DoxyCodeLine{\ \ \ \ .addInt16(0)\ }
+\DoxyCodeLine{\ \ \ \ .join(\textcolor{keyword}{true},\ \textcolor{charliteral}{'t'})}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_acebff3f74b4fe3e0c32bf338a1d64528}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!emptyRowDescriptionBuffer@{emptyRowDescriptionBuffer}}
+\index{emptyRowDescriptionBuffer@{emptyRowDescriptionBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{emptyRowDescriptionBuffer}{emptyRowDescriptionBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_acebff3f74b4fe3e0c32bf338a1d64528} 
+var empty\+Row\+Description\+Buffer}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{new}\ \mbox{\hyperlink{inbound-parser_8test_8js_aa250b1283ed215180bc56b03f36672f9}{buffer\_list\_1}}.default()}
+\DoxyCodeLine{\ \ \ \ .addInt16(0)\ }
+\DoxyCodeLine{\ \ \ \ .join(\textcolor{keyword}{true},\ \textcolor{charliteral}{'T'})}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_adeb65f76f0d5a13bdabfa44d3a07a2fe}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!emptyRowFieldBuf@{emptyRowFieldBuf}}
+\index{emptyRowFieldBuf@{emptyRowFieldBuf}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{emptyRowFieldBuf}{emptyRowFieldBuf}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_adeb65f76f0d5a13bdabfa44d3a07a2fe} 
+var empty\+Row\+Field\+Buf = new buffer\+\_\+list\+\_\+1.\+default().\mbox{\hyperlink{buffer-writer_2index_8js_ac764e228a074bc7d8f15becada71232e}{add\+Int16}}(0).\mbox{\hyperlink{buffer-writer_2index_8js_a6224c24496a1edd10ed52a9149e0d28a}{join}}(true, \textquotesingle{}D\textquotesingle{})}
+
+\Hypertarget{inbound-parser_8test_8js_a1eabba9ffebb957cc21b21c437d75d46}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedAuthenticationOkayMessage@{expectedAuthenticationOkayMessage}}
+\index{expectedAuthenticationOkayMessage@{expectedAuthenticationOkayMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedAuthenticationOkayMessage}{expectedAuthenticationOkayMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a1eabba9ffebb957cc21b21c437d75d46} 
+var expected\+Authentication\+Okay\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'authenticationOk'},}
+\DoxyCodeLine{\ \ \ \ length:\ 8,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a1cd6fb6e827c300d0bf185e9609ad359}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedBackendKeyDataMessage@{expectedBackendKeyDataMessage}}
+\index{expectedBackendKeyDataMessage@{expectedBackendKeyDataMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedBackendKeyDataMessage}{expectedBackendKeyDataMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a1cd6fb6e827c300d0bf185e9609ad359} 
+var expected\+Backend\+Key\+Data\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'backendKeyData'},}
+\DoxyCodeLine{\ \ \ \ processID:\ 1,}
+\DoxyCodeLine{\ \ \ \ secretKey:\ 2,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_afe049b3e19361cb373fb2a9370ea1d03}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedCommandCompleteMessage@{expectedCommandCompleteMessage}}
+\index{expectedCommandCompleteMessage@{expectedCommandCompleteMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedCommandCompleteMessage}{expectedCommandCompleteMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_afe049b3e19361cb373fb2a9370ea1d03} 
+var expected\+Command\+Complete\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'commandComplete'},}
+\DoxyCodeLine{\ \ \ \ length:\ 13,}
+\DoxyCodeLine{\ \ \ \ text:\ \textcolor{stringliteral}{'SELECT\ 3'},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a0225d90da67cae0569ca3a404106c511}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedEmptyParameterDescriptionMessage@{expectedEmptyParameterDescriptionMessage}}
+\index{expectedEmptyParameterDescriptionMessage@{expectedEmptyParameterDescriptionMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedEmptyParameterDescriptionMessage}{expectedEmptyParameterDescriptionMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a0225d90da67cae0569ca3a404106c511} 
+var expected\+Empty\+Parameter\+Description\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'parameterDescription'},}
+\DoxyCodeLine{\ \ \ \ length:\ 6,}
+\DoxyCodeLine{\ \ \ \ parameterCount:\ 0,}
+\DoxyCodeLine{\ \ \ \ dataTypeIDs:\ [],}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_af95a302132df7119e65f8acc8768b535}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedEmptyRowDescriptionMessage@{expectedEmptyRowDescriptionMessage}}
+\index{expectedEmptyRowDescriptionMessage@{expectedEmptyRowDescriptionMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedEmptyRowDescriptionMessage}{expectedEmptyRowDescriptionMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_af95a302132df7119e65f8acc8768b535} 
+var expected\+Empty\+Row\+Description\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'rowDescription'},}
+\DoxyCodeLine{\ \ \ \ length:\ 6,}
+\DoxyCodeLine{\ \ \ \ fieldCount:\ 0,}
+\DoxyCodeLine{\ \ \ \ fields:\ [],}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a0a3db3284ed0072912efaebc27d3b384}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedMD5PasswordMessage@{expectedMD5PasswordMessage}}
+\index{expectedMD5PasswordMessage@{expectedMD5PasswordMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedMD5PasswordMessage}{expectedMD5PasswordMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a0a3db3284ed0072912efaebc27d3b384} 
+var expected\+MD5\+Password\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'authenticationMD5Password'},}
+\DoxyCodeLine{\ \ \ \ salt:\ Buffer.from([1,\ 2,\ 3,\ 4]),}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a9087883d7d2b5388e99225df4367a7b3}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedNotificationResponseMessage@{expectedNotificationResponseMessage}}
+\index{expectedNotificationResponseMessage@{expectedNotificationResponseMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedNotificationResponseMessage}{expectedNotificationResponseMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a9087883d7d2b5388e99225df4367a7b3} 
+var expected\+Notification\+Response\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'notification'},}
+\DoxyCodeLine{\ \ \ \ processId:\ 4,}
+\DoxyCodeLine{\ \ \ \ channel:\ \textcolor{stringliteral}{'hi'},}
+\DoxyCodeLine{\ \ \ \ payload:\ \textcolor{stringliteral}{'boom'},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a507d380a69b23deb817fc388ef6f7246}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedOneParameterMessage@{expectedOneParameterMessage}}
+\index{expectedOneParameterMessage@{expectedOneParameterMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedOneParameterMessage}{expectedOneParameterMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a507d380a69b23deb817fc388ef6f7246} 
+var expected\+One\+Parameter\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'parameterDescription'},}
+\DoxyCodeLine{\ \ \ \ length:\ 10,}
+\DoxyCodeLine{\ \ \ \ parameterCount:\ 1,}
+\DoxyCodeLine{\ \ \ \ dataTypeIDs:\ [1111],}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a63bc9ad99f034d10c96352f8cd993dd8}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedOneRowMessage@{expectedOneRowMessage}}
+\index{expectedOneRowMessage@{expectedOneRowMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedOneRowMessage}{expectedOneRowMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a63bc9ad99f034d10c96352f8cd993dd8} 
+var expected\+One\+Row\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'rowDescription'},}
+\DoxyCodeLine{\ \ \ \ length:\ 27,}
+\DoxyCodeLine{\ \ \ \ fieldCount:\ 1,}
+\DoxyCodeLine{\ \ \ \ fields:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'id'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ tableID:\ 1,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ columnID:\ 2,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ dataTypeID:\ 3,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ dataTypeSize:\ 4,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ dataTypeModifier:\ 5,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{bytes_2index_8js_a9027c5af360d5ef99cc9906449e85a27}{format}}:\ \textcolor{stringliteral}{'text'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_aeb266d0c2d9517c6babf7aa354aada12}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedParameterStatusMessage@{expectedParameterStatusMessage}}
+\index{expectedParameterStatusMessage@{expectedParameterStatusMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedParameterStatusMessage}{expectedParameterStatusMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_aeb266d0c2d9517c6babf7aa354aada12} 
+var expected\+Parameter\+Status\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'parameterStatus'},}
+\DoxyCodeLine{\ \ \ \ parameterName:\ \textcolor{stringliteral}{'client\_encoding'},}
+\DoxyCodeLine{\ \ \ \ parameterValue:\ \textcolor{stringliteral}{'UTF8'},}
+\DoxyCodeLine{\ \ \ \ length:\ 25,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a8d61397cf1f575d8ae59ddb81e49eed2}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedPlainPasswordMessage@{expectedPlainPasswordMessage}}
+\index{expectedPlainPasswordMessage@{expectedPlainPasswordMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedPlainPasswordMessage}{expectedPlainPasswordMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a8d61397cf1f575d8ae59ddb81e49eed2} 
+var expected\+Plain\+Password\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'authenticationCleartextPassword'},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a0d9c877ecb0c43f276024d02ea26764e}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedReadyForQueryMessage@{expectedReadyForQueryMessage}}
+\index{expectedReadyForQueryMessage@{expectedReadyForQueryMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedReadyForQueryMessage}{expectedReadyForQueryMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a0d9c877ecb0c43f276024d02ea26764e} 
+var expected\+Ready\+For\+Query\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'readyForQuery'},}
+\DoxyCodeLine{\ \ \ \ length:\ 5,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{status}}:\ \textcolor{charliteral}{'I'},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_afc115c2c15d55a76f609063df1c12edd}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedSASLContinueMessage@{expectedSASLContinueMessage}}
+\index{expectedSASLContinueMessage@{expectedSASLContinueMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedSASLContinueMessage}{expectedSASLContinueMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_afc115c2c15d55a76f609063df1c12edd} 
+var expected\+SASLContinue\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'authenticationSASLContinue'},}
+\DoxyCodeLine{\ \ \ \ data:\ \textcolor{stringliteral}{'data'},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a28244211750174ef4166b285e556596c}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedSASLFinalMessage@{expectedSASLFinalMessage}}
+\index{expectedSASLFinalMessage@{expectedSASLFinalMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedSASLFinalMessage}{expectedSASLFinalMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a28244211750174ef4166b285e556596c} 
+var expected\+SASLFinal\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'authenticationSASLFinal'},}
+\DoxyCodeLine{\ \ \ \ data:\ \textcolor{stringliteral}{'data'},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a233a256c28800cfce8d1f52e18e54f48}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedSASLMessage@{expectedSASLMessage}}
+\index{expectedSASLMessage@{expectedSASLMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedSASLMessage}{expectedSASLMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a233a256c28800cfce8d1f52e18e54f48} 
+var expected\+SASLMessage}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'authenticationSASL'},}
+\DoxyCodeLine{\ \ \ \ mechanisms:\ [\textcolor{stringliteral}{'SCRAM-\/SHA-\/256'}],}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_add7e6b28b911adcaec7b64494e5c364d}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedTwoParameterMessage@{expectedTwoParameterMessage}}
+\index{expectedTwoParameterMessage@{expectedTwoParameterMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedTwoParameterMessage}{expectedTwoParameterMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_add7e6b28b911adcaec7b64494e5c364d} 
+var expected\+Two\+Parameter\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'parameterDescription'},}
+\DoxyCodeLine{\ \ \ \ length:\ 14,}
+\DoxyCodeLine{\ \ \ \ parameterCount:\ 2,}
+\DoxyCodeLine{\ \ \ \ dataTypeIDs:\ [2222,\ 3333],}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a91d8b63c956c9bb9a19c43def9b04a01}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!expectedTwoRowMessage@{expectedTwoRowMessage}}
+\index{expectedTwoRowMessage@{expectedTwoRowMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{expectedTwoRowMessage}{expectedTwoRowMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a91d8b63c956c9bb9a19c43def9b04a01} 
+var expected\+Two\+Row\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'rowDescription'},}
+\DoxyCodeLine{\ \ \ \ length:\ 53,}
+\DoxyCodeLine{\ \ \ \ fieldCount:\ 2,}
+\DoxyCodeLine{\ \ \ \ fields:\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'bang'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ tableID:\ 1,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ columnID:\ 2,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ dataTypeID:\ 3,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ dataTypeSize:\ 4,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ dataTypeModifier:\ 5,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{bytes_2index_8js_a9027c5af360d5ef99cc9906449e85a27}{format}}:\ \textcolor{stringliteral}{'text'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'whoah'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ tableID:\ 10,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ columnID:\ 11,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ dataTypeID:\ 12,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ dataTypeSize:\ 13,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ dataTypeModifier:\ 14,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{bytes_2index_8js_a9027c5af360d5ef99cc9906449e85a27}{format}}:\ \textcolor{stringliteral}{'text'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ ],}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a548098af9ea379b1d832e696263f7a35}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!md5PasswordBuffer@{md5PasswordBuffer}}
+\index{md5PasswordBuffer@{md5PasswordBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{md5PasswordBuffer}{md5PasswordBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a548098af9ea379b1d832e696263f7a35} 
+var md5\+Password\+Buffer = test\+\_\+buffers\+\_\+1.\+default.\+authentication\+MD5\+Password()}
+
+\Hypertarget{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!name@{name}}
+\index{name@{name}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e} 
+\mbox{\hyperlink{inbound-parser_8test_8js_ad5a8dc24a61495d6e103302762046096}{row1}} name = \textquotesingle{}bang\textquotesingle{}}
+
+\Hypertarget{inbound-parser_8test_8js_aca0b16ccf8c22698333cb37e5294c2d3}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!notificationResponseBuffer@{notificationResponseBuffer}}
+\index{notificationResponseBuffer@{notificationResponseBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{notificationResponseBuffer}{notificationResponseBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_aca0b16ccf8c22698333cb37e5294c2d3} 
+var notification\+Response\+Buffer = test\+\_\+buffers\+\_\+1.\+default.\+notification(4, \textquotesingle{}hi\textquotesingle{}, \textquotesingle{}boom\textquotesingle{})}
+
+\Hypertarget{inbound-parser_8test_8js_a75c82b7be5aac54c5932f010f17410cf}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!oneFieldBuf@{oneFieldBuf}}
+\index{oneFieldBuf@{oneFieldBuf}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{oneFieldBuf}{oneFieldBuf}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a75c82b7be5aac54c5932f010f17410cf} 
+var one\+Field\+Buf}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{new}\ \mbox{\hyperlink{inbound-parser_8test_8js_aa250b1283ed215180bc56b03f36672f9}{buffer\_list\_1}}.default()}
+\DoxyCodeLine{\ \ \ \ .addInt16(1)\ }
+\DoxyCodeLine{\ \ \ \ .addInt32(5)\ }
+\DoxyCodeLine{\ \ \ \ .addCString(\textcolor{stringliteral}{'test'})}
+\DoxyCodeLine{\ \ \ \ .join(\textcolor{keyword}{true},\ \textcolor{charliteral}{'D'})}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a19b52335ab1d9c7d65723f83f6aaeb31}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!oneParameterDescBuf@{oneParameterDescBuf}}
+\index{oneParameterDescBuf@{oneParameterDescBuf}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{oneParameterDescBuf}{oneParameterDescBuf}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a19b52335ab1d9c7d65723f83f6aaeb31} 
+var one\+Parameter\+Desc\+Buf = test\+\_\+buffers\+\_\+1.\+default.\+parameter\+Description(\mbox{[}1111\mbox{]})}
+
+\Hypertarget{inbound-parser_8test_8js_a1d51b5018d1bc79658bdc4440b4b6a3d}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!oneRowDescBuff@{oneRowDescBuff}}
+\index{oneRowDescBuff@{oneRowDescBuff}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{oneRowDescBuff}{oneRowDescBuff}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a1d51b5018d1bc79658bdc4440b4b6a3d} 
+var one\+Row\+Desc\+Buff = test\+\_\+buffers\+\_\+1.\+default.\+row\+Description(\mbox{[}\mbox{\hyperlink{inbound-parser_8test_8js_ad5a8dc24a61495d6e103302762046096}{row1}}\mbox{]})}
+
+\Hypertarget{inbound-parser_8test_8js_a05fd0b40cf710260445d70d5aa1b26f7}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!paramStatusBuffer@{paramStatusBuffer}}
+\index{paramStatusBuffer@{paramStatusBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{paramStatusBuffer}{paramStatusBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a05fd0b40cf710260445d70d5aa1b26f7} 
+var param\+Status\+Buffer = test\+\_\+buffers\+\_\+1.\+default.\+parameter\+Status(\textquotesingle{}client\+\_\+encoding\textquotesingle{}, \textquotesingle{}UTF8\textquotesingle{})}
+
+\Hypertarget{inbound-parser_8test_8js_a3bcb75a676c00f0aae1dc2f2252bc4e1}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!parseBuffers@{parseBuffers}}
+\index{parseBuffers@{parseBuffers}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{parseBuffers}{parseBuffers}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a3bcb75a676c00f0aae1dc2f2252bc4e1} 
+const parse\+Buffers}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (buffers)\ =>\ \mbox{\hyperlink{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}{\_\_awaiter}}(\textcolor{keywordtype}{void}\ 0,\ \textcolor{keywordtype}{void}\ 0,\ \textcolor{keywordtype}{void}\ 0,\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}*\ ()\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{inbound-parser_8test_8js_a4bf84a2dbc80e17d37c6591ece0577c1}{stream\_1}}.PassThrough();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}\ of\ buffers)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}}.write(\mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}}.end();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ msgs\ =\ [];}
+\DoxyCodeLine{\ \ \ \ yield\ \mbox{\hyperlink{inbound-parser_8test_8js_a76aa01e4e3ebe86c8dbf548e41385e61}{\_1}}.parse(\mbox{\hyperlink{src_2node_8js_a822bf74d422c61e6caa292f739dc4786}{stream}},\ (msg)\ =>\ msgs.push(msg));}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ msgs;}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_a3d54bff1c20dbb5a42080a87d2463eae}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!parseCompleteBuffer@{parseCompleteBuffer}}
+\index{parseCompleteBuffer@{parseCompleteBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{parseCompleteBuffer}{parseCompleteBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a3d54bff1c20dbb5a42080a87d2463eae} 
+var parse\+Complete\+Buffer = \mbox{\hyperlink{messages_8js_a97e53ecef3b958713727affe2304135d}{test\+\_\+buffers\+\_\+1.\+default.\+parse\+Complete}}()}
+
+\Hypertarget{inbound-parser_8test_8js_adba14487241f9d9399c1f79b75729325}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!plainPasswordBuffer@{plainPasswordBuffer}}
+\index{plainPasswordBuffer@{plainPasswordBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{plainPasswordBuffer}{plainPasswordBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_adba14487241f9d9399c1f79b75729325} 
+var plain\+Password\+Buffer = test\+\_\+buffers\+\_\+1.\+default.\+authentication\+Cleartext\+Password()}
+
+\Hypertarget{inbound-parser_8test_8js_a939c6a89342b23f8414a34fa8c3fa723}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!portalSuspendedBuffer@{portalSuspendedBuffer}}
+\index{portalSuspendedBuffer@{portalSuspendedBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{portalSuspendedBuffer}{portalSuspendedBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a939c6a89342b23f8414a34fa8c3fa723} 
+var portal\+Suspended\+Buffer = \mbox{\hyperlink{messages_8js_afcf183e9b49dac6df878d13c5b5833c6}{test\+\_\+buffers\+\_\+1.\+default.\+portal\+Suspended}}()}
+
+\Hypertarget{inbound-parser_8test_8js_a04fe6555588ba28526273741fa3076d2}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!readyForQueryBuffer@{readyForQueryBuffer}}
+\index{readyForQueryBuffer@{readyForQueryBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{readyForQueryBuffer}{readyForQueryBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a04fe6555588ba28526273741fa3076d2} 
+var ready\+For\+Query\+Buffer = test\+\_\+buffers\+\_\+1.\+default.\+ready\+For\+Query()}
+
+\Hypertarget{inbound-parser_8test_8js_ad5a8dc24a61495d6e103302762046096}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!row1@{row1}}
+\index{row1@{row1}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{row1}{row1}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_ad5a8dc24a61495d6e103302762046096} 
+var row1}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'id'},}
+\DoxyCodeLine{\ \ \ \ tableID:\ 1,}
+\DoxyCodeLine{\ \ \ \ attributeNumber:\ 2,}
+\DoxyCodeLine{\ \ \ \ dataTypeID:\ 3,}
+\DoxyCodeLine{\ \ \ \ dataTypeSize:\ 4,}
+\DoxyCodeLine{\ \ \ \ typeModifier:\ 5,}
+\DoxyCodeLine{\ \ \ \ formatCode:\ 0,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_acd13eb31ab5dbf1bf42352e7f2595a3c}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!SASLBuffer@{SASLBuffer}}
+\index{SASLBuffer@{SASLBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{SASLBuffer}{SASLBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_acd13eb31ab5dbf1bf42352e7f2595a3c} 
+var SASLBuffer = test\+\_\+buffers\+\_\+1.\+default.\+authentication\+SASL()}
+
+\Hypertarget{inbound-parser_8test_8js_a794db65eca7d13adabd7d0ad9259fbf4}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!SASLContinueBuffer@{SASLContinueBuffer}}
+\index{SASLContinueBuffer@{SASLContinueBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{SASLContinueBuffer}{SASLContinueBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a794db65eca7d13adabd7d0ad9259fbf4} 
+var SASLContinue\+Buffer = test\+\_\+buffers\+\_\+1.\+default.\+authentication\+SASLContinue()}
+
+\Hypertarget{inbound-parser_8test_8js_a5315a63d75bd5c9819e3d4cc4f0eaac3}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!SASLFinalBuffer@{SASLFinalBuffer}}
+\index{SASLFinalBuffer@{SASLFinalBuffer}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{SASLFinalBuffer}{SASLFinalBuffer}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a5315a63d75bd5c9819e3d4cc4f0eaac3} 
+var SASLFinal\+Buffer = test\+\_\+buffers\+\_\+1.\+default.\+authentication\+SASLFinal()}
+
+\Hypertarget{inbound-parser_8test_8js_a4bf84a2dbc80e17d37c6591ece0577c1}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!stream\_1@{stream\_1}}
+\index{stream\_1@{stream\_1}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{stream\_1}{stream\_1}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a4bf84a2dbc80e17d37c6591ece0577c1} 
+const stream\+\_\+1 = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}stream"{})}
+
+\Hypertarget{inbound-parser_8test_8js_ae2475e10618961c050dcba04e8c42331}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!strict@{strict}}
+\index{strict@{strict}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+\Hypertarget{inbound-parser_8test_8js_ae9ce36b404a16efec1133ba350532f79}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!test\_buffers\_1@{test\_buffers\_1}}
+\index{test\_buffers\_1@{test\_buffers\_1}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{test\_buffers\_1}{test\_buffers\_1}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_ae9ce36b404a16efec1133ba350532f79} 
+const test\+\_\+buffers\+\_\+1 = \mbox{\hyperlink{inbound-parser_8test_8js_aa77bab964373eb2917ab7e271138d9aa}{\+\_\+\+\_\+import\+Default}}(\mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}./testing/\mbox{\hyperlink{test_2call_bound_8js_a3a897d91c374db023efd4ed28e633ade}{test}}-\/buffers"{}))}
+
+\Hypertarget{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!testForMessage@{testForMessage}}
+\index{testForMessage@{testForMessage}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{testForMessage}{testForMessage}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_ac47979bbfe82d893a3530bf262c0b044} 
+var test\+For\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (\mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}},\ expectedMessage)\ \{}
+\DoxyCodeLine{\ \ \ \ it(\textcolor{stringliteral}{'recieves\ and\ parses\ '}\ +\ expectedMessage.name,\ ()\ =>\ \mbox{\hyperlink{inbound-parser_8test_8js_a9010a5ba1e0664f677e88772a797c4c9}{\_\_awaiter}}(\textcolor{keyword}{this},\ \textcolor{keywordtype}{void}\ 0,\ \textcolor{keywordtype}{void}\ 0,\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}*\ ()\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ messages\ =\ yield\ \mbox{\hyperlink{inbound-parser_8test_8js_a3bcb75a676c00f0aae1dc2f2252bc4e1}{parseBuffers}}([\mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}]);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ [lastMessage]\ =\ messages;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ key\ in\ expectedMessage)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_ad9535cd8fb66673f53cea356b63e94c1}{assert\_1}}.default.deepEqual(lastMessage[key],\ expectedMessage[key]);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}));}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{inbound-parser_8test_8js_aad877473029b93c46b7bf38986f90baa}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!twoParameterDescBuf@{twoParameterDescBuf}}
+\index{twoParameterDescBuf@{twoParameterDescBuf}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{twoParameterDescBuf}{twoParameterDescBuf}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_aad877473029b93c46b7bf38986f90baa} 
+var two\+Parameter\+Desc\+Buf = test\+\_\+buffers\+\_\+1.\+default.\+parameter\+Description(\mbox{[}2222, 3333\mbox{]})}
+
+\Hypertarget{inbound-parser_8test_8js_a690b25053552bea3c542a15a9d25655d}\index{inbound-\/parser.test.js@{inbound-\/parser.test.js}!twoRowBuf@{twoRowBuf}}
+\index{twoRowBuf@{twoRowBuf}!inbound-\/parser.test.js@{inbound-\/parser.test.js}}
+\doxysubsubsection{\texorpdfstring{twoRowBuf}{twoRowBuf}}
+{\footnotesize\ttfamily \label{inbound-parser_8test_8js_a690b25053552bea3c542a15a9d25655d} 
+var two\+Row\+Buf}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{inbound-parser_8test_8js_ae9ce36b404a16efec1133ba350532f79}{test\_buffers\_1}}.default.rowDescription([}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_ad5a8dc24a61495d6e103302762046096}{row1}},}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}:\ \textcolor{stringliteral}{'whoah'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ tableID:\ 10,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ attributeNumber:\ 11,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ dataTypeID:\ 12,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ dataTypeSize:\ 13,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ typeModifier:\ 14,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ formatCode:\ 0,}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{])}
+
+\end{DoxyCode}

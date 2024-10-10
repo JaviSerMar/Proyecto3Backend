@@ -1,0 +1,135 @@
+\doxysection{Referencia del archivo server.\+js}
+\hypertarget{server_8js}{}\label{server_8js}\index{server.js@{server.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{server_8js_a94df07d5fca4f3e33fe1c674017b314f}{use}} (\mbox{\hyperlink{express_8js_ac6fdc7f7005e375dc7d7dce4bc785ab4}{express.\+json}}()) \mbox{\hyperlink{response_8js_a10d7f5ef6343bd4575249458cf93dd3e}{app.\+get}}(\textquotesingle{}/setup\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Crea las tablas necesarias en la base de datos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{server_8js_ae1bff8c68b572fc576b50c4e5ace656f}{async}} (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})
+\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{server_8js_ad58102be9bcb7f1ff2b7c6f5046c49ac}{get}} (\textquotesingle{}/latest\textquotesingle{}, \mbox{\hyperlink{server_8js_ae1bff8c68b572fc576b50c4e5ace656f}{async}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})=$>$ \{ \mbox{\hyperlink{inherits_8js_abe4cc9788f52e49485473dc699537388}{try}} \{ const temperature\+Query=await \mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{pool.\+query}}(\`{} SELECT \texorpdfstring{$\ast$}{*}FROM sensors WHERE \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}=\textquotesingle{}temperature\textquotesingle{} ORDER BY timestamp DESC LIMIT 1 \`{});const co2\+Query=await \mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{pool.\+query}}(\`{} SELECT \texorpdfstring{$\ast$}{*}FROM sensors WHERE \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}=\textquotesingle{}CO2\textquotesingle{} ORDER BY timestamp DESC LIMIT 1 \`{});const response\+Data=\{ temperature\+:temperature\+Query.\+rows\mbox{[}0\mbox{]}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}null, co2\+:co2\+Query.\+rows\mbox{[}0\mbox{]}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}null \};\mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{res.\+status}}(200).\mbox{\hyperlink{response_8js_a88d7310f8a18b3e16f4020168641b86a}{send}}(response\+Data);\} \mbox{\hyperlink{inherits_8js_a5bf45fc51bc0426586792b5f9cb95431}{catch}}(err) \{ \mbox{\hyperlink{browser_8js_abd96780d5def5a58be64a80192702ca8}{console.\+log}}(err);\mbox{\hyperlink{response_8js_a48eb47c20281112f798efcf6dd189e9e}{res.\+send\+Status}}(500);\} \})
+\begin{DoxyCompactList}\small\item\em Obtiene las últimas mediciones de temperatura y CO2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{server_8js_a4da71aff55659294d9191d8feadc2760}{post}} (\textquotesingle{}/\textquotesingle{}, \mbox{\hyperlink{server_8js_ae1bff8c68b572fc576b50c4e5ace656f}{async}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})=$>$ \{ const \{ \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}, \mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}, timestamp \}=req.\+body;\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(!\mbox{[}\textquotesingle{}temperature\textquotesingle{}, \textquotesingle{}CO2\textquotesingle{}\mbox{]}.includes(\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}})\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}typeof \mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}} !==\textquotesingle{}number\textquotesingle{}) \{ return \mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{res.\+status}}(400).\mbox{\hyperlink{response_8js_a88d7310f8a18b3e16f4020168641b86a}{send}}(\{ message\+:"{}\+Invalid sensor data"{} \});\} \mbox{\hyperlink{inherits_8js_abe4cc9788f52e49485473dc699537388}{try}} \{ await \mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{pool.\+query}}(\textquotesingle{}INSERT INTO sensors(\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}, \mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}, timestamp) VALUES(\$1, \$2, \$3)\textquotesingle{}, \mbox{[}\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}, \mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}, timestamp\mbox{]});\mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{res.\+status}}(200).\mbox{\hyperlink{response_8js_a88d7310f8a18b3e16f4020168641b86a}{send}}(\{ message\+:"{}\+Successfully added sensor data"{} \});\} \mbox{\hyperlink{inherits_8js_a5bf45fc51bc0426586792b5f9cb95431}{catch}}(err) \{ \mbox{\hyperlink{browser_8js_abd96780d5def5a58be64a80192702ca8}{console.\+log}}(err);\mbox{\hyperlink{response_8js_a48eb47c20281112f798efcf6dd189e9e}{res.\+send\+Status}}(500);\} \})
+\begin{DoxyCompactList}\small\item\em Inserta un nuevo dato de sensor en la base de datos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} \mbox{\hyperlink{server_8js_af5592b322cf023a990308ac1e32c856d}{delete}} (\textquotesingle{}/\+:\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}\textquotesingle{}, \mbox{\hyperlink{server_8js_ae1bff8c68b572fc576b50c4e5ace656f}{async}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})=$>$ \{ const \{ \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}} \}=req.\+params;\mbox{\hyperlink{inherits_8js_abe4cc9788f52e49485473dc699537388}{try}} \{ await \mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{pool.\+query}}(\textquotesingle{}DELETE FROM sensors WHERE \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}=\$1\textquotesingle{}, \mbox{[}\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}\mbox{]});\mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{res.\+status}}(200).\mbox{\hyperlink{response_8js_a88d7310f8a18b3e16f4020168641b86a}{send}}(\{ message\+:\`{}Successfully deleted records of type\+:\$\{\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}\}\`{} \});\} \mbox{\hyperlink{inherits_8js_a5bf45fc51bc0426586792b5f9cb95431}{catch}}(err) \{ \mbox{\hyperlink{browser_8js_abd96780d5def5a58be64a80192702ca8}{console.\+log}}(err);\mbox{\hyperlink{response_8js_a48eb47c20281112f798efcf6dd189e9e}{res.\+send\+Status}}(500);\} \})
+\begin{DoxyCompactList}\small\item\em Elimina los registros de sensor por tipo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}
+\item 
+const \mbox{\hyperlink{server_8js_ab7ab846d8317850d72512f720c6a05e2}{pool}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{server_8js_ae1bff8c68b572fc576b50c4e5ace656f}\index{server.js@{server.js}!async@{async}}
+\index{async@{async}!server.js@{server.js}}
+\doxysubsubsection{\texorpdfstring{async()}{async()}}
+{\footnotesize\ttfamily \label{server_8js_ae1bff8c68b572fc576b50c4e5ace656f} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}}]{}{, }\item[{\mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{server_8js_af5592b322cf023a990308ac1e32c856d}\index{server.js@{server.js}!delete@{delete}}
+\index{delete@{delete}!server.js@{server.js}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily \label{server_8js_af5592b322cf023a990308ac1e32c856d} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} delete (\begin{DoxyParamCaption}\item[{\textquotesingle{}/\+:\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{server_8js_ae1bff8c68b572fc576b50c4e5ace656f}{async}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})}]{}{, }\item[{\{ const \{ \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}} \}=req.\+params;\mbox{\hyperlink{inherits_8js_abe4cc9788f52e49485473dc699537388}{try}} \{ await \mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{pool.\+query}}(\textquotesingle{}DELETE FROM sensors WHERE \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}=\$1\textquotesingle{}, \mbox{[}\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}\mbox{]});\mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{res.\+status}}(200).\mbox{\hyperlink{response_8js_a88d7310f8a18b3e16f4020168641b86a}{send}}(\{ message\+:\`{}Successfully deleted records of type\+:\$\{\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}\}\`{} \});\} \mbox{\hyperlink{inherits_8js_a5bf45fc51bc0426586792b5f9cb95431}{catch}}(err) \{ \mbox{\hyperlink{browser_8js_abd96780d5def5a58be64a80192702ca8}{console.\+log}}(err);\mbox{\hyperlink{response_8js_a48eb47c20281112f798efcf6dd189e9e}{res.\+send\+Status}}(500);\} \}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Elimina los registros de sensor por tipo. 
+
+Esta ruta maneja las solicitudes DELETE a \textquotesingle{}/\+:type\textquotesingle{}, permitiendo eliminar todos los registros de un tipo de sensor específico.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em req.\+params.\+type} & El tipo de sensor a eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+JSON con un mensaje de éxito o error. 
+\end{DoxyReturn}
+\Hypertarget{server_8js_ad58102be9bcb7f1ff2b7c6f5046c49ac}\index{server.js@{server.js}!get@{get}}
+\index{get@{get}!server.js@{server.js}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{server_8js_ad58102be9bcb7f1ff2b7c6f5046c49ac} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} get (\begin{DoxyParamCaption}\item[{\textquotesingle{}/latest\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{server_8js_ae1bff8c68b572fc576b50c4e5ace656f}{async}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})}]{}{, }\item[{\{ \mbox{\hyperlink{inherits_8js_abe4cc9788f52e49485473dc699537388}{try}} \{ const temperature\+Query=await \mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{pool.\+query}}(\`{} SELECT \texorpdfstring{$\ast$}{*}FROM sensors WHERE \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}=\textquotesingle{}temperature\textquotesingle{} ORDER BY timestamp DESC LIMIT 1 \`{});const co2\+Query=await \mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{pool.\+query}}(\`{} SELECT \texorpdfstring{$\ast$}{*}FROM sensors WHERE \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}=\textquotesingle{}CO2\textquotesingle{} ORDER BY timestamp DESC LIMIT 1 \`{});const response\+Data=\{ temperature\+:temperature\+Query.\+rows\mbox{[}0\mbox{]}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}null, co2\+:co2\+Query.\+rows\mbox{[}0\mbox{]}\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}null \};\mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{res.\+status}}(200).\mbox{\hyperlink{response_8js_a88d7310f8a18b3e16f4020168641b86a}{send}}(response\+Data);\} \mbox{\hyperlink{inherits_8js_a5bf45fc51bc0426586792b5f9cb95431}{catch}}(err) \{ \mbox{\hyperlink{browser_8js_abd96780d5def5a58be64a80192702ca8}{console.\+log}}(err);\mbox{\hyperlink{response_8js_a48eb47c20281112f798efcf6dd189e9e}{res.\+send\+Status}}(500);\} \}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene las últimas mediciones de temperatura y CO2. 
+
+Esta ruta maneja las solicitudes GET a \textquotesingle{}/latest\textquotesingle{} y devuelve la última medición de temperatura y CO2 almacenada en la base de datos.
+
+\begin{DoxyReturn}{Devuelve}
+JSON con los datos de la última medición de temperatura y CO2, o un mensaje de error en caso de fallo. 
+\end{DoxyReturn}
+\Hypertarget{server_8js_a4da71aff55659294d9191d8feadc2760}\index{server.js@{server.js}!post@{post}}
+\index{post@{post}!server.js@{server.js}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily \label{server_8js_a4da71aff55659294d9191d8feadc2760} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} post (\begin{DoxyParamCaption}\item[{\textquotesingle{}/\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{server_8js_ae1bff8c68b572fc576b50c4e5ace656f}{async}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}, \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})}]{}{, }\item[{\{ const \{ \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}, \mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}, timestamp \}=req.\+body;\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(!\mbox{[}\textquotesingle{}temperature\textquotesingle{}, \textquotesingle{}CO2\textquotesingle{}\mbox{]}.includes(\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}})\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}typeof \mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}} !==\textquotesingle{}number\textquotesingle{}) \{ return \mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{res.\+status}}(400).\mbox{\hyperlink{response_8js_a88d7310f8a18b3e16f4020168641b86a}{send}}(\{ message\+:"{}\+Invalid sensor data"{} \});\} \mbox{\hyperlink{inherits_8js_abe4cc9788f52e49485473dc699537388}{try}} \{ await \mbox{\hyperlink{application_8js_a3934419f0f9a2068c705a0013b77fab3}{pool.\+query}}(\textquotesingle{}INSERT INTO sensors(\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}, \mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}, timestamp) VALUES(\$1, \$2, \$3)\textquotesingle{}, \mbox{[}\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}, \mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}, timestamp\mbox{]});\mbox{\hyperlink{response_8js_ad9c73d5a753bd398aeb580443d4c1957}{res.\+status}}(200).\mbox{\hyperlink{response_8js_a88d7310f8a18b3e16f4020168641b86a}{send}}(\{ message\+:"{}\+Successfully added sensor data"{} \});\} \mbox{\hyperlink{inherits_8js_a5bf45fc51bc0426586792b5f9cb95431}{catch}}(err) \{ \mbox{\hyperlink{browser_8js_abd96780d5def5a58be64a80192702ca8}{console.\+log}}(err);\mbox{\hyperlink{response_8js_a48eb47c20281112f798efcf6dd189e9e}{res.\+send\+Status}}(500);\} \}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Inserta un nuevo dato de sensor en la base de datos. 
+
+Esta ruta maneja las solicitudes POST a \textquotesingle{}/\textquotesingle{} y permite insertar una nueva medición de sensor. Verifica que el tipo de sensor y el valor sean válidos antes de proceder a la inserción.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em req.\+body.\+type} & El tipo de sensor (temperatura o CO2). \\
+\hline
+{\em req.\+body.\+value} & El valor de la medición. \\
+\hline
+{\em req.\+body.\+timestamp} & La marca de tiempo de la medición.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+JSON con un mensaje de éxito o error. 
+\end{DoxyReturn}
+\Hypertarget{server_8js_a94df07d5fca4f3e33fe1c674017b314f}\index{server.js@{server.js}!use@{use}}
+\index{use@{use}!server.js@{server.js}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily \label{server_8js_a94df07d5fca4f3e33fe1c674017b314f} 
+\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} use (\begin{DoxyParamCaption}\item[{express.}]{json}{()}\end{DoxyParamCaption})}
+
+
+
+Crea las tablas necesarias en la base de datos. 
+
+Esta ruta maneja las solicitudes GET a \textquotesingle{}/setup\textquotesingle{} y crea la tabla "{}sensors"{} en la base de datos si no existe.
+
+\begin{DoxyReturn}{Devuelve}
+JSON con un mensaje de éxito o error. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{server_8js_a81e570c198204c57e1ebcace4f4e6dad}\index{server.js@{server.js}!express@{express}}
+\index{express@{express}!server.js@{server.js}}
+\doxysubsubsection{\texorpdfstring{express}{express}}
+{\footnotesize\ttfamily \label{server_8js_a81e570c198204c57e1ebcace4f4e6dad} 
+const express}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'express'})}
+\DoxyCodeLine{const\ cors\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('cors')}
+
+\end{DoxyCode}
+\Hypertarget{server_8js_ab7ab846d8317850d72512f720c6a05e2}\index{server.js@{server.js}!pool@{pool}}
+\index{pool@{pool}!server.js@{server.js}}
+\doxysubsubsection{\texorpdfstring{pool}{pool}}
+{\footnotesize\ttfamily \label{server_8js_ab7ab846d8317850d72512f720c6a05e2} 
+const pool}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'./db'})}
+\DoxyCodeLine{const\ port\ =\ 3000}
+\DoxyCodeLine{}
+\DoxyCodeLine{const\ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}()}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}}(cors())}
+
+\end{DoxyCode}

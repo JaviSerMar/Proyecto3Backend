@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: node-postgres</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">node-postgres</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1540"></a></p>
+<p><a href="http://travis-ci.org/brianc/node-postgres"><img src="https://secure.travis-ci.org/brianc/node-postgres.svg?branch=master" alt="Build Status" style="pointer-events: none;" class="inline"/></a> <span class="badge-npmversion"><a href="https://npmjs.org/package/pg" title="View this project on NPM"><img src="https://img.shields.io/npm/v/pg.svg" alt="NPM version" style="pointer-events: none;" class="inline"/></a></span> <span class="badge-npmdownloads"><a href="https://npmjs.org/package/pg" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/pg.svg" alt="NPM downloads" style="pointer-events: none;" class="inline"/></a></span></p>
+<p>Non-blocking PostgreSQL client for Node.js. Pure JavaScript and optional native libpq bindings.</p>
+<h1><a class="anchor" id="autotoc_md1541"></a>
+Install</h1>
+<div class="fragment"><div class="line">$ npm install pg</div>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md1543"></a>
+:star: <a href="https://node-postgres.com">Documentation</a> :star:</h1>
+<h2><a class="anchor" id="autotoc_md1544"></a>
+Features</h2>
+<ul>
+<li>Pure JavaScript client and native libpq bindings share <em>the same API</em></li>
+<li>Connection pooling</li>
+<li>Extensible JS ↔ PostgreSQL data-type coercion</li>
+<li>Supported PostgreSQL features<ul>
+<li>Parameterized queries</li>
+<li>Named statements with query plan caching</li>
+<li>Async notifications with <code>LISTEN/NOTIFY</code></li>
+<li>Bulk import &amp; export with <code>COPY TO/COPY FROM</code></li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md1545"></a>
+Extras</h2>
+<p>node-postgres is by design pretty light on abstractions. These are some handy modules we've been using over the years to complete the picture. The entire list can be found on our <a href="https://github.com/brianc/node-postgres/wiki/Extras">wiki</a>.</p>
+<h1><a class="anchor" id="autotoc_md1546"></a>
+Support</h1>
+<p>node-postgres is free software. If you encounter a bug with the library please open an issue on the <a href="https://github.com/brianc/node-postgres">GitHub repo</a>. If you have questions unanswered by the documentation please open an issue pointing out how the documentation was unclear &amp; I will do my best to make it better!</p>
+<p>When you open an issue please provide:</p>
+<ul>
+<li>version of Node</li>
+<li>version of Postgres</li>
+<li>smallest possible snippet of code to reproduce the problem</li>
+</ul>
+<p>You can also follow me <a href="https://twitter.com/briancarlson">@briancarlson</a> if that's your thing. I try to always announce noteworthy changes &amp; developments with node-postgres on Twitter.</p>
+<h1><a class="anchor" id="autotoc_md1547"></a>
+Sponsorship :two_hearts:</h1>
+<p>node-postgres's continued development has been made possible in part by generous finanical support from <a href="https://github.com/brianc/node-postgres/blob/master/SPONSORS.md">the community</a>.</p>
+<p>If you or your company are benefiting from node-postgres and would like to help keep the project financially sustainable <a href="https://github.com/sponsors/brianc">please consider supporting</a> its development.</p>
+<h1><a class="anchor" id="autotoc_md1548"></a>
+Contributing</h1>
+<p><b>:heart: contributions!</b></p>
+<p>I will <b>happily</b> accept your pull request if it:</p>
+<ul>
+<li><b>has tests</b></li>
+<li>looks reasonable</li>
+<li>does not break backwards compatibility</li>
+</ul>
+<p>If your change involves breaking backwards compatibility please please point that out in the pull request &amp; we can discuss &amp; plan when and how to release it and what type of documentation or communicate it will require.</p>
+<h1><a class="anchor" id="autotoc_md1549"></a>
+Troubleshooting and FAQ</h1>
+<p>The causes and solutions to common errors can be found among the <a href="https://github.com/brianc/node-postgres/wiki/FAQ">Frequently Asked Questions (FAQ)</a></p>
+<h1><a class="anchor" id="autotoc_md1550"></a>
+License</h1>
+<p>Copyright (c) 2010-2020 Brian Carlson (<a href="#" onclick="location.href='mai'+'lto:'+'bri'+'an'+'.m.'+'ca'+'rls'+'on'+'@gm'+'ai'+'l.c'+'om'; return false;">brian<span class="obfuscator">.nosp@m.</span>.m.c<span class="obfuscator">.nosp@m.</span>arlso<span class="obfuscator">.nosp@m.</span>n@gm<span class="obfuscator">.nosp@m.</span>ail.c<span class="obfuscator">.nosp@m.</span>om</a>)</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

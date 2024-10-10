@@ -1,0 +1,68 @@
+\chapter{node-\/postgres}
+\hypertarget{md_node__modules_2pg_2_r_e_a_d_m_e}{}\label{md_node__modules_2pg_2_r_e_a_d_m_e}\index{node-\/postgres@{node-\/postgres}}
+\label{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1540}%
+\Hypertarget{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1540}%
+
+
+\href{http://travis-ci.org/brianc/node-postgres}{\texttt{ }} \href{https://npmjs.org/package/pg}{\texttt{ }} \href{https://npmjs.org/package/pg}{\texttt{ }}
+
+Non-\/blocking Postgre\+SQL client for Node.\+js. Pure Java\+Script and optional native libpq bindings.\hypertarget{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1541}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1541}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ pg}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1543}{}\doxysection{\texorpdfstring{\+:star\+: \href{https://node-postgres.com}{\texttt{ Documentation}} \+:star\+:}{\+:star\+: \href{https://node-postgres.com}{\texttt{ Documentation}} \+:star\+:}}\label{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1543}
+\hypertarget{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1544}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1544}
+
+\begin{DoxyItemize}
+\item Pure Java\+Script client and native libpq bindings share {\itshape the same API}
+\item Connection pooling
+\item Extensible JS ↔ Postgre\+SQL data-\/type coercion
+\item Supported Postgre\+SQL features
+\begin{DoxyItemize}
+\item Parameterized queries
+\item Named statements with query plan caching
+\item Async notifications with {\ttfamily LISTEN/\+NOTIFY}
+\item Bulk import \& export with {\ttfamily COPY TO/\+COPY FROM}
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1545}{}\doxysubsection{\texorpdfstring{Extras}{Extras}}\label{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1545}
+node-\/postgres is by design pretty light on abstractions. These are some handy modules we\textquotesingle{}ve been using over the years to complete the picture. The entire list can be found on our \href{https://github.com/brianc/node-postgres/wiki/Extras}{\texttt{ wiki}}.\hypertarget{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1546}{}\doxysection{\texorpdfstring{Support}{Support}}\label{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1546}
+node-\/postgres is free software. If you encounter a bug with the library please open an issue on the \href{https://github.com/brianc/node-postgres}{\texttt{ Git\+Hub repo}}. If you have questions unanswered by the documentation please open an issue pointing out how the documentation was unclear \& I will do my best to make it better!
+
+When you open an issue please provide\+:
+
+
+\begin{DoxyItemize}
+\item version of Node
+\item version of Postgres
+\item smallest possible snippet of code to reproduce the problem
+\end{DoxyItemize}
+
+You can also follow me \href{https://twitter.com/briancarlson}{\texttt{ @briancarlson}} if that\textquotesingle{}s your thing. I try to always announce noteworthy changes \& developments with node-\/postgres on Twitter.\hypertarget{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1547}{}\doxysection{\texorpdfstring{Sponsorship \+:two\+\_\+hearts\+:}{Sponsorship \+:two\+\_\+hearts\+:}}\label{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1547}
+node-\/postgres\textquotesingle{}s continued development has been made possible in part by generous finanical support from \href{https://github.com/brianc/node-postgres/blob/master/SPONSORS.md}{\texttt{ the community}}.
+
+If you or your company are benefiting from node-\/postgres and would like to help keep the project financially sustainable \href{https://github.com/sponsors/brianc}{\texttt{ please consider supporting}} its development.\hypertarget{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1548}{}\doxysection{\texorpdfstring{Contributing}{Contributing}}\label{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1548}
+{\bfseries{\+:heart\+: contributions!}}
+
+I will {\bfseries{happily}} accept your pull request if it\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{has tests}}
+\item looks reasonable
+\item does not break backwards compatibility
+\end{DoxyItemize}
+
+If your change involves breaking backwards compatibility please please point that out in the pull request \& we can discuss \& plan when and how to release it and what type of documentation or communicate it will require.\hypertarget{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1549}{}\doxysection{\texorpdfstring{Troubleshooting and FAQ}{Troubleshooting and FAQ}}\label{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1549}
+The causes and solutions to common errors can be found among the \href{https://github.com/brianc/node-postgres/wiki/FAQ}{\texttt{ Frequently Asked Questions (FAQ)}}\hypertarget{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1550}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2pg_2_r_e_a_d_m_e_autotoc_md1550}
+Copyright (c) 2010-\/2020 Brian Carlson (\href{mailto:brian.m.carlson@gmail.com}{\texttt{ brian.\+m.\+carlson@gmail.\+com}})
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "{}\+Software"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "{}\+AS IS"{}, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 

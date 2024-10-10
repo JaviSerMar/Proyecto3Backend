@@ -1,0 +1,62 @@
+\doxysection{Referencia del archivo node\+\_\+modules/object-\/inspect/test/fakes.js}
+\hypertarget{fakes_8js}{}\label{fakes_8js}\index{node\_modules/object-\/inspect/test/fakes.js@{node\_modules/object-\/inspect/test/fakes.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{fakes_8js_a8c7c2e6543c9d61dcfa908235db0e6a3}{test}} (\textquotesingle{}fakes\textquotesingle{}, \{ skip\+:!has\+To\+String\+Tag \}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(t) \{ \mbox{\hyperlink{call-bind_2test_2index_8js_a56555593fcdace53c8cf68fb2b4a8892}{for\+Each}}(\mbox{[}\textquotesingle{}Array\textquotesingle{}, \textquotesingle{}Boolean\textquotesingle{}, \textquotesingle{}Date\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{class_error}{Error}}\textquotesingle{}, \textquotesingle{}Number\textquotesingle{}, \textquotesingle{}Reg\+Exp\textquotesingle{}, \textquotesingle{}String\textquotesingle{}\mbox{]}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(expected) \{ var faker=\{\};faker\mbox{[}\mbox{\hyperlink{object-inspect_2index_8js_a572ae0dfaba3e317ca2ffb34e431ddb0}{Symbol.\+to\+String\+Tag}}\mbox{]}=expected;\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(faker), \textquotesingle{}\{\mbox{[}Symbol(\mbox{\hyperlink{object-inspect_2index_8js_a572ae0dfaba3e317ca2ffb34e431ddb0}{Symbol.\+to\+String\+Tag}})\mbox{]}\+:\textbackslash{}\textquotesingle{}\textquotesingle{}+expected+\textquotesingle{}\textbackslash{}\textquotesingle{} \}\textquotesingle{}, \textquotesingle{}faker masquerading as \textquotesingle{}+expected+\textquotesingle{} \mbox{\hyperlink{request_8js_a5e3afd97276cc403924d1a449a83ea84}{is}} not shown as one\textquotesingle{});\});t.\+end();\})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{fakes_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{fakes_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}../\textquotesingle{})
+\item 
+var \mbox{\hyperlink{fakes_8js_a3a897d91c374db023efd4ed28e633ade}{test}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}tape\textquotesingle{})
+\item 
+var \mbox{\hyperlink{fakes_8js_a19435398d60d84af34f28b77a2cd2731}{has\+To\+String\+Tag}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{lib_2parse_8js_a1fd59be22bbab6bc2baae116e333d914}{has}}-\/tostringtag/shams\textquotesingle{})()
+\item 
+var \mbox{\hyperlink{fakes_8js_a56555593fcdace53c8cf68fb2b4a8892}{for\+Each}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{dbcs-codec_8js_a3640a64c8d4fe02d6ade18fddf7457c4}{for}}-\/each\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{fakes_8js_a8c7c2e6543c9d61dcfa908235db0e6a3}\index{fakes.js@{fakes.js}!test@{test}}
+\index{test@{test}!fakes.js@{fakes.js}}
+\doxysubsubsection{\texorpdfstring{test()}{test()}}
+{\footnotesize\ttfamily \label{fakes_8js_a8c7c2e6543c9d61dcfa908235db0e6a3} 
+test (\begin{DoxyParamCaption}\item[{\textquotesingle{}fakes\textquotesingle{}}]{}{, }\item[{\{ skip\+:!has\+To\+String\+Tag \}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(t) \{ \mbox{\hyperlink{call-bind_2test_2index_8js_a56555593fcdace53c8cf68fb2b4a8892}{for\+Each}}(\mbox{[}\textquotesingle{}Array\textquotesingle{}, \textquotesingle{}Boolean\textquotesingle{}, \textquotesingle{}Date\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{class_error}{Error}}\textquotesingle{}, \textquotesingle{}Number\textquotesingle{}, \textquotesingle{}Reg\+Exp\textquotesingle{}, \textquotesingle{}String\textquotesingle{}\mbox{]}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(expected) \{ var faker=\{\};faker\mbox{[}\mbox{\hyperlink{object-inspect_2index_8js_a572ae0dfaba3e317ca2ffb34e431ddb0}{Symbol.\+to\+String\+Tag}}\mbox{]}=expected;\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(faker), \textquotesingle{}\{\mbox{[}Symbol(\mbox{\hyperlink{object-inspect_2index_8js_a572ae0dfaba3e317ca2ffb34e431ddb0}{Symbol.\+to\+String\+Tag}})\mbox{]}\+:\textbackslash{}\textquotesingle{}\textquotesingle{}+expected+\textquotesingle{}\textbackslash{}\textquotesingle{} \}\textquotesingle{}, \textquotesingle{}faker masquerading as \textquotesingle{}+expected+\textquotesingle{} \mbox{\hyperlink{request_8js_a5e3afd97276cc403924d1a449a83ea84}{is}} not shown as one\textquotesingle{});\});t.\+end();\}}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{fakes_8js_a56555593fcdace53c8cf68fb2b4a8892}\index{fakes.js@{fakes.js}!forEach@{forEach}}
+\index{forEach@{forEach}!fakes.js@{fakes.js}}
+\doxysubsubsection{\texorpdfstring{forEach}{forEach}}
+{\footnotesize\ttfamily \label{fakes_8js_a56555593fcdace53c8cf68fb2b4a8892} 
+var for\+Each = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{dbcs-codec_8js_a3640a64c8d4fe02d6ade18fddf7457c4}{for}}-\/each\textquotesingle{})}
+
+\Hypertarget{fakes_8js_a19435398d60d84af34f28b77a2cd2731}\index{fakes.js@{fakes.js}!hasToStringTag@{hasToStringTag}}
+\index{hasToStringTag@{hasToStringTag}!fakes.js@{fakes.js}}
+\doxysubsubsection{\texorpdfstring{hasToStringTag}{hasToStringTag}}
+{\footnotesize\ttfamily \label{fakes_8js_a19435398d60d84af34f28b77a2cd2731} 
+var has\+To\+String\+Tag = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{lib_2parse_8js_a1fd59be22bbab6bc2baae116e333d914}{has}}-\/tostringtag/shams\textquotesingle{})()}
+
+\Hypertarget{fakes_8js_ada233bc1a09b3d9309abcd7d4a0baebe}\index{fakes.js@{fakes.js}!inspect@{inspect}}
+\index{inspect@{inspect}!fakes.js@{fakes.js}}
+\doxysubsubsection{\texorpdfstring{inspect}{inspect}}
+{\footnotesize\ttfamily \label{fakes_8js_ada233bc1a09b3d9309abcd7d4a0baebe} 
+var inspect = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}../\textquotesingle{})}
+
+\Hypertarget{fakes_8js_ae2475e10618961c050dcba04e8c42331}\index{fakes.js@{fakes.js}!strict@{strict}}
+\index{strict@{strict}!fakes.js@{fakes.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{fakes_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+\Hypertarget{fakes_8js_a3a897d91c374db023efd4ed28e633ade}\index{fakes.js@{fakes.js}!test@{test}}
+\index{test@{test}!fakes.js@{fakes.js}}
+\doxysubsubsection{\texorpdfstring{test}{test}}
+{\footnotesize\ttfamily \label{fakes_8js_a3a897d91c374db023efd4ed28e633ade} 
+var test = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}tape\textquotesingle{})}
+

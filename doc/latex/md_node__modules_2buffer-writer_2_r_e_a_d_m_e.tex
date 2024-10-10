@@ -1,0 +1,24 @@
+\chapter{buffer-\/writer}
+\hypertarget{md_node__modules_2buffer-writer_2_r_e_a_d_m_e}{}\label{md_node__modules_2buffer-writer_2_r_e_a_d_m_e}\index{buffer-\/writer@{buffer-\/writer}}
+\label{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md176}%
+\Hypertarget{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md176}%
+
+
+\href{http://travis-ci.org/brianc/node-buffer-writer}{\texttt{ }}
+
+Fast \& efficient buffer writer used to keep memory usage low by internally recycling a single large buffer.
+
+Used as the binary protocol writer in \href{https://github.com/brianc/node-postgres}{\texttt{ node-\/postgres}}
+
+Since postgres requires big endian encoding, this only writes big endian numbers for now, but can \& probably will easily be extended to write little endian as well.
+
+I\textquotesingle{}ll admit this has a few postgres specific things I might need to take out in the future, such as {\ttfamily add\+Header}\hypertarget{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md177}{}\doxysection{\texorpdfstring{api}{api}}\label{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md177}
+`var writer = new (require(\textquotesingle{}buffer-\/writer')());\`{}\hypertarget{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md178}{}\doxysubsection{\texorpdfstring{writer.\+add\+Int32(num)}{writer.\+add\+Int32(num)}}\label{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md178}
+Writes a 4-\/byte big endian binary encoded number to the end of the buffer.\hypertarget{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md179}{}\doxysubsection{\texorpdfstring{writer.\+add\+Int16(num)}{writer.\+add\+Int16(num)}}\label{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md179}
+Writes a 2-\/byte big endian binary encoded number to the end of the buffer.\hypertarget{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md180}{}\doxysubsection{\texorpdfstring{writer.\+add\+CString(string)}{writer.\+add\+CString(string)}}\label{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md180}
+Writes a string to the buffer {\ttfamily utf8} encoded and adds a null character ({\ttfamily \textbackslash{}0}) at the end.\hypertarget{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md181}{}\doxysubsection{\texorpdfstring{var buffer = writer.\+add\+Header(char)}{var buffer = writer.\+add\+Header(char)}}\label{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md181}
+Writes the 5 byte Postgre\+SQL required header to the beginning of the buffer. (1 byte for character, 1 BE Int32 for length of the buffer)\hypertarget{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md182}{}\doxysubsection{\texorpdfstring{var buffer = writer.\+join()}{var buffer = writer.\+join()}}\label{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md182}
+Collects all data in the writer and joins it into a single, new buffer.\hypertarget{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md183}{}\doxysubsection{\texorpdfstring{var buffer = writer.\+flush(char)}{var buffer = writer.\+flush(char)}}\label{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md183}
+Writes the 5 byte postgres required message header, collects all data in the writer and joins it into a single, new buffer, and then resets the writer.\hypertarget{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md184}{}\doxysection{\texorpdfstring{thoughts}{thoughts}}\label{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md184}
+This is kind of node-\/postgres specific. If you\textquotesingle{}re interested in using this for a more general purpose thing, lemme know. I would love to work with you on getting this more reusable for your needs.\hypertarget{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md185}{}\doxysection{\texorpdfstring{license}{license}}\label{md_node__modules_2buffer-writer_2_r_e_a_d_m_e_autotoc_md185}
+MIT 

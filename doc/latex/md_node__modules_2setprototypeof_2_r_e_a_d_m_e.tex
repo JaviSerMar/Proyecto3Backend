@@ -1,0 +1,39 @@
+\chapter{Polyfill for \texorpdfstring{$<$}{<}tt\texorpdfstring{$>$}{>}Object.\+set\+Prototype\+Of\texorpdfstring{$<$}{<}/tt\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2setprototypeof_2_r_e_a_d_m_e}{}\label{md_node__modules_2setprototypeof_2_r_e_a_d_m_e}\index{Polyfill for $<$tt$>$Object.setPrototypeOf$<$/tt$>$@{Polyfill for $<$tt$>$Object.setPrototypeOf$<$/tt$>$}}
+\label{md_node__modules_2setprototypeof_2_r_e_a_d_m_e_autotoc_md2072}%
+\Hypertarget{md_node__modules_2setprototypeof_2_r_e_a_d_m_e_autotoc_md2072}%
+
+
+\href{https://npmjs.org/package/setprototypeof}{\texttt{ }} \href{https://npmjs.org/package/setprototypeof}{\texttt{ }} \href{https://github.com/standard/standard}{\texttt{ }}
+
+A simple cross platform implementation to set the prototype of an instianted object. Supports all modern browsers and at least back to IE8.\hypertarget{md_node__modules_2setprototypeof_2_r_e_a_d_m_e_autotoc_md2073}{}\doxysection{\texorpdfstring{Usage\+:}{Usage\+:}}\label{md_node__modules_2setprototypeof_2_r_e_a_d_m_e_autotoc_md2073}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ -\/-\/save\ setprototypeof}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_aa76cc157afb30404d8bee6cf35ebe8b2}{setPrototypeOf}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'setprototypeof'})}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ \mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}\ =\ \{\}}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_aa76cc157afb30404d8bee6cf35ebe8b2}{setPrototypeOf}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}},\ \{}
+\DoxyCodeLine{\ \ foo:\ \textcolor{keyword}{function}\ ()\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'bar'}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}.foo()\ \textcolor{comment}{//\ bar}}
+
+\end{DoxyCode}
+
+
+Type\+Script is also supported\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ setPrototypeOf\ from\ 'setprototypeof'}
+
+\end{DoxyCode}
+ 

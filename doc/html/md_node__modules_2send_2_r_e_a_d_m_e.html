@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: send</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">send</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1935"></a></p>
+<p><a href="https://npmjs.org/package/send"><img src="https://badgen.net/npm/v/send" alt="NPM Version" class="inline"/></a> <a href="https://npmjs.org/package/send"><img src="https://badgen.net/npm/dm/send" alt="NPM Downloads" class="inline"/></a> <a href="https://github.com/pillarjs/send/actions/workflows/ci.yml"><img src="https://badgen.net/github/checks/pillarjs/send/master?label=linux" alt="Linux Build" class="inline"/></a> <a href="https://ci.appveyor.com/project/dougwilson/send"><img src="https://badgen.net/appveyor/ci/dougwilson/send/master?label=windows" alt="Windows Build" class="inline"/></a> <a href="https://coveralls.io/r/pillarjs/send?branch=master"><img src="https://badgen.net/coveralls/c/github/pillarjs/send/master" alt="Test Coverage" class="inline"/></a></p>
+<p>Send is a library for streaming files from the file system as a http response supporting partial responses (Ranges), conditional-GET negotiation (If-Match, If-Unmodified-Since, If-None-Match, If-Modified-Since), high test coverage, and granular events which may be leveraged to take appropriate actions in your application or framework.</p>
+<p>Looking to serve up entire folders mapped to URLs? Try <a href="https://www.npmjs.org/package/serve-static">serve-static</a>.</p>
+<h1><a class="anchor" id="autotoc_md1936"></a>
+Installation</h1>
+<p>This is a <a href="https://nodejs.org/en/">Node.js</a> module available through the <a href="https://www.npmjs.com/">npm registry</a>. Installation is done using the <a href="https://docs.npmjs.com/getting-started/installing-npm-packages-locally"><code>npm install</code> command</a>:</p>
+<div class="fragment"><div class="line">$ npm install send</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1937"></a>
+API</h1>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;send&#39;</span>)</div>
+<div class="ttc" id="aresponse_8js_html_a88d7310f8a18b3e16f4020168641b86a"><div class="ttname"><a href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a></div><div class="ttdeci">var send</div><div class="ttdef"><b>Definition</b> response.js:32</div></div>
+<div class="ttc" id="atest-core-js_8js_html_a2fc998a372f1531668f7047d0878effe"><div class="ttname"><a href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a></div><div class="ttdeci">require('core-js')</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1938"></a>
+send(req, path, [options])</h2>
+<p>Create a new <code>SendStream</code> for the given path to send to a <code>res</code>. The <code>req</code> is the Node.js HTTP request and the <code>path</code> is a urlencoded path to send (urlencoded, not the actual file-system path).</p>
+<h3><a class="anchor" id="autotoc_md1939"></a>
+Options</h3>
+<h4><a class="anchor" id="autotoc_md1940"></a>
+acceptRanges</h4>
+<p>Enable or disable accepting ranged requests, defaults to true. Disabling this will not send <code>Accept-Ranges</code> and ignore the contents of the <code>Range</code> request header.</p>
+<h4><a class="anchor" id="autotoc_md1941"></a>
+cacheControl</h4>
+<p>Enable or disable setting <code>Cache-Control</code> response header, defaults to true. Disabling this will ignore the <code>immutable</code> and <code>maxAge</code> options.</p>
+<h4><a class="anchor" id="autotoc_md1942"></a>
+dotfiles</h4>
+<p>Set how "dotfiles" are treated when encountered. A dotfile is a file or directory that begins with a dot ("."). Note this check is done on the path itself without checking if the path actually exists on the disk. If <code>root</code> is specified, only the dotfiles above the root are checked (i.e. the root itself can be within a dotfile when when set to "deny").</p>
+<ul>
+<li>&lsquo;'allow&rsquo;<code>No special treatment for dotfiles. -</code>'deny'<code>Send a 403 for any request for a dotfile. -</code>'ignore'` Pretend like the dotfile does not exist and 404.</li>
+</ul>
+<p>The default value is <em>similar</em> to &lsquo;'ignore&rsquo;`, with the exception that this default will not ignore the files within a directory that begins with a dot, for backward-compatibility.</p>
+<h4><a class="anchor" id="autotoc_md1943"></a>
+end</h4>
+<p>Byte offset at which the stream ends, defaults to the length of the file minus 1. The end is inclusive in the stream, meaning <code>end: 3</code> will include the 4th byte in the stream.</p>
+<h4><a class="anchor" id="autotoc_md1944"></a>
+etag</h4>
+<p>Enable or disable etag generation, defaults to true.</p>
+<h4><a class="anchor" id="autotoc_md1945"></a>
+extensions</h4>
+<p>If a given file doesn't exist, try appending one of the given extensions, in the given order. By default, this is disabled (set to <code>false</code>). An example value that will serve extension-less HTML files: &lsquo;['html&rsquo;, 'htm']`. This is skipped if the requested file already has an extension.</p>
+<h4><a class="anchor" id="autotoc_md1946"></a>
+immutable</h4>
+<p>Enable or disable the <code>immutable</code> directive in the <code>Cache-Control</code> response header, defaults to <code>false</code>. If set to <code>true</code>, the <code>maxAge</code> option should also be specified to enable caching. The <code>immutable</code> directive will prevent supported clients from making conditional requests during the life of the <code>maxAge</code> option to check if the file has changed.</p>
+<h4><a class="anchor" id="autotoc_md1947"></a>
+index</h4>
+<p>By default send supports "index.html" files, to disable this set <code>false</code> or to supply a new index pass a string or an array in preferred order.</p>
+<h4><a class="anchor" id="autotoc_md1948"></a>
+lastModified</h4>
+<p>Enable or disable <code>Last-Modified</code> header, defaults to true. Uses the file system's last modified value.</p>
+<h4><a class="anchor" id="autotoc_md1949"></a>
+maxAge</h4>
+<p>Provide a max-age in milliseconds for http caching, defaults to 0. This can also be a string accepted by the <a href="https://www.npmjs.org/package/ms#readme">ms</a> module.</p>
+<h4><a class="anchor" id="autotoc_md1950"></a>
+root</h4>
+<p>Serve files relative to <code>path</code>.</p>
+<h4><a class="anchor" id="autotoc_md1951"></a>
+start</h4>
+<p>Byte offset at which the stream starts, defaults to 0. The start is inclusive, meaning <code>start: 2</code> will include the 3rd byte in the stream.</p>
+<h3><a class="anchor" id="autotoc_md1952"></a>
+Events</h3>
+<p>The <code>SendStream</code> is an event emitter and will emit the following events:</p>
+<ul>
+<li><code>error</code> an error occurred <code>(err)</code></li>
+<li><code>directory</code> a directory was requested <code>(res, path)</code></li>
+<li><code>file</code> a file was requested <code>(path, stat)</code></li>
+<li><code>headers</code> the headers are about to be set on a file <code>(res, path, stat)</code></li>
+<li><code>stream</code> file streaming has started <code>(stream)</code></li>
+<li><code>end</code> streaming has completed</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md1953"></a>
+.pipe</h3>
+<p>The <code>pipe</code> method is used to pipe the response into the Node.js HTTP response object, typically <code><a class="el" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send(req, path, options)</a>.pipe(res)</code>.</p>
+<h2><a class="anchor" id="autotoc_md1954"></a>
+.mime</h2>
+<p>The <code>mime</code> export is the global instance of of the <a href="https://www.npmjs.com/package/mime"><code>mime</code> npm module</a>.</p>
+<p>This is used to configure the MIME types that are associated with file extensions as well as other options for how to resolve the MIME type of a file (like the default type to use for an unknown file extension).</p>
+<h1><a class="anchor" id="autotoc_md1955"></a>
+Error-handling</h1>
+<p>By default when no <code>error</code> listeners are present an automatic response will be made, otherwise you have full control over the response, aka you may show a 5xx page etc.</p>
+<h1><a class="anchor" id="autotoc_md1956"></a>
+Caching</h1>
+<p>It does <em>not</em> perform internal caching, you should use a reverse proxy cache such as Varnish for this, or those fancy things called CDNs. If your application is small enough that it would benefit from single-node memory caching, it's small enough that it does not need caching at all ;).</p>
+<h1><a class="anchor" id="autotoc_md1957"></a>
+Debugging</h1>
+<p>To enable <code><a class="el" href="application_8js.html#a651046067579e48d7f0d03ce38dc7cf8">debug()</a></code> instrumentation output export <b>DEBUG</b>:</p>
+<div class="fragment"><div class="line">$ DEBUG=send node app</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1958"></a>
+Running tests</h1>
+<div class="fragment"><div class="line">$ npm install</div>
+<div class="line">$ npm test</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1959"></a>
+Examples</h1>
+<h2><a class="anchor" id="autotoc_md1960"></a>
+Serve a specific file</h2>
+<p>This simple example will send a specific file to all requests.</p>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;http&#39;</span>)</div>
+<div class="line">var <a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;<a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a>&#39;)</div>
+<div class="line"> </div>
+<div class="line">var server = <a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a>.createServer(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> onRequest (<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>) {</div>
+<div class="line">  <a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a>(<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <span class="stringliteral">&#39;/path/to/index.html&#39;</span>)</div>
+<div class="line">    .pipe(<a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>)</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line">server.listen(3000)</div>
+<div class="ttc" id="aapplication_8js_html_a55f22d498ca401fddca364855629d1d3"><div class="ttname"><a href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a></div><div class="ttdeci">var http</div><div class="ttdef"><b>Definition</b> application.js:23</div></div>
+<div class="ttc" id="acors_2lib_2index_8js_html_ac2ffb26d6f42d3bbcd7847b0873403f4"><div class="ttname"><a href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a></div><div class="ttdeci">function()</div><div class="ttdef"><b>Definition</b> index.js:1</div></div>
+<div class="ttc" id="aexpress_8js_html_a42c43c76081a7df8ae2954f16ee9338b"><div class="ttname"><a href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></div><div class="ttdeci">var req</div><div class="ttdef"><b>Definition</b> express.js:21</div></div>
+<div class="ttc" id="aexpress_8js_html_abde3c35e3bb7e5225dd7f234c685329c"><div class="ttname"><a href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a></div><div class="ttdeci">var res</div><div class="ttdef"><b>Definition</b> express.js:22</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1961"></a>
+Serve all files from a directory</h2>
+<p>This simple example will just serve up all the files in a given directory as the top-level. For example, a request <code>GET /foo.txt</code> will send back <code>/www/public/foo.txt</code>.</p>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;http&#39;</span>)</div>
+<div class="line">var <a class="code hl_variable" href="express_2lib_2router_2index_8js.html#a22abdd124753668e3939b76fbc8e3386">parseUrl</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;parseurl&#39;)</div>
+<div class="line">var <a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;<a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a>&#39;)</div>
+<div class="line"> </div>
+<div class="line">var server = <a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a>.createServer(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> onRequest (<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>) {</div>
+<div class="line">  <a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a>(<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <a class="code hl_variable" href="express_2lib_2router_2index_8js.html#a22abdd124753668e3939b76fbc8e3386">parseUrl</a>(<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>).pathname, { root: <span class="stringliteral">&#39;/www/public&#39;</span> })</div>
+<div class="line">    .pipe(<a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>)</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line">server.listen(3000)</div>
+<div class="ttc" id="aexpress_2lib_2router_2index_8js_html_a22abdd124753668e3939b76fbc8e3386"><div class="ttname"><a href="express_2lib_2router_2index_8js.html#a22abdd124753668e3939b76fbc8e3386">parseUrl</a></div><div class="ttdeci">var parseUrl</div><div class="ttdef"><b>Definition</b> index.js:23</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1962"></a>
+Custom file types</h2>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;http&#39;</span>)</div>
+<div class="line">var <a class="code hl_variable" href="express_2lib_2router_2index_8js.html#a22abdd124753668e3939b76fbc8e3386">parseUrl</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;parseurl&#39;)</div>
+<div class="line">var <a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;<a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a>&#39;)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Default unknown types to text/plain</span></div>
+<div class="line"><a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a>.<a class="code hl_variable" href="response_8js.html#ab4d288fe448bcc077971c41ae3797375">mime</a>.<a class="code hl_variable" href="mime_8js.html#afca09a8404b2481ca11258e9284f8768">default_type</a> = &#39;text/plain&#39;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Add a custom type</span></div>
+<div class="line"><a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a>.<a class="code hl_variable" href="response_8js.html#ab4d288fe448bcc077971c41ae3797375">mime</a>.<a class="code hl_variable" href="mime_8js.html#a14947f326ebc4da17b5d55921c25e9fb">define</a>({</div>
+<div class="line">  <span class="stringliteral">&#39;application/x-my-type&#39;</span>: [<span class="stringliteral">&#39;x-mt&#39;</span>, <span class="stringliteral">&#39;x-mtt&#39;</span>]</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line">var server = <a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a>.createServer(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> onRequest (<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>) {</div>
+<div class="line">  <a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a>(<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <a class="code hl_variable" href="express_2lib_2router_2index_8js.html#a22abdd124753668e3939b76fbc8e3386">parseUrl</a>(<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>).pathname, { root: <span class="stringliteral">&#39;/www/public&#39;</span> })</div>
+<div class="line">    .pipe(<a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>)</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line">server.listen(3000)</div>
+<div class="ttc" id="amime_8js_html_a14947f326ebc4da17b5d55921c25e9fb"><div class="ttname"><a href="mime_8js.html#a14947f326ebc4da17b5d55921c25e9fb">define</a></div><div class="ttdeci">Mime prototype define</div><div class="ttdef"><b>Definition</b> mime.js:21</div></div>
+<div class="ttc" id="amime_8js_html_afca09a8404b2481ca11258e9284f8768"><div class="ttname"><a href="mime_8js.html#afca09a8404b2481ca11258e9284f8768">default_type</a></div><div class="ttdeci">mime default_type</div><div class="ttdef"><b>Definition</b> mime.js:90</div></div>
+<div class="ttc" id="aresponse_8js_html_ab4d288fe448bcc077971c41ae3797375"><div class="ttname"><a href="response_8js.html#ab4d288fe448bcc077971c41ae3797375">mime</a></div><div class="ttdeci">var mime</div><div class="ttdef"><b>Definition</b> response.js:34</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1963"></a>
+Custom directory index view</h2>
+<p>This is a example of serving up a structure of directories with a custom function to render a listing of a directory.</p>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;http&#39;</span>)</div>
+<div class="line">var <a class="code hl_variable" href="view_8js.html#aebcdd70130f7e0b00b39cc981ab0bab0">fs</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;<a class="code hl_variable" href="view_8js.html#aebcdd70130f7e0b00b39cc981ab0bab0">fs</a>&#39;)</div>
+<div class="line">var <a class="code hl_variable" href="express_2lib_2router_2index_8js.html#a22abdd124753668e3939b76fbc8e3386">parseUrl</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;parseurl&#39;)</div>
+<div class="line">var <a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;<a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a>&#39;)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Transfer arbitrary files from within /www/example.com/public/*</span></div>
+<div class="line"><span class="comment">// with a custom handler for directory listing</span></div>
+<div class="line">var server = <a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a>.createServer(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> onRequest (<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>) {</div>
+<div class="line">  <a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a>(<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <a class="code hl_variable" href="express_2lib_2router_2index_8js.html#a22abdd124753668e3939b76fbc8e3386">parseUrl</a>(<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>).pathname, { index: <span class="keyword">false</span>, root: <span class="stringliteral">&#39;/www/public&#39;</span> })</div>
+<div class="line">    .once(<span class="stringliteral">&#39;directory&#39;</span>, directory)</div>
+<div class="line">    .pipe(<a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>)</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line">server.listen(3000)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Custom directory handler</span></div>
+<div class="line"><a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> directory (<a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>, path) {</div>
+<div class="line">  var <a class="code hl_variable" href="src_2node_8js.html#a822bf74d422c61e6caa292f739dc4786">stream</a> = <span class="keyword">this</span></div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// redirect to trailing slash for consistent url</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="src_2node_8js.html#a822bf74d422c61e6caa292f739dc4786">stream</a>.hasTrailingSlash()) {</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_variable" href="src_2node_8js.html#a822bf74d422c61e6caa292f739dc4786">stream</a>.redirect(path)</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// get directory list</span></div>
+<div class="line">  <a class="code hl_variable" href="view_8js.html#aebcdd70130f7e0b00b39cc981ab0bab0">fs</a>.readdir(path, <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> onReaddir (err, list) {</div>
+<div class="line">    <span class="keywordflow">if</span> (err) <span class="keywordflow">return</span> <a class="code hl_variable" href="src_2node_8js.html#a822bf74d422c61e6caa292f739dc4786">stream</a>.error(err)</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// render an index for the directory</span></div>
+<div class="line">    <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.setHeader(<span class="stringliteral">&#39;Content-Type&#39;</span>, <span class="stringliteral">&#39;text/plain; charset=UTF-8&#39;</span>)</div>
+<div class="line">    <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.end(list.join(<span class="charliteral">&#39;\n&#39;</span>) + <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line">  })</div>
+<div class="line">}</div>
+<div class="ttc" id="asrc_2node_8js_html_a822bf74d422c61e6caa292f739dc4786"><div class="ttname"><a href="src_2node_8js.html#a822bf74d422c61e6caa292f739dc4786">stream</a></div><div class="ttdeci">var stream</div><div class="ttdef"><b>Definition</b> node.js:67</div></div>
+<div class="ttc" id="aview_8js_html_aebcdd70130f7e0b00b39cc981ab0bab0"><div class="ttname"><a href="view_8js.html#aebcdd70130f7e0b00b39cc981ab0bab0">fs</a></div><div class="ttdeci">var fs</div><div class="ttdef"><b>Definition</b> view.js:18</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1964"></a>
+Serving from a root directory with custom error-handling</h2>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;http&#39;</span>)</div>
+<div class="line">var <a class="code hl_variable" href="express_2lib_2router_2index_8js.html#a22abdd124753668e3939b76fbc8e3386">parseUrl</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;parseurl&#39;)</div>
+<div class="line">var <a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;<a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a>&#39;)</div>
+<div class="line"> </div>
+<div class="line">var server = <a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a>.createServer(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> onRequest (<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>) {</div>
+<div class="line">  <span class="comment">// your custom error-handling logic:</span></div>
+<div class="line">  <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> error (err) {</div>
+<div class="line">    <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.statusCode = err.status || 500</div>
+<div class="line">    <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.end(err.message)</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// your custom headers</span></div>
+<div class="line">  <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> headers (<a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>, path, stat) {</div>
+<div class="line">    <span class="comment">// serve all files for download</span></div>
+<div class="line">    <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.setHeader(<span class="stringliteral">&#39;Content-Disposition&#39;</span>, <span class="stringliteral">&#39;attachment&#39;</span>)</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// your custom directory handling logic:</span></div>
+<div class="line">  <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="response_8js.html#a8de4982240756277f8ed598dae635f7b">redirect</a> () {</div>
+<div class="line">    <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.statusCode = 301</div>
+<div class="line">    <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.setHeader(<span class="stringliteral">&#39;Location&#39;</span>, <a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>.url + <span class="charliteral">&#39;/&#39;</span>)</div>
+<div class="line">    <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.end(<span class="stringliteral">&#39;Redirecting to &#39;</span> + <a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>.url + <span class="charliteral">&#39;/&#39;</span>)</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// transfer arbitrary files from within</span></div>
+<div class="line">  <span class="comment">// /www/example.com/public/*</span></div>
+<div class="line">  <a class="code hl_variable" href="response_8js.html#a88d7310f8a18b3e16f4020168641b86a">send</a>(<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <a class="code hl_variable" href="express_2lib_2router_2index_8js.html#a22abdd124753668e3939b76fbc8e3386">parseUrl</a>(<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>).pathname, { root: <span class="stringliteral">&#39;/www/public&#39;</span> })</div>
+<div class="line">    .on(<span class="stringliteral">&#39;error&#39;</span>, error)</div>
+<div class="line">    .on(<span class="stringliteral">&#39;directory&#39;</span>, <a class="code hl_variable" href="response_8js.html#a8de4982240756277f8ed598dae635f7b">redirect</a>)</div>
+<div class="line">    .on(<span class="stringliteral">&#39;headers&#39;</span>, headers)</div>
+<div class="line">    .pipe(<a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>)</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line">server.listen(3000)</div>
+<div class="ttc" id="aresponse_8js_html_a8de4982240756277f8ed598dae635f7b"><div class="ttname"><a href="response_8js.html#a8de4982240756277f8ed598dae635f7b">redirect</a></div><div class="ttdeci">res redirect</div><div class="ttdef"><b>Definition</b> response.js:946</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1965"></a>
+License</h1>
+<p>[MIT](LICENSE) </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

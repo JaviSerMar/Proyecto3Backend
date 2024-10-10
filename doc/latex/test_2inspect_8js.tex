@@ -1,0 +1,62 @@
+\doxysection{Referencia del archivo node\+\_\+modules/object-\/inspect/test/inspect.js}
+\hypertarget{test_2inspect_8js}{}\label{test_2inspect_8js}\index{node\_modules/object-\/inspect/test/inspect.js@{node\_modules/object-\/inspect/test/inspect.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test_2inspect_8js_a3eae88ae1fef1956f6d38949e973e83e}{test}} (\textquotesingle{}\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(t) \{ t.\+plan(5);var \mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}=\mbox{[}\{ inspect\+:function xyz\+Inspect() \{ return \textquotesingle{}!XYZ¡\textquotesingle{};\} \}, \mbox{[}$\,$\mbox{]}\mbox{]};var string\+Result=\textquotesingle{}\mbox{[}!XYZ¡, \mbox{[}$\,$\mbox{]}\mbox{]}\textquotesingle{};var false\+Result=\textquotesingle{}\mbox{[}\{ inspect\+:\mbox{[}Function\+:xyz\+Inspect\mbox{]} \}, \mbox{[}$\,$\mbox{]}\mbox{]}\textquotesingle{};\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}), string\+Result);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}, \{ custom\+Inspect\+:true \}), string\+Result);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}, \{ custom\+Inspect\+:\textquotesingle{}symbol\textquotesingle{} \}), false\+Result);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}, \{ custom\+Inspect\+:false \}), false\+Result);t\mbox{[}\textquotesingle{}throws\textquotesingle{}\mbox{]}(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}, \{ custom\+Inspect\+:\textquotesingle{}not a boolean or "{}symbol"{}\textquotesingle{} \});\}, Type\+Error, \textquotesingle{}\`{}custom\+Inspect\`{} must be a boolean or the string "{}symbol"{}\textquotesingle{});\})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \mbox{\hyperlink{test_2inspect_8js_a3a897d91c374db023efd4ed28e633ade}{test}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}tape\textquotesingle{})
+\item 
+var \mbox{\hyperlink{test_2inspect_8js_ab265d6ce76982576467ae1e40245a76d}{has\+Symbols}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{lib_2parse_8js_a1fd59be22bbab6bc2baae116e333d914}{has}}-\/symbols/shams\textquotesingle{})()
+\item 
+var \mbox{\hyperlink{test_2inspect_8js_acdf9d20ed718037c0c91aeb178811e4f}{util\+Inspect}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}../\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{util.\+inspect}}\textquotesingle{})
+\item 
+var \mbox{\hyperlink{test_2inspect_8js_a1da39873b2351cb41deb24dfbe8c4d79}{repeat}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}string.\+prototype.\+repeat\textquotesingle{})
+\item 
+var \mbox{\hyperlink{test_2inspect_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}..\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{test_2inspect_8js_a3eae88ae1fef1956f6d38949e973e83e}\index{inspect.js@{inspect.js}!test@{test}}
+\index{test@{test}!inspect.js@{inspect.js}}
+\doxysubsubsection{\texorpdfstring{test()}{test()}}
+{\footnotesize\ttfamily \label{test_2inspect_8js_a3eae88ae1fef1956f6d38949e973e83e} 
+test (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(t) \{ t.\+plan(5);var \mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}=\mbox{[}\{ inspect\+:function xyz\+Inspect() \{ return \textquotesingle{}!XYZ¡\textquotesingle{};\} \}, \mbox{[}$\,$\mbox{]}\mbox{]};var string\+Result=\textquotesingle{}\mbox{[}!XYZ¡, \mbox{[}$\,$\mbox{]}\mbox{]}\textquotesingle{};var false\+Result=\textquotesingle{}\mbox{[}\{ inspect\+:\mbox{[}Function\+:xyz\+Inspect\mbox{]} \}, \mbox{[}$\,$\mbox{]}\mbox{]}\textquotesingle{};\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}), string\+Result);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}, \{ custom\+Inspect\+:true \}), string\+Result);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}, \{ custom\+Inspect\+:\textquotesingle{}symbol\textquotesingle{} \}), false\+Result);\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}, \{ custom\+Inspect\+:false \}), false\+Result);t\mbox{[}\textquotesingle{}throws\textquotesingle{}\mbox{]}(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}() \{ \mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}, \{ custom\+Inspect\+:\textquotesingle{}not a boolean or "{}symbol"{}\textquotesingle{} \});\}, Type\+Error, \textquotesingle{}\`{}custom\+Inspect\`{} must be a boolean or the string "{}symbol"{}\textquotesingle{});\}}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{test_2inspect_8js_ab265d6ce76982576467ae1e40245a76d}\index{inspect.js@{inspect.js}!hasSymbols@{hasSymbols}}
+\index{hasSymbols@{hasSymbols}!inspect.js@{inspect.js}}
+\doxysubsubsection{\texorpdfstring{hasSymbols}{hasSymbols}}
+{\footnotesize\ttfamily \label{test_2inspect_8js_ab265d6ce76982576467ae1e40245a76d} 
+var has\+Symbols = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{lib_2parse_8js_a1fd59be22bbab6bc2baae116e333d914}{has}}-\/symbols/shams\textquotesingle{})()}
+
+\Hypertarget{test_2inspect_8js_ada233bc1a09b3d9309abcd7d4a0baebe}\index{inspect.js@{inspect.js}!inspect@{inspect}}
+\index{inspect@{inspect}!inspect.js@{inspect.js}}
+\doxysubsubsection{\texorpdfstring{inspect}{inspect}}
+{\footnotesize\ttfamily \label{test_2inspect_8js_ada233bc1a09b3d9309abcd7d4a0baebe} 
+var inspect = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}..\textquotesingle{})}
+
+\Hypertarget{test_2inspect_8js_a1da39873b2351cb41deb24dfbe8c4d79}\index{inspect.js@{inspect.js}!repeat@{repeat}}
+\index{repeat@{repeat}!inspect.js@{inspect.js}}
+\doxysubsubsection{\texorpdfstring{repeat}{repeat}}
+{\footnotesize\ttfamily \label{test_2inspect_8js_a1da39873b2351cb41deb24dfbe8c4d79} 
+var repeat = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}string.\+prototype.\+repeat\textquotesingle{})}
+
+\Hypertarget{test_2inspect_8js_a3a897d91c374db023efd4ed28e633ade}\index{inspect.js@{inspect.js}!test@{test}}
+\index{test@{test}!inspect.js@{inspect.js}}
+\doxysubsubsection{\texorpdfstring{test}{test}}
+{\footnotesize\ttfamily \label{test_2inspect_8js_a3a897d91c374db023efd4ed28e633ade} 
+var test = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}tape\textquotesingle{})}
+
+\Hypertarget{test_2inspect_8js_acdf9d20ed718037c0c91aeb178811e4f}\index{inspect.js@{inspect.js}!utilInspect@{utilInspect}}
+\index{utilInspect@{utilInspect}!inspect.js@{inspect.js}}
+\doxysubsubsection{\texorpdfstring{utilInspect}{utilInspect}}
+{\footnotesize\ttfamily \label{test_2inspect_8js_acdf9d20ed718037c0c91aeb178811e4f} 
+var util\+Inspect = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}../\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{util.\+inspect}}\textquotesingle{})}
+

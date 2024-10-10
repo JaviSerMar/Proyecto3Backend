@@ -1,0 +1,72 @@
+\chapter{vary}
+\hypertarget{md_node__modules_2vary_2_r_e_a_d_m_e}{}\label{md_node__modules_2vary_2_r_e_a_d_m_e}\index{vary@{vary}}
+\label{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2185}%
+\Hypertarget{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2185}%
+
+
+\href{https://npmjs.org/package/vary}{\texttt{ }} \href{https://npmjs.org/package/vary}{\texttt{ }} \href{https://nodejs.org/en/download}{\texttt{ }} \href{https://travis-ci.org/jshttp/vary}{\texttt{ }} \href{https://coveralls.io/r/jshttp/vary}{\texttt{ }}
+
+Manipulate the HTTP Vary header\hypertarget{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2186}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2186}
+This is a \href{https://nodejs.org/en/}{\texttt{ Node.\+js}} module available through the \href{https://www.npmjs.com/}{\texttt{ npm registry}}. Installation is done using the \href{https://docs.npmjs.com/getting-started/installing-npm-packages-locally}{\texttt{ {\ttfamily npm install} command}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ vary}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2187}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2187}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{response_8js_a2222d7dc84a3b14edb06515136c7d0a5}{vary}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'vary'})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2188}{}\doxysubsection{\texorpdfstring{vary(res, field)}{vary(res, field)}}\label{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2188}
+Adds the given header {\ttfamily field} to the {\ttfamily Vary} response header of {\ttfamily res}. This can be a string of a single field, a string of a valid {\ttfamily Vary} header, or an array of multiple fields.
+
+This will append the header if not already listed, otherwise leaves it listed in the current location.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Append\ "{}Origin"{}\ to\ the\ Vary\ header\ of\ the\ response}}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_a2222d7dc84a3b14edb06515136c7d0a5}{vary}}(\mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ \textcolor{stringliteral}{'Origin'})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2189}{}\doxysubsection{\texorpdfstring{vary.\+append(header, field)}{vary.\+append(header, field)}}\label{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2189}
+Adds the given header {\ttfamily field} to the {\ttfamily Vary} response header string {\ttfamily header}. This can be a string of a single field, a string of a valid {\ttfamily Vary} header, or an array of multiple fields.
+
+This will append the header if not already listed, otherwise leaves it listed in the current location. The new header string is returned.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Get\ header\ string\ appending\ "{}Origin"{}\ to\ "{}Accept,\ User-\/Agent"{}}}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_a2222d7dc84a3b14edb06515136c7d0a5}{vary}}.append(\textcolor{stringliteral}{'Accept,\ User-\/Agent'},\ \textcolor{stringliteral}{'Origin'})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2190}{}\doxysection{\texorpdfstring{Examples}{Examples}}\label{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2190}
+\hypertarget{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2191}{}\doxysubsection{\texorpdfstring{Updating the Vary header when content is based on it}{Updating the Vary header when content is based on it}}\label{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2191}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'http'})}
+\DoxyCodeLine{var\ \mbox{\hyperlink{response_8js_a2222d7dc84a3b14edb06515136c7d0a5}{vary}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('\mbox{\hyperlink{response_8js_a2222d7dc84a3b14edb06515136c7d0a5}{vary}}')}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}.createServer(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ onRequest\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ about\ to\ user-\/agent\ sniff}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{response_8js_a2222d7dc84a3b14edb06515136c7d0a5}{vary}}(\mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ \textcolor{stringliteral}{'User-\/Agent'})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ var\ ua\ =\ \mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}.headers['user-\/agent']\ ||\ ''}
+\DoxyCodeLine{\ \ var\ isMobile\ =\ /mobi|android|touch|mini/i.\mbox{\hyperlink{test_2call_bound_8js_a3a897d91c374db023efd4ed28e633ade}{test}}(ua)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ serve\ site,\ depending\ on\ isMobile}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.setHeader('Content-\/Type',\ 'text/\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}')}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.end('You\ are\ (probably)\ '\ +\ (isMobile\ ?\ ''\ :\ 'not\ ')\ +\ 'a\ mobile\ user')}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2192}{}\doxysection{\texorpdfstring{Testing}{Testing}}\label{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2192}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ test}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2193}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2vary_2_r_e_a_d_m_e_autotoc_md2193}
+\mbox{[}MIT\mbox{]}(LICENSE) 

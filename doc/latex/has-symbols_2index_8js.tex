@@ -1,0 +1,52 @@
+\doxysection{Referencia del archivo node\+\_\+modules/has-\/symbols/index.js}
+\hypertarget{has-symbols_2index_8js}{}\label{has-symbols_2index_8js}\index{node\_modules/has-\/symbols/index.js@{node\_modules/has-\/symbols/index.js}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{has-symbols_2index_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{has-symbols_2index_8js_a429a7db2f2ccf236e6e9e4edbc7db2a7}{orig\+Symbol}} = typeof Symbol !== \textquotesingle{}\mbox{\hyperlink{get-intrinsic_2index_8js_ae6aa4817f0f49345b718ea6b4abae197}{undefined}}\textquotesingle{} \&\& Symbol
+\item 
+var \mbox{\hyperlink{has-symbols_2index_8js_a4fc9c8249be63c9102e4c03a0134fceb}{has\+Symbol\+Sham}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./shams\textquotesingle{})
+\item 
+module \mbox{\hyperlink{has-symbols_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{has-symbols_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}\index{index.js@{index.js}!exports@{exports}}
+\index{exports@{exports}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{exports}{exports}}
+{\footnotesize\ttfamily \label{has-symbols_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34} 
+module exports}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ hasNativeSymbols()\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (typeof\ \mbox{\hyperlink{has-symbols_2index_8js_a429a7db2f2ccf236e6e9e4edbc7db2a7}{origSymbol}}\ !==\ \textcolor{stringliteral}{'function'})\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (typeof\ Symbol\ !==\ \textcolor{stringliteral}{'function'})\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (typeof\ \mbox{\hyperlink{has-symbols_2index_8js_a429a7db2f2ccf236e6e9e4edbc7db2a7}{origSymbol}}(\textcolor{stringliteral}{'foo'})\ !==\ \textcolor{stringliteral}{'symbol'})\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (typeof\ Symbol(\textcolor{stringliteral}{'bar'})\ !==\ \textcolor{stringliteral}{'symbol'})\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{has-symbols_2index_8js_a4fc9c8249be63c9102e4c03a0134fceb}{hasSymbolSham}}();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{has-symbols_2index_8js_a4fc9c8249be63c9102e4c03a0134fceb}\index{index.js@{index.js}!hasSymbolSham@{hasSymbolSham}}
+\index{hasSymbolSham@{hasSymbolSham}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{hasSymbolSham}{hasSymbolSham}}
+{\footnotesize\ttfamily \label{has-symbols_2index_8js_a4fc9c8249be63c9102e4c03a0134fceb} 
+var has\+Symbol\+Sham = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./shams\textquotesingle{})}
+
+\Hypertarget{has-symbols_2index_8js_a429a7db2f2ccf236e6e9e4edbc7db2a7}\index{index.js@{index.js}!origSymbol@{origSymbol}}
+\index{origSymbol@{origSymbol}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{origSymbol}{origSymbol}}
+{\footnotesize\ttfamily \label{has-symbols_2index_8js_a429a7db2f2ccf236e6e9e4edbc7db2a7} 
+var orig\+Symbol = typeof Symbol !== \textquotesingle{}\mbox{\hyperlink{get-intrinsic_2index_8js_ae6aa4817f0f49345b718ea6b4abae197}{undefined}}\textquotesingle{} \&\& Symbol}
+
+\Hypertarget{has-symbols_2index_8js_ae2475e10618961c050dcba04e8c42331}\index{index.js@{index.js}!strict@{strict}}
+\index{strict@{strict}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{has-symbols_2index_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+

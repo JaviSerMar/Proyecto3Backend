@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: node-packet-reader</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">node-packet-reader</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Handy little well tested module for reading length-prefixed binary packets.</p>
+<p>Since buffers come off a socket in randomly sized chunks you can't expect them to cleanly break on packet boundaries. This module allows you to push buffers in and read full packets out the other side, so you can get to parsing right away and not have to manage concatenating partial buffers and searching through them for packets.</p>
+<h1><a class="anchor" id="autotoc_md1486"></a>
+install</h1>
+<p><code>$ npm install packet-reader</code></p>
+<h1><a class="anchor" id="autotoc_md1487"></a>
+example</h1>
+<div class="fragment"><div class="line">var Reader = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;packet-reader&#39;</span>)</div>
+<div class="line"> </div>
+<div class="line">var <a class="code hl_variable" href="b_8js.html#a40fca641642c2c63b243c71973ecec54">reader</a> = new Reader()</div>
+<div class="line"><span class="comment">//assuming you have a socket emitting `data` events</span></div>
+<div class="line">socket.on(&#39;data&#39;, <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(<a class="code hl_variable" href="b_8js.html#aad851473247e961d3bd53eea92dabe1d">buffer</a>) {</div>
+<div class="line">  <a class="code hl_variable" href="b_8js.html#a40fca641642c2c63b243c71973ecec54">reader</a>.addChunk(<a class="code hl_variable" href="b_8js.html#aad851473247e961d3bd53eea92dabe1d">buffer</a>)</div>
+<div class="line">  var packet = <a class="code hl_variable" href="b_8js.html#a40fca641642c2c63b243c71973ecec54">reader</a>.read()</div>
+<div class="line">  <span class="keywordflow">while</span>(packet) {</div>
+<div class="line">    <span class="comment">//do something with fully parsed packet</span></div>
+<div class="line">  }</div>
+<div class="line">})</div>
+<div class="ttc" id="ab_8js_html_a40fca641642c2c63b243c71973ecec54"><div class="ttname"><a href="b_8js.html#a40fca641642c2c63b243c71973ecec54">reader</a></div><div class="ttdeci">const reader</div><div class="ttdef"><b>Definition</b> b.js:10</div></div>
+<div class="ttc" id="ab_8js_html_aad851473247e961d3bd53eea92dabe1d"><div class="ttname"><a href="b_8js.html#aad851473247e961d3bd53eea92dabe1d">buffer</a></div><div class="ttdeci">const buffer</div><div class="ttdef"><b>Definition</b> b.js:11</div></div>
+<div class="ttc" id="acors_2lib_2index_8js_html_ac2ffb26d6f42d3bbcd7847b0873403f4"><div class="ttname"><a href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a></div><div class="ttdeci">function()</div><div class="ttdef"><b>Definition</b> index.js:1</div></div>
+<div class="ttc" id="atest-core-js_8js_html_a2fc998a372f1531668f7047d0878effe"><div class="ttname"><a href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a></div><div class="ttdeci">require('core-js')</div></div>
+</div><!-- fragment --><p>here's a more full featured example:</p>
+<p>let's assume our "packet" for our protocol is 32-bit Big Endian length-prefixed strings so a "hello world" packet would look something like [length, string] <code>[0, 0, 0 0x0B, h, e, l, l, o, w, o, r, l, d]</code></p>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="streams_8js.html#ab8d6089fc93e12bffae30469af9a58ff">Transform</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;stream&#39;</span>).Transform</div>
+<div class="line">var Reader = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;packet-reader&#39;</span>)</div>
+<div class="line">var <a class="code hl_variable" href="b_8js.html#a40fca641642c2c63b243c71973ecec54">reader</a> = new Reader()</div>
+<div class="line">var parser = new <a class="code hl_variable" href="streams_8js.html#ab8d6089fc93e12bffae30469af9a58ff">Transform</a>()</div>
+<div class="line">parser.<a class="code hl_variable" href="streams_8js.html#ac77dbea0660ea662f74752d78b6052d6">_transform</a> = <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(chunk, <a class="code hl_variable" href="negotiator_2index_8js.html#a9ad8213a7626ee07aef47950752cac18">encoding</a>, cb) {</div>
+<div class="line">  <a class="code hl_variable" href="b_8js.html#a40fca641642c2c63b243c71973ecec54">reader</a>.addChunk(chunk)</div>
+<div class="line">  var packet = <a class="code hl_variable" href="b_8js.html#a40fca641642c2c63b243c71973ecec54">reader</a>.read()</div>
+<div class="line">  <span class="keywordflow">while</span>(packet) {</div>
+<div class="line">    this.push(packet.toString(<span class="stringliteral">&#39;utf8&#39;</span>))</div>
+<div class="line">    packet = reader.read()</div>
+<div class="line">  }</div>
+<div class="line">  cb()</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">var server = net.createServer(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(socket) {</div>
+<div class="line">  socket.pipe(parser).pipe(stdout)</div>
+<div class="line">})</div>
+<div class="ttc" id="anegotiator_2index_8js_html_a9ad8213a7626ee07aef47950752cac18"><div class="ttname"><a href="negotiator_2index_8js.html#a9ad8213a7626ee07aef47950752cac18">encoding</a></div><div class="ttdeci">Negotiator prototype encoding</div><div class="ttdef"><b>Definition</b> index.js:47</div></div>
+<div class="ttc" id="astreams_8js_html_ab8d6089fc93e12bffae30469af9a58ff"><div class="ttname"><a href="streams_8js.html#ab8d6089fc93e12bffae30469af9a58ff">Transform</a></div><div class="ttdeci">var Transform</div><div class="ttdef"><b>Definition</b> streams.js:4</div></div>
+<div class="ttc" id="astreams_8js_html_ac77dbea0660ea662f74752d78b6052d6"><div class="ttname"><a href="streams_8js.html#ac77dbea0660ea662f74752d78b6052d6">_transform</a></div><div class="ttdeci">IconvLiteEncoderStream prototype _transform</div><div class="ttdef"><b>Definition</b> streams.js:41</div></div>
+</div><!-- fragment --><p>There are a few config options for setting optional pre-length padding byte. Read the tests for details.</p>
+<h1><a class="anchor" id="autotoc_md1488"></a>
+License</h1>
+<p>MIT</p>
+<p>Copyright 2015 Brian M. Carlson All rights reserved.</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

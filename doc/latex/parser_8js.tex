@@ -1,0 +1,114 @@
+\doxysection{Referencia del archivo node\+\_\+modules/pg-\/protocol/dist/parser.js}
+\hypertarget{parser_8js}{}\label{parser_8js}\index{node\_modules/pg-\/protocol/dist/parser.js@{node\_modules/pg-\/protocol/dist/parser.js}}
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_parser}{Parser}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+Object \mbox{\hyperlink{parser_8js_a28b393256d5d3dc5b7d5940192da33e5}{define\+Property}} (\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}, "{}\+\_\+\+\_\+es\+Module"{}, \{ value\+:true \})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{parser_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{parser_8js_aa77bab964373eb2917ab7e271138d9aa}{\+\_\+\+\_\+import\+Default}}
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{parser_8js_a87fab8a54817e0fa1cd2b8d6bc3d8915}{Parser}} = void 0
+\item 
+const \mbox{\hyperlink{parser_8js_ae03a2cd4753e32835df51adbcbb4f9af}{messages\+\_\+1}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}./messages"{})
+\item 
+const \mbox{\hyperlink{parser_8js_af9a1920e93d4ae692e313cb55cdc0d9f}{buffer\+\_\+reader\+\_\+1}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}./buffer-\/reader"{})
+\item 
+const \mbox{\hyperlink{parser_8js_ad9535cd8fb66673f53cea356b63e94c1}{assert\+\_\+1}} = \mbox{\hyperlink{inbound-parser_8test_8js_aa77bab964373eb2917ab7e271138d9aa}{\+\_\+\+\_\+import\+Default}}(\mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}assert"{}))
+\item 
+const \mbox{\hyperlink{parser_8js_a4f0256bdf75e262ed4c10df3f57417f9}{CODE\+\_\+\+LENGTH}} = 1
+\item 
+const \mbox{\hyperlink{parser_8js_a2245d918a1f52452a8c3ae57063984c2}{LEN\+\_\+\+LENGTH}} = 4
+\item 
+const \mbox{\hyperlink{parser_8js_a8e32a8a4575eea46bfa497894cc2a353}{HEADER\+\_\+\+LENGTH}} = \mbox{\hyperlink{parser_8js_a4f0256bdf75e262ed4c10df3f57417f9}{CODE\+\_\+\+LENGTH}} + \mbox{\hyperlink{parser_8js_a2245d918a1f52452a8c3ae57063984c2}{LEN\+\_\+\+LENGTH}}
+\item 
+const \mbox{\hyperlink{parser_8js_a823260704d6a3aef701320c5c07b6a44}{empty\+Buffer}} = Buffer.\+alloc\+Unsafe(0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{parser_8js_a28b393256d5d3dc5b7d5940192da33e5}\index{parser.js@{parser.js}!defineProperty@{defineProperty}}
+\index{defineProperty@{defineProperty}!parser.js@{parser.js}}
+\doxysubsubsection{\texorpdfstring{defineProperty()}{defineProperty()}}
+{\footnotesize\ttfamily \label{parser_8js_a28b393256d5d3dc5b7d5940192da33e5} 
+Object define\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}}]{}{, }\item[{"{}\+\_\+\+\_\+es\+Module"{}}]{}{, }\item[{\{ value\+:true \}}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{parser_8js_aa77bab964373eb2917ab7e271138d9aa}\index{parser.js@{parser.js}!\_\_importDefault@{\_\_importDefault}}
+\index{\_\_importDefault@{\_\_importDefault}!parser.js@{parser.js}}
+\doxysubsubsection{\texorpdfstring{\_\_importDefault}{\_\_importDefault}}
+{\footnotesize\ttfamily \label{parser_8js_aa77bab964373eb2917ab7e271138d9aa} 
+var \+\_\+\+\_\+import\+Default}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\textcolor{keyword}{this}\ \&\&\ this.\mbox{\hyperlink{parser_8js_aa77bab964373eb2917ab7e271138d9aa}{\_\_importDefault}})\ ||\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (mod)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ (mod\ \&\&\ mod.\_\_esModule)\ ?\ mod\ :\ \{\ \textcolor{stringliteral}{"{}default"{}}:\ mod\ \};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{parser_8js_ad9535cd8fb66673f53cea356b63e94c1}\index{parser.js@{parser.js}!assert\_1@{assert\_1}}
+\index{assert\_1@{assert\_1}!parser.js@{parser.js}}
+\doxysubsubsection{\texorpdfstring{assert\_1}{assert\_1}}
+{\footnotesize\ttfamily \label{parser_8js_ad9535cd8fb66673f53cea356b63e94c1} 
+const assert\+\_\+1 = \mbox{\hyperlink{inbound-parser_8test_8js_aa77bab964373eb2917ab7e271138d9aa}{\+\_\+\+\_\+import\+Default}}(\mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}assert"{}))}
+
+\Hypertarget{parser_8js_af9a1920e93d4ae692e313cb55cdc0d9f}\index{parser.js@{parser.js}!buffer\_reader\_1@{buffer\_reader\_1}}
+\index{buffer\_reader\_1@{buffer\_reader\_1}!parser.js@{parser.js}}
+\doxysubsubsection{\texorpdfstring{buffer\_reader\_1}{buffer\_reader\_1}}
+{\footnotesize\ttfamily \label{parser_8js_af9a1920e93d4ae692e313cb55cdc0d9f} 
+const buffer\+\_\+reader\+\_\+1 = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}./buffer-\/reader"{})}
+
+\Hypertarget{parser_8js_a4f0256bdf75e262ed4c10df3f57417f9}\index{parser.js@{parser.js}!CODE\_LENGTH@{CODE\_LENGTH}}
+\index{CODE\_LENGTH@{CODE\_LENGTH}!parser.js@{parser.js}}
+\doxysubsubsection{\texorpdfstring{CODE\_LENGTH}{CODE\_LENGTH}}
+{\footnotesize\ttfamily \label{parser_8js_a4f0256bdf75e262ed4c10df3f57417f9} 
+const CODE\+\_\+\+LENGTH = 1}
+
+\Hypertarget{parser_8js_a823260704d6a3aef701320c5c07b6a44}\index{parser.js@{parser.js}!emptyBuffer@{emptyBuffer}}
+\index{emptyBuffer@{emptyBuffer}!parser.js@{parser.js}}
+\doxysubsubsection{\texorpdfstring{emptyBuffer}{emptyBuffer}}
+{\footnotesize\ttfamily \label{parser_8js_a823260704d6a3aef701320c5c07b6a44} 
+const empty\+Buffer = Buffer.\+alloc\+Unsafe(0)}
+
+\Hypertarget{parser_8js_a8e32a8a4575eea46bfa497894cc2a353}\index{parser.js@{parser.js}!HEADER\_LENGTH@{HEADER\_LENGTH}}
+\index{HEADER\_LENGTH@{HEADER\_LENGTH}!parser.js@{parser.js}}
+\doxysubsubsection{\texorpdfstring{HEADER\_LENGTH}{HEADER\_LENGTH}}
+{\footnotesize\ttfamily \label{parser_8js_a8e32a8a4575eea46bfa497894cc2a353} 
+const HEADER\+\_\+\+LENGTH = \mbox{\hyperlink{parser_8js_a4f0256bdf75e262ed4c10df3f57417f9}{CODE\+\_\+\+LENGTH}} + \mbox{\hyperlink{parser_8js_a2245d918a1f52452a8c3ae57063984c2}{LEN\+\_\+\+LENGTH}}}
+
+\Hypertarget{parser_8js_a2245d918a1f52452a8c3ae57063984c2}\index{parser.js@{parser.js}!LEN\_LENGTH@{LEN\_LENGTH}}
+\index{LEN\_LENGTH@{LEN\_LENGTH}!parser.js@{parser.js}}
+\doxysubsubsection{\texorpdfstring{LEN\_LENGTH}{LEN\_LENGTH}}
+{\footnotesize\ttfamily \label{parser_8js_a2245d918a1f52452a8c3ae57063984c2} 
+const LEN\+\_\+\+LENGTH = 4}
+
+\Hypertarget{parser_8js_ae03a2cd4753e32835df51adbcbb4f9af}\index{parser.js@{parser.js}!messages\_1@{messages\_1}}
+\index{messages\_1@{messages\_1}!parser.js@{parser.js}}
+\doxysubsubsection{\texorpdfstring{messages\_1}{messages\_1}}
+{\footnotesize\ttfamily \label{parser_8js_ae03a2cd4753e32835df51adbcbb4f9af} 
+const messages\+\_\+1 = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}./messages"{})}
+
+\Hypertarget{parser_8js_a87fab8a54817e0fa1cd2b8d6bc3d8915}\index{parser.js@{parser.js}!Parser@{Parser}}
+\index{Parser@{Parser}!parser.js@{parser.js}}
+\doxysubsubsection{\texorpdfstring{Parser}{Parser}}
+{\footnotesize\ttfamily \label{parser_8js_a87fab8a54817e0fa1cd2b8d6bc3d8915} 
+class Parser Parser = void 0}
+
+\Hypertarget{parser_8js_ae2475e10618961c050dcba04e8c42331}\index{parser.js@{parser.js}!strict@{strict}}
+\index{strict@{strict}!parser.js@{parser.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{parser_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+

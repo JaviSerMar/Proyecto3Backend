@@ -1,0 +1,76 @@
+\chapter{Split2(matcher, mapper, options)}
+\hypertarget{md_node__modules_2split2_2_r_e_a_d_m_e}{}\label{md_node__modules_2split2_2_r_e_a_d_m_e}\index{Split2(matcher, mapper, options)@{Split2(matcher, mapper, options)}}
+\label{md_node__modules_2split2_2_r_e_a_d_m_e_autotoc_md2090}%
+\Hypertarget{md_node__modules_2split2_2_r_e_a_d_m_e_autotoc_md2090}%
+
+
+
+
+Break up a stream and reassemble it so that each line is a chunk. {\ttfamily split2} is inspired by \href{https://github.com/dominictarr}{\texttt{ @dominictarr}} \href{https://github.com/dominictarr/split}{\texttt{ {\ttfamily split}}} module, and it is totally API compatible with it. However, it is based on Node.\+js core \href{https://nodejs.org/api/stream.html\#stream_new_stream_transform_options}{\texttt{ {\ttfamily Transform}}}.
+
+{\ttfamily matcher} may be a {\ttfamily String}, or a {\ttfamily Reg\+Exp}. Example, read every line in a file ...
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{js}
+\DoxyCodeLine{\ fs.createReadStream(file)}
+\DoxyCodeLine{\ \ \ .pipe(split2())}
+\DoxyCodeLine{\ \ \ .on('data',\ function\ (line)\ \{}
+\DoxyCodeLine{\ \ \ \ \ //each\ chunk\ now\ is\ a\ separate\ line!}
+\DoxyCodeLine{\ \ \ \})}
+
+\end{DoxyCode}
+
+
+{\ttfamily split} takes the same arguments as {\ttfamily string.\+split} except it defaults to \textquotesingle{}/\textbackslash{}r?~\newline
+/\textquotesingle{}, and the optional {\ttfamily limit} paremeter is ignored. \href{https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/split}{\texttt{ String\#split}}
+
+{\ttfamily split} takes an optional options object on it\textquotesingle{}s third argument, which is directly passed as a \href{https://nodejs.org/api/stream.html\#stream_new_stream_transform_options}{\texttt{ Transform}} option.
+
+Additionally, the {\ttfamily .max\+Length} and {\ttfamily .skip\+Overflow} options are implemented, which set limits on the internal buffer size and the stream\textquotesingle{}s behavior when the limit is exceeded. There is no limit unless {\ttfamily max\+Length} is set. When the internal buffer size exceeds {\ttfamily max\+Length}, the stream emits an error by default. You may also set {\ttfamily skip\+Overflow} to true to suppress the error and instead skip past any lines that cause the internal buffer to exceed {\ttfamily max\+Length}.
+
+Calling {\ttfamily .destroy} will make the stream emit {\ttfamily close}. Use this to perform cleanup logic
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ js}
+\DoxyCodeLine{var\ splitFile\ =\ function(filename)\ \{}
+\DoxyCodeLine{\ \ var\ file\ =\ fs.createReadStream(filename)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ return\ file}
+\DoxyCodeLine{\ \ \ \ .pipe(split2())}
+\DoxyCodeLine{\ \ \ \ .on('close',\ function()\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ //\ destroy\ the\ file\ stream\ in\ case\ the\ split\ stream\ was\ destroyed}
+\DoxyCodeLine{\ \ \ \ \ \ file.destroy()}
+\DoxyCodeLine{\ \ \ \ \})}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ stream\ =\ splitFile('my-\/file.txt')}
+\DoxyCodeLine{}
+\DoxyCodeLine{stream.destroy()\ //\ will\ destroy\ the\ input\ file\ stream}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2split2_2_r_e_a_d_m_e_autotoc_md2091}{}\doxysection{\texorpdfstring{NDJ -\/ Newline Delimited Json}{NDJ -\/ Newline Delimited Json}}\label{md_node__modules_2split2_2_r_e_a_d_m_e_autotoc_md2091}
+{\ttfamily split2} accepts a function which transforms each line.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ js}
+\DoxyCodeLine{fs.createReadStream(file)}
+\DoxyCodeLine{\ \ .pipe(split2(JSON.parse))}
+\DoxyCodeLine{\ \ .on('data',\ function\ (obj)\ \{}
+\DoxyCodeLine{\ \ \ \ //each\ chunk\ now\ is\ a\ js\ object}
+\DoxyCodeLine{\ \ \})}
+\DoxyCodeLine{\ \ .on("{}error"{},\ function(error)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ //handling\ parsing\ errors}
+\DoxyCodeLine{\ \ \})}
+
+\end{DoxyCode}
+
+
+However, in \href{https://github.com/dominictarr}{\texttt{ @dominictarr}} \href{https://github.com/dominictarr/split}{\texttt{ {\ttfamily split}}} the mapper is wrapped in a try-\/catch, while here it is not\+: if your parsing logic can throw, wrap it yourself. Otherwise, you can also use the stream error handling when mapper function throw.\hypertarget{md_node__modules_2split2_2_r_e_a_d_m_e_autotoc_md2092}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2split2_2_r_e_a_d_m_e_autotoc_md2092}
+Copyright (c) 2014-\/2021, Matteo Collina \href{mailto:hello@matteocollina.com}{\texttt{ hello@matteocollina.\+com}}
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "{}\+AS IS"{} AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. 

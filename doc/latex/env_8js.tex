@@ -1,0 +1,99 @@
+\doxysection{Referencia del archivo node\+\_\+modules/set-\/function-\/length/env.js}
+\hypertarget{env_8js}{}\label{env_8js}\index{node\_modules/set-\/function-\/length/env.js@{node\_modules/set-\/function-\/length/env.js}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{env_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{env_8js_a84b871b070ccb8a7b1d0bf553be7be3b}{g\+OPD}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{define-data-property_2index_8js_a413f51dc6c69ae60e8f9edd1e26a6858}{gopd}}\textquotesingle{})
+\item 
+var \mbox{\hyperlink{env_8js_a19486bed968a6392ace0ade14136e21a}{bind}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}-\/bind\textquotesingle{})
+\item 
+var \mbox{\hyperlink{env_8js_a22e9947b127d89c884ce0320fa25d878}{unbound}} = \mbox{\hyperlink{call-bind_2test_2index_8js_a84b871b070ccb8a7b1d0bf553be7be3b}{g\+OPD}} \&\& \mbox{\hyperlink{call-bind_2test_2index_8js_a84b871b070ccb8a7b1d0bf553be7be3b}{g\+OPD}}(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} () \{\}, \textquotesingle{}length\textquotesingle{})
+\item 
+var \mbox{\hyperlink{env_8js_a7329afffd0f8eff10659641bc1725369}{bound}} = \mbox{\hyperlink{call-bind_2test_2index_8js_a84b871b070ccb8a7b1d0bf553be7be3b}{g\+OPD}} \&\& \mbox{\hyperlink{call-bind_2test_2index_8js_a84b871b070ccb8a7b1d0bf553be7be3b}{g\+OPD}}(\mbox{\hyperlink{hasown_2index_8js_af41b23e59e21fbbca9175e1dbd07b54e}{bind.\+call}}(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} () \{\}), \textquotesingle{}length\textquotesingle{})
+\item 
+var \mbox{\hyperlink{env_8js_a97cc064755085af53bb809512ecea7dc}{functions\+Have\+Configurable\+Lengths}} = !!(\mbox{\hyperlink{env_8js_a22e9947b127d89c884ce0320fa25d878}{unbound}} \&\& unbound.\+configurable)
+\item 
+var \mbox{\hyperlink{env_8js_a2cc5e626899a82c6629d6fa9748f0534}{functions\+Have\+Writable\+Lengths}} = !!(\mbox{\hyperlink{env_8js_a22e9947b127d89c884ce0320fa25d878}{unbound}} \&\& unbound.\+writable)
+\item 
+var \mbox{\hyperlink{env_8js_a5aabcc5f90aa0ddcef77052bc7c12d34}{bound\+Fns\+Have\+Configurable\+Lengths}} = !!(\mbox{\hyperlink{env_8js_a7329afffd0f8eff10659641bc1725369}{bound}} \&\& bound.\+configurable)
+\item 
+var \mbox{\hyperlink{env_8js_a86476ba7986bb0f2ccfa1ed4c574f5d8}{bound\+Fns\+Have\+Writable\+Lengths}} = !!(\mbox{\hyperlink{env_8js_a7329afffd0f8eff10659641bc1725369}{bound}} \&\& bound.\+writable)
+\item 
+module \mbox{\hyperlink{env_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{env_8js_a19486bed968a6392ace0ade14136e21a}\index{env.js@{env.js}!bind@{bind}}
+\index{bind@{bind}!env.js@{env.js}}
+\doxysubsubsection{\texorpdfstring{bind}{bind}}
+{\footnotesize\ttfamily \label{env_8js_a19486bed968a6392ace0ade14136e21a} 
+var bind = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}-\/bind\textquotesingle{})}
+
+\Hypertarget{env_8js_a7329afffd0f8eff10659641bc1725369}\index{env.js@{env.js}!bound@{bound}}
+\index{bound@{bound}!env.js@{env.js}}
+\doxysubsubsection{\texorpdfstring{bound}{bound}}
+{\footnotesize\ttfamily \label{env_8js_a7329afffd0f8eff10659641bc1725369} 
+var bound = \mbox{\hyperlink{call-bind_2test_2index_8js_a84b871b070ccb8a7b1d0bf553be7be3b}{g\+OPD}} \&\& \mbox{\hyperlink{call-bind_2test_2index_8js_a84b871b070ccb8a7b1d0bf553be7be3b}{g\+OPD}}(\mbox{\hyperlink{hasown_2index_8js_af41b23e59e21fbbca9175e1dbd07b54e}{bind.\+call}}(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} () \{\}), \textquotesingle{}length\textquotesingle{})}
+
+\Hypertarget{env_8js_a5aabcc5f90aa0ddcef77052bc7c12d34}\index{env.js@{env.js}!boundFnsHaveConfigurableLengths@{boundFnsHaveConfigurableLengths}}
+\index{boundFnsHaveConfigurableLengths@{boundFnsHaveConfigurableLengths}!env.js@{env.js}}
+\doxysubsubsection{\texorpdfstring{boundFnsHaveConfigurableLengths}{boundFnsHaveConfigurableLengths}}
+{\footnotesize\ttfamily \label{env_8js_a5aabcc5f90aa0ddcef77052bc7c12d34} 
+var bound\+Fns\+Have\+Configurable\+Lengths = !!(\mbox{\hyperlink{env_8js_a7329afffd0f8eff10659641bc1725369}{bound}} \&\& bound.\+configurable)}
+
+\Hypertarget{env_8js_a86476ba7986bb0f2ccfa1ed4c574f5d8}\index{env.js@{env.js}!boundFnsHaveWritableLengths@{boundFnsHaveWritableLengths}}
+\index{boundFnsHaveWritableLengths@{boundFnsHaveWritableLengths}!env.js@{env.js}}
+\doxysubsubsection{\texorpdfstring{boundFnsHaveWritableLengths}{boundFnsHaveWritableLengths}}
+{\footnotesize\ttfamily \label{env_8js_a86476ba7986bb0f2ccfa1ed4c574f5d8} 
+var bound\+Fns\+Have\+Writable\+Lengths = !!(\mbox{\hyperlink{env_8js_a7329afffd0f8eff10659641bc1725369}{bound}} \&\& bound.\+writable)}
+
+\Hypertarget{env_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}\index{env.js@{env.js}!exports@{exports}}
+\index{exports@{exports}!env.js@{env.js}}
+\doxysubsubsection{\texorpdfstring{exports}{exports}}
+{\footnotesize\ttfamily \label{env_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34} 
+module exports}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \_\_proto\_\_:\ null,}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{env_8js_a5aabcc5f90aa0ddcef77052bc7c12d34}{boundFnsHaveConfigurableLengths}}:\ \mbox{\hyperlink{env_8js_a5aabcc5f90aa0ddcef77052bc7c12d34}{boundFnsHaveConfigurableLengths}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{env_8js_a86476ba7986bb0f2ccfa1ed4c574f5d8}{boundFnsHaveWritableLengths}}:\ \mbox{\hyperlink{env_8js_a86476ba7986bb0f2ccfa1ed4c574f5d8}{boundFnsHaveWritableLengths}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{env_8js_a97cc064755085af53bb809512ecea7dc}{functionsHaveConfigurableLengths}}:\ \mbox{\hyperlink{env_8js_a97cc064755085af53bb809512ecea7dc}{functionsHaveConfigurableLengths}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{env_8js_a2cc5e626899a82c6629d6fa9748f0534}{functionsHaveWritableLengths}}:\ \mbox{\hyperlink{env_8js_a2cc5e626899a82c6629d6fa9748f0534}{functionsHaveWritableLengths}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+@type \{import(\textquotesingle{}./env\textquotesingle{})\} \Hypertarget{env_8js_a97cc064755085af53bb809512ecea7dc}\index{env.js@{env.js}!functionsHaveConfigurableLengths@{functionsHaveConfigurableLengths}}
+\index{functionsHaveConfigurableLengths@{functionsHaveConfigurableLengths}!env.js@{env.js}}
+\doxysubsubsection{\texorpdfstring{functionsHaveConfigurableLengths}{functionsHaveConfigurableLengths}}
+{\footnotesize\ttfamily \label{env_8js_a97cc064755085af53bb809512ecea7dc} 
+var functions\+Have\+Configurable\+Lengths = !!(\mbox{\hyperlink{env_8js_a22e9947b127d89c884ce0320fa25d878}{unbound}} \&\& unbound.\+configurable)}
+
+\Hypertarget{env_8js_a2cc5e626899a82c6629d6fa9748f0534}\index{env.js@{env.js}!functionsHaveWritableLengths@{functionsHaveWritableLengths}}
+\index{functionsHaveWritableLengths@{functionsHaveWritableLengths}!env.js@{env.js}}
+\doxysubsubsection{\texorpdfstring{functionsHaveWritableLengths}{functionsHaveWritableLengths}}
+{\footnotesize\ttfamily \label{env_8js_a2cc5e626899a82c6629d6fa9748f0534} 
+var functions\+Have\+Writable\+Lengths = !!(\mbox{\hyperlink{env_8js_a22e9947b127d89c884ce0320fa25d878}{unbound}} \&\& unbound.\+writable)}
+
+\Hypertarget{env_8js_a84b871b070ccb8a7b1d0bf553be7be3b}\index{env.js@{env.js}!gOPD@{gOPD}}
+\index{gOPD@{gOPD}!env.js@{env.js}}
+\doxysubsubsection{\texorpdfstring{gOPD}{gOPD}}
+{\footnotesize\ttfamily \label{env_8js_a84b871b070ccb8a7b1d0bf553be7be3b} 
+var g\+OPD = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{define-data-property_2index_8js_a413f51dc6c69ae60e8f9edd1e26a6858}{gopd}}\textquotesingle{})}
+
+\Hypertarget{env_8js_ae2475e10618961c050dcba04e8c42331}\index{env.js@{env.js}!strict@{strict}}
+\index{strict@{strict}!env.js@{env.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{env_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+\Hypertarget{env_8js_a22e9947b127d89c884ce0320fa25d878}\index{env.js@{env.js}!unbound@{unbound}}
+\index{unbound@{unbound}!env.js@{env.js}}
+\doxysubsubsection{\texorpdfstring{unbound}{unbound}}
+{\footnotesize\ttfamily \label{env_8js_a22e9947b127d89c884ce0320fa25d878} 
+var unbound = \mbox{\hyperlink{call-bind_2test_2index_8js_a84b871b070ccb8a7b1d0bf553be7be3b}{g\+OPD}} \&\& \mbox{\hyperlink{call-bind_2test_2index_8js_a84b871b070ccb8a7b1d0bf553be7be3b}{g\+OPD}}(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} () \{\}, \textquotesingle{}length\textquotesingle{})}
+

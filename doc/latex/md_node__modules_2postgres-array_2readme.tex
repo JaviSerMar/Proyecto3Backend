@@ -1,0 +1,35 @@
+\chapter{postgres-\/array \texorpdfstring{$<$}{<}a href="{}https\+://travis-\/ci.\+org/bendrucker/postgres-\/array"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://travis-\/ci.\+org/bendrucker/postgres-\/array.\+svg?branch=master"{} alt="{}\+Build Status"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2postgres-array_2readme}{}\label{md_node__modules_2postgres-array_2readme}\index{postgres-\/array $<$a href="{}https://travis-\/ci.org/bendrucker/postgres-\/array"{} $>$$<$img src="{}https://travis-\/ci.org/bendrucker/postgres-\/array.svg?branch=master"{} alt="{}Build Status"{}/$>$$<$/a$>$@{postgres-\/array $<$a href=""https://travis-\/ci.org/bendrucker/postgres-\/array"" $>$$<$img src=""https://travis-\/ci.org/bendrucker/postgres-\/array.svg?branch=master"" alt=""Build Status""/$>$$<$/a$>$}}
+\label{md_node__modules_2postgres-array_2readme_autotoc_md1560}%
+\Hypertarget{md_node__modules_2postgres-array_2readme_autotoc_md1560}%
+
+
+\begin{quote}
+Parse postgres array columns \end{quote}
+\hypertarget{md_node__modules_2postgres-array_2readme_autotoc_md1561}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2postgres-array_2readme_autotoc_md1561}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ -\/-\/save\ postgres-\/array}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postgres-array_2readme_autotoc_md1562}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2postgres-array_2readme_autotoc_md1562}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ postgresArray\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'postgres-\/array'})}
+\DoxyCodeLine{}
+\DoxyCodeLine{postgresArray.\mbox{\hyperlink{bytes_2index_8js_a28ecd76297a5d556aac05441b295f93c}{parse}}('\{1,2,3\}\textcolor{stringliteral}{',\ (value)\ =>\ parseInt(value,\ 10))}}
+\DoxyCodeLine{\textcolor{stringliteral}{//=>\ [1,\ 2,\ 3]}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2postgres-array_2readme_autotoc_md1563}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2postgres-array_2readme_autotoc_md1563}
+\hypertarget{md_node__modules_2postgres-array_2readme_autotoc_md1564}{}\doxysubsubsection{\texorpdfstring{{\ttfamily parse(input, \mbox{[}transform\mbox{]})} -\/\texorpdfstring{$>$}{>} {\ttfamily array}}{{\ttfamily parse(input, \mbox{[}transform\mbox{]})} -\/\texorpdfstring{$>$}{>} {\ttfamily array}}}\label{md_node__modules_2postgres-array_2readme_autotoc_md1564}
+\hypertarget{md_node__modules_2postgres-array_2readme_autotoc_md1565}{}\doxysubsubsubsection{\texorpdfstring{input}{input}}\label{md_node__modules_2postgres-array_2readme_autotoc_md1565}
+{\itshape Required} ~\newline
+ Type\+: {\ttfamily string}
+
+A Postgres array string.\hypertarget{md_node__modules_2postgres-array_2readme_autotoc_md1566}{}\doxysubsubsubsection{\texorpdfstring{transform}{transform}}\label{md_node__modules_2postgres-array_2readme_autotoc_md1566}
+Type\+: {\ttfamily function} ~\newline
+ Default\+: {\ttfamily identity}
+
+A function that transforms non-\/null values inserted into the array.\hypertarget{md_node__modules_2postgres-array_2readme_autotoc_md1567}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2postgres-array_2readme_autotoc_md1567}
+MIT © \href{http://bendrucker.me}{\texttt{ Ben Drucker}} 

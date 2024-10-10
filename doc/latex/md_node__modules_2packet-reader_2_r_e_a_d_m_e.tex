@@ -1,0 +1,60 @@
+\chapter{node-\/packet-\/reader}
+\hypertarget{md_node__modules_2packet-reader_2_r_e_a_d_m_e}{}\label{md_node__modules_2packet-reader_2_r_e_a_d_m_e}\index{node-\/packet-\/reader@{node-\/packet-\/reader}}
+Handy little well tested module for reading length-\/prefixed binary packets.
+
+Since buffers come off a socket in randomly sized chunks you can\textquotesingle{}t expect them to cleanly break on packet boundaries. This module allows you to push buffers in and read full packets out the other side, so you can get to parsing right away and not have to manage concatenating partial buffers and searching through them for packets.\hypertarget{md_node__modules_2packet-reader_2_r_e_a_d_m_e_autotoc_md1486}{}\doxysection{\texorpdfstring{install}{install}}\label{md_node__modules_2packet-reader_2_r_e_a_d_m_e_autotoc_md1486}
+{\ttfamily \$ npm install packet-\/reader}\hypertarget{md_node__modules_2packet-reader_2_r_e_a_d_m_e_autotoc_md1487}{}\doxysection{\texorpdfstring{example}{example}}\label{md_node__modules_2packet-reader_2_r_e_a_d_m_e_autotoc_md1487}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ Reader\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'packet-\/reader'})}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ \mbox{\hyperlink{b_8js_a40fca641642c2c63b243c71973ecec54}{reader}}\ =\ new\ Reader()}
+\DoxyCodeLine{\textcolor{comment}{//assuming\ you\ have\ a\ socket\ emitting\ \`{}data`\ events}}
+\DoxyCodeLine{socket.on('data',\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(\mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}})\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{b_8js_a40fca641642c2c63b243c71973ecec54}{reader}}.addChunk(\mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}})}
+\DoxyCodeLine{\ \ var\ packet\ =\ \mbox{\hyperlink{b_8js_a40fca641642c2c63b243c71973ecec54}{reader}}.read()}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{while}(packet)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//do\ something\ with\ fully\ parsed\ packet}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+
+
+here\textquotesingle{}s a more full featured example\+:
+
+let\textquotesingle{}s assume our "{}packet"{} for our protocol is 32-\/bit Big Endian length-\/prefixed strings so a "{}hello world"{} packet would look something like \mbox{[}length, string\mbox{]} {\ttfamily \mbox{[}0, 0, 0 0x0B, h, e, l, l, o, w, o, r, l, d\mbox{]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{streams_8js_ab8d6089fc93e12bffae30469af9a58ff}{Transform}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'stream'}).Transform}
+\DoxyCodeLine{var\ Reader\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'packet-\/reader'})}
+\DoxyCodeLine{var\ \mbox{\hyperlink{b_8js_a40fca641642c2c63b243c71973ecec54}{reader}}\ =\ new\ Reader()}
+\DoxyCodeLine{var\ parser\ =\ new\ \mbox{\hyperlink{streams_8js_ab8d6089fc93e12bffae30469af9a58ff}{Transform}}()}
+\DoxyCodeLine{parser.\mbox{\hyperlink{streams_8js_ac77dbea0660ea662f74752d78b6052d6}{\_transform}}\ =\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(chunk,\ \mbox{\hyperlink{negotiator_2index_8js_a9ad8213a7626ee07aef47950752cac18}{encoding}},\ cb)\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{b_8js_a40fca641642c2c63b243c71973ecec54}{reader}}.addChunk(chunk)}
+\DoxyCodeLine{\ \ var\ packet\ =\ \mbox{\hyperlink{b_8js_a40fca641642c2c63b243c71973ecec54}{reader}}.read()}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{while}(packet)\ \{}
+\DoxyCodeLine{\ \ \ \ this.push(packet.toString(\textcolor{stringliteral}{'utf8'}))}
+\DoxyCodeLine{\ \ \ \ packet\ =\ reader.read()}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ cb()}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ server\ =\ net.createServer(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(socket)\ \{}
+\DoxyCodeLine{\ \ socket.pipe(parser).pipe(stdout)}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+
+
+There are a few config options for setting optional pre-\/length padding byte. Read the tests for details.\hypertarget{md_node__modules_2packet-reader_2_r_e_a_d_m_e_autotoc_md1488}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2packet-reader_2_r_e_a_d_m_e_autotoc_md1488}
+MIT
+
+Copyright 2015 Brian M. Carlson All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "{}\+Software"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "{}\+AS IS"{}, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 

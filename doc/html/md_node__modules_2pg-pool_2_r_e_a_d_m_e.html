@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: pg-pool</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">pg-pool</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1515"></a></p>
+<p><a href="https://travis-ci.org/brianc/node-pg-pool"><img src="https://travis-ci.org/brianc/node-pg-pool.svg?branch=master" alt="Build Status" style="pointer-events: none;" class="inline"/></a></p>
+<p>A connection pool for node-postgres</p>
+<h1><a class="anchor" id="autotoc_md1516"></a>
+install</h1>
+<div class="fragment"><div class="line">npm i pg-pool pg</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1517"></a>
+use</h1>
+<h2><a class="anchor" id="autotoc_md1518"></a>
+create</h2>
+<p>to use pg-pool you must first create an instance of a pool</p>
+<div class="fragment"><div class="line">var Pool = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;pg-pool&#39;</span>)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// by default the pool uses the same</span></div>
+<div class="line"><span class="comment">// configuration as whatever `pg` version you have installed</span></div>
+<div class="line">var <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a> = new Pool()</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// you can pass properties to the pool</span></div>
+<div class="line"><span class="comment">// these properties are passed unchanged to both the node-postgres Client constructor</span></div>
+<div class="line"><span class="comment">// and the node-pool (https://github.com/coopernurse/node-pool) constructor</span></div>
+<div class="line"><span class="comment">// allowing you to fully configure the behavior of both</span></div>
+<div class="line">var pool2 = new Pool({</div>
+<div class="line">  database: <span class="stringliteral">&#39;postgres&#39;</span>,</div>
+<div class="line">  user: <span class="stringliteral">&#39;brianc&#39;</span>,</div>
+<div class="line">  <a class="code hl_variable" href="serializer_8js.html#abd7c13acac876da8bdefce825ee1fa0b">password</a>: <span class="stringliteral">&#39;secret!&#39;</span>,</div>
+<div class="line">  port: 5432,</div>
+<div class="line">  ssl: <span class="keyword">true</span>,</div>
+<div class="line">  <a class="code hl_variable" href="implementation_8js.html#a04fa2ea575d5471ca09e1b344ec4a69e">max</a>: 20, <span class="comment">// set pool max size to 20</span></div>
+<div class="line">  idleTimeoutMillis: 1000, <span class="comment">// close idle clients after 1 second</span></div>
+<div class="line">  connectionTimeoutMillis: 1000, <span class="comment">// return an error after 1 second if connection could not be established</span></div>
+<div class="line">  maxUses: 7500, <span class="comment">// close (and replace) a connection after it has been used 7500 times (see below for discussion)</span></div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//you can supply a custom client constructor</span></div>
+<div class="line"><span class="comment">//if you want to use the native postgres client</span></div>
+<div class="line">var NativeClient = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;pg&#39;</span>).native.Client</div>
+<div class="line">var nativePool = <span class="keyword">new</span> Pool({ Client: NativeClient })</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//you can even pool pg-native clients directly</span></div>
+<div class="line">var PgNativeClient = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;pg-native&#39;</span>)</div>
+<div class="line">var pgNativePool = new Pool({ Client: PgNativeClient })</div>
+<div class="ttc" id="aimplementation_8js_html_a04fa2ea575d5471ca09e1b344ec4a69e"><div class="ttname"><a href="implementation_8js.html#a04fa2ea575d5471ca09e1b344ec4a69e">max</a></div><div class="ttdeci">var max</div><div class="ttdef"><b>Definition</b> implementation.js:7</div></div>
+<div class="ttc" id="aserializer_8js_html_abd7c13acac876da8bdefce825ee1fa0b"><div class="ttname"><a href="serializer_8js.html#abd7c13acac876da8bdefce825ee1fa0b">password</a></div><div class="ttdeci">const password</div><div class="ttdef"><b>Definition</b> serializer.js:24</div></div>
+<div class="ttc" id="aserver_8js_html_ab7ab846d8317850d72512f720c6a05e2"><div class="ttname"><a href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a></div><div class="ttdeci">const pool</div><div class="ttdef"><b>Definition</b> server.js:4</div></div>
+<div class="ttc" id="atest-core-js_8js_html_a2fc998a372f1531668f7047d0878effe"><div class="ttname"><a href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a></div><div class="ttdeci">require('core-js')</div></div>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md1519"></a>
+Note:</h4>
+<p>The Pool constructor does not support passing a Database URL as the parameter. To use pg-pool on heroku, for example, you need to parse the URL into a config object. Here is an example of how to parse a Database URL.</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> Pool = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;pg-pool&#39;</span>);</div>
+<div class="line"><span class="keyword">const</span> url = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;url&#39;</span>)</div>
+<div class="line"> </div>
+<div class="line">const params = url.<a class="code hl_variable" href="bytes_2index_8js.html#a28ecd76297a5d556aac05441b295f93c">parse</a>(process.env.DATABASE_URL);</div>
+<div class="line">const auth = params.auth.<a class="code hl_variable" href="helper_8js.html#a02757733e12d272f36eb88bf5eb0df12">split</a>(&#39;:&#39;);</div>
+<div class="line"> </div>
+<div class="line">const config = {</div>
+<div class="line">  user: auth[0],</div>
+<div class="line">  <a class="code hl_variable" href="serializer_8js.html#abd7c13acac876da8bdefce825ee1fa0b">password</a>: auth[1],</div>
+<div class="line">  host: params.hostname,</div>
+<div class="line">  port: params.port,</div>
+<div class="line">  database: params.pathname.split(<span class="charliteral">&#39;/&#39;</span>)[1],</div>
+<div class="line">  ssl: <span class="keyword">true</span></div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a> = <span class="keyword">new</span> Pool(config);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment">  Transforms, &#39;postgres://DBuser:secret@DBHost:#####/myDB&#39;, into</span></div>
+<div class="line"><span class="comment">  config = {</span></div>
+<div class="line"><span class="comment">    user: &#39;DBuser&#39;,</span></div>
+<div class="line"><span class="comment">    password: &#39;secret&#39;,</span></div>
+<div class="line"><span class="comment">    host: &#39;DBHost&#39;,</span></div>
+<div class="line"><span class="comment">    port: &#39;#####&#39;,</span></div>
+<div class="line"><span class="comment">    database: &#39;myDB&#39;,</span></div>
+<div class="line"><span class="comment">    ssl: true</span></div>
+<div class="line"><span class="comment">  }</span></div>
+<div class="line"><span class="comment">*/</span></div>
+<div class="ttc" id="abytes_2index_8js_html_a28ecd76297a5d556aac05441b295f93c"><div class="ttname"><a href="bytes_2index_8js.html#a28ecd76297a5d556aac05441b295f93c">parse</a></div><div class="ttdeci">module exports parse</div><div class="ttdef"><b>Definition</b> index.js:17</div></div>
+<div class="ttc" id="ahelper_8js_html_a02757733e12d272f36eb88bf5eb0df12"><div class="ttname"><a href="helper_8js.html#a02757733e12d272f36eb88bf5eb0df12">split</a></div><div class="ttdeci">var split</div><div class="ttdef"><b>Definition</b> helper.js:5</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1520"></a>
+acquire clients with a promise</h2>
+<p>pg-pool supports a fully promise-based api for acquiring clients</p>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a> = <span class="keyword">new</span> Pool()</div>
+<div class="line"><a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.connect().then(client =&gt; {</div>
+<div class="line">  client.query(<span class="stringliteral">&#39;select $1::text as name&#39;</span>, [<span class="stringliteral">&#39;pg-pool&#39;</span>]).then(<a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a> =&gt; {</div>
+<div class="line">    client.release()</div>
+<div class="line">    console.log(<span class="stringliteral">&#39;hello from&#39;</span>, <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.rows[0].name)</div>
+<div class="line">  })</div>
+<div class="line">  .catch(e =&gt; {</div>
+<div class="line">    client.release()</div>
+<div class="line">    console.error(<span class="stringliteral">&#39;query error&#39;</span>, e.message, e.stack)</div>
+<div class="line">  })</div>
+<div class="line">})</div>
+<div class="ttc" id="aexpress_8js_html_abde3c35e3bb7e5225dd7f234c685329c"><div class="ttname"><a href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a></div><div class="ttdeci">var res</div><div class="ttdef"><b>Definition</b> express.js:22</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1521"></a>
+plays nice with async/await</h2>
+<p>this ends up looking much nicer if you're using <a href="https://github.com/tj/co">co</a> or async/await:</p>
+<div class="fragment"><div class="line"><span class="comment">// with async/await</span></div>
+<div class="line">(<a class="code hl_function" href="server_8js.html#ae1bff8c68b572fc576b50c4e5ace656f">async</a> () =&gt; {</div>
+<div class="line">  var <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a> = <span class="keyword">new</span> Pool()</div>
+<div class="line">  var client = await <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.connect()</div>
+<div class="line">  <a class="code hl_variable" href="inherits_8js.html#abe4cc9788f52e49485473dc699537388">try</a> {</div>
+<div class="line">    var result = await client.query(<span class="stringliteral">&#39;select $1::text as name&#39;</span>, [<span class="stringliteral">&#39;brianc&#39;</span>])</div>
+<div class="line">    console.log(<span class="stringliteral">&#39;hello from&#39;</span>, result.rows[0])</div>
+<div class="line">  } <span class="keywordflow">finally</span> {</div>
+<div class="line">    client.release()</div>
+<div class="line">  }</div>
+<div class="line">})().catch(e =&gt; console.error(e.message, e.stack))</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// with co</span></div>
+<div class="line">co(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> * () {</div>
+<div class="line">  var client = yield <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.connect()</div>
+<div class="line">  <span class="keywordflow">try</span> {</div>
+<div class="line">    var result = yield client.query(<span class="stringliteral">&#39;select $1::text as name&#39;</span>, [<span class="stringliteral">&#39;brianc&#39;</span>])</div>
+<div class="line">    console.log(<span class="stringliteral">&#39;hello from&#39;</span>, result.rows[0])</div>
+<div class="line">  } <span class="keywordflow">finally</span> {</div>
+<div class="line">    client.release()</div>
+<div class="line">  }</div>
+<div class="line">}).<span class="keywordflow">catch</span>(e =&gt; console.error(e.message, e.stack))</div>
+<div class="ttc" id="acors_2lib_2index_8js_html_ac2ffb26d6f42d3bbcd7847b0873403f4"><div class="ttname"><a href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a></div><div class="ttdeci">function()</div><div class="ttdef"><b>Definition</b> index.js:1</div></div>
+<div class="ttc" id="ainherits_8js_html_abe4cc9788f52e49485473dc699537388"><div class="ttname"><a href="inherits_8js.html#abe4cc9788f52e49485473dc699537388">try</a></div><div class="ttdeci">try</div><div class="ttdef"><b>Definition</b> inherits.js:1</div></div>
+<div class="ttc" id="aserver_8js_html_ae1bff8c68b572fc576b50c4e5ace656f"><div class="ttname"><a href="server_8js.html#ae1bff8c68b572fc576b50c4e5ace656f">async</a></div><div class="ttdeci">app async(req, res)</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1522"></a>
+your new favorite helper method</h2>
+<p>because its so common to just run a query and return the client to the pool afterward pg-pool has this built-in:</p>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a> = <span class="keyword">new</span> Pool()</div>
+<div class="line">var time = await <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.<a class="code hl_variable" href="application_8js.html#a3934419f0f9a2068c705a0013b77fab3">query</a>(&#39;SELECT NOW()&#39;)</div>
+<div class="line">var <a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a> = await <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.<a class="code hl_variable" href="application_8js.html#a3934419f0f9a2068c705a0013b77fab3">query</a>(&#39;select $1::text as <a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>&#39;, [&#39;brianc&#39;])</div>
+<div class="line">console.<a class="code hl_variable" href="browser_8js.html#abd96780d5def5a58be64a80192702ca8">log</a>(<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>.rows[0].<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>, &#39;says hello at&#39;, time.rows[0].now)</div>
+<div class="ttc" id="aapplication_8js_html_a3934419f0f9a2068c705a0013b77fab3"><div class="ttname"><a href="application_8js.html#a3934419f0f9a2068c705a0013b77fab3">query</a></div><div class="ttdeci">var query</div><div class="ttdef"><b>Definition</b> application.js:20</div></div>
+<div class="ttc" id="abrowser_8js_html_abd96780d5def5a58be64a80192702ca8"><div class="ttname"><a href="browser_8js.html#abd96780d5def5a58be64a80192702ca8">log</a></div><div class="ttdeci">exports log</div><div class="ttdef"><b>Definition</b> browser.js:8</div></div>
+<div class="ttc" id="ainbound-parser_8test_8js_html_a82922bbd162af030b5deaeafbf18ef0e"><div class="ttname"><a href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a></div><div class="ttdeci">row1 name</div><div class="ttdef"><b>Definition</b> inbound-parser.test.js:48</div></div>
+</div><!-- fragment --><p>you can also use a callback here if you'd like:</p>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a> = <span class="keyword">new</span> Pool()</div>
+<div class="line"><a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.<a class="code hl_variable" href="application_8js.html#a3934419f0f9a2068c705a0013b77fab3">query</a>(&#39;SELECT $1::text as <a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>&#39;, [&#39;brianc&#39;], <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> (err, <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>) {</div>
+<div class="line">  console.log(<a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.rows[0].name) <span class="comment">// brianc</span></div>
+<div class="line">})</div>
+</div><!-- fragment --><p><b>pro tip:</b> unless you need to run a transaction (which requires a single client for multiple queries) or you have some other edge case like <a href="https://github.com/brianc/node-pg-query-stream">streaming rows</a> or using a <a href="https://github.com/brianc/node-pg-cursor">cursor</a> you should almost always just use <code>pool.query</code>. Its easy, it does the right thing :tm:, and wont ever forget to return clients back to the pool after the query is done.</p>
+<h2><a class="anchor" id="autotoc_md1523"></a>
+drop-in backwards compatible</h2>
+<p>pg-pool still and will always support the traditional callback api for acquiring a client. This is the exact API node-postgres has shipped with for years:</p>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a> = <span class="keyword">new</span> Pool()</div>
+<div class="line"><a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.connect((err, client, done) =&gt; {</div>
+<div class="line">  <span class="keywordflow">if</span> (err) <span class="keywordflow">return</span> done(err)</div>
+<div class="line"> </div>
+<div class="line">  client.query(<span class="stringliteral">&#39;SELECT $1::text as name&#39;</span>, [<span class="stringliteral">&#39;pg-pool&#39;</span>], (err, <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>) =&gt; {</div>
+<div class="line">    done()</div>
+<div class="line">    if (err) {</div>
+<div class="line">      return console.error(<span class="stringliteral">&#39;query error&#39;</span>, e.message, e.stack)</div>
+<div class="line">    }</div>
+<div class="line">    console.log(<span class="stringliteral">&#39;hello from&#39;</span>, <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.rows[0].name)</div>
+<div class="line">  })</div>
+<div class="line">})</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1524"></a>
+shut it down</h2>
+<p>When you are finished with the pool if all the clients are idle the pool will close them after <code>config.idleTimeoutMillis</code> and your app will shutdown gracefully. If you don't want to wait for the timeout you can end the pool as follows:</p>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a> = <span class="keyword">new</span> Pool()</div>
+<div class="line">var client = await <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.connect()</div>
+<div class="line">console.<a class="code hl_variable" href="browser_8js.html#abd96780d5def5a58be64a80192702ca8">log</a>(await client.<a class="code hl_variable" href="application_8js.html#a3934419f0f9a2068c705a0013b77fab3">query</a>(&#39;select now()&#39;))</div>
+<div class="line">client.release()</div>
+<div class="line">await <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.end()</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1525"></a>
+a note on instances</h2>
+<p>The pool should be a <b>long-lived object</b> in your application. Generally you'll want to instantiate one pool when your app starts up and use the same instance of the pool throughout the lifetime of your application. If you are frequently creating a new pool within your code you likely don't have your pool initialization code in the correct place. Example:</p>
+<div class="fragment"><div class="line"><span class="comment">// assume this is a file in your program at ./your-app/lib/db.js</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// correct usage: create the pool and let it live</span></div>
+<div class="line"><span class="comment">// &#39;globally&#39; here, controlling access to it through exported methods</span></div>
+<div class="line">var <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a> = <span class="keyword">new</span> pg.Pool()</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// this is the right way to export the query method</span></div>
+<div class="line"><span class="keyword">module</span>.exports.query = (text, values) =&gt; {</div>
+<div class="line">  console.log(&#39;query:&#39;, text, values)</div>
+<div class="line">  return pool.query(text, values)</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// this would be the WRONG way to export the connect method</span></div>
+<div class="line">module.exports.connect = () =&gt; {</div>
+<div class="line">  <span class="comment">// notice how we would be creating a pool instance here</span></div>
+<div class="line">  <span class="comment">// every time we called &#39;connect&#39; to get a new client?</span></div>
+<div class="line">  <span class="comment">// that&#39;s a bad thing &amp; results in creating an unbounded</span></div>
+<div class="line">  <span class="comment">// number of pools &amp; therefore connections</span></div>
+<div class="line">  var aPool = new pg.Pool()</div>
+<div class="line">  return aPool.connect()</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1526"></a>
+events</h2>
+<p>Every instance of a <code>Pool</code> is an event emitter. These instances emit the following events:</p>
+<h3><a class="anchor" id="autotoc_md1527"></a>
+error</h3>
+<p>Emitted whenever an idle client in the pool encounters an error. This is common when your PostgreSQL server shuts down, reboots, or a network partition otherwise causes it to become unavailable while your pool has connected clients.</p>
+<p>Example:</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> Pool = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;pg-pool&#39;</span>)</div>
+<div class="line">const <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a> = new Pool()</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// attach an error handler to the pool for when a connected, idle client</span></div>
+<div class="line"><span class="comment">// receives an error by being disconnected, etc</span></div>
+<div class="line"><a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.on(&#39;error&#39;, <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(error, client) {</div>
+<div class="line">  <span class="comment">// handle this in the same way you would treat process.on(&#39;uncaughtException&#39;)</span></div>
+<div class="line">  <span class="comment">// it is supplied the error as well as the idle client which received the error</span></div>
+<div class="line">})</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md1528"></a>
+connect</h3>
+<p>Fired whenever the pool creates a <b>new</b> <code>pg.Client</code> instance and successfully connects it to the backend.</p>
+<p>Example:</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> Pool = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;pg-pool&#39;</span>)</div>
+<div class="line">const <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a> = new Pool()</div>
+<div class="line"> </div>
+<div class="line">var <a class="code hl_variable" href="b_8js.html#aa8808e1c6d5fc017e61f5b78127ff466">count</a> = 0</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.on(&#39;connect&#39;, client =&gt; {</div>
+<div class="line">  client.count = <a class="code hl_variable" href="b_8js.html#aa8808e1c6d5fc017e61f5b78127ff466">count</a>++</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a></div>
+<div class="line">  .connect()</div>
+<div class="line">  .then(client =&gt; {</div>
+<div class="line">    <span class="keywordflow">return</span> client</div>
+<div class="line">      .query(<span class="stringliteral">&#39;SELECT $1::int AS &quot;clientCount&quot;&#39;</span>, [client.count])</div>
+<div class="line">      .then(<a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a> =&gt; console.log(<a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.rows[0].clientCount)) <span class="comment">// outputs 0</span></div>
+<div class="line">      .then(() =&gt; client)</div>
+<div class="line">  })</div>
+<div class="line">  .then(client =&gt; client.release())</div>
+<div class="ttc" id="ab_8js_html_aa8808e1c6d5fc017e61f5b78127ff466"><div class="ttname"><a href="b_8js.html#aa8808e1c6d5fc017e61f5b78127ff466">count</a></div><div class="ttdeci">let count</div><div class="ttdef"><b>Definition</b> b.js:7</div></div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md1529"></a>
+acquire</h3>
+<p>Fired whenever the a client is acquired from the pool</p>
+<p>Example:</p>
+<p>This allows you to count the number of clients which have ever been acquired from the pool.</p>
+<div class="fragment"><div class="line">var Pool = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;pg-pool&#39;</span>)</div>
+<div class="line">var <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a> = new Pool()</div>
+<div class="line"> </div>
+<div class="line">var acquireCount = 0</div>
+<div class="line"><a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.on(&#39;acquire&#39;, <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> (client) {</div>
+<div class="line">  acquireCount++</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line">var connectCount = 0</div>
+<div class="line"><a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.on(<span class="stringliteral">&#39;connect&#39;</span>, <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> () {</div>
+<div class="line">  connectCount++</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">for</span> (var i = 0; i &lt; 200; i++) {</div>
+<div class="line">  <a class="code hl_variable" href="server_8js.html#ab7ab846d8317850d72512f720c6a05e2">pool</a>.query(<span class="stringliteral">&#39;SELECT NOW()&#39;</span>)</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">setTimeout(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> () {</div>
+<div class="line">  console.log(<span class="stringliteral">&#39;connect count:&#39;</span>, connectCount) <span class="comment">// output: connect count: 10</span></div>
+<div class="line">  console.log(<span class="stringliteral">&#39;acquire count:&#39;</span>, acquireCount) <span class="comment">// output: acquire count: 200</span></div>
+<div class="line">}, 100)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1530"></a>
+environment variables</h2>
+<p>pg-pool &amp; node-postgres support some of the same environment variables as <code>psql</code> supports. The most common are:</p>
+<div class="fragment"><div class="line">PGDATABASE=my_db</div>
+<div class="line">PGUSER=username</div>
+<div class="line">PGPASSWORD=&quot;my awesome password&quot;</div>
+<div class="line">PGPORT=5432</div>
+<div class="line">PGSSLMODE=require</div>
+</div><!-- fragment --><p>Usually I will export these into my local environment via a <code>.env</code> file with environment settings or export them in <code>~/.bash_profile</code> or something similar. This way I get configurability which works with both the postgres suite of tools (<code>psql</code>, <code>pg_dump</code>, <code>pg_restore</code>) and node, I can vary the environment variables locally and in production, and it supports the concept of a <a href="http://12factor.net/">12-factor app</a> out of the box.</p>
+<h1><a class="anchor" id="autotoc_md1531"></a>
+bring your own promise</h1>
+<p>In versions of node <code>&lt;=0.12.x</code> there is no native promise implementation available globally. You can polyfill the promise globally like this:</p>
+<div class="fragment"><div class="line"><span class="comment">// first run `npm install promise-polyfill --save</span></div>
+<div class="line"><span class="keywordflow">if</span> (typeof Promise == <span class="stringliteral">&#39;undefined&#39;</span>) {</div>
+<div class="line">  global.Promise = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;promise-polyfill&#39;</span>)</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>You can use any other promise implementation you'd like. The pool also allows you to configure the promise implementation on a per-pool level:</p>
+<div class="fragment"><div class="line">var bluebirdPool = <span class="keyword">new</span> Pool({</div>
+<div class="line">  Promise: <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;bluebird&#39;</span>)</div>
+<div class="line">})</div>
+</div><!-- fragment --><p><b>please note:</b> in node <code>&lt;=0.12.x</code> the pool will throw if you do not provide a promise constructor in one of the two ways mentioned above. In node <code>&gt;=4.0.0</code> the pool will use the native promise implementation by default; however, the two methods above still allow you to "bring your own."</p>
+<h1><a class="anchor" id="autotoc_md1532"></a>
+maxUses and read-replica autoscaling (e.g. AWS Aurora)</h1>
+<p>The maxUses config option can help an application instance rebalance load against a replica set that has been auto-scaled after the connection pool is already full of healthy connections.</p>
+<p>The mechanism here is that a connection is considered "expended" after it has been acquired and released <code>maxUses</code> number of times. Depending on the load on your system, this means there will be an approximate time in which any given connection will live, thus creating a window for rebalancing.</p>
+<p>Imagine a scenario where you have 10 app instances providing an API running against a replica cluster of 3 that are accessed via a round-robin DNS entry. Each instance runs a connection pool size of 20. With an ambient load of 50 requests per second, the connection pool will likely fill up in a few minutes with healthy connections.</p>
+<p>If you have weekly bursts of traffic which peak at 1,000 requests per second, you might want to grow your replicas to 10 during this period. Without setting <code>maxUses</code>, the new replicas will not be adopted by the app servers without an intervention &ndash; namely, restarting each in turn in order to build up new connection pools that are balanced against all the replicas. Adding additional app server instances will help to some extent because they will adopt all the replicas in an even way, but the initial app servers will continue to focus additional load on the original replicas.</p>
+<p>This is where the <code>maxUses</code> configuration option comes into play. Setting <code>maxUses</code> to 7500 will ensure that over a period of 30 minutes or so the new replicas will be adopted as the pre-existing connections are closed and replaced with new ones, thus creating a window for eventual balance.</p>
+<p>You'll want to test based on your own scenarios, but one way to make a first guess at <code>maxUses</code> is to identify an acceptable window for rebalancing and then solve for the value:</p>
+<div class="fragment"><div class="line">maxUses = rebalanceWindowSeconds * totalRequestsPerSecond / numAppInstances / poolSize</div>
+</div><!-- fragment --><p>In the example above, assuming we acquire and release 1 connection per request and we are aiming for a 30 minute rebalancing window:</p>
+<div class="fragment"><div class="line">maxUses = rebalanceWindowSeconds * totalRequestsPerSecond / numAppInstances / poolSize</div>
+<div class="line">   7200 =        1800            *          1000          /        10       /    25</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1533"></a>
+tests</h1>
+<p>To run tests clone the repo, <code>npm i</code> in the working dir, and then run <code>npm test</code></p>
+<h1><a class="anchor" id="autotoc_md1534"></a>
+contributions</h1>
+<p>I love contributions. Please make sure they have tests, and submit a PR. If you're not sure if the issue is worth it or will be accepted it never hurts to open an issue to begin the conversation. If you're interested in keeping up with node-postgres releated stuff, you can follow me on twitter at <a href="https://twitter.com/briancarlson">@briancarlson</a> - I generally announce any noteworthy updates there.</p>
+<h1><a class="anchor" id="autotoc_md1535"></a>
+license</h1>
+<p>The MIT License (MIT) Copyright (c) 2016 Brian M. Carlson</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

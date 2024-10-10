@@ -1,0 +1,138 @@
+\doxysection{Referencia del archivo node\+\_\+modules/express/lib/router/route.js}
+\hypertarget{route_8js}{}\label{route_8js}\index{node\_modules/express/lib/router/route.js@{node\_modules/express/lib/router/route.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{route_8js_a422c02560643d1ce186c825f5c585db5}{Route}} (path)
+\item 
+\mbox{\hyperlink{application_8js_a04d30fa6e159a438c5fe8d248cb41845}{methods}} \mbox{\hyperlink{route_8js_ab437ed2f52da2af825639234d9faeb08}{for\+Each}} (\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(method)\{ \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{Route.\+prototype}}\mbox{[}method\mbox{]}=\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}()\{ var handles=\mbox{\hyperlink{application_8js_a19188fd934b073f6bf88119434489ad4}{flatten}}(\mbox{\hyperlink{hasown_2index_8js_af41b23e59e21fbbca9175e1dbd07b54e}{slice.\+call}}(arguments));\mbox{\hyperlink{dbcs-codec_8js_a3640a64c8d4fe02d6ade18fddf7457c4}{for}}(var i=0;i$<$ handles.\+length;i++) \{ var handle=handles\mbox{[}i\mbox{]};\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(typeof handle !==\textquotesingle{}\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\textquotesingle{}) \{ var \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}=\mbox{\hyperlink{hasown_2index_8js_af41b23e59e21fbbca9175e1dbd07b54e}{to\+String.\+call}}(handle);var msg=\textquotesingle{}Route.\textquotesingle{}+method+\textquotesingle{}() requires a callback \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} but got a \textquotesingle{}+\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}} throw new \mbox{\hyperlink{class_error}{Error}}(msg);\} \mbox{\hyperlink{application_8js_a651046067579e48d7f0d03ce38dc7cf8}{debug}}(\textquotesingle{}\%\mbox{\hyperlink{ms_2index_8js_ad9a7d92cb87932d25187fdec3ba1b621}{s}} \%\mbox{\hyperlink{src_2node_8js_a4a850bc05bea213ffc508fac80e83975}{o}}\textquotesingle{}, method, this.\+path) var layer=\mbox{\hyperlink{express_2lib_2router_2index_8js_a8f21692d459dc10b9b630f09a12f6a37}{Layer}}(\textquotesingle{}/\textquotesingle{}, \{\}, handle);layer.\+method=method;\mbox{\hyperlink{application_8js_a04d30fa6e159a438c5fe8d248cb41845}{this.\+methods}}\mbox{[}method\mbox{]}=true;\mbox{\hyperlink{lib_2stringify_8js_aa24e781fe0b662d38aac138432ec5e48}{this.\+stack.\+push}}(layer);\} return this;\};\})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{route_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{route_8js_ab46fcd98af3029a573d093d6ea1473f5}{flatten}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{array_parser_8js_aa26ea275a7c12c30df9334d66ece8a65}{array}}-\/flatten\textquotesingle{})
+\item 
+var \mbox{\hyperlink{route_8js_a8f21692d459dc10b9b630f09a12f6a37}{Layer}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./layer\textquotesingle{})
+\item 
+var \mbox{\hyperlink{route_8js_a04d30fa6e159a438c5fe8d248cb41845}{methods}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}methods\textquotesingle{})
+\item 
+var \mbox{\hyperlink{route_8js_a7c9b2c6889147a97101a5409709b8d91}{to\+String}} = Object.\+prototype.\+to\+String
+\item 
+module \mbox{\hyperlink{route_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} = \mbox{\hyperlink{express_8js_a01754b113e4439f9a2740d01a338e80b}{Route}}
+\item 
+\mbox{\hyperlink{express_8js_a01754b113e4439f9a2740d01a338e80b}{Route}} \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{prototype}} \mbox{\hyperlink{route_8js_a218ef1c47993424bde76f2f908627414}{all}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{route_8js_ab437ed2f52da2af825639234d9faeb08}\index{route.js@{route.js}!forEach@{forEach}}
+\index{forEach@{forEach}!route.js@{route.js}}
+\doxysubsubsection{\texorpdfstring{forEach()}{forEach()}}
+{\footnotesize\ttfamily \label{route_8js_ab437ed2f52da2af825639234d9faeb08} 
+\mbox{\hyperlink{application_8js_a04d30fa6e159a438c5fe8d248cb41845}{methods}} for\+Each (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(method)\{ \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{Route.\+prototype}}\mbox{[}method\mbox{]}=\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}()\{ var handles=\mbox{\hyperlink{application_8js_a19188fd934b073f6bf88119434489ad4}{flatten}}(\mbox{\hyperlink{hasown_2index_8js_af41b23e59e21fbbca9175e1dbd07b54e}{slice.\+call}}(arguments));\mbox{\hyperlink{dbcs-codec_8js_a3640a64c8d4fe02d6ade18fddf7457c4}{for}}(var i=0;i$<$ handles.\+length;i++) \{ var handle=handles\mbox{[}i\mbox{]};\mbox{\hyperlink{buffer-writer_2index_8js_af5573e69e835b9cd97daf36e3072666b}{if}}(typeof handle !==\textquotesingle{}\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\textquotesingle{}) \{ var \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}=\mbox{\hyperlink{hasown_2index_8js_af41b23e59e21fbbca9175e1dbd07b54e}{to\+String.\+call}}(handle);var msg=\textquotesingle{}Route.\textquotesingle{}+method+\textquotesingle{}() requires a callback \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} but got a \textquotesingle{}+\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}} throw new \mbox{\hyperlink{class_error}{Error}}(msg);\} \mbox{\hyperlink{application_8js_a651046067579e48d7f0d03ce38dc7cf8}{debug}}(\textquotesingle{}\%\mbox{\hyperlink{ms_2index_8js_ad9a7d92cb87932d25187fdec3ba1b621}{s}} \%\mbox{\hyperlink{src_2node_8js_a4a850bc05bea213ffc508fac80e83975}{o}}\textquotesingle{}, method, this.\+path) var layer=\mbox{\hyperlink{express_2lib_2router_2index_8js_a8f21692d459dc10b9b630f09a12f6a37}{Layer}}(\textquotesingle{}/\textquotesingle{}, \{\}, handle);layer.\+method=method;\mbox{\hyperlink{application_8js_a04d30fa6e159a438c5fe8d248cb41845}{this.\+methods}}\mbox{[}method\mbox{]}=true;\mbox{\hyperlink{lib_2stringify_8js_aa24e781fe0b662d38aac138432ec5e48}{this.\+stack.\+push}}(layer);\} return this;\};\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{route_8js_a422c02560643d1ce186c825f5c585db5}\index{route.js@{route.js}!Route@{Route}}
+\index{Route@{Route}!route.js@{route.js}}
+\doxysubsubsection{\texorpdfstring{Route()}{Route()}}
+{\footnotesize\ttfamily \label{route_8js_a422c02560643d1ce186c825f5c585db5} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} Route (\begin{DoxyParamCaption}\item[{path}]{}{}\end{DoxyParamCaption})}
+
+Initialize {\ttfamily Route} with the given {\ttfamily path},
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & path \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{route_8js_a218ef1c47993424bde76f2f908627414}\index{route.js@{route.js}!all@{all}}
+\index{all@{all}!route.js@{route.js}}
+\doxysubsubsection{\texorpdfstring{all}{all}}
+{\footnotesize\ttfamily \label{route_8js_a218ef1c47993424bde76f2f908627414} 
+\mbox{\hyperlink{express_8js_a01754b113e4439f9a2740d01a338e80b}{Route}} \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{prototype}} all}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{route_8js_a218ef1c47993424bde76f2f908627414}{all}}()\ \{}
+\DoxyCodeLine{\ \ var\ handles\ =\ \mbox{\hyperlink{route_8js_ab46fcd98af3029a573d093d6ea1473f5}{flatten}}(\mbox{\hyperlink{express_2lib_2router_2index_8js_acab0c09ac73e7a3c85a21fa773e9b8b0}{slice}}.call(arguments));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ handles.length;\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ var\ handle\ =\ handles[i];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (typeof\ handle\ !==\ \textcolor{stringliteral}{'function'})\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ var\ \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}\ =\ \mbox{\hyperlink{route_8js_a7c9b2c6889147a97101a5409709b8d91}{toString}}.call(handle);}
+\DoxyCodeLine{\ \ \ \ \ \ var\ msg\ =\ \textcolor{stringliteral}{'Route.all()\ requires\ a\ callback\ function\ but\ got\ a\ '}\ +\ \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ TypeError(msg);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ var\ layer\ =\ \mbox{\hyperlink{route_8js_a8f21692d459dc10b9b630f09a12f6a37}{Layer}}(\textcolor{charliteral}{'/'},\ \{\},\ handle);}
+\DoxyCodeLine{\ \ \ \ layer.method\ =\ \mbox{\hyperlink{get-intrinsic_2index_8js_ae6aa4817f0f49345b718ea6b4abae197}{undefined}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ this.\mbox{\hyperlink{route_8js_a04d30fa6e159a438c5fe8d248cb41845}{methods}}.\_all\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \ \ this.stack.push(layer);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Add a handler for all HTTP verbs to this route.
+
+Behaves just like middleware and can respond or call {\ttfamily next} to continue processing.
+
+You can use multiple {\ttfamily .all} call to add multiple handlers.
+
+function check\+\_\+something(req, res, next)\{ next(); \};
+
+function validate\+\_\+user(req, res, next)\{ next(); \};
+
+route .\doxylink{route_8js_a218ef1c47993424bde76f2f908627414}{all(validate\+\_\+user)} .\doxylink{route_8js_a218ef1c47993424bde76f2f908627414}{all(check\+\_\+something)} .get(function(req, res, next)\{ res.\+send(\textquotesingle{}hello world\textquotesingle{}); \});
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{function\}} & handler \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{Route\} for chaining @api public 
+\end{DoxyReturn}
+\Hypertarget{route_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}\index{route.js@{route.js}!exports@{exports}}
+\index{exports@{exports}!route.js@{route.js}}
+\doxysubsubsection{\texorpdfstring{exports}{exports}}
+{\footnotesize\ttfamily \label{route_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34} 
+module exports = \mbox{\hyperlink{express_8js_a01754b113e4439f9a2740d01a338e80b}{Route}}}
+
+Module exports. \Hypertarget{route_8js_ab46fcd98af3029a573d093d6ea1473f5}\index{route.js@{route.js}!flatten@{flatten}}
+\index{flatten@{flatten}!route.js@{route.js}}
+\doxysubsubsection{\texorpdfstring{flatten}{flatten}}
+{\footnotesize\ttfamily \label{route_8js_ab46fcd98af3029a573d093d6ea1473f5} 
+var flatten = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{array_parser_8js_aa26ea275a7c12c30df9334d66ece8a65}{array}}-\/flatten\textquotesingle{})}
+
+\Hypertarget{route_8js_a8f21692d459dc10b9b630f09a12f6a37}\index{route.js@{route.js}!Layer@{Layer}}
+\index{Layer@{Layer}!route.js@{route.js}}
+\doxysubsubsection{\texorpdfstring{Layer}{Layer}}
+{\footnotesize\ttfamily \label{route_8js_a8f21692d459dc10b9b630f09a12f6a37} 
+var Layer = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./layer\textquotesingle{})}
+
+\Hypertarget{route_8js_a04d30fa6e159a438c5fe8d248cb41845}\index{route.js@{route.js}!methods@{methods}}
+\index{methods@{methods}!route.js@{route.js}}
+\doxysubsubsection{\texorpdfstring{methods}{methods}}
+{\footnotesize\ttfamily \label{route_8js_a04d30fa6e159a438c5fe8d248cb41845} 
+var methods = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}methods\textquotesingle{})}
+
+\Hypertarget{route_8js_ae2475e10618961c050dcba04e8c42331}\index{route.js@{route.js}!strict@{strict}}
+\index{strict@{strict}!route.js@{route.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{route_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+express Copyright(c) 2009-\/2013 TJ Holowaychuk Copyright(c) 2013 Roman Shtylman Copyright(c) 2014-\/2015 Douglas Christopher Wilson MIT Licensed \Hypertarget{route_8js_a7c9b2c6889147a97101a5409709b8d91}\index{route.js@{route.js}!toString@{toString}}
+\index{toString@{toString}!route.js@{route.js}}
+\doxysubsubsection{\texorpdfstring{toString}{toString}}
+{\footnotesize\ttfamily \label{route_8js_a7c9b2c6889147a97101a5409709b8d91} 
+var to\+String = Object.\+prototype.\+to\+String}
+

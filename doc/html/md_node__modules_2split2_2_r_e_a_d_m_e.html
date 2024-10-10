@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: Split2(matcher, mapper, options)</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Split2(matcher, mapper, options)</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md2090"></a></p>
+<p><img src="https://github.com/mcollina/split2/workflows/ci/badge.svg" alt="ci" style="pointer-events: none;" class="inline"/></p>
+<p>Break up a stream and reassemble it so that each line is a chunk. <code>split2</code> is inspired by <a href="https://github.com/dominictarr">@dominictarr</a> <a href="https://github.com/dominictarr/split"><code>split</code></a> module, and it is totally API compatible with it. However, it is based on Node.js core <a href="https://nodejs.org/api/stream.html#stream_new_stream_transform_options"><code>Transform</code></a>.</p>
+<p><code>matcher</code> may be a <code>String</code>, or a <code>RegExp</code>. Example, read every line in a file ...</p>
+<div class="fragment"><div class="line">js</div>
+<div class="line"> fs.createReadStream(file)</div>
+<div class="line">   .pipe(split2())</div>
+<div class="line">   .on(&#39;data&#39;, function (line) {</div>
+<div class="line">     //each chunk now is a separate line!</div>
+<div class="line">   })</div>
+</div><!-- fragment --><p><code>split</code> takes the same arguments as <code>string.split</code> except it defaults to '/\r?<br  />
+/', and the optional <code>limit</code> paremeter is ignored. <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/split">String#split</a></p>
+<p><code>split</code> takes an optional options object on it's third argument, which is directly passed as a <a href="https://nodejs.org/api/stream.html#stream_new_stream_transform_options">Transform</a> option.</p>
+<p>Additionally, the <code>.maxLength</code> and <code>.skipOverflow</code> options are implemented, which set limits on the internal buffer size and the stream's behavior when the limit is exceeded. There is no limit unless <code>maxLength</code> is set. When the internal buffer size exceeds <code>maxLength</code>, the stream emits an error by default. You may also set <code>skipOverflow</code> to true to suppress the error and instead skip past any lines that cause the internal buffer to exceed <code>maxLength</code>.</p>
+<p>Calling <code>.destroy</code> will make the stream emit <code>close</code>. Use this to perform cleanup logic</p>
+<div class="fragment"><div class="line"> js</div>
+<div class="line">var splitFile = function(filename) {</div>
+<div class="line">  var file = fs.createReadStream(filename)</div>
+<div class="line"> </div>
+<div class="line">  return file</div>
+<div class="line">    .pipe(split2())</div>
+<div class="line">    .on(&#39;close&#39;, function() {</div>
+<div class="line">      // destroy the file stream in case the split stream was destroyed</div>
+<div class="line">      file.destroy()</div>
+<div class="line">    })</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">var stream = splitFile(&#39;my-file.txt&#39;)</div>
+<div class="line"> </div>
+<div class="line">stream.destroy() // will destroy the input file stream</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2091"></a>
+NDJ - Newline Delimited Json</h1>
+<p><code>split2</code> accepts a function which transforms each line.</p>
+<div class="fragment"><div class="line"> js</div>
+<div class="line">fs.createReadStream(file)</div>
+<div class="line">  .pipe(split2(JSON.parse))</div>
+<div class="line">  .on(&#39;data&#39;, function (obj) {</div>
+<div class="line">    //each chunk now is a js object</div>
+<div class="line">  })</div>
+<div class="line">  .on(&quot;error&quot;, function(error) =&gt; {</div>
+<div class="line">    //handling parsing errors</div>
+<div class="line">  })</div>
+</div><!-- fragment --><p>However, in <a href="https://github.com/dominictarr">@dominictarr</a> <a href="https://github.com/dominictarr/split"><code>split</code></a> the mapper is wrapped in a try-catch, while here it is not: if your parsing logic can throw, wrap it yourself. Otherwise, you can also use the stream error handling when mapper function throw.</p>
+<h1><a class="anchor" id="autotoc_md2092"></a>
+License</h1>
+<p>Copyright (c) 2014-2021, Matteo Collina <a href="#" onclick="location.href='mai'+'lto:'+'hel'+'lo'+'@ma'+'tt'+'eoc'+'ol'+'lin'+'a.'+'com'; return false;">hello<span class="obfuscator">.nosp@m.</span>@mat<span class="obfuscator">.nosp@m.</span>teoco<span class="obfuscator">.nosp@m.</span>llin<span class="obfuscator">.nosp@m.</span>a.com</a></p>
+<p>Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

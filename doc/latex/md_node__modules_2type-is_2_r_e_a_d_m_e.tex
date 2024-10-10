@@ -1,0 +1,137 @@
+\chapter{type-\/is}
+\hypertarget{md_node__modules_2type-is_2_r_e_a_d_m_e}{}\label{md_node__modules_2type-is_2_r_e_a_d_m_e}\index{type-\/is@{type-\/is}}
+\label{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2161}%
+\Hypertarget{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2161}%
+
+
+\href{https://npmjs.org/package/type-is}{\texttt{ }} \href{https://npmjs.org/package/type-is}{\texttt{ }} \href{https://nodejs.org/en/download}{\texttt{ }} \href{https://travis-ci.org/jshttp/type-is}{\texttt{ }} \href{https://coveralls.io/r/jshttp/type-is?branch=master}{\texttt{ }}
+
+Infer the content-\/type of a request.\hypertarget{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2162}{}\doxysubsection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2162}
+This is a \href{https://nodejs.org/en/}{\texttt{ Node.\+js}} module available through the \href{https://www.npmjs.com/}{\texttt{ npm registry}}. Installation is done using the \href{https://docs.npmjs.com/getting-started/installing-npm-packages-locally}{\texttt{ {\ttfamily npm install} command}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ type-\/is}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2163}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2163}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'http'})}
+\DoxyCodeLine{var\ \mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}-\/\mbox{\hyperlink{request_8js_a5e3afd97276cc403924d1a449a83ea84}{is}}')}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}.createServer(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})\ \{}
+\DoxyCodeLine{\ \ var\ istext\ =\ \mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ [\textcolor{stringliteral}{'text/*'}])}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.end('you\ '\ +\ (istext\ ?\ 'sent'\ :\ 'did\ not\ \mbox{\hyperlink{response_8js_a88d7310f8a18b3e16f4020168641b86a}{send}}')\ +\ '\ me\ text')}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2164}{}\doxysubsection{\texorpdfstring{typeis(request, types)}{typeis(request, types)}}\label{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2164}
+Checks if the {\ttfamily request} is one of the {\ttfamily types}. If the request has no body, even if there is a {\ttfamily Content-\/\+Type} header, then {\ttfamily null} is returned. If the {\ttfamily Content-\/\+Type} header is invalid or does not matches any of the {\ttfamily types}, then {\ttfamily false} is returned. Otherwise, a string of the type that matched is returned.
+
+The {\ttfamily request} argument is expected to be a Node.\+js HTTP request. The {\ttfamily types} argument is an array of type strings.
+
+Each type in the {\ttfamily types} array can be one of the following\+:
+
+
+\begin{DoxyItemize}
+\item A file extension name such as {\ttfamily json}. This name will be returned if matched.
+\item A mime type such as {\ttfamily application/json}.
+\item A mime type with a wildcard such as {\ttfamily \texorpdfstring{$\ast$}{*}/\texorpdfstring{$\ast$}{*}} or {\ttfamily \texorpdfstring{$\ast$}{*}/json} or {\ttfamily application/\texorpdfstring{$\ast$}{*}}. The full mime type will be returned if matched.
+\item A suffix such as {\ttfamily +json}. This can be combined with a wildcard such as {\ttfamily \texorpdfstring{$\ast$}{*}/vnd+json} or {\ttfamily application/\texorpdfstring{$\ast$}{*}+json}. The full mime type will be returned if matched.
+\end{DoxyItemize}
+
+Some examples to illustrate the inputs and returned value\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ req.headers.content-\/type\ =\ 'application/json'}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ [\textcolor{stringliteral}{'json'}])\ \textcolor{comment}{//\ =>\ 'json'}}
+\DoxyCodeLine{\mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ ['\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}',\ '\mbox{\hyperlink{express_8js_ac6fdc7f7005e375dc7d7dce4bc785ab4}{json}}'])\ \textcolor{comment}{//\ =>\ 'json'}}
+\DoxyCodeLine{\mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ ['\mbox{\hyperlink{express_8js_aa30c9d0e437092b0607b68dee5b2c751}{application}}\textcolor{comment}{/*'])\ //\ =>\ 'application/json'}}
+\DoxyCodeLine{\textcolor{comment}{typeis(req,\ ['application/json'])\ //\ =>\ 'application/json'}}
+\DoxyCodeLine{\textcolor{comment}{}}
+\DoxyCodeLine{\textcolor{comment}{typeis(req,\ ['html'])\ //\ =>\ false}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2165}{}\doxysubsection{\texorpdfstring{typeis.\+has\+Body(request)}{typeis.\+has\+Body(request)}}\label{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2165}
+Returns a Boolean if the given {\ttfamily request} has a body, regardless of the {\ttfamily Content-\/\+Type} header.
+
+Having a body has no relation to how large the body is (it may be 0 bytes). This is similar to how file existence works. If a body does exist, then this indicates that there is data to read from the Node.\+js request stream.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}.hasBody(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}))\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ read\ the\ body,\ since\ there\ is\ one}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}.on(\textcolor{stringliteral}{'data'},\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (chunk)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{\ \ \})}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2166}{}\doxysubsection{\texorpdfstring{typeis.\+is(media\+Type, types)}{typeis.\+is(media\+Type, types)}}\label{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2166}
+Checks if the {\ttfamily media\+Type} is one of the {\ttfamily types}. If the {\ttfamily media\+Type} is invalid or does not matches any of the {\ttfamily types}, then {\ttfamily false} is returned. Otherwise, a string of the type that matched is returned.
+
+The {\ttfamily media\+Type} argument is expected to be a \href{https://tools.ietf.org/html/rfc6838}{\texttt{ media type}} string. The {\ttfamily types} argument is an array of type strings.
+
+Each type in the {\ttfamily types} array can be one of the following\+:
+
+
+\begin{DoxyItemize}
+\item A file extension name such as {\ttfamily json}. This name will be returned if matched.
+\item A mime type such as {\ttfamily application/json}.
+\item A mime type with a wildcard such as {\ttfamily \texorpdfstring{$\ast$}{*}/\texorpdfstring{$\ast$}{*}} or {\ttfamily \texorpdfstring{$\ast$}{*}/json} or {\ttfamily application/\texorpdfstring{$\ast$}{*}}. The full mime type will be returned if matched.
+\item A suffix such as {\ttfamily +json}. This can be combined with a wildcard such as {\ttfamily \texorpdfstring{$\ast$}{*}/vnd+json} or {\ttfamily application/\texorpdfstring{$\ast$}{*}+json}. The full mime type will be returned if matched.
+\end{DoxyItemize}
+
+Some examples to illustrate the inputs and returned value\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{negotiator_2index_8js_af4794b01f34365f594061a62a22e46cc}{mediaType}}\ =\ \textcolor{stringliteral}{'application/json'}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}.is(\mbox{\hyperlink{negotiator_2index_8js_af4794b01f34365f594061a62a22e46cc}{mediaType}},\ [\textcolor{stringliteral}{'json'}])\ \textcolor{comment}{//\ =>\ 'json'}}
+\DoxyCodeLine{\mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}.is(\mbox{\hyperlink{negotiator_2index_8js_af4794b01f34365f594061a62a22e46cc}{mediaType}},\ [\textcolor{stringliteral}{'html'},\ \textcolor{stringliteral}{'json'}])\ \textcolor{comment}{//\ =>\ 'json'}}
+\DoxyCodeLine{\mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}.is(\mbox{\hyperlink{negotiator_2index_8js_af4794b01f34365f594061a62a22e46cc}{mediaType}},\ [\textcolor{stringliteral}{'application/*'}])\ \textcolor{comment}{//\ =>\ 'application/json'}}
+\DoxyCodeLine{\mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}.is(\mbox{\hyperlink{negotiator_2index_8js_af4794b01f34365f594061a62a22e46cc}{mediaType}},\ [\textcolor{stringliteral}{'application/json'}])\ \textcolor{comment}{//\ =>\ 'application/json'}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}.is(\mbox{\hyperlink{negotiator_2index_8js_af4794b01f34365f594061a62a22e46cc}{mediaType}},\ [\textcolor{stringliteral}{'html'}])\ \textcolor{comment}{//\ =>\ false}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2167}{}\doxysection{\texorpdfstring{Examples}{Examples}}\label{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2167}
+\hypertarget{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2168}{}\doxysubsection{\texorpdfstring{Example body parser}{Example body parser}}\label{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2168}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'express'})}
+\DoxyCodeLine{var\ \mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}-\/\mbox{\hyperlink{request_8js_a5e3afd97276cc403924d1a449a83ea84}{is}}')}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}}(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{express_8js_a2f18df3edfa1cab06177ab4917a1d17e}{bodyParser}}\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ next)\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}.hasBody(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}))\ \{}
+\DoxyCodeLine{\ \ \ \ return\ next()}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ switch\ (\mbox{\hyperlink{request_8js_a2efc67136068229eaf03e7ae371b6b25}{typeis}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ [\textcolor{stringliteral}{'urlencoded'},\ \textcolor{stringliteral}{'json'},\ \textcolor{stringliteral}{'multipart'}]))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{'urlencoded'}:}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ parse\ urlencoded\ body}}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_error}{Error}}(\textcolor{stringliteral}{'implement\ urlencoded\ body\ parsing'})}
+\DoxyCodeLine{\ \ \ \ case\ '\mbox{\hyperlink{express_8js_ac6fdc7f7005e375dc7d7dce4bc785ab4}{json}}':}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ parse\ json\ body}}
+\DoxyCodeLine{\ \ \ \ \ \ throw\ new\ \mbox{\hyperlink{class_error}{Error}}('implement\ \mbox{\hyperlink{express_8js_ac6fdc7f7005e375dc7d7dce4bc785ab4}{json}}\ body\ parsing')}
+\DoxyCodeLine{\ \ \ \ case\ 'multipart':}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ parse\ multipart\ body}}
+\DoxyCodeLine{\ \ \ \ \ \ throw\ new\ \mbox{\hyperlink{class_error}{Error}}('implement\ multipart\ body\ parsing')}
+\DoxyCodeLine{\ \ \ \ default:}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ 415\ error\ code}}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.statusCode\ =\ 415}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.end()}
+\DoxyCodeLine{\ \ \ \ \ \ \mbox{\hyperlink{escape-html_2index_8js_a91cf6fbebedd86150a36e5ac3d5d3bfc}{break}}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2169}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2type-is_2_r_e_a_d_m_e_autotoc_md2169}
+\mbox{[}MIT\mbox{]}(LICENSE) 

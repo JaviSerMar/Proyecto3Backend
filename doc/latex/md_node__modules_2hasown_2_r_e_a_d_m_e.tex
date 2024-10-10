@@ -1,0 +1,23 @@
+\chapter{hasown \texorpdfstring{$<$}{<}sup\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}a href="{}https\+://npmjs.\+org/package/hasown"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://versionbadg.\+es/inspect-\/js/hasown.\+svg"{} alt="{}\+Version Badge"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/sup\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2hasown_2_r_e_a_d_m_e}{}\label{md_node__modules_2hasown_2_r_e_a_d_m_e}\index{hasown $<$sup$>$$<$a href="{}https://npmjs.org/package/hasown"{} $>$$<$img src="{}https://versionbadg.es/inspect-\/js/hasown.svg"{} alt="{}Version Badge"{}/$>$$<$/a$>$$<$/sup$>$@{hasown $<$sup$>$$<$a href=""https://npmjs.org/package/hasown"" $>$$<$img src=""https://versionbadg.es/inspect-\/js/hasown.svg"" alt=""Version Badge""/$>$$<$/a$>$$<$/sup$>$}}
+\label{md_node__modules_2hasown_2_r_e_a_d_m_e_autotoc_md1009}%
+\Hypertarget{md_node__modules_2hasown_2_r_e_a_d_m_e_autotoc_md1009}%
+
+
+\href{https://github.com/inspect-js/hasOwn/actions}{\texttt{ }} \href{https://app.codecov.io/gh/inspect-js/hasOwn/}{\texttt{ }} \mbox{[}\mbox{]}\mbox{[}license-\/url\mbox{]} \href{https://npm-stat.com/charts.html?package=hasown}{\texttt{ }}
+
+\href{https://npmjs.org/package/hasown}{\texttt{ }}
+
+A robust, ES3 compatible, "{}has own property"{} predicate.\hypertarget{md_node__modules_2hasown_2_r_e_a_d_m_e_autotoc_md1010}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md_node__modules_2hasown_2_r_e_a_d_m_e_autotoc_md1010}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'assert'});}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{define-data-property_2test_2index_8js_a0511343fcdbac93090154dce865cbfd5}{hasOwn}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'hasown'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(\mbox{\hyperlink{define-data-property_2test_2index_8js_a0511343fcdbac93090154dce865cbfd5}{hasOwn}}(\{\},\ \textcolor{stringliteral}{'toString'}),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(\mbox{\hyperlink{define-data-property_2test_2index_8js_a0511343fcdbac93090154dce865cbfd5}{hasOwn}}([],\ \textcolor{stringliteral}{'length'}),\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(\mbox{\hyperlink{define-data-property_2test_2index_8js_a0511343fcdbac93090154dce865cbfd5}{hasOwn}}(\{\ a:\ 42\ \},\ \textcolor{charliteral}{'a'}),\ \textcolor{keyword}{true});}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2hasown_2_r_e_a_d_m_e_autotoc_md1011}{}\doxysection{\texorpdfstring{Tests}{Tests}}\label{md_node__modules_2hasown_2_r_e_a_d_m_e_autotoc_md1011}
+Simply clone the repo, {\ttfamily npm install}, and run {\ttfamily npm test} 

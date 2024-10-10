@@ -1,0 +1,118 @@
+\doxysection{Referencia del archivo node\+\_\+modules/mime/src/build.js}
+\hypertarget{build_8js}{}\label{build_8js}\index{node\_modules/mime/src/build.js@{node\_modules/mime/src/build.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{build_8js_a4ceac614d3f966a9143badb894f75a2b}{for}} (let \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}} in \mbox{\hyperlink{build_8js_af670582b5c8da7efc1bd7486225bcec7}{db}})
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{build_8js_ae5ac5cf27d94ab4494aef4d56e9f13d9}{write\+Types\+File}} (\mbox{\hyperlink{build_8js_a5802f014ed8e96d3a513f114faa91d12}{types}}, path)
+\item 
+Object \mbox{\hyperlink{build_8js_a2d89a02a5a2340b3da7f2c23838fabf4}{keys}} (\mbox{\hyperlink{build_8js_af670582b5c8da7efc1bd7486225bcec7}{db}}).sort().\mbox{\hyperlink{call-bind_2test_2index_8js_a56555593fcdace53c8cf68fb2b4a8892}{for\+Each}}(k
+\item 
+\mbox{\hyperlink{build_8js_a149096eec3d43bcfac024eb31a94e300}{write\+Types\+File}} (\mbox{\hyperlink{build_8js_a5802f014ed8e96d3a513f114faa91d12}{types}}, \mbox{\hyperlink{buffer-writer_2index_8js_a6224c24496a1edd10ed52a9149e0d28a}{path.\+join}}(\+\_\+\+\_\+dirname, \textquotesingle{}..\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{express_8js_ac6fdc7f7005e375dc7d7dce4bc785ab4}{types.\+json}}\textquotesingle{}))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{build_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+const \mbox{\hyperlink{build_8js_a2e47e1f004220675d0fa39b8255bd78f}{fs}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}fs\textquotesingle{})
+\item 
+const \mbox{\hyperlink{build_8js_a1fdc7709faf62dce60620fb3f9d3453c}{path}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}path\textquotesingle{})
+\item 
+const \mbox{\hyperlink{build_8js_a20103d58d9cf3ed860f018324e0bc90f}{mime\+Score}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}-\/score\textquotesingle{})
+\item 
+let \mbox{\hyperlink{build_8js_af670582b5c8da7efc1bd7486225bcec7}{db}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}-\/db\textquotesingle{})
+\item 
+let \mbox{\hyperlink{build_8js_a260d9a5150295c2d53fcc9e1dc41fdc7}{chalk}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}chalk\textquotesingle{})
+\item 
+const \mbox{\hyperlink{build_8js_ace36854cc9f5eb82ffc1613c5de29ba7}{STANDARD\+\_\+\+FACET\+\_\+\+SCORE}} = 900
+\item 
+const \mbox{\hyperlink{build_8js_a2cfff77b6b1bc1131701824a6a741e54}{by\+Extension}} = \{\}
+\item 
+const \mbox{\hyperlink{build_8js_a5802f014ed8e96d3a513f114faa91d12}{types}} = \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{build_8js_a4ceac614d3f966a9143badb894f75a2b}\index{build.js@{build.js}!for@{for}}
+\index{for@{for}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{for()}{for()}}
+{\footnotesize\ttfamily \label{build_8js_a4ceac614d3f966a9143badb894f75a2b} 
+for (\begin{DoxyParamCaption}\item[{let \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}} in}]{db}{}\end{DoxyParamCaption})}
+
+\Hypertarget{build_8js_a2d89a02a5a2340b3da7f2c23838fabf4}\index{build.js@{build.js}!keys@{keys}}
+\index{keys@{keys}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{keys()}{keys()}}
+{\footnotesize\ttfamily \label{build_8js_a2d89a02a5a2340b3da7f2c23838fabf4} 
+Object keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build_8js_af670582b5c8da7efc1bd7486225bcec7}{db}}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{build_8js_ae5ac5cf27d94ab4494aef4d56e9f13d9}\index{build.js@{build.js}!writeTypesFile@{writeTypesFile}}
+\index{writeTypesFile@{writeTypesFile}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{writeTypesFile()}{writeTypesFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{build_8js_ae5ac5cf27d94ab4494aef4d56e9f13d9} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} write\+Types\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build_8js_a5802f014ed8e96d3a513f114faa91d12}{types}}}]{}{, }\item[{path}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{build_8js_a149096eec3d43bcfac024eb31a94e300}\index{build.js@{build.js}!writeTypesFile@{writeTypesFile}}
+\index{writeTypesFile@{writeTypesFile}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{writeTypesFile()}{writeTypesFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{build_8js_a149096eec3d43bcfac024eb31a94e300} 
+write\+Types\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build_8js_a5802f014ed8e96d3a513f114faa91d12}{types}}}]{}{, }\item[{path.}]{join}{\+\_\+\+\_\+dirname, \textquotesingle{}..\textquotesingle{}, \textquotesingle{}types.\+json\textquotesingle{}}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{build_8js_a2cfff77b6b1bc1131701824a6a741e54}\index{build.js@{build.js}!byExtension@{byExtension}}
+\index{byExtension@{byExtension}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{byExtension}{byExtension}}
+{\footnotesize\ttfamily \label{build_8js_a2cfff77b6b1bc1131701824a6a741e54} 
+const by\+Extension = \{\}}
+
+\Hypertarget{build_8js_a260d9a5150295c2d53fcc9e1dc41fdc7}\index{build.js@{build.js}!chalk@{chalk}}
+\index{chalk@{chalk}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{chalk}{chalk}}
+{\footnotesize\ttfamily \label{build_8js_a260d9a5150295c2d53fcc9e1dc41fdc7} 
+let chalk = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}chalk\textquotesingle{})}
+
+\Hypertarget{build_8js_af670582b5c8da7efc1bd7486225bcec7}\index{build.js@{build.js}!db@{db}}
+\index{db@{db}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily \label{build_8js_af670582b5c8da7efc1bd7486225bcec7} 
+let db = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}-\/db\textquotesingle{})}
+
+\Hypertarget{build_8js_a2e47e1f004220675d0fa39b8255bd78f}\index{build.js@{build.js}!fs@{fs}}
+\index{fs@{fs}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{fs}{fs}}
+{\footnotesize\ttfamily \label{build_8js_a2e47e1f004220675d0fa39b8255bd78f} 
+const fs = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}fs\textquotesingle{})}
+
+\Hypertarget{build_8js_a20103d58d9cf3ed860f018324e0bc90f}\index{build.js@{build.js}!mimeScore@{mimeScore}}
+\index{mimeScore@{mimeScore}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{mimeScore}{mimeScore}}
+{\footnotesize\ttfamily \label{build_8js_a20103d58d9cf3ed860f018324e0bc90f} 
+const mime\+Score = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}-\/score\textquotesingle{})}
+
+\Hypertarget{build_8js_a1fdc7709faf62dce60620fb3f9d3453c}\index{build.js@{build.js}!path@{path}}
+\index{path@{path}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{build_8js_a1fdc7709faf62dce60620fb3f9d3453c} 
+const path = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}path\textquotesingle{})}
+
+\Hypertarget{build_8js_ace36854cc9f5eb82ffc1613c5de29ba7}\index{build.js@{build.js}!STANDARD\_FACET\_SCORE@{STANDARD\_FACET\_SCORE}}
+\index{STANDARD\_FACET\_SCORE@{STANDARD\_FACET\_SCORE}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{STANDARD\_FACET\_SCORE}{STANDARD\_FACET\_SCORE}}
+{\footnotesize\ttfamily \label{build_8js_ace36854cc9f5eb82ffc1613c5de29ba7} 
+const STANDARD\+\_\+\+FACET\+\_\+\+SCORE = 900}
+
+\Hypertarget{build_8js_ae2475e10618961c050dcba04e8c42331}\index{build.js@{build.js}!strict@{strict}}
+\index{strict@{strict}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{build_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+\Hypertarget{build_8js_a5802f014ed8e96d3a513f114faa91d12}\index{build.js@{build.js}!types@{types}}
+\index{types@{types}!build.js@{build.js}}
+\doxysubsubsection{\texorpdfstring{types}{types}}
+{\footnotesize\ttfamily \label{build_8js_a5802f014ed8e96d3a513f114faa91d12} 
+const types = \{\}}
+

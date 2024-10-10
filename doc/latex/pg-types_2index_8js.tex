@@ -1,0 +1,126 @@
+\doxysection{Referencia del archivo node\+\_\+modules/pg-\/types/index.js}
+\hypertarget{pg-types_2index_8js}{}\label{pg-types_2index_8js}\index{node\_modules/pg-\/types/index.js@{node\_modules/pg-\/types/index.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{pg-types_2index_8js_ab433db3ec2c823fd41d5c0afe262261f}{no\+Parse}} (val)
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{pg-types_2index_8js_aa0a36c6f27594b067e1ce17097b5a5b5}{get\+Type\+Parser}} (oid, \mbox{\hyperlink{bytes_2index_8js_a9027c5af360d5ef99cc9906449e85a27}{format}})
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{pg-types_2index_8js_a34f7e0a2b0afb11bfedb0981ee78ebf1}{set\+Type\+Parser}} (oid, \mbox{\hyperlink{bytes_2index_8js_a9027c5af360d5ef99cc9906449e85a27}{format}}, parse\+Fn)
+\item 
+\mbox{\hyperlink{pg-types_2index_8js_accda0576ae8424eabb284446179e9282}{text\+Parsers}} \mbox{\hyperlink{pg-types_2index_8js_a81aa435cc28244d173579a7eab7d36bf}{init}} (\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(oid, converter) \{ type\+Parsers.\+text\mbox{[}oid\mbox{]}=converter;\})
+\item 
+\mbox{\hyperlink{pg-types_2index_8js_aff3f6afb6e714bf043531be08260d445}{binary\+Parsers}} \mbox{\hyperlink{pg-types_2index_8js_a6e7be41909207889da88360eec9e0e38}{init}} (\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(oid, converter) \{ type\+Parsers.\+binary\mbox{[}oid\mbox{]}=converter;\})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \mbox{\hyperlink{pg-types_2index_8js_accda0576ae8424eabb284446179e9282}{text\+Parsers}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./lib/text\+Parsers\textquotesingle{})
+\item 
+var \mbox{\hyperlink{pg-types_2index_8js_aff3f6afb6e714bf043531be08260d445}{binary\+Parsers}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./lib/binary\+Parsers\textquotesingle{})
+\item 
+var \mbox{\hyperlink{pg-types_2index_8js_ae69268f8a534eb785e51eec474291443}{array\+Parser}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./lib/array\+Parser\textquotesingle{})
+\item 
+var \mbox{\hyperlink{pg-types_2index_8js_aed582afc1d5aa416c1cdc8dac9c319ac}{builtin\+Types}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./lib/\mbox{\hyperlink{pg-types_2index_8js_a1716675b369caf9a8d1536f5cc8f0b7a}{builtins}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{pg-types_2index_8js_a0c353601e53c5a7b8b76331186b98481}{get\+Type\+Parser}} = get\+Type\+Parser
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{pg-types_2index_8js_a61f58c4c9d88d854d89933e4efb35af6}{set\+Type\+Parser}} = set\+Type\+Parser
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{pg-types_2index_8js_a1716675b369caf9a8d1536f5cc8f0b7a}{builtins}} = \mbox{\hyperlink{pg-types_2index_8js_aed582afc1d5aa416c1cdc8dac9c319ac}{builtin\+Types}}
+\item 
+var \mbox{\hyperlink{pg-types_2index_8js_a2cbd04effa0bbe6293bd32c787048ec6}{type\+Parsers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{pg-types_2index_8js_aa0a36c6f27594b067e1ce17097b5a5b5}\index{index.js@{index.js}!getTypeParser@{getTypeParser}}
+\index{getTypeParser@{getTypeParser}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{getTypeParser()}{getTypeParser()}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_aa0a36c6f27594b067e1ce17097b5a5b5} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} get\+Type\+Parser (\begin{DoxyParamCaption}\item[{oid}]{}{, }\item[{\mbox{\hyperlink{bytes_2index_8js_a9027c5af360d5ef99cc9906449e85a27}{format}}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pg-types_2index_8js_a6e7be41909207889da88360eec9e0e38}\index{index.js@{index.js}!init@{init}}
+\index{init@{init}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_a6e7be41909207889da88360eec9e0e38} 
+\mbox{\hyperlink{pg-types_2index_8js_aff3f6afb6e714bf043531be08260d445}{binary\+Parsers}} init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(oid, converter) \{ type\+Parsers.\+binary\mbox{[}oid\mbox{]}=converter;\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pg-types_2index_8js_a81aa435cc28244d173579a7eab7d36bf}\index{index.js@{index.js}!init@{init}}
+\index{init@{init}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_a81aa435cc28244d173579a7eab7d36bf} 
+\mbox{\hyperlink{pg-types_2index_8js_accda0576ae8424eabb284446179e9282}{text\+Parsers}} init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(oid, converter) \{ type\+Parsers.\+text\mbox{[}oid\mbox{]}=converter;\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pg-types_2index_8js_ab433db3ec2c823fd41d5c0afe262261f}\index{index.js@{index.js}!noParse@{noParse}}
+\index{noParse@{noParse}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{noParse()}{noParse()}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_ab433db3ec2c823fd41d5c0afe262261f} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} no\+Parse (\begin{DoxyParamCaption}\item[{val}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pg-types_2index_8js_a34f7e0a2b0afb11bfedb0981ee78ebf1}\index{index.js@{index.js}!setTypeParser@{setTypeParser}}
+\index{setTypeParser@{setTypeParser}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{setTypeParser()}{setTypeParser()}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_a34f7e0a2b0afb11bfedb0981ee78ebf1} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} set\+Type\+Parser (\begin{DoxyParamCaption}\item[{oid}]{}{, }\item[{\mbox{\hyperlink{bytes_2index_8js_a9027c5af360d5ef99cc9906449e85a27}{format}}}]{}{, }\item[{parse\+Fn}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{pg-types_2index_8js_ae69268f8a534eb785e51eec474291443}\index{index.js@{index.js}!arrayParser@{arrayParser}}
+\index{arrayParser@{arrayParser}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{arrayParser}{arrayParser}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_ae69268f8a534eb785e51eec474291443} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} array\+Parser = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./lib/array\+Parser\textquotesingle{})}
+
+\Hypertarget{pg-types_2index_8js_aff3f6afb6e714bf043531be08260d445}\index{index.js@{index.js}!binaryParsers@{binaryParsers}}
+\index{binaryParsers@{binaryParsers}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{binaryParsers}{binaryParsers}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_aff3f6afb6e714bf043531be08260d445} 
+var binary\+Parsers = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./lib/binary\+Parsers\textquotesingle{})}
+
+\Hypertarget{pg-types_2index_8js_a1716675b369caf9a8d1536f5cc8f0b7a}\index{index.js@{index.js}!builtins@{builtins}}
+\index{builtins@{builtins}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{builtins}{builtins}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_a1716675b369caf9a8d1536f5cc8f0b7a} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} builtins = \mbox{\hyperlink{pg-types_2index_8js_aed582afc1d5aa416c1cdc8dac9c319ac}{builtin\+Types}}}
+
+\Hypertarget{pg-types_2index_8js_aed582afc1d5aa416c1cdc8dac9c319ac}\index{index.js@{index.js}!builtinTypes@{builtinTypes}}
+\index{builtinTypes@{builtinTypes}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{builtinTypes}{builtinTypes}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_aed582afc1d5aa416c1cdc8dac9c319ac} 
+var builtin\+Types = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./lib/\mbox{\hyperlink{pg-types_2index_8js_a1716675b369caf9a8d1536f5cc8f0b7a}{builtins}}\textquotesingle{})}
+
+\Hypertarget{pg-types_2index_8js_a0c353601e53c5a7b8b76331186b98481}\index{index.js@{index.js}!getTypeParser@{getTypeParser}}
+\index{getTypeParser@{getTypeParser}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{getTypeParser}{getTypeParser}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_a0c353601e53c5a7b8b76331186b98481} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} get\+Type\+Parser = get\+Type\+Parser}
+
+\Hypertarget{pg-types_2index_8js_a61f58c4c9d88d854d89933e4efb35af6}\index{index.js@{index.js}!setTypeParser@{setTypeParser}}
+\index{setTypeParser@{setTypeParser}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{setTypeParser}{setTypeParser}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_a61f58c4c9d88d854d89933e4efb35af6} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} set\+Type\+Parser = set\+Type\+Parser}
+
+\Hypertarget{pg-types_2index_8js_accda0576ae8424eabb284446179e9282}\index{index.js@{index.js}!textParsers@{textParsers}}
+\index{textParsers@{textParsers}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{textParsers}{textParsers}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_accda0576ae8424eabb284446179e9282} 
+var text\+Parsers = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./lib/text\+Parsers\textquotesingle{})}
+
+\Hypertarget{pg-types_2index_8js_a2cbd04effa0bbe6293bd32c787048ec6}\index{index.js@{index.js}!typeParsers@{typeParsers}}
+\index{typeParsers@{typeParsers}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{typeParsers}{typeParsers}}
+{\footnotesize\ttfamily \label{pg-types_2index_8js_a2cbd04effa0bbe6293bd32c787048ec6} 
+var type\+Parsers}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ text:\ \{\},}
+\DoxyCodeLine{\ \ binary:\ \{\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

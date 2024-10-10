@@ -1,0 +1,76 @@
+\chapter{pg-\/connection-\/string}
+\hypertarget{md_node__modules_2pg-connection-string_2_r_e_a_d_m_e}{}\label{md_node__modules_2pg-connection-string_2_r_e_a_d_m_e}\index{pg-\/connection-\/string@{pg-\/connection-\/string}}
+\href{https://nodei.co/npm/pg-connection-string/}{\texttt{ }}
+
+\href{https://travis-ci.org/iceddev/pg-connection-string}{\texttt{ }} \href{https://coveralls.io/github/iceddev/pg-connection-string?branch=master}{\texttt{ }}
+
+Functions for dealing with a Postgres\+SQL connection string
+
+{\ttfamily parse} method taken from \href{https://github.com/brianc/node-postgres.git}{\texttt{ node-\/postgres}} Copyright (c) 2010-\/2014 Brian Carlson (\href{mailto:brian.m.carlson@gmail.com}{\texttt{ brian.\+m.\+carlson@gmail.\+com}}) MIT License\hypertarget{md_node__modules_2pg-connection-string_2_r_e_a_d_m_e_autotoc_md1511}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_node__modules_2pg-connection-string_2_r_e_a_d_m_e_autotoc_md1511}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{bytes_2index_8js_a28ecd76297a5d556aac05441b295f93c}{parse}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'pg-\/connection-\/string'}).parse;}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ config\ =\ \mbox{\hyperlink{bytes_2index_8js_a28ecd76297a5d556aac05441b295f93c}{parse}}(\textcolor{stringliteral}{'postgres://someuser:somepassword@somehost:381/somedatabase'})}
+
+\end{DoxyCode}
+
+
+The resulting config contains a subset of the following properties\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily host} -\/ Postgres server hostname or, for UNIX domain sockets, the socket filename
+\item {\ttfamily port} -\/ port on which to connect
+\item {\ttfamily user} -\/ User with which to authenticate to the server
+\item {\ttfamily password} -\/ Corresponding password
+\item {\ttfamily database} -\/ Database name within the server
+\item {\ttfamily client\+\_\+encoding} -\/ string encoding the client will use
+\item {\ttfamily ssl}, either a boolean or an object with properties
+\begin{DoxyItemize}
+\item {\ttfamily reject\+Unauthorized}
+\item {\ttfamily cert}
+\item {\ttfamily key}
+\item {\ttfamily ca}
+\end{DoxyItemize}
+\item any other query parameters (for example, {\ttfamily application\+\_\+name}) are preserved intact.
+\end{DoxyItemize}\hypertarget{md_node__modules_2pg-connection-string_2_r_e_a_d_m_e_autotoc_md1512}{}\doxysection{\texorpdfstring{Connection Strings}{Connection Strings}}\label{md_node__modules_2pg-connection-string_2_r_e_a_d_m_e_autotoc_md1512}
+The short summary of acceptable URLs is\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily socket\+:\texorpdfstring{$<$}{<}path\texorpdfstring{$>$}{>}?\texorpdfstring{$<$}{<}query\texorpdfstring{$>$}{>}} -\/ UNIX domain socket
+\item {\ttfamily postgres\+://\texorpdfstring{$<$}{<}user\texorpdfstring{$>$}{>}\+:\texorpdfstring{$<$}{<}password\texorpdfstring{$>$}{>}@\texorpdfstring{$<$}{<}host\texorpdfstring{$>$}{>}\+:\texorpdfstring{$<$}{<}port\texorpdfstring{$>$}{>}/\texorpdfstring{$<$}{<}database\texorpdfstring{$>$}{>}?\texorpdfstring{$<$}{<}query\texorpdfstring{$>$}{>}} -\/ TCP connection
+\end{DoxyItemize}
+
+But see below for more details.\hypertarget{md_node__modules_2pg-connection-string_2_r_e_a_d_m_e_autotoc_md1513}{}\doxysubsection{\texorpdfstring{UNIX Domain Sockets}{UNIX Domain Sockets}}\label{md_node__modules_2pg-connection-string_2_r_e_a_d_m_e_autotoc_md1513}
+When user and password are not given, the socket path follows {\ttfamily socket\+:}, as in {\ttfamily socket\+:/var/run/pgsql}. This form can be shortened to just a path\+: {\ttfamily /var/run/pgsql}.
+
+When user and password are given, they are included in the typical URL positions, with an empty {\ttfamily host}, as in {\ttfamily socket\+://user\+:pass@/var/run/pgsql}.
+
+Query parameters follow a {\ttfamily ?} character, including the following special query parameters\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily db=\texorpdfstring{$<$}{<}database\texorpdfstring{$>$}{>}} -\/ sets the database name (urlencoded)
+\item {\ttfamily encoding=\texorpdfstring{$<$}{<}encoding\texorpdfstring{$>$}{>}} -\/ sets the {\ttfamily client\+\_\+encoding} property
+\end{DoxyItemize}\hypertarget{md_node__modules_2pg-connection-string_2_r_e_a_d_m_e_autotoc_md1514}{}\doxysubsection{\texorpdfstring{TCP Connections}{TCP Connections}}\label{md_node__modules_2pg-connection-string_2_r_e_a_d_m_e_autotoc_md1514}
+TCP connections to the Postgres server are indicated with {\ttfamily pg\+:} or {\ttfamily postgres\+:} schemes (in fact, any scheme but {\ttfamily socket\+:} is accepted). If username and password are included, they should be urlencoded. The database name, however, should {\itshape not} be urlencoded.
+
+Query parameters follow a {\ttfamily ?} character, including the following special query parameters\+:
+\begin{DoxyItemize}
+\item {\ttfamily host=\texorpdfstring{$<$}{<}host\texorpdfstring{$>$}{>}} -\/ sets {\ttfamily host} property, overriding the URL\textquotesingle{}s host
+\item {\ttfamily encoding=\texorpdfstring{$<$}{<}encoding\texorpdfstring{$>$}{>}} -\/ sets the {\ttfamily client\+\_\+encoding} property
+\item {\ttfamily ssl=1}, {\ttfamily ssl=true}, {\ttfamily ssl=0}, {\ttfamily ssl=false} -\/ sets {\ttfamily ssl} to true or false, accordingly
+\item {\ttfamily sslmode=\texorpdfstring{$<$}{<}sslmode\texorpdfstring{$>$}{>}}
+\begin{DoxyItemize}
+\item {\ttfamily sslmode=disable} -\/ sets {\ttfamily ssl} to false
+\item {\ttfamily sslmode=no-\/verify} -\/ sets {\ttfamily ssl} to {\ttfamily \{ reject\+Unauthorized\+: false \}}
+\item {\ttfamily sslmode=prefer}, {\ttfamily sslmode=require}, {\ttfamily sslmode=verify-\/ca}, {\ttfamily sslmode=verify-\/full} -\/ sets {\ttfamily ssl} to true
+\end{DoxyItemize}
+\item {\ttfamily sslcert=\texorpdfstring{$<$}{<}filename\texorpdfstring{$>$}{>}} -\/ reads data from the given file and includes the result as {\ttfamily ssl.\+cert}
+\item {\ttfamily sslkey=\texorpdfstring{$<$}{<}filename\texorpdfstring{$>$}{>}} -\/ reads data from the given file and includes the result as {\ttfamily ssl.\+key}
+\item {\ttfamily sslrootcert=\texorpdfstring{$<$}{<}filename\texorpdfstring{$>$}{>}} -\/ reads data from the given file and includes the result as {\ttfamily ssl.\+ca}
+\end{DoxyItemize}
+
+A bare relative URL, such as {\ttfamily salesdata}, will indicate a database name while leaving other properties empty. 

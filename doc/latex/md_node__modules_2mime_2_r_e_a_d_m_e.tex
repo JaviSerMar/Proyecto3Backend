@@ -1,0 +1,87 @@
+\chapter{mime}
+\hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e}{}\label{md_node__modules_2mime_2_r_e_a_d_m_e}\index{mime@{mime}}
+\label{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1298}%
+\Hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1298}%
+
+
+Comprehensive MIME type mapping API based on mime-\/db module.\hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1299}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1299}
+Install with \href{http://github.com/isaacs/npm}{\texttt{ npm}}\+: \begin{DoxyVerb}npm install mime
+\end{DoxyVerb}
+\hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1300}{}\doxysection{\texorpdfstring{Contributing / Testing}{Contributing / Testing}}\label{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1300}
+\begin{DoxyVerb}npm run test
+\end{DoxyVerb}
+\hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1301}{}\doxysection{\texorpdfstring{Command Line}{Command Line}}\label{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1301}
+\begin{DoxyVerb}mime [path_string]
+\end{DoxyVerb}
+
+
+E.\+g. \begin{DoxyVerb}> mime scripts/jquery.js
+application/javascript
+\end{DoxyVerb}
+\hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1302}{}\doxysection{\texorpdfstring{API -\/ Queries}{API -\/ Queries}}\label{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1302}
+\hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1303}{}\doxysubsection{\texorpdfstring{mime.\+lookup(path)}{mime.\+lookup(path)}}\label{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1303}
+Get the mime type associated with a file, if no mime type is found {\ttfamily application/octet-\/stream} is returned. Performs a case-\/insensitive lookup using the extension in {\ttfamily path} (the substring after the last \textquotesingle{}/\textquotesingle{} or \textquotesingle{}.\textquotesingle{}). E.\+g.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'mime'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}.lookup(\textcolor{stringliteral}{'/path/to/file.txt'});\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =>\ 'text/plain'}}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}.lookup(\textcolor{stringliteral}{'file.txt'});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =>\ 'text/plain'}}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}.lookup(\textcolor{stringliteral}{'.TXT'});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =>\ 'text/plain'}}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}.lookup(\textcolor{stringliteral}{'htm'});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =>\ 'text/html'}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1304}{}\doxysubsection{\texorpdfstring{mime.\+default\+\_\+type}{mime.\+default\+\_\+type}}\label{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1304}
+Sets the mime type returned when {\ttfamily mime.\+lookup} fails to find the extension searched for. (Default is {\ttfamily application/octet-\/stream}.)\hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1305}{}\doxysubsection{\texorpdfstring{mime.\+extension(type)}{mime.\+extension(type)}}\label{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1305}
+Get the default extension for {\ttfamily type}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}.extension(\textcolor{stringliteral}{'text/html'});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =>\ 'html'}}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}.extension(\textcolor{stringliteral}{'application/octet-\/stream'});\ \ \textcolor{comment}{//\ =>\ 'bin'}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1306}{}\doxysubsection{\texorpdfstring{mime.\+charsets.\+lookup()}{mime.\+charsets.\+lookup()}}\label{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1306}
+Map mime-\/type to charset
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}.charsets.lookup(\textcolor{stringliteral}{'text/plain'});\ \ \ \ \ \ \ \ \textcolor{comment}{//\ =>\ 'UTF-\/8'}}
+
+\end{DoxyCode}
+
+
+(The logic for charset lookups is pretty rudimentary. Feel free to suggest improvements.)\hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1307}{}\doxysection{\texorpdfstring{API -\/ Defining Custom Types}{API -\/ Defining Custom Types}}\label{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1307}
+Custom type mappings can be added on a per-\/project basis via the following APIs.\hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1308}{}\doxysubsection{\texorpdfstring{mime.\+define()}{mime.\+define()}}\label{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1308}
+Add custom mime/extension mappings
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}.define(\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'text/x-\/some-\/format'}:\ [\textcolor{stringliteral}{'x-\/sf'},\ \textcolor{stringliteral}{'x-\/sft'},\ \textcolor{stringliteral}{'x-\/sfml'}],}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'application/x-\/my-\/type'}:\ [\textcolor{stringliteral}{'x-\/mt'},\ \textcolor{stringliteral}{'x-\/mtt'}],}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ etc\ ...}}
+\DoxyCodeLine{\});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}.lookup(\textcolor{stringliteral}{'x-\/sft'});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =>\ 'text/x-\/some-\/format'}}
+
+\end{DoxyCode}
+
+
+The first entry in the extensions array is returned by {\ttfamily mime.\+extension()}. E.\+g.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}.extension(\textcolor{stringliteral}{'text/x-\/some-\/format'});\ \textcolor{comment}{//\ =>\ 'x-\/sf'}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1309}{}\doxysubsection{\texorpdfstring{mime.\+load(filepath)}{mime.\+load(filepath)}}\label{md_node__modules_2mime_2_r_e_a_d_m_e_autotoc_md1309}
+Load mappings from an Apache "{}.\+types"{} format file
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{response_8js_ab4d288fe448bcc077971c41ae3797375}{mime}}.load(\textcolor{stringliteral}{'./my\_project.types'});}
+
+\end{DoxyCode}
+ The .types file format is simple -\/ See the {\ttfamily types} dir for examples. 

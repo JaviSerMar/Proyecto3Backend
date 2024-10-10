@@ -1,0 +1,29 @@
+\chapter{es-\/define-\/property \texorpdfstring{$<$}{<}sup\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}a href="{}https\+://npmjs.\+org/package/es-\/define-\/property"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://versionbadg.\+es/ljharb/es-\/define-\/property.\+svg"{} alt="{}\+Version Badge"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/sup\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2es-define-property_2_r_e_a_d_m_e}{}\label{md_node__modules_2es-define-property_2_r_e_a_d_m_e}\index{es-\/define-\/property $<$sup$>$$<$a href="{}https://npmjs.org/package/es-\/define-\/property"{} $>$$<$img src="{}https://versionbadg.es/ljharb/es-\/define-\/property.svg"{} alt="{}Version Badge"{}/$>$$<$/a$>$$<$/sup$>$@{es-\/define-\/property $<$sup$>$$<$a href=""https://npmjs.org/package/es-\/define-\/property"" $>$$<$img src=""https://versionbadg.es/ljharb/es-\/define-\/property.svg"" alt=""Version Badge""/$>$$<$/a$>$$<$/sup$>$}}
+\label{md_node__modules_2es-define-property_2_r_e_a_d_m_e_autotoc_md488}%
+\Hypertarget{md_node__modules_2es-define-property_2_r_e_a_d_m_e_autotoc_md488}%
+
+
+\href{https://github.com/ljharb/es-define-property/actions}{\texttt{ }} \href{https://app.codecov.io/gh/ljharb/es-define-property/}{\texttt{ }} \mbox{[}\mbox{]}\mbox{[}license-\/url\mbox{]} \href{https://npm-stat.com/charts.html?package=es-define-property}{\texttt{ }}
+
+\href{https://npmjs.org/package/es-define-property}{\texttt{ }}
+
+{\ttfamily Object.\+define\+Property}, but not IE 8\textquotesingle{}s broken one.\hypertarget{md_node__modules_2es-define-property_2_r_e_a_d_m_e_autotoc_md489}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md_node__modules_2es-define-property_2_r_e_a_d_m_e_autotoc_md489}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'assert'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{call-bind_2index_8js_aa1c8e87c148849ff42d712942c5a503a}{\$defineProperty}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'es-\/define-\/property'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{call-bind_2index_8js_aa1c8e87c148849ff42d712942c5a503a}{\$defineProperty}})\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(\mbox{\hyperlink{call-bind_2index_8js_aa1c8e87c148849ff42d712942c5a503a}{\$defineProperty}},\ Object.defineProperty);}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (Object.defineProperty)\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(\mbox{\hyperlink{call-bind_2index_8js_aa1c8e87c148849ff42d712942c5a503a}{\$defineProperty}},\ \textcolor{keyword}{false},\ \textcolor{stringliteral}{'this\ is\ IE\ 8'});}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(\mbox{\hyperlink{call-bind_2index_8js_aa1c8e87c148849ff42d712942c5a503a}{\$defineProperty}},\ \textcolor{keyword}{false},\ \textcolor{stringliteral}{'this\ is\ an\ ES3\ engine'});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2es-define-property_2_r_e_a_d_m_e_autotoc_md490}{}\doxysection{\texorpdfstring{Tests}{Tests}}\label{md_node__modules_2es-define-property_2_r_e_a_d_m_e_autotoc_md490}
+Simply clone the repo, {\ttfamily npm install}, and run {\ttfamily npm test}\hypertarget{md_node__modules_2es-define-property_2_r_e_a_d_m_e_autotoc_md491}{}\doxysection{\texorpdfstring{Security}{Security}}\label{md_node__modules_2es-define-property_2_r_e_a_d_m_e_autotoc_md491}
+Please email \href{https://github.com/ljharb}{\texttt{ @ljharb}} or see \href{https://tidelift.com/security}{\texttt{ https\+://tidelift.\+com/security}} if you have a potential security vulnerability to report. 

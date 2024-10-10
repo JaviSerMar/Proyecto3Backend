@@ -1,0 +1,95 @@
+\doxysection{Referencia del archivo node\+\_\+modules/cookie-\/signature/index.js}
+\hypertarget{cookie-signature_2index_8js}{}\label{cookie-signature_2index_8js}\index{node\_modules/cookie-\/signature/index.js@{node\_modules/cookie-\/signature/index.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{cookie-signature_2index_8js_a16973f9a625111c122c03eeceaf8800c}{sha1}} (str)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \mbox{\hyperlink{cookie-signature_2index_8js_a3eca37c9aac9a17870baa116339724e3}{crypto}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}crypto\textquotesingle{})
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{cookie-signature_2index_8js_a2ae74b621986bd2d222135508d36cd2c}{sign}}
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{cookie-signature_2index_8js_aee17cec6e9bceed014212c9893094d11}{unsign}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{cookie-signature_2index_8js_a16973f9a625111c122c03eeceaf8800c}\index{index.js@{index.js}!sha1@{sha1}}
+\index{sha1@{sha1}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{sha1()}{sha1()}}
+{\footnotesize\ttfamily \label{cookie-signature_2index_8js_a16973f9a625111c122c03eeceaf8800c} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} sha1 (\begin{DoxyParamCaption}\item[{str}]{}{}\end{DoxyParamCaption})}
+
+Private 
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{cookie-signature_2index_8js_a3eca37c9aac9a17870baa116339724e3}\index{index.js@{index.js}!crypto@{crypto}}
+\index{crypto@{crypto}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{crypto}{crypto}}
+{\footnotesize\ttfamily \label{cookie-signature_2index_8js_a3eca37c9aac9a17870baa116339724e3} 
+var crypto = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}crypto\textquotesingle{})}
+
+Module dependencies. \Hypertarget{cookie-signature_2index_8js_a2ae74b621986bd2d222135508d36cd2c}\index{index.js@{index.js}!sign@{sign}}
+\index{sign@{sign}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{sign}{sign}}
+{\footnotesize\ttfamily \label{cookie-signature_2index_8js_a2ae74b621986bd2d222135508d36cd2c} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} sign}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(val,\ secret)\{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{'string'}\ !=\ typeof\ val)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ TypeError(\textcolor{stringliteral}{"{}Cookie\ value\ must\ be\ provided\ as\ a\ string."{}});}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{'string'}\ !=\ typeof\ secret)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ TypeError(\textcolor{stringliteral}{"{}Secret\ string\ must\ be\ provided."{}});}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ val\ +\ \textcolor{charliteral}{'.'}\ +\ \mbox{\hyperlink{cookie-signature_2index_8js_a3eca37c9aac9a17870baa116339724e3}{crypto}}}
+\DoxyCodeLine{\ \ \ \ .createHmac(\textcolor{stringliteral}{'sha256'},\ secret)}
+\DoxyCodeLine{\ \ \ \ .update(val)}
+\DoxyCodeLine{\ \ \ \ .digest(\textcolor{stringliteral}{'base64'})}
+\DoxyCodeLine{\ \ \ \ .replace(/\(\backslash\)=+\$/,\ \textcolor{stringliteral}{''});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Sign the given {\ttfamily val} with {\ttfamily secret}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & val \\
+\hline
+{\em \{\+String\}} & secret \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{String\} @api private 
+\end{DoxyReturn}
+\Hypertarget{cookie-signature_2index_8js_aee17cec6e9bceed014212c9893094d11}\index{index.js@{index.js}!unsign@{unsign}}
+\index{unsign@{unsign}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{unsign}{unsign}}
+{\footnotesize\ttfamily \label{cookie-signature_2index_8js_aee17cec6e9bceed014212c9893094d11} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} unsign}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(val,\ secret)\{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{'string'}\ !=\ typeof\ val)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ TypeError(\textcolor{stringliteral}{"{}Signed\ cookie\ string\ must\ be\ provided."{}});}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{'string'}\ !=\ typeof\ secret)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ TypeError(\textcolor{stringliteral}{"{}Secret\ string\ must\ be\ provided."{}});}
+\DoxyCodeLine{\ \ var\ str\ =\ val.slice(0,\ val.lastIndexOf(\textcolor{charliteral}{'.'}))}
+\DoxyCodeLine{\ \ \ \ ,\ mac\ =\ \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}.sign(str,\ secret);}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{cookie-signature_2index_8js_a16973f9a625111c122c03eeceaf8800c}{sha1}}(mac)\ ==\ \mbox{\hyperlink{cookie-signature_2index_8js_a16973f9a625111c122c03eeceaf8800c}{sha1}}(val)\ ?\ str\ :\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Unsign and decode the given {\ttfamily val} with {\ttfamily secret}, returning {\ttfamily false} if the signature is invalid.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & val \\
+\hline
+{\em \{\+String\}} & secret \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{String\texorpdfstring{$\vert$}{|}\+Boolean\} @api private 
+\end{DoxyReturn}

@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: Referencia del archivo node_modules/express/lib/application.js</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_acd06b18086a0dd2ae699b1e0b775be8.html">node_modules</a></li><li class="navelem"><a class="el" href="dir_50b5d50ebc732ec851288c97b42b3c42.html">express</a></li><li class="navelem"><a class="el" href="dir_a7b26f1e9e3dbcc51c0ab7c55e7546be.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo application.js</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a637027551c6fc7c4b6e13a5212082576" id="r_a637027551c6fc7c4b6e13a5212082576"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a04d30fa6e159a438c5fe8d248cb41845">methods</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a637027551c6fc7c4b6e13a5212082576">forEach</a> (<a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(method){ <a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>[method]=<a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(path){ <a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>(method==='<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">get</a>' &amp;&amp;arguments.length===1) { return <a class="el" href="#aea3662ebceec6f02ef3aec57683086a6">this.set</a>(path);} this.lazyrouter();var <a class="el" href="#af3f591f97717ca147d68bee8e75eb44d">route</a>=<a class="el" href="#af3f591f97717ca147d68bee8e75eb44d">this._router.route</a>(path);<a class="el" href="#af3f591f97717ca147d68bee8e75eb44d">route</a>[method].apply(<a class="el" href="#af3f591f97717ca147d68bee8e75eb44d">route</a>, <a class="el" href="hasown_2index_8js.html#af41b23e59e21fbbca9175e1dbd07b54e">slice.call</a>(arguments, 1));return this;};})</td></tr>
+<tr class="separator:a637027551c6fc7c4b6e13a5212082576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ae2475e10618961c050dcba04e8c42331" id="r_ae2475e10618961c050dcba04e8c42331"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a8192500ed5d08ae60d3778b54729bd51">use</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2475e10618961c050dcba04e8c42331">strict</a></td></tr>
+<tr class="separator:ae2475e10618961c050dcba04e8c42331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba65771981450b82508e4145d73f148" id="r_abba65771981450b82508e4145d73f148"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abba65771981450b82508e4145d73f148">Router</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./router')</td></tr>
+<tr class="separator:abba65771981450b82508e4145d73f148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04d30fa6e159a438c5fe8d248cb41845" id="r_a04d30fa6e159a438c5fe8d248cb41845"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04d30fa6e159a438c5fe8d248cb41845">methods</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('methods')</td></tr>
+<tr class="separator:a04d30fa6e159a438c5fe8d248cb41845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaff85ba61558a052f881cca6a226657" id="r_aaaff85ba61558a052f881cca6a226657"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaff85ba61558a052f881cca6a226657">middleware</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./middleware/<a class="el" href="src_2node_8js.html#a1dc0aa163de2e7161fbb52b60824b4c6">init</a>')</td></tr>
+<tr class="separator:aaaff85ba61558a052f881cca6a226657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3934419f0f9a2068c705a0013b77fab3" id="r_a3934419f0f9a2068c705a0013b77fab3"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3934419f0f9a2068c705a0013b77fab3">query</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./<a class="el" href="#aaaff85ba61558a052f881cca6a226657">middleware</a>/query')</td></tr>
+<tr class="separator:a3934419f0f9a2068c705a0013b77fab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a651046067579e48d7f0d03ce38dc7cf8" id="r_a651046067579e48d7f0d03ce38dc7cf8"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a651046067579e48d7f0d03ce38dc7cf8">debug</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('debug')('express:application')</td></tr>
+<tr class="separator:a651046067579e48d7f0d03ce38dc7cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aae9db38f1cc0bfe93e61181d3b9a50" id="r_a2aae9db38f1cc0bfe93e61181d3b9a50"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aae9db38f1cc0bfe93e61181d3b9a50">View</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./view')</td></tr>
+<tr class="separator:a2aae9db38f1cc0bfe93e61181d3b9a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55f22d498ca401fddca364855629d1d3" id="r_a55f22d498ca401fddca364855629d1d3"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55f22d498ca401fddca364855629d1d3">http</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('http')</td></tr>
+<tr class="separator:a55f22d498ca401fddca364855629d1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc15ca345237290114cd3c5c8714af3f" id="r_abc15ca345237290114cd3c5c8714af3f"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc15ca345237290114cd3c5c8714af3f">compileETag</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./<a class="el" href="lib_2parse_8js.html#a7b58b8887c6d26e09f79fbacfbda7f53">utils</a>').compileETag</td></tr>
+<tr class="separator:abc15ca345237290114cd3c5c8714af3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2370c27ff46124de02255f0c4590a4c" id="r_ae2370c27ff46124de02255f0c4590a4c"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2370c27ff46124de02255f0c4590a4c">compileQueryParser</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./<a class="el" href="lib_2parse_8js.html#a7b58b8887c6d26e09f79fbacfbda7f53">utils</a>').compileQueryParser</td></tr>
+<tr class="separator:ae2370c27ff46124de02255f0c4590a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34da2018555e2c0d480cc5d7bf9e6e44" id="r_a34da2018555e2c0d480cc5d7bf9e6e44"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34da2018555e2c0d480cc5d7bf9e6e44">compileTrust</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./<a class="el" href="lib_2parse_8js.html#a7b58b8887c6d26e09f79fbacfbda7f53">utils</a>').compileTrust</td></tr>
+<tr class="separator:a34da2018555e2c0d480cc5d7bf9e6e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfcd119b39526e732877a941ebeed620" id="r_acfcd119b39526e732877a941ebeed620"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfcd119b39526e732877a941ebeed620">deprecate</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('depd')('<a class="el" href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express</a>')</td></tr>
+<tr class="separator:acfcd119b39526e732877a941ebeed620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19188fd934b073f6bf88119434489ad4" id="r_a19188fd934b073f6bf88119434489ad4"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19188fd934b073f6bf88119434489ad4">flatten</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('<a class="el" href="array_parser_8js.html#aa26ea275a7c12c30df9334d66ece8a65">array</a>-flatten')</td></tr>
+<tr class="separator:a19188fd934b073f6bf88119434489ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fda54bf53a2d62c0f154400825c4b57" id="r_a3fda54bf53a2d62c0f154400825c4b57"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fda54bf53a2d62c0f154400825c4b57">merge</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('<a class="el" href="lib_2parse_8js.html#a7b58b8887c6d26e09f79fbacfbda7f53">utils</a>-merge')</td></tr>
+<tr class="separator:a3fda54bf53a2d62c0f154400825c4b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2001ea102ec496ebdabe15e68493427a" id="r_a2001ea102ec496ebdabe15e68493427a"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2001ea102ec496ebdabe15e68493427a">resolve</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('path').resolve</td></tr>
+<tr class="separator:a2001ea102ec496ebdabe15e68493427a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76cc157afb30404d8bee6cf35ebe8b2" id="r_aa76cc157afb30404d8bee6cf35ebe8b2"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa76cc157afb30404d8bee6cf35ebe8b2">setPrototypeOf</a></td></tr>
+<tr class="separator:aa76cc157afb30404d8bee6cf35ebe8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b225fcb720e4d5ed2bbf60e28a25e6d" id="r_a7b225fcb720e4d5ed2bbf60e28a25e6d"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> = <a class="el" href="bytes_2index_8js.html#aa4072ba4b6b56b0fb6f4801f17ab2b34">exports</a> = <a class="el" href="bytes_2index_8js.html#aa4072ba4b6b56b0fb6f4801f17ab2b34">module.exports</a> = {}</td></tr>
+<tr class="separator:a7b225fcb720e4d5ed2bbf60e28a25e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8192500ed5d08ae60d3778b54729bd51" id="r_a8192500ed5d08ae60d3778b54729bd51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8192500ed5d08ae60d3778b54729bd51">use</a></td></tr>
+<tr class="separator:a8192500ed5d08ae60d3778b54729bd51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f591f97717ca147d68bee8e75eb44d" id="r_af3f591f97717ca147d68bee8e75eb44d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3f591f97717ca147d68bee8e75eb44d">route</a></td></tr>
+<tr class="separator:af3f591f97717ca147d68bee8e75eb44d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017e4d01df641c6c9830c5471a94cda6" id="r_a017e4d01df641c6c9830c5471a94cda6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a017e4d01df641c6c9830c5471a94cda6">engine</a></td></tr>
+<tr class="separator:a017e4d01df641c6c9830c5471a94cda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde8b8550e5c046446eadb8a9715d706" id="r_adde8b8550e5c046446eadb8a9715d706"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adde8b8550e5c046446eadb8a9715d706">param</a></td></tr>
+<tr class="separator:adde8b8550e5c046446eadb8a9715d706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3662ebceec6f02ef3aec57683086a6" id="r_aea3662ebceec6f02ef3aec57683086a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea3662ebceec6f02ef3aec57683086a6">set</a></td></tr>
+<tr class="separator:aea3662ebceec6f02ef3aec57683086a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d07aaa71d58b4d359831c520ebc81b" id="r_a99d07aaa71d58b4d359831c520ebc81b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99d07aaa71d58b4d359831c520ebc81b">enabled</a></td></tr>
+<tr class="separator:a99d07aaa71d58b4d359831c520ebc81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c8c0f5dea0786f9f7750c076275f96c" id="r_a1c8c0f5dea0786f9f7750c076275f96c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c8c0f5dea0786f9f7750c076275f96c">disabled</a></td></tr>
+<tr class="separator:a1c8c0f5dea0786f9f7750c076275f96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e9c3f39836d503170e7d6ab05f5900" id="r_ad1e9c3f39836d503170e7d6ab05f5900"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1e9c3f39836d503170e7d6ab05f5900">enable</a></td></tr>
+<tr class="separator:ad1e9c3f39836d503170e7d6ab05f5900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d03b01f00ab5602e600d29f8780d4ee" id="r_a8d03b01f00ab5602e600d29f8780d4ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d03b01f00ab5602e600d29f8780d4ee">disable</a></td></tr>
+<tr class="separator:a8d03b01f00ab5602e600d29f8780d4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8f173cc9d0f47e38ae05e7bb965c99" id="r_adb8f173cc9d0f47e38ae05e7bb965c99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb8f173cc9d0f47e38ae05e7bb965c99">all</a></td></tr>
+<tr class="separator:adb8f173cc9d0f47e38ae05e7bb965c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f72c37919081ee0d853416d11f41f69" id="r_a8f72c37919081ee0d853416d11f41f69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f72c37919081ee0d853416d11f41f69">del</a> = <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">deprecate.function</a>(<a class="el" href="server_8js.html#af5592b322cf023a990308ac1e32c856d">app.delete</a>, 'app.del: Use <a class="el" href="server_8js.html#af5592b322cf023a990308ac1e32c856d">app.delete</a> instead')</td></tr>
+<tr class="separator:a8f72c37919081ee0d853416d11f41f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b10e770d40c6b603d01132ceb665e8" id="r_a33b10e770d40c6b603d01132ceb665e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33b10e770d40c6b603d01132ceb665e8">render</a></td></tr>
+<tr class="separator:a33b10e770d40c6b603d01132ceb665e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57e630eaf5f2d94b72288e1cef6edc49" id="r_a57e630eaf5f2d94b72288e1cef6edc49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57e630eaf5f2d94b72288e1cef6edc49">listen</a></td></tr>
+<tr class="separator:a57e630eaf5f2d94b72288e1cef6edc49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a637027551c6fc7c4b6e13a5212082576" name="a637027551c6fc7c4b6e13a5212082576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a637027551c6fc7c4b6e13a5212082576">&#9670;&#160;</a></span>forEach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a04d30fa6e159a438c5fe8d248cb41845">methods</a> forEach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(method){ <a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>[method]=<a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(path){ <a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>(method==='<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">get</a>' &amp;&amp;arguments.length===1) { return <a class="el" href="#aea3662ebceec6f02ef3aec57683086a6">this.set</a>(path);} this.lazyrouter();var <a class="el" href="#af3f591f97717ca147d68bee8e75eb44d">route</a>=<a class="el" href="#af3f591f97717ca147d68bee8e75eb44d">this._router.route</a>(path);<a class="el" href="#af3f591f97717ca147d68bee8e75eb44d">route</a>[method].apply(<a class="el" href="#af3f591f97717ca147d68bee8e75eb44d">route</a>, <a class="el" href="hasown_2index_8js.html#af41b23e59e21fbbca9175e1dbd07b54e">slice.call</a>(arguments, 1));return this;};}</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Delegate <code>.VERB(...)</code> calls to <code>router.VERB(...)</code>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="adb8f173cc9d0f47e38ae05e7bb965c99" name="adb8f173cc9d0f47e38ae05e7bb965c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8f173cc9d0f47e38ae05e7bb965c99">&#9670;&#160;</a></span>all</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> all</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="#adb8f173cc9d0f47e38ae05e7bb965c99">all</a>(path) {</div>
+<div class="line">  this.lazyrouter();</div>
+<div class="line"> </div>
+<div class="line">  var <a class="code hl_variable" href="#af3f591f97717ca147d68bee8e75eb44d">route</a> = this._router.route(path);</div>
+<div class="line">  var args = <a class="code hl_variable" href="express_2lib_2router_2index_8js.html#acab0c09ac73e7a3c85a21fa773e9b8b0">slice</a>.call(arguments, 1);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">for</span> (var i = 0; i &lt; <a class="code hl_variable" href="#a04d30fa6e159a438c5fe8d248cb41845">methods</a>.length; i++) {</div>
+<div class="line">    <a class="code hl_variable" href="#af3f591f97717ca147d68bee8e75eb44d">route</a>[<a class="code hl_variable" href="#a04d30fa6e159a438c5fe8d248cb41845">methods</a>[i]].apply(<a class="code hl_variable" href="#af3f591f97717ca147d68bee8e75eb44d">route</a>, args);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line">}</div>
+<div class="ttc" id="aapplication_8js_html_a04d30fa6e159a438c5fe8d248cb41845"><div class="ttname"><a href="#a04d30fa6e159a438c5fe8d248cb41845">methods</a></div><div class="ttdeci">var methods</div><div class="ttdef"><b>Definition</b> application.js:18</div></div>
+<div class="ttc" id="aapplication_8js_html_adb8f173cc9d0f47e38ae05e7bb965c99"><div class="ttname"><a href="#adb8f173cc9d0f47e38ae05e7bb965c99">all</a></div><div class="ttdeci">app all</div><div class="ttdef"><b>Definition</b> application.js:514</div></div>
+<div class="ttc" id="aapplication_8js_html_af3f591f97717ca147d68bee8e75eb44d"><div class="ttname"><a href="#af3f591f97717ca147d68bee8e75eb44d">route</a></div><div class="ttdeci">app route</div><div class="ttdef"><b>Definition</b> application.js:261</div></div>
+<div class="ttc" id="acors_2lib_2index_8js_html_ac2ffb26d6f42d3bbcd7847b0873403f4"><div class="ttname"><a href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a></div><div class="ttdeci">function()</div><div class="ttdef"><b>Definition</b> index.js:1</div></div>
+<div class="ttc" id="aexpress_2lib_2router_2index_8js_html_acab0c09ac73e7a3c85a21fa773e9b8b0"><div class="ttname"><a href="express_2lib_2router_2index_8js.html#acab0c09ac73e7a3c85a21fa773e9b8b0">slice</a></div><div class="ttdeci">var slice</div><div class="ttdef"><b>Definition</b> index.js:32</div></div>
+</div><!-- fragment --><p>Special-cased "all" method, applying the given route <code>path</code>, middleware, and callback to <em>every</em> HTTP method.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String}</td><td>path </td></tr>
+    <tr><td class="paramname">{Function}</td><td>... </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{app} for chaining </dd></dl>
+
+</div>
+</div>
+<a id="a7b225fcb720e4d5ed2bbf60e28a25e6d" name="a7b225fcb720e4d5ed2bbf60e28a25e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">&#9670;&#160;</a></span>app</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var app = <a class="el" href="bytes_2index_8js.html#aa4072ba4b6b56b0fb6f4801f17ab2b34">exports</a> = <a class="el" href="bytes_2index_8js.html#aa4072ba4b6b56b0fb6f4801f17ab2b34">module.exports</a> = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Application prototype. </p>
+
+</div>
+</div>
+<a id="abc15ca345237290114cd3c5c8714af3f" name="abc15ca345237290114cd3c5c8714af3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc15ca345237290114cd3c5c8714af3f">&#9670;&#160;</a></span>compileETag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var compileETag = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./<a class="el" href="lib_2parse_8js.html#a7b58b8887c6d26e09f79fbacfbda7f53">utils</a>').compileETag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2370c27ff46124de02255f0c4590a4c" name="ae2370c27ff46124de02255f0c4590a4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2370c27ff46124de02255f0c4590a4c">&#9670;&#160;</a></span>compileQueryParser</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var compileQueryParser = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./<a class="el" href="lib_2parse_8js.html#a7b58b8887c6d26e09f79fbacfbda7f53">utils</a>').compileQueryParser</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34da2018555e2c0d480cc5d7bf9e6e44" name="a34da2018555e2c0d480cc5d7bf9e6e44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34da2018555e2c0d480cc5d7bf9e6e44">&#9670;&#160;</a></span>compileTrust</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var compileTrust = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./<a class="el" href="lib_2parse_8js.html#a7b58b8887c6d26e09f79fbacfbda7f53">utils</a>').compileTrust</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a651046067579e48d7f0d03ce38dc7cf8" name="a651046067579e48d7f0d03ce38dc7cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a651046067579e48d7f0d03ce38dc7cf8">&#9670;&#160;</a></span>debug</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var debug = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('debug')('express:application')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f72c37919081ee0d853416d11f41f69" name="a8f72c37919081ee0d853416d11f41f69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f72c37919081ee0d853416d11f41f69">&#9670;&#160;</a></span>del</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> del = <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">deprecate.function</a>(<a class="el" href="server_8js.html#af5592b322cf023a990308ac1e32c856d">app.delete</a>, 'app.del: Use <a class="el" href="server_8js.html#af5592b322cf023a990308ac1e32c856d">app.delete</a> instead')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfcd119b39526e732877a941ebeed620" name="acfcd119b39526e732877a941ebeed620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfcd119b39526e732877a941ebeed620">&#9670;&#160;</a></span>deprecate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var deprecate = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('depd')('<a class="el" href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express</a>')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d03b01f00ab5602e600d29f8780d4ee" name="a8d03b01f00ab5602e600d29f8780d4ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d03b01f00ab5602e600d29f8780d4ee">&#9670;&#160;</a></span>disable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> disable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="#a8d03b01f00ab5602e600d29f8780d4ee">disable</a>(setting) {</div>
+<div class="line">  <span class="keywordflow">return</span> this.<a class="code hl_variable" href="#aea3662ebceec6f02ef3aec57683086a6">set</a>(setting, <span class="keyword">false</span>);</div>
+<div class="line">}</div>
+<div class="ttc" id="aapplication_8js_html_a8d03b01f00ab5602e600d29f8780d4ee"><div class="ttname"><a href="#a8d03b01f00ab5602e600d29f8780d4ee">disable</a></div><div class="ttdeci">app disable</div><div class="ttdef"><b>Definition</b> application.js:481</div></div>
+<div class="ttc" id="aapplication_8js_html_aea3662ebceec6f02ef3aec57683086a6"><div class="ttname"><a href="#aea3662ebceec6f02ef3aec57683086a6">set</a></div><div class="ttdeci">app set</div><div class="ttdef"><b>Definition</b> application.js:359</div></div>
+</div><!-- fragment --><p>Disable <code>setting</code>.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String}</td><td>setting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{app} for chaining </dd></dl>
+
+</div>
+</div>
+<a id="a1c8c0f5dea0786f9f7750c076275f96c" name="a1c8c0f5dea0786f9f7750c076275f96c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c8c0f5dea0786f9f7750c076275f96c">&#9670;&#160;</a></span>disabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> disabled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="#a1c8c0f5dea0786f9f7750c076275f96c">disabled</a>(setting) {</div>
+<div class="line">  <span class="keywordflow">return</span> !this.<a class="code hl_variable" href="#aea3662ebceec6f02ef3aec57683086a6">set</a>(setting);</div>
+<div class="line">}</div>
+<div class="ttc" id="aapplication_8js_html_a1c8c0f5dea0786f9f7750c076275f96c"><div class="ttname"><a href="#a1c8c0f5dea0786f9f7750c076275f96c">disabled</a></div><div class="ttdeci">app disabled</div><div class="ttdef"><b>Definition</b> application.js:457</div></div>
+</div><!-- fragment --><p>Check if <code>setting</code> is disabled.</p>
+<p>app.disabled('foo') // =&gt; true</p>
+<p>app.enable('foo') app.disabled('foo') // =&gt; false</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String}</td><td>setting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{Boolean} </dd></dl>
+
+</div>
+</div>
+<a id="ad1e9c3f39836d503170e7d6ab05f5900" name="ad1e9c3f39836d503170e7d6ab05f5900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e9c3f39836d503170e7d6ab05f5900">&#9670;&#160;</a></span>enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> enable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="#ad1e9c3f39836d503170e7d6ab05f5900">enable</a>(setting) {</div>
+<div class="line">  <span class="keywordflow">return</span> this.<a class="code hl_variable" href="#aea3662ebceec6f02ef3aec57683086a6">set</a>(setting, <span class="keyword">true</span>);</div>
+<div class="line">}</div>
+<div class="ttc" id="aapplication_8js_html_ad1e9c3f39836d503170e7d6ab05f5900"><div class="ttname"><a href="#ad1e9c3f39836d503170e7d6ab05f5900">enable</a></div><div class="ttdeci">app enable</div><div class="ttdef"><b>Definition</b> application.js:469</div></div>
+</div><!-- fragment --><p>Enable <code>setting</code>.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String}</td><td>setting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{app} for chaining </dd></dl>
+
+</div>
+</div>
+<a id="a99d07aaa71d58b4d359831c520ebc81b" name="a99d07aaa71d58b4d359831c520ebc81b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99d07aaa71d58b4d359831c520ebc81b">&#9670;&#160;</a></span>enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> enabled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="#a99d07aaa71d58b4d359831c520ebc81b">enabled</a>(setting) {</div>
+<div class="line">  <span class="keywordflow">return</span> Boolean(this.<a class="code hl_variable" href="#aea3662ebceec6f02ef3aec57683086a6">set</a>(setting));</div>
+<div class="line">}</div>
+<div class="ttc" id="aapplication_8js_html_a99d07aaa71d58b4d359831c520ebc81b"><div class="ttname"><a href="#a99d07aaa71d58b4d359831c520ebc81b">enabled</a></div><div class="ttdeci">app enabled</div><div class="ttdef"><b>Definition</b> application.js:438</div></div>
+</div><!-- fragment --><p>Check if <code>setting</code> is enabled (truthy).</p>
+<p>app.enabled('foo') // =&gt; false</p>
+<p>app.enable('foo') app.enabled('foo') // =&gt; true</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String}</td><td>setting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{Boolean} </dd></dl>
+
+</div>
+</div>
+<a id="a017e4d01df641c6c9830c5471a94cda6" name="a017e4d01df641c6c9830c5471a94cda6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017e4d01df641c6c9830c5471a94cda6">&#9670;&#160;</a></span>engine</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> engine</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="#a017e4d01df641c6c9830c5471a94cda6">engine</a>(ext, fn) {</div>
+<div class="line">  <span class="keywordflow">if</span> (typeof fn !== <span class="stringliteral">&#39;function&#39;</span>) {</div>
+<div class="line">    <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_error.html">Error</a>(<span class="stringliteral">&#39;callback function required&#39;</span>);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  </div>
+<div class="line">  var <a class="code hl_variable" href="mime_8js.html#a0442fbc62163718c2d1b972be791c68b">extension</a> = ext[0] !== <span class="charliteral">&#39;.&#39;</span></div>
+<div class="line">    ? <span class="charliteral">&#39;.&#39;</span> + ext</div>
+<div class="line">    : ext;</div>
+<div class="line"> </div>
+<div class="line">  </div>
+<div class="line">  this.engines[<a class="code hl_variable" href="mime_8js.html#a0442fbc62163718c2d1b972be791c68b">extension</a>] = fn;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line">}</div>
+<div class="ttc" id="aapplication_8js_html_a017e4d01df641c6c9830c5471a94cda6"><div class="ttname"><a href="#a017e4d01df641c6c9830c5471a94cda6">engine</a></div><div class="ttdeci">app engine</div><div class="ttdef"><b>Definition</b> application.js:300</div></div>
+<div class="ttc" id="aclass_error_html"><div class="ttname"><a href="class_error.html">Error</a></div><div class="ttdef"><b>Definition</b> messages.js:36</div></div>
+<div class="ttc" id="amime_8js_html_a0442fbc62163718c2d1b972be791c68b"><div class="ttname"><a href="mime_8js.html#a0442fbc62163718c2d1b972be791c68b">extension</a></div><div class="ttdeci">Mime prototype extension</div><div class="ttdef"><b>Definition</b> mime.js:78</div></div>
+</div><!-- fragment --><p>Register the given template engine callback <code>fn</code> as <code>ext</code>.</p>
+<p>By default will <code><a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require()</a></code> the engine based on the file extension. For example if you try to render a "foo.ejs" file Express will invoke the following internally: </p><pre class="fragment">app.engine('ejs', require('ejs').__express);
+</pre><p>For engines that do not provide <code>.__express</code> out of the box, or if you wish to "map" a different extension to the template engine you may use this method. For example mapping the EJS template engine to ".html" files: </p><pre class="fragment">app.engine('html', require('ejs').renderFile);
+</pre><p>In this case EJS provides a <code>.renderFile()</code> method with the same signature that Express expects: <code>(path, options, callback)</code>, though note that it aliases this method as <code>ejs.__express</code> internally so if you're using ".ejs" extensions you don't need to do anything.</p>
+<p>Some template engines do not follow this convention, the <a href="https://github.com/tj/consolidate.js">Consolidate.js</a> library was created to map all of node's popular template engines to follow this convention, thus allowing them to work seamlessly within Express.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String}</td><td>ext </td></tr>
+    <tr><td class="paramname">{Function}</td><td>fn </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{app} for chaining </dd></dl>
+
+</div>
+</div>
+<a id="a19188fd934b073f6bf88119434489ad4" name="a19188fd934b073f6bf88119434489ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19188fd934b073f6bf88119434489ad4">&#9670;&#160;</a></span>flatten</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bytes_2index_8js.html#aa4072ba4b6b56b0fb6f4801f17ab2b34">exports</a> flatten = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('<a class="el" href="array_parser_8js.html#aa26ea275a7c12c30df9334d66ece8a65">array</a>-flatten')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flatten the given <code>arr</code>.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{Array}</td><td>arr </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{Array} @api private </dd></dl>
+
+</div>
+</div>
+<a id="a55f22d498ca401fddca364855629d1d3" name="a55f22d498ca401fddca364855629d1d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55f22d498ca401fddca364855629d1d3">&#9670;&#160;</a></span>http</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var http = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('http')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57e630eaf5f2d94b72288e1cef6edc49" name="a57e630eaf5f2d94b72288e1cef6edc49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57e630eaf5f2d94b72288e1cef6edc49">&#9670;&#160;</a></span>listen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> listen</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="#a57e630eaf5f2d94b72288e1cef6edc49">listen</a>() {</div>
+<div class="line">  var server = <a class="code hl_variable" href="#a55f22d498ca401fddca364855629d1d3">http</a>.createServer(<span class="keyword">this</span>);</div>
+<div class="line">  <span class="keywordflow">return</span> server.listen.apply(server, arguments);</div>
+<div class="line">}</div>
+<div class="ttc" id="aapplication_8js_html_a55f22d498ca401fddca364855629d1d3"><div class="ttname"><a href="#a55f22d498ca401fddca364855629d1d3">http</a></div><div class="ttdeci">var http</div><div class="ttdef"><b>Definition</b> application.js:23</div></div>
+<div class="ttc" id="aapplication_8js_html_a57e630eaf5f2d94b72288e1cef6edc49"><div class="ttname"><a href="#a57e630eaf5f2d94b72288e1cef6edc49">listen</a></div><div class="ttdeci">app listen</div><div class="ttdef"><b>Definition</b> application.js:633</div></div>
+</div><!-- fragment --><p>Listen for connections.</p>
+<p>A node <code>http.Server</code> is returned, with this application (which is a <code>Function</code>) as its callback. If you wish to create both an HTTP and HTTPS server you may do so with the "http" and "https" modules as shown here:</p>
+<p>var http = require('http') , https = require('https') , express = require('express') , app = <a class="el" href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express()</a>;</p>
+<p>http.createServer(app).<a class="el" href="#a57e630eaf5f2d94b72288e1cef6edc49">listen(80)</a>; https.createServer({ ... }, app).<a class="el" href="#a57e630eaf5f2d94b72288e1cef6edc49">listen(443)</a>;</p>
+<dl class="section return"><dt>Devuelve</dt><dd>{http.Server} </dd></dl>
+
+</div>
+</div>
+<a id="a3fda54bf53a2d62c0f154400825c4b57" name="a3fda54bf53a2d62c0f154400825c4b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fda54bf53a2d62c0f154400825c4b57">&#9670;&#160;</a></span>merge</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var merge = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('<a class="el" href="lib_2parse_8js.html#a7b58b8887c6d26e09f79fbacfbda7f53">utils</a>-merge')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04d30fa6e159a438c5fe8d248cb41845" name="a04d30fa6e159a438c5fe8d248cb41845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04d30fa6e159a438c5fe8d248cb41845">&#9670;&#160;</a></span>methods</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var methods = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('methods')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaaff85ba61558a052f881cca6a226657" name="aaaff85ba61558a052f881cca6a226657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaff85ba61558a052f881cca6a226657">&#9670;&#160;</a></span>middleware</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var middleware = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./middleware/<a class="el" href="src_2node_8js.html#a1dc0aa163de2e7161fbb52b60824b4c6">init</a>')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adde8b8550e5c046446eadb8a9715d706" name="adde8b8550e5c046446eadb8a9715d706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde8b8550e5c046446eadb8a9715d706">&#9670;&#160;</a></span>param</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> param</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="#adde8b8550e5c046446eadb8a9715d706">param</a>(<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>, fn) {</div>
+<div class="line">  this.lazyrouter();</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (Array.isArray(<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>)) {</div>
+<div class="line">    <span class="keywordflow">for</span> (var i = 0; i &lt; <a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>.length; i++) {</div>
+<div class="line">      this.<a class="code hl_variable" href="#adde8b8550e5c046446eadb8a9715d706">param</a>(<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>[i], fn);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  this._router.param(<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>, fn);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line">}</div>
+<div class="ttc" id="aapplication_8js_html_adde8b8550e5c046446eadb8a9715d706"><div class="ttname"><a href="#adde8b8550e5c046446eadb8a9715d706">param</a></div><div class="ttdeci">app param</div><div class="ttdef"><b>Definition</b> application.js:328</div></div>
+<div class="ttc" id="ainbound-parser_8test_8js_html_a82922bbd162af030b5deaeafbf18ef0e"><div class="ttname"><a href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a></div><div class="ttdeci">row1 name</div><div class="ttdef"><b>Definition</b> inbound-parser.test.js:48</div></div>
+</div><!-- fragment --><p>Proxy to <code>Router#<a class="el" href="#adde8b8550e5c046446eadb8a9715d706">param()</a></code> with one added api feature. The <em>name</em> parameter can be an array of names.</p>
+<p>See the Router#param() docs for more details.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String|Array}</td><td>name </td></tr>
+    <tr><td class="paramname">{Function}</td><td>fn </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{app} for chaining </dd></dl>
+
+</div>
+</div>
+<a id="a3934419f0f9a2068c705a0013b77fab3" name="a3934419f0f9a2068c705a0013b77fab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3934419f0f9a2068c705a0013b77fab3">&#9670;&#160;</a></span>query</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var query = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./<a class="el" href="#aaaff85ba61558a052f881cca6a226657">middleware</a>/query')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33b10e770d40c6b603d01132ceb665e8" name="a33b10e770d40c6b603d01132ceb665e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b10e770d40c6b603d01132ceb665e8">&#9670;&#160;</a></span>render</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> render</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Render the given view <code>name</code> name with <code>options</code> and a callback accepting an error and the rendered template string.</p>
+<p>Example:</p>
+<p>app.render('email', { name: 'Tobi' }, function(err, html){ // ... })</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String}</td><td>name </td></tr>
+    <tr><td class="paramname">{Object|Function}</td><td>options or fn </td></tr>
+    <tr><td class="paramname">{Function}</td><td>callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2001ea102ec496ebdabe15e68493427a" name="a2001ea102ec496ebdabe15e68493427a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2001ea102ec496ebdabe15e68493427a">&#9670;&#160;</a></span>resolve</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a2aae9db38f1cc0bfe93e61181d3b9a50">View</a> <a class="el" href="internal_8js.html#a22c3fb2b14bdd9d6de4c61f2778f4444">prototype</a> resolve = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('path').resolve</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Resolve the file within the given directory.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{string}</td><td>dir </td></tr>
+    <tr><td class="paramname">{string}</td><td>file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af3f591f97717ca147d68bee8e75eb44d" name="af3f591f97717ca147d68bee8e75eb44d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3f591f97717ca147d68bee8e75eb44d">&#9670;&#160;</a></span>route</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> route</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="#af3f591f97717ca147d68bee8e75eb44d">route</a>(path) {</div>
+<div class="line">  this.lazyrouter();</div>
+<div class="line">  <span class="keywordflow">return</span> this._router.route(path);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Proxy to the app <code>Router#<a class="el" href="#af3f591f97717ca147d68bee8e75eb44d">route()</a></code> Returns a new <code>Route</code> instance for the <em>path</em>.</p>
+<p>Routes are isolated middleware stacks for specific paths. See the Route api docs for details. </p>
+
+</div>
+</div>
+<a id="abba65771981450b82508e4145d73f148" name="abba65771981450b82508e4145d73f148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba65771981450b82508e4145d73f148">&#9670;&#160;</a></span>Router</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bytes_2index_8js.html#aa4072ba4b6b56b0fb6f4801f17ab2b34">exports</a> Router = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./router')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea3662ebceec6f02ef3aec57683086a6" name="aea3662ebceec6f02ef3aec57683086a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea3662ebceec6f02ef3aec57683086a6">&#9670;&#160;</a></span>set</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> set</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Assign <code>setting</code> to <code>val</code>, or return <code>setting</code>'s value.</p>
+<p>app.set('foo', 'bar'); app.set('foo'); // =&gt; "bar"</p>
+<p>Mounted servers inherit their parent server's settings.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String}</td><td>setting </td></tr>
+    <tr><td class="paramname">{*}</td><td>[val] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{Server} for chaining </dd></dl>
+
+</div>
+</div>
+<a id="aa76cc157afb30404d8bee6cf35ebe8b2" name="aa76cc157afb30404d8bee6cf35ebe8b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76cc157afb30404d8bee6cf35ebe8b2">&#9670;&#160;</a></span>setPrototypeOf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var setPrototypeOf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;setprototypeof&#39;</span>)</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">var hasOwnProperty = Object.<a class="code hl_variable" href="internal_8js.html#a22c3fb2b14bdd9d6de4c61f2778f4444">prototype</a>.hasOwnProperty</div>
+<div class="line">var <a class="code hl_variable" href="express_2lib_2router_2index_8js.html#acab0c09ac73e7a3c85a21fa773e9b8b0">slice</a> = Array.<a class="code hl_variable" href="internal_8js.html#a22c3fb2b14bdd9d6de4c61f2778f4444">prototype</a>.<a class="code hl_variable" href="express_2lib_2router_2index_8js.html#acab0c09ac73e7a3c85a21fa773e9b8b0">slice</a></div>
+<div class="ttc" id="ainternal_8js_html_a22c3fb2b14bdd9d6de4c61f2778f4444"><div class="ttname"><a href="internal_8js.html#a22c3fb2b14bdd9d6de4c61f2778f4444">prototype</a></div><div class="ttdeci">InternalDecoder prototype</div><div class="ttdef"><b>Definition</b> internal.js:59</div></div>
+<div class="ttc" id="atest-core-js_8js_html_a2fc998a372f1531668f7047d0878effe"><div class="ttname"><a href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a></div><div class="ttdeci">require('core-js')</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae2475e10618961c050dcba04e8c42331" name="ae2475e10618961c050dcba04e8c42331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2475e10618961c050dcba04e8c42331">&#9670;&#160;</a></span>strict</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a8192500ed5d08ae60d3778b54729bd51">use</a> strict</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>express Copyright(c) 2009-2013 TJ Holowaychuk Copyright(c) 2013 Roman Shtylman Copyright(c) 2014-2015 Douglas Christopher Wilson MIT Licensed </p>
+
+</div>
+</div>
+<a id="a8192500ed5d08ae60d3778b54729bd51" name="a8192500ed5d08ae60d3778b54729bd51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8192500ed5d08ae60d3778b54729bd51">&#9670;&#160;</a></span>use</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> use</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Proxy <code>Router#<a class="el" href="#a8192500ed5d08ae60d3778b54729bd51">use()</a></code> to add middleware to the app router. See Router#use() documentation for details.</p>
+<p>If the <em>fn</em> parameter is an express app, then it will be mounted at the <em>route</em> specified. </p>
+
+</div>
+</div>
+<a id="a2aae9db38f1cc0bfe93e61181d3b9a50" name="a2aae9db38f1cc0bfe93e61181d3b9a50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aae9db38f1cc0bfe93e61181d3b9a50">&#9670;&#160;</a></span>View</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var View = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('./view')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

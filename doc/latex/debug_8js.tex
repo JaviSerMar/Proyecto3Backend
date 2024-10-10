@@ -1,0 +1,185 @@
+\doxysection{Referencia del archivo node\+\_\+modules/debug/src/debug.js}
+\hypertarget{debug_8js}{}\label{debug_8js}\index{node\_modules/debug/src/debug.js@{node\_modules/debug/src/debug.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{debug_8js_a7058c83f9e4c8b8b407ca9f00ec3096e}{select\+Color}} (namespace)
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{debug_8js_a09a3f614b4bd6474a64bf881359575f8}{create\+Debug}} (namespace)
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{debug_8js_a9b7ed4d7e67e0772ee9697d9f105944e}{enable}} (namespaces)
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{debug_8js_a5a484ba2cfd1538ac56a9304c5ce0fd9}{enabled}} (\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}})
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{debug_8js_a6c43fc5b45cc4f5e67977a39b59ae397}{coerce}} (val)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{debug_8js_af2836014938e5fb6078778620cb19081}{exports}} = module.\+exports = \mbox{\hyperlink{application_8js_a651046067579e48d7f0d03ce38dc7cf8}{create\+Debug.\+debug}} = \mbox{\hyperlink{debug_8js_a09a3f614b4bd6474a64bf881359575f8}{create\+Debug}}\mbox{[}\textquotesingle{}default\textquotesingle{}\mbox{]} = \mbox{\hyperlink{debug_8js_a09a3f614b4bd6474a64bf881359575f8}{create\+Debug}}
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{debug_8js_ae57dc0e21e8bb28ce03b07bc03ed923b}{coerce}} = coerce
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{debug_8js_afad5dca3febcf4ca25f739f84328d7be}{disable}} = disable
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{debug_8js_a3a5f3655b9e533bdb490d507ac2012f4}{enable}} = enable
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{debug_8js_af2904d770a67b3b7593a990075e6541a}{enabled}} = enabled
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{debug_8js_ad113e130ea9a28588551cf3b222c445b}{humanize}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}ms\textquotesingle{})
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{debug_8js_a00f940aec5ddd2e4e7a8ff4ac69a1430}{names}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{debug_8js_a8578c8199799bc9fda15156a1a91cc2f}{skips}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{debug_8js_a8b728f13fab33c62e04926e9947a6545}{formatters}} = \{\}
+\item 
+var \mbox{\hyperlink{debug_8js_a0c5bb2d027630af758124bf15ef72305}{prev\+Time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{debug_8js_a6c43fc5b45cc4f5e67977a39b59ae397}\index{debug.js@{debug.js}!coerce@{coerce}}
+\index{coerce@{coerce}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{coerce()}{coerce()}}
+{\footnotesize\ttfamily \label{debug_8js_a6c43fc5b45cc4f5e67977a39b59ae397} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} coerce (\begin{DoxyParamCaption}\item[{val}]{}{}\end{DoxyParamCaption})}
+
+Coerce {\ttfamily val}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+Mixed\}} & val \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{Mixed\} @api private 
+\end{DoxyReturn}
+\Hypertarget{debug_8js_a09a3f614b4bd6474a64bf881359575f8}\index{debug.js@{debug.js}!createDebug@{createDebug}}
+\index{createDebug@{createDebug}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{createDebug()}{createDebug()}}
+{\footnotesize\ttfamily \label{debug_8js_a09a3f614b4bd6474a64bf881359575f8} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} create\+Debug (\begin{DoxyParamCaption}\item[{namespace}]{}{}\end{DoxyParamCaption})}
+
+Create a debugger with the given {\ttfamily namespace}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & namespace \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{Function\} @api public 
+\end{DoxyReturn}
+\Hypertarget{debug_8js_a9b7ed4d7e67e0772ee9697d9f105944e}\index{debug.js@{debug.js}!enable@{enable}}
+\index{enable@{enable}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily \label{debug_8js_a9b7ed4d7e67e0772ee9697d9f105944e} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} enable (\begin{DoxyParamCaption}\item[{namespaces}]{}{}\end{DoxyParamCaption})}
+
+Enables a debug mode by namespaces. This can include modes separated by a colon and wildcards.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & namespaces @api public \\
+\hline
+\end{DoxyParams}
+\Hypertarget{debug_8js_a5a484ba2cfd1538ac56a9304c5ce0fd9}\index{debug.js@{debug.js}!enabled@{enabled}}
+\index{enabled@{enabled}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{enabled()}{enabled()}}
+{\footnotesize\ttfamily \label{debug_8js_a5a484ba2cfd1538ac56a9304c5ce0fd9} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} enabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}}]{}{}\end{DoxyParamCaption})}
+
+Returns true if the given mode name is enabled, false otherwise.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{Boolean\} @api public 
+\end{DoxyReturn}
+\Hypertarget{debug_8js_a7058c83f9e4c8b8b407ca9f00ec3096e}\index{debug.js@{debug.js}!selectColor@{selectColor}}
+\index{selectColor@{selectColor}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{selectColor()}{selectColor()}}
+{\footnotesize\ttfamily \label{debug_8js_a7058c83f9e4c8b8b407ca9f00ec3096e} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} select\+Color (\begin{DoxyParamCaption}\item[{namespace}]{}{}\end{DoxyParamCaption})}
+
+Select a color. 
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & namespace \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{Number\} @api private 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{debug_8js_ae57dc0e21e8bb28ce03b07bc03ed923b}\index{debug.js@{debug.js}!coerce@{coerce}}
+\index{coerce@{coerce}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{coerce}{coerce}}
+{\footnotesize\ttfamily \label{debug_8js_ae57dc0e21e8bb28ce03b07bc03ed923b} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} coerce = coerce}
+
+\Hypertarget{debug_8js_afad5dca3febcf4ca25f739f84328d7be}\index{debug.js@{debug.js}!disable@{disable}}
+\index{disable@{disable}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{disable}{disable}}
+{\footnotesize\ttfamily \label{debug_8js_afad5dca3febcf4ca25f739f84328d7be} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} disable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) = disable}
+
+Disable debug output.
+
+@api public \Hypertarget{debug_8js_a3a5f3655b9e533bdb490d507ac2012f4}\index{debug.js@{debug.js}!enable@{enable}}
+\index{enable@{enable}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{enable}{enable}}
+{\footnotesize\ttfamily \label{debug_8js_a3a5f3655b9e533bdb490d507ac2012f4} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} enable = enable}
+
+\Hypertarget{debug_8js_af2904d770a67b3b7593a990075e6541a}\index{debug.js@{debug.js}!enabled@{enabled}}
+\index{enabled@{enabled}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily \label{debug_8js_af2904d770a67b3b7593a990075e6541a} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} enabled = enabled}
+
+\Hypertarget{debug_8js_af2836014938e5fb6078778620cb19081}\index{debug.js@{debug.js}!exports@{exports}}
+\index{exports@{exports}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{exports}{exports}}
+{\footnotesize\ttfamily \label{debug_8js_af2836014938e5fb6078778620cb19081} 
+exports = module.\+exports = \mbox{\hyperlink{application_8js_a651046067579e48d7f0d03ce38dc7cf8}{create\+Debug.\+debug}} = \mbox{\hyperlink{debug_8js_a09a3f614b4bd6474a64bf881359575f8}{create\+Debug}}\mbox{[}\textquotesingle{}default\textquotesingle{}\mbox{]} = \mbox{\hyperlink{debug_8js_a09a3f614b4bd6474a64bf881359575f8}{create\+Debug}}}
+
+This is the common logic for both the Node.\+js and web browser implementations of {\ttfamily \doxylink{application_8js_a651046067579e48d7f0d03ce38dc7cf8}{debug()}}.
+
+Expose {\ttfamily \doxylink{application_8js_a651046067579e48d7f0d03ce38dc7cf8}{debug()}} as the module. \Hypertarget{debug_8js_a8b728f13fab33c62e04926e9947a6545}\index{debug.js@{debug.js}!formatters@{formatters}}
+\index{formatters@{formatters}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{formatters}{formatters}}
+{\footnotesize\ttfamily \label{debug_8js_a8b728f13fab33c62e04926e9947a6545} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} formatters = \{\}}
+
+Map of special "{}\%n"{} handling functions, for the debug "{}format"{} argument.
+
+Valid key names are a single, lower or upper-\/case letter, i.\+e. "{}n"{} and "{}\+N"{}. \Hypertarget{debug_8js_ad113e130ea9a28588551cf3b222c445b}\index{debug.js@{debug.js}!humanize@{humanize}}
+\index{humanize@{humanize}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{humanize}{humanize}}
+{\footnotesize\ttfamily \label{debug_8js_ad113e130ea9a28588551cf3b222c445b} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} humanize = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}ms\textquotesingle{})}
+
+\Hypertarget{debug_8js_a00f940aec5ddd2e4e7a8ff4ac69a1430}\index{debug.js@{debug.js}!names@{names}}
+\index{names@{names}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{names}{names}}
+{\footnotesize\ttfamily \label{debug_8js_a00f940aec5ddd2e4e7a8ff4ac69a1430} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} names = \mbox{[}$\,$\mbox{]}}
+
+The currently active debug mode names, and names to skip. \Hypertarget{debug_8js_a0c5bb2d027630af758124bf15ef72305}\index{debug.js@{debug.js}!prevTime@{prevTime}}
+\index{prevTime@{prevTime}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{prevTime}{prevTime}}
+{\footnotesize\ttfamily \label{debug_8js_a0c5bb2d027630af758124bf15ef72305} 
+var prev\+Time}
+
+Previous log timestamp. \Hypertarget{debug_8js_a8578c8199799bc9fda15156a1a91cc2f}\index{debug.js@{debug.js}!skips@{skips}}
+\index{skips@{skips}!debug.js@{debug.js}}
+\doxysubsubsection{\texorpdfstring{skips}{skips}}
+{\footnotesize\ttfamily \label{debug_8js_a8578c8199799bc9fda15156a1a91cc2f} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} skips = \mbox{[}$\,$\mbox{]}}
+

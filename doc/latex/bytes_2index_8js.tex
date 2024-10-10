@@ -1,0 +1,155 @@
+\doxysection{Referencia del archivo node\+\_\+modules/bytes/index.js}
+\hypertarget{bytes_2index_8js}{}\label{bytes_2index_8js}\index{node\_modules/bytes/index.js@{node\_modules/bytes/index.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{bytes_2index_8js_adeb1431b84efe09355bbd01e42326838}{bytes}} (\mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}, options)
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{bytes_2index_8js_abe609f6530a12306839787778f9f0a09}{format}} (\mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}, options)
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{bytes_2index_8js_a4b0c2185d35bf0049a385542da99334a}{parse}} (val)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{bytes_2index_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} = \mbox{\hyperlink{bytes_2index_8js_adeb1431b84efe09355bbd01e42326838}{bytes}}
+\item 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{bytes_2index_8js_a9027c5af360d5ef99cc9906449e85a27}{format}} = format
+\item 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{bytes_2index_8js_a28ecd76297a5d556aac05441b295f93c}{parse}} = parse
+\item 
+var \mbox{\hyperlink{bytes_2index_8js_a3787d1b6ea0a8a3830ef5b20dde86faf}{format\+Decimals\+Reg\+Exp}} = /(?\+:\textbackslash{}.\+0\texorpdfstring{$\ast$}{*}\texorpdfstring{$\vert$}{|}(\textbackslash{}.\mbox{[}\texorpdfstring{$^\wedge$}{\string^}0\mbox{]}+)0+)\$/
+\item 
+var \mbox{\hyperlink{bytes_2index_8js_a48e18769649a3ca5bab0fafdec44cb15}{map}}
+\item 
+var \mbox{\hyperlink{bytes_2index_8js_a91a2aee55639e45d0e4a4484025b538a}{parse\+Reg\+Exp}} = /\texorpdfstring{$^\wedge$}{\string^}((-\/\texorpdfstring{$\vert$}{|}\textbackslash{}+)?(\textbackslash{}\mbox{\hyperlink{ms_2index_8js_aeb337d295abaddb5ec3cb34cc2e2bbc9}{d}}+(?\+:\textbackslash{}.\textbackslash{}\mbox{\hyperlink{ms_2index_8js_aeb337d295abaddb5ec3cb34cc2e2bbc9}{d}}+)?)) \texorpdfstring{$\ast$}{*}(kb\texorpdfstring{$\vert$}{|}mb\texorpdfstring{$\vert$}{|}gb\texorpdfstring{$\vert$}{|}tb\texorpdfstring{$\vert$}{|}pb)\$/i
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{bytes_2index_8js_adeb1431b84efe09355bbd01e42326838}\index{index.js@{index.js}!bytes@{bytes}}
+\index{bytes@{bytes}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{bytes()}{bytes()}}
+{\footnotesize\ttfamily \label{bytes_2index_8js_adeb1431b84efe09355bbd01e42326838} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} bytes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}}]{}{, }\item[{options}]{}{}\end{DoxyParamCaption})}
+
+Convert the given value in bytes into a string or parse to string to an integer in bytes.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{string\texorpdfstring{$\vert$}{|}number\}} & value \\
+\hline
+{\em \{\{} & case\+: \mbox{[}string\mbox{]}, decimal\+Places\+: \mbox{[}number\mbox{]} fixed\+Decimals\+: \mbox{[}boolean\mbox{]} thousands\+Separator\+: \mbox{[}string\mbox{]} unit\+Separator\+: \mbox{[}string\mbox{]} \}\} \mbox{[}options\mbox{]} bytes options.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{string\texorpdfstring{$\vert$}{|}number\texorpdfstring{$\vert$}{|}null\} 
+\end{DoxyReturn}
+\Hypertarget{bytes_2index_8js_abe609f6530a12306839787778f9f0a09}\index{index.js@{index.js}!format@{format}}
+\index{format@{format}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily \label{bytes_2index_8js_abe609f6530a12306839787778f9f0a09} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{get-intrinsic_2index_8js_aacce635d68067370c70caa2381ea1040}{value}}}]{}{, }\item[{options}]{}{}\end{DoxyParamCaption})}
+
+Format the given value in bytes into a string.
+
+If the value is negative, it is kept as such. If it is a float, it is rounded.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{number\}} & value \\
+\hline
+{\em \{object\}} & \mbox{[}options\mbox{]} \\
+\hline
+{\em \{number\}} & \mbox{[}options.\+decimal\+Places=2\mbox{]} \\
+\hline
+{\em \{number\}} & \mbox{[}options.\+fixed\+Decimals=false\mbox{]} \\
+\hline
+{\em \{string\}} & \mbox{[}options.\+thousands\+Separator=\mbox{]} \\
+\hline
+{\em \{string\}} & \mbox{[}options.\+unit=\mbox{]} \\
+\hline
+{\em \{string\}} & \mbox{[}options.\+unit\+Separator=\mbox{]}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{string\texorpdfstring{$\vert$}{|}null\} 
+\end{DoxyReturn}
+\Hypertarget{bytes_2index_8js_a4b0c2185d35bf0049a385542da99334a}\index{index.js@{index.js}!parse@{parse}}
+\index{parse@{parse}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{bytes_2index_8js_a4b0c2185d35bf0049a385542da99334a} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} parse (\begin{DoxyParamCaption}\item[{val}]{}{}\end{DoxyParamCaption})}
+
+Parse the string value into an integer in bytes.
+
+If no unit is given, it is assumed the value is in bytes.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{number\texorpdfstring{$\vert$}{|}string\}} & val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{number\texorpdfstring{$\vert$}{|}null\} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}\index{index.js@{index.js}!exports@{exports}}
+\index{exports@{exports}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{exports}{exports}}
+{\footnotesize\ttfamily \label{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34} 
+module exports = \mbox{\hyperlink{bytes_2index_8js_adeb1431b84efe09355bbd01e42326838}{bytes}}}
+
+Module exports. \Hypertarget{bytes_2index_8js_a9027c5af360d5ef99cc9906449e85a27}\index{index.js@{index.js}!format@{format}}
+\index{format@{format}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily \label{bytes_2index_8js_a9027c5af360d5ef99cc9906449e85a27} 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} format = format}
+
+\Hypertarget{bytes_2index_8js_a3787d1b6ea0a8a3830ef5b20dde86faf}\index{index.js@{index.js}!formatDecimalsRegExp@{formatDecimalsRegExp}}
+\index{formatDecimalsRegExp@{formatDecimalsRegExp}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{formatDecimalsRegExp}{formatDecimalsRegExp}}
+{\footnotesize\ttfamily \label{bytes_2index_8js_a3787d1b6ea0a8a3830ef5b20dde86faf} 
+var format\+Decimals\+Reg\+Exp = /(?\+:\textbackslash{}.\+0\texorpdfstring{$\ast$}{*}\texorpdfstring{$\vert$}{|}(\textbackslash{}.\mbox{[}\texorpdfstring{$^\wedge$}{\string^}0\mbox{]}+)0+)\$/}
+
+\Hypertarget{bytes_2index_8js_a48e18769649a3ca5bab0fafdec44cb15}\index{index.js@{index.js}!map@{map}}
+\index{map@{map}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{map}{map}}
+{\footnotesize\ttfamily \label{bytes_2index_8js_a48e18769649a3ca5bab0fafdec44cb15} 
+var map}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ b:\ \ 1,}
+\DoxyCodeLine{\ \ kb:\ 1\ <<\ 10,}
+\DoxyCodeLine{\ \ mb:\ 1\ <<\ 20,}
+\DoxyCodeLine{\ \ gb:\ 1\ <<\ 30,}
+\DoxyCodeLine{\ \ tb:\ Math.pow(1024,\ 4),}
+\DoxyCodeLine{\ \ pb:\ Math.pow(1024,\ 5),}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{bytes_2index_8js_a28ecd76297a5d556aac05441b295f93c}\index{index.js@{index.js}!parse@{parse}}
+\index{parse@{parse}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{parse}{parse}}
+{\footnotesize\ttfamily \label{bytes_2index_8js_a28ecd76297a5d556aac05441b295f93c} 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} parse = parse}
+
+\Hypertarget{bytes_2index_8js_a91a2aee55639e45d0e4a4484025b538a}\index{index.js@{index.js}!parseRegExp@{parseRegExp}}
+\index{parseRegExp@{parseRegExp}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{parseRegExp}{parseRegExp}}
+{\footnotesize\ttfamily \label{bytes_2index_8js_a91a2aee55639e45d0e4a4484025b538a} 
+var parse\+Reg\+Exp = /\texorpdfstring{$^\wedge$}{\string^}((-\/\texorpdfstring{$\vert$}{|}\textbackslash{}+)?(\textbackslash{}\mbox{\hyperlink{ms_2index_8js_aeb337d295abaddb5ec3cb34cc2e2bbc9}{d}}+(?\+:\textbackslash{}.\textbackslash{}\mbox{\hyperlink{ms_2index_8js_aeb337d295abaddb5ec3cb34cc2e2bbc9}{d}}+)?)) \texorpdfstring{$\ast$}{*}(kb\texorpdfstring{$\vert$}{|}mb\texorpdfstring{$\vert$}{|}gb\texorpdfstring{$\vert$}{|}tb\texorpdfstring{$\vert$}{|}pb)\$/i}
+
+\Hypertarget{bytes_2index_8js_ae2475e10618961c050dcba04e8c42331}\index{index.js@{index.js}!strict@{strict}}
+\index{strict@{strict}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{bytes_2index_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+bytes Copyright(c) 2012-\/2014 TJ Holowaychuk Copyright(c) 2015 Jed Watson MIT Licensed 

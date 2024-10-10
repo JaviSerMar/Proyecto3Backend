@@ -1,0 +1,165 @@
+\doxysection{Referencia del archivo node\+\_\+modules/ms/index.js}
+\hypertarget{ms_2index_8js}{}\label{ms_2index_8js}\index{node\_modules/ms/index.js@{node\_modules/ms/index.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{ms_2index_8js_a4530ce177622b1bc609eed9449d42b79}{parse}} (str)
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{ms_2index_8js_a037ee48a5020b290c31150c1c1a36e39}{fmt\+Short}} (ms)
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{ms_2index_8js_aaeec67d932f853cd8e3e26539e6dc1b1}{fmt\+Long}} (ms)
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{ms_2index_8js_a2e23a5d764be71bda17ec4f940a7c235}{plural}} (ms, n, \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \mbox{\hyperlink{ms_2index_8js_ad9a7d92cb87932d25187fdec3ba1b621}{s}} = 1000
+\item 
+var \mbox{\hyperlink{ms_2index_8js_a9e77e016b2928d7dcb493b89a0c9dc32}{m}} = \mbox{\hyperlink{ms_2index_8js_ad9a7d92cb87932d25187fdec3ba1b621}{s}} \texorpdfstring{$\ast$}{*} 60
+\item 
+var \mbox{\hyperlink{ms_2index_8js_a79fe0eb780a2a4b5543b4dddf8b6188a}{h}} = \mbox{\hyperlink{ms_2index_8js_a9e77e016b2928d7dcb493b89a0c9dc32}{m}} \texorpdfstring{$\ast$}{*} 60
+\item 
+var \mbox{\hyperlink{ms_2index_8js_aeb337d295abaddb5ec3cb34cc2e2bbc9}{d}} = \mbox{\hyperlink{ms_2index_8js_a79fe0eb780a2a4b5543b4dddf8b6188a}{h}} \texorpdfstring{$\ast$}{*} 24
+\item 
+var \mbox{\hyperlink{ms_2index_8js_a0b31909b1cae9ed1db6ff042057fce60}{y}} = \mbox{\hyperlink{ms_2index_8js_aeb337d295abaddb5ec3cb34cc2e2bbc9}{d}} \texorpdfstring{$\ast$}{*} 365.\+25
+\item 
+module \mbox{\hyperlink{ms_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{ms_2index_8js_aaeec67d932f853cd8e3e26539e6dc1b1}\index{index.js@{index.js}!fmtLong@{fmtLong}}
+\index{fmtLong@{fmtLong}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{fmtLong()}{fmtLong()}}
+{\footnotesize\ttfamily \label{ms_2index_8js_aaeec67d932f853cd8e3e26539e6dc1b1} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} fmt\+Long (\begin{DoxyParamCaption}\item[{ms}]{}{}\end{DoxyParamCaption})}
+
+Long format for {\ttfamily ms}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+Number\}} & ms \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{String\} @api private 
+\end{DoxyReturn}
+\Hypertarget{ms_2index_8js_a037ee48a5020b290c31150c1c1a36e39}\index{index.js@{index.js}!fmtShort@{fmtShort}}
+\index{fmtShort@{fmtShort}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{fmtShort()}{fmtShort()}}
+{\footnotesize\ttfamily \label{ms_2index_8js_a037ee48a5020b290c31150c1c1a36e39} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} fmt\+Short (\begin{DoxyParamCaption}\item[{ms}]{}{}\end{DoxyParamCaption})}
+
+Short format for {\ttfamily ms}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+Number\}} & ms \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{String\} @api private 
+\end{DoxyReturn}
+\Hypertarget{ms_2index_8js_a4530ce177622b1bc609eed9449d42b79}\index{index.js@{index.js}!parse@{parse}}
+\index{parse@{parse}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{ms_2index_8js_a4530ce177622b1bc609eed9449d42b79} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} parse (\begin{DoxyParamCaption}\item[{str}]{}{}\end{DoxyParamCaption})}
+
+Parse the given {\ttfamily str} and return milliseconds.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & str \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{Number\} @api private 
+\end{DoxyReturn}
+\Hypertarget{ms_2index_8js_a2e23a5d764be71bda17ec4f940a7c235}\index{index.js@{index.js}!plural@{plural}}
+\index{plural@{plural}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{plural()}{plural()}}
+{\footnotesize\ttfamily \label{ms_2index_8js_a2e23a5d764be71bda17ec4f940a7c235} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} plural (\begin{DoxyParamCaption}\item[{ms}]{}{, }\item[{n}]{}{, }\item[{\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}}]{}{}\end{DoxyParamCaption})}
+
+Pluralization helper. 
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{ms_2index_8js_aeb337d295abaddb5ec3cb34cc2e2bbc9}\index{index.js@{index.js}!d@{d}}
+\index{d@{d}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily \label{ms_2index_8js_aeb337d295abaddb5ec3cb34cc2e2bbc9} 
+var d = \mbox{\hyperlink{ms_2index_8js_a79fe0eb780a2a4b5543b4dddf8b6188a}{h}} \texorpdfstring{$\ast$}{*} 24}
+
+\Hypertarget{ms_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}\index{index.js@{index.js}!exports@{exports}}
+\index{exports@{exports}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{exports}{exports}}
+{\footnotesize\ttfamily \label{ms_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34} 
+module exports}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(val,\ options)\ \{}
+\DoxyCodeLine{\ \ options\ =\ options\ ||\ \{\};}
+\DoxyCodeLine{\ \ var\ \mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}\ =\ typeof\ val;}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}\ ===\ \textcolor{stringliteral}{'string'}\ \&\&\ val.length\ >\ 0)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{bytes_2index_8js_a28ecd76297a5d556aac05441b295f93c}{parse}}(val);}
+\DoxyCodeLine{\ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}\ ===\ \textcolor{stringliteral}{'number'}\ \&\&\ isNaN(val)\ ===\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ options.long\ ?\ \mbox{\hyperlink{ms_2index_8js_aaeec67d932f853cd8e3e26539e6dc1b1}{fmtLong}}(val)\ :\ \mbox{\hyperlink{ms_2index_8js_a037ee48a5020b290c31150c1c1a36e39}{fmtShort}}(val);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_error}{Error}}(}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'val\ is\ not\ a\ non-\/empty\ string\ or\ a\ valid\ number.\ val='}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ JSON.stringify(val)}
+\DoxyCodeLine{\ \ );}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Parse or format the given {\ttfamily val}.
+
+Options\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily long} verbose formatting \mbox{[}false\mbox{]}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\texorpdfstring{$\vert$}{|}\+Number\}} & val \\
+\hline
+{\em \{\+Object\}} & \mbox{[}options\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em \{\+Error\}} & throw an error if val is not a non-\/empty string or a number \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Devuelve}
+\{String\texorpdfstring{$\vert$}{|}\+Number\} @api public 
+\end{DoxyReturn}
+\Hypertarget{ms_2index_8js_a79fe0eb780a2a4b5543b4dddf8b6188a}\index{index.js@{index.js}!h@{h}}
+\index{h@{h}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily \label{ms_2index_8js_a79fe0eb780a2a4b5543b4dddf8b6188a} 
+var h = \mbox{\hyperlink{ms_2index_8js_a9e77e016b2928d7dcb493b89a0c9dc32}{m}} \texorpdfstring{$\ast$}{*} 60}
+
+\Hypertarget{ms_2index_8js_a9e77e016b2928d7dcb493b89a0c9dc32}\index{index.js@{index.js}!m@{m}}
+\index{m@{m}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily \label{ms_2index_8js_a9e77e016b2928d7dcb493b89a0c9dc32} 
+var m = \mbox{\hyperlink{ms_2index_8js_ad9a7d92cb87932d25187fdec3ba1b621}{s}} \texorpdfstring{$\ast$}{*} 60}
+
+\Hypertarget{ms_2index_8js_ad9a7d92cb87932d25187fdec3ba1b621}\index{index.js@{index.js}!s@{s}}
+\index{s@{s}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \label{ms_2index_8js_ad9a7d92cb87932d25187fdec3ba1b621} 
+var s = 1000}
+
+Helpers. \Hypertarget{ms_2index_8js_a0b31909b1cae9ed1db6ff042057fce60}\index{index.js@{index.js}!y@{y}}
+\index{y@{y}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{ms_2index_8js_a0b31909b1cae9ed1db6ff042057fce60} 
+var y = \mbox{\hyperlink{ms_2index_8js_aeb337d295abaddb5ec3cb34cc2e2bbc9}{d}} \texorpdfstring{$\ast$}{*} 365.\+25}
+

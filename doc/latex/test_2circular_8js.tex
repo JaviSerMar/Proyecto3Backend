@@ -1,0 +1,38 @@
+\doxysection{Referencia del archivo node\+\_\+modules/object-\/inspect/test/circular.js}
+\hypertarget{test_2circular_8js}{}\label{test_2circular_8js}\index{node\_modules/object-\/inspect/test/circular.js@{node\_modules/object-\/inspect/test/circular.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{test_2circular_8js_a6335ecbf22e5008748ec2868104c553a}{test}} (\textquotesingle{}circular\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(t) \{ t.\+plan(2);var \mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}=\{ a\+:1, b\+:\mbox{[}3, 4\mbox{]} \};\mbox{\hyperlink{example_2circular_8js_ac4b136ad7da3ddbc5ff64f2be6433bf2}{obj.\+c}}=\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}};\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}), \textquotesingle{}\{ a\+:1, b\+:\mbox{[}3, 4\mbox{]}, c\+:\mbox{[}Circular\mbox{]} \}\textquotesingle{});var double=\{\};double.\+a=\mbox{[}double\mbox{]};double.\+b=\{\};double.\+b.\+inner=double.\+b;\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{double.\+b.\+obj}}=double;\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(double), \textquotesingle{}\{ a\+:\mbox{[}\mbox{[}Circular\mbox{]}\mbox{]}, b\+:\{ inner\+:\mbox{[}Circular\mbox{]}, obj\+:\mbox{[}Circular\mbox{]} \} \}\textquotesingle{});\})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \mbox{\hyperlink{test_2circular_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}../\textquotesingle{})
+\item 
+var \mbox{\hyperlink{test_2circular_8js_a3a897d91c374db023efd4ed28e633ade}{test}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}tape\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{test_2circular_8js_a6335ecbf22e5008748ec2868104c553a}\index{circular.js@{circular.js}!test@{test}}
+\index{test@{test}!circular.js@{circular.js}}
+\doxysubsubsection{\texorpdfstring{test()}{test()}}
+{\footnotesize\ttfamily \label{test_2circular_8js_a6335ecbf22e5008748ec2868104c553a} 
+test (\begin{DoxyParamCaption}\item[{\textquotesingle{}circular\textquotesingle{}}]{}{, }\item[{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(t) \{ t.\+plan(2);var \mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}=\{ a\+:1, b\+:\mbox{[}3, 4\mbox{]} \};\mbox{\hyperlink{example_2circular_8js_ac4b136ad7da3ddbc5ff64f2be6433bf2}{obj.\+c}}=\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}};\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}), \textquotesingle{}\{ a\+:1, b\+:\mbox{[}3, 4\mbox{]}, c\+:\mbox{[}Circular\mbox{]} \}\textquotesingle{});var double=\{\};double.\+a=\mbox{[}double\mbox{]};double.\+b=\{\};double.\+b.\+inner=double.\+b;\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{double.\+b.\+obj}}=double;\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(double), \textquotesingle{}\{ a\+:\mbox{[}\mbox{[}Circular\mbox{]}\mbox{]}, b\+:\{ inner\+:\mbox{[}Circular\mbox{]}, obj\+:\mbox{[}Circular\mbox{]} \} \}\textquotesingle{});\}}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{test_2circular_8js_ada233bc1a09b3d9309abcd7d4a0baebe}\index{circular.js@{circular.js}!inspect@{inspect}}
+\index{inspect@{inspect}!circular.js@{circular.js}}
+\doxysubsubsection{\texorpdfstring{inspect}{inspect}}
+{\footnotesize\ttfamily \label{test_2circular_8js_ada233bc1a09b3d9309abcd7d4a0baebe} 
+var inspect = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}../\textquotesingle{})}
+
+\Hypertarget{test_2circular_8js_a3a897d91c374db023efd4ed28e633ade}\index{circular.js@{circular.js}!test@{test}}
+\index{test@{test}!circular.js@{circular.js}}
+\doxysubsubsection{\texorpdfstring{test}{test}}
+{\footnotesize\ttfamily \label{test_2circular_8js_a3a897d91c374db023efd4ed28e633ade} 
+var test = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}tape\textquotesingle{})}
+

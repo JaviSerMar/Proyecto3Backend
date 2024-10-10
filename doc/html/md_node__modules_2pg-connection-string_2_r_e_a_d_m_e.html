@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: pg-connection-string</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">pg-connection-string</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a href="https://nodei.co/npm/pg-connection-string/"><img src="https://nodei.co/npm/pg-connection-string.png?compact=true" alt="NPM" class="inline"/></a></p>
+<p><a href="https://travis-ci.org/iceddev/pg-connection-string"><img src="https://travis-ci.org/iceddev/pg-connection-string.svg?branch=master" alt="Build Status" style="pointer-events: none;" class="inline"/></a> <a href="https://coveralls.io/github/iceddev/pg-connection-string?branch=master"><img src="https://coveralls.io/repos/github/iceddev/pg-connection-string/badge.svg?branch=master" alt="Coverage Status" style="pointer-events: none;" class="inline"/></a></p>
+<p>Functions for dealing with a PostgresSQL connection string</p>
+<p><code>parse</code> method taken from <a href="https://github.com/brianc/node-postgres.git">node-postgres</a> Copyright (c) 2010-2014 Brian Carlson (<a href="#" onclick="location.href='mai'+'lto:'+'bri'+'an'+'.m.'+'ca'+'rls'+'on'+'@gm'+'ai'+'l.c'+'om'; return false;">brian<span class="obfuscator">.nosp@m.</span>.m.c<span class="obfuscator">.nosp@m.</span>arlso<span class="obfuscator">.nosp@m.</span>n@gm<span class="obfuscator">.nosp@m.</span>ail.c<span class="obfuscator">.nosp@m.</span>om</a>) MIT License</p>
+<h1><a class="anchor" id="autotoc_md1511"></a>
+Usage</h1>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="bytes_2index_8js.html#a28ecd76297a5d556aac05441b295f93c">parse</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;pg-connection-string&#39;</span>).parse;</div>
+<div class="line"> </div>
+<div class="line">var config = <a class="code hl_variable" href="bytes_2index_8js.html#a28ecd76297a5d556aac05441b295f93c">parse</a>(<span class="stringliteral">&#39;postgres://someuser:somepassword@somehost:381/somedatabase&#39;</span>)</div>
+<div class="ttc" id="abytes_2index_8js_html_a28ecd76297a5d556aac05441b295f93c"><div class="ttname"><a href="bytes_2index_8js.html#a28ecd76297a5d556aac05441b295f93c">parse</a></div><div class="ttdeci">module exports parse</div><div class="ttdef"><b>Definition</b> index.js:17</div></div>
+<div class="ttc" id="atest-core-js_8js_html_a2fc998a372f1531668f7047d0878effe"><div class="ttname"><a href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a></div><div class="ttdeci">require('core-js')</div></div>
+</div><!-- fragment --><p>The resulting config contains a subset of the following properties:</p>
+<ul>
+<li><code>host</code> - Postgres server hostname or, for UNIX domain sockets, the socket filename</li>
+<li><code>port</code> - port on which to connect</li>
+<li><code>user</code> - User with which to authenticate to the server</li>
+<li><code>password</code> - Corresponding password</li>
+<li><code>database</code> - Database name within the server</li>
+<li><code>client_encoding</code> - string encoding the client will use</li>
+<li><code>ssl</code>, either a boolean or an object with properties<ul>
+<li><code>rejectUnauthorized</code></li>
+<li><code>cert</code></li>
+<li><code>key</code></li>
+<li><code>ca</code></li>
+</ul>
+</li>
+<li>any other query parameters (for example, <code>application_name</code>) are preserved intact.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md1512"></a>
+Connection Strings</h1>
+<p>The short summary of acceptable URLs is:</p>
+<ul>
+<li><code>socket:&lt;path&gt;?&lt;query&gt;</code> - UNIX domain socket</li>
+<li><code>postgres://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;/&lt;database&gt;?&lt;query&gt;</code> - TCP connection</li>
+</ul>
+<p>But see below for more details.</p>
+<h2><a class="anchor" id="autotoc_md1513"></a>
+UNIX Domain Sockets</h2>
+<p>When user and password are not given, the socket path follows <code>socket:</code>, as in <code>socket:/var/run/pgsql</code>. This form can be shortened to just a path: <code>/var/run/pgsql</code>.</p>
+<p>When user and password are given, they are included in the typical URL positions, with an empty <code>host</code>, as in <code>socket://user:pass@/var/run/pgsql</code>.</p>
+<p>Query parameters follow a <code>?</code> character, including the following special query parameters:</p>
+<ul>
+<li><code>db=&lt;database&gt;</code> - sets the database name (urlencoded)</li>
+<li><code>encoding=&lt;encoding&gt;</code> - sets the <code>client_encoding</code> property</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md1514"></a>
+TCP Connections</h2>
+<p>TCP connections to the Postgres server are indicated with <code>pg:</code> or <code>postgres:</code> schemes (in fact, any scheme but <code>socket:</code> is accepted). If username and password are included, they should be urlencoded. The database name, however, should <em>not</em> be urlencoded.</p>
+<p>Query parameters follow a <code>?</code> character, including the following special query parameters:</p><ul>
+<li><code>host=&lt;host&gt;</code> - sets <code>host</code> property, overriding the URL's host</li>
+<li><code>encoding=&lt;encoding&gt;</code> - sets the <code>client_encoding</code> property</li>
+<li><code>ssl=1</code>, <code>ssl=true</code>, <code>ssl=0</code>, <code>ssl=false</code> - sets <code>ssl</code> to true or false, accordingly</li>
+<li><code>sslmode=&lt;sslmode&gt;</code><ul>
+<li><code>sslmode=disable</code> - sets <code>ssl</code> to false</li>
+<li><code>sslmode=no-verify</code> - sets <code>ssl</code> to <code>{ rejectUnauthorized: false }</code></li>
+<li><code>sslmode=prefer</code>, <code>sslmode=require</code>, <code>sslmode=verify-ca</code>, <code>sslmode=verify-full</code> - sets <code>ssl</code> to true</li>
+</ul>
+</li>
+<li><code>sslcert=&lt;filename&gt;</code> - reads data from the given file and includes the result as <code>ssl.cert</code></li>
+<li><code>sslkey=&lt;filename&gt;</code> - reads data from the given file and includes the result as <code>ssl.key</code></li>
+<li><code>sslrootcert=&lt;filename&gt;</code> - reads data from the given file and includes the result as <code>ssl.ca</code></li>
+</ul>
+<p>A bare relative URL, such as <code>salesdata</code>, will indicate a database name while leaving other properties empty. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

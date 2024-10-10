@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: http-errors</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">http-errors</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1039"></a></p>
+<p><a href="https://npmjs.org/package/http-errors"><img src="https://badgen.net/npm/v/http-errors" alt="NPM Version" class="inline"/></a> <a href="https://nodejs.org/en/download"><img src="https://badgen.net/npm/dm/http-errors" alt="NPM Downloads" class="inline"/></a> <a href="https://nodejs.org/en/download"><img src="https://badgen.net/npm/node/http-errors" alt="Node.js Version" class="inline"/></a> <a href="https://github.com/jshttp/http-errors/actions?query=workflow%3Aci"><img src="https://badgen.net/github/checks/jshttp/http-errors/master?label=ci" alt="Build Status" class="inline"/></a> <a href="https://coveralls.io/r/jshttp/http-errors?branch=master"><img src="https://badgen.net/coveralls/c/github/jshttp/http-errors/master" alt="Test Coverage" class="inline"/></a></p>
+<p>Create HTTP errors for Express, Koa, Connect, etc. with ease.</p>
+<h1><a class="anchor" id="autotoc_md1040"></a>
+Install</h1>
+<p>This is a <a href="https://nodejs.org/en/">Node.js</a> module available through the <a href="https://www.npmjs.com/">npm registry</a>. Installation is done using the <a href="https://docs.npmjs.com/getting-started/installing-npm-packages-locally"><code>npm install</code> command</a>:</p>
+<div class="fragment"><div class="line">$ npm install http-errors</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1041"></a>
+Example</h1>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="response_8js.html#a36d4507fc5974c25545c80a464e96cff">createError</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;http-errors&#39;</span>)</div>
+<div class="line">var <a class="code hl_variable" href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;<a class="code hl_variable" href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express</a>&#39;)</div>
+<div class="line">var <a class="code hl_variable" href="application_8js.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> = <a class="code hl_variable" href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express</a>()</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_variable" href="application_8js.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.<a class="code hl_variable" href="application_8js.html#a8192500ed5d08ae60d3778b54729bd51">use</a>(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> (<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>, next) {</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>.user) <span class="keywordflow">return</span> next(<a class="code hl_variable" href="response_8js.html#a36d4507fc5974c25545c80a464e96cff">createError</a>(401, <span class="stringliteral">&#39;Please login to view this page.&#39;</span>))</div>
+<div class="line">  next()</div>
+<div class="line">})</div>
+<div class="ttc" id="aapplication_8js_html_a7b225fcb720e4d5ed2bbf60e28a25e6d"><div class="ttname"><a href="application_8js.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a></div><div class="ttdeci">var app</div><div class="ttdef"><b>Definition</b> application.js:45</div></div>
+<div class="ttc" id="aapplication_8js_html_a8192500ed5d08ae60d3778b54729bd51"><div class="ttname"><a href="application_8js.html#a8192500ed5d08ae60d3778b54729bd51">use</a></div><div class="ttdeci">app use</div><div class="ttdef"><b>Definition</b> application.js:194</div></div>
+<div class="ttc" id="acors_2lib_2index_8js_html_ac2ffb26d6f42d3bbcd7847b0873403f4"><div class="ttname"><a href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a></div><div class="ttdeci">function()</div><div class="ttdef"><b>Definition</b> index.js:1</div></div>
+<div class="ttc" id="aexpress_8js_html_a42c43c76081a7df8ae2954f16ee9338b"><div class="ttname"><a href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></div><div class="ttdeci">var req</div><div class="ttdef"><b>Definition</b> express.js:21</div></div>
+<div class="ttc" id="aexpress_8js_html_abde3c35e3bb7e5225dd7f234c685329c"><div class="ttname"><a href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a></div><div class="ttdeci">var res</div><div class="ttdef"><b>Definition</b> express.js:22</div></div>
+<div class="ttc" id="aresponse_8js_html_a36d4507fc5974c25545c80a464e96cff"><div class="ttname"><a href="response_8js.html#a36d4507fc5974c25545c80a464e96cff">createError</a></div><div class="ttdeci">var createError</div><div class="ttdef"><b>Definition</b> response.js:17</div></div>
+<div class="ttc" id="aserver_8js_html_a81e570c198204c57e1ebcace4f4e6dad"><div class="ttname"><a href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express</a></div><div class="ttdeci">const express</div><div class="ttdef"><b>Definition</b> server.js:2</div></div>
+<div class="ttc" id="atest-core-js_8js_html_a2fc998a372f1531668f7047d0878effe"><div class="ttname"><a href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a></div><div class="ttdeci">require('core-js')</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1042"></a>
+API</h1>
+<p>This is the current API, currently extracted from Koa and subject to change.</p>
+<h2><a class="anchor" id="autotoc_md1043"></a>
+Error Properties</h2>
+<ul>
+<li><code>expose</code> - can be used to signal if <code>message</code> should be sent to the client, defaulting to <code>false</code> when <code>status</code> &gt;= 500</li>
+<li><code>headers</code> - can be an object of header names to values to be sent to the client, defaulting to <code>undefined</code>. When defined, the key names should all be lower-cased</li>
+<li><code>message</code> - the traditional error message, which should be kept short and all single line</li>
+<li><code>status</code> - the status code of the error, mirroring <code>statusCode</code> for general compatibility</li>
+<li><code>statusCode</code> - the status code of the error, defaulting to <code>500</code></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md1044"></a>
+createError([status], [message], [properties])</h2>
+<p>Create a new error object with the given message <code>msg</code>. The error object inherits from <code>createError.HttpError</code>.</p>
+<div class="fragment"><div class="line">var err = <a class="code hl_variable" href="response_8js.html#a36d4507fc5974c25545c80a464e96cff">createError</a>(404, <span class="stringliteral">&#39;This video does not exist!&#39;</span>)</div>
+</div><!-- fragment --><ul>
+<li><code>status: 500</code> - the status code as a number</li>
+<li><code>message</code> - the message of the error, defaulting to node's text for that status code.</li>
+<li><code>properties</code> - custom properties to attach to the object</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md1045"></a>
+createError([status], [error], [properties])</h2>
+<p>Extend the given <code>error</code> object with <code>createError.HttpError</code> properties. This will not alter the inheritance of the given <code>error</code> object, and the modified <code>error</code> object is the return value.</p>
+<div class="fragment"><div class="line"><a class="code hl_variable" href="view_8js.html#aebcdd70130f7e0b00b39cc981ab0bab0">fs</a>.readFile(<span class="stringliteral">&#39;foo.txt&#39;</span>, <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> (err, buf) {</div>
+<div class="line">  <span class="keywordflow">if</span> (err) {</div>
+<div class="line">    <span class="keywordflow">if</span> (err.code === <span class="stringliteral">&#39;ENOENT&#39;</span>) {</div>
+<div class="line">      var httpError = <a class="code hl_variable" href="response_8js.html#a36d4507fc5974c25545c80a464e96cff">createError</a>(404, err, { expose: <span class="keyword">false</span> })</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">      var httpError = <a class="code hl_variable" href="response_8js.html#a36d4507fc5974c25545c80a464e96cff">createError</a>(500, err)</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">})</div>
+<div class="ttc" id="aview_8js_html_aebcdd70130f7e0b00b39cc981ab0bab0"><div class="ttname"><a href="view_8js.html#aebcdd70130f7e0b00b39cc981ab0bab0">fs</a></div><div class="ttdeci">var fs</div><div class="ttdef"><b>Definition</b> view.js:18</div></div>
+</div><!-- fragment --><ul>
+<li><code>status</code> - the status code as a number</li>
+<li><code>error</code> - the error object to extend</li>
+<li><code>properties</code> - custom properties to attach to the object</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md1046"></a>
+createError.isHttpError(val)</h2>
+<p>Determine if the provided <code>val</code> is an <code>HttpError</code>. This will return <code>true</code> if the error inherits from the <code>HttpError</code> constructor of this module or matches the "duck type" for an error this module creates. All outputs from the <code>createError</code> factory will return <code>true</code> for this function, including if an non-<code>HttpError</code> was passed into the factory.</p>
+<h2><a class="anchor" id="autotoc_md1047"></a>
+new createError[code || name]([msg]))</h2>
+<p>Create a new error object with the given message <code>msg</code>. The error object inherits from <code>createError.HttpError</code>.</p>
+<div class="fragment"><div class="line">var err = <span class="keyword">new</span> <a class="code hl_variable" href="response_8js.html#a36d4507fc5974c25545c80a464e96cff">createError</a>.NotFound()</div>
+</div><!-- fragment --><ul>
+<li><code>code</code> - the status code as a number</li>
+<li><code>name</code> - the name of the error as a "bumpy case", i.e. <code>NotFound</code> or <code>InternalServerError</code>.</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md1048"></a>
+List of all constructors</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Status Code   </th><th class="markdownTableHeadNone">Constructor Name    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">400   </td><td class="markdownTableBodyNone">BadRequest    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">401   </td><td class="markdownTableBodyNone">Unauthorized    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">402   </td><td class="markdownTableBodyNone">PaymentRequired    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">403   </td><td class="markdownTableBodyNone">Forbidden    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">404   </td><td class="markdownTableBodyNone">NotFound    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">405   </td><td class="markdownTableBodyNone">MethodNotAllowed    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">406   </td><td class="markdownTableBodyNone">NotAcceptable    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">407   </td><td class="markdownTableBodyNone">ProxyAuthenticationRequired    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">408   </td><td class="markdownTableBodyNone">RequestTimeout    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">409   </td><td class="markdownTableBodyNone">Conflict    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">410   </td><td class="markdownTableBodyNone">Gone    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">411   </td><td class="markdownTableBodyNone">LengthRequired    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">412   </td><td class="markdownTableBodyNone">PreconditionFailed    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">413   </td><td class="markdownTableBodyNone">PayloadTooLarge    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">414   </td><td class="markdownTableBodyNone">URITooLong    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">415   </td><td class="markdownTableBodyNone">UnsupportedMediaType    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">416   </td><td class="markdownTableBodyNone">RangeNotSatisfiable    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">417   </td><td class="markdownTableBodyNone">ExpectationFailed    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">418   </td><td class="markdownTableBodyNone">ImATeapot    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">421   </td><td class="markdownTableBodyNone">MisdirectedRequest    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">422   </td><td class="markdownTableBodyNone">UnprocessableEntity    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">423   </td><td class="markdownTableBodyNone">Locked    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">424   </td><td class="markdownTableBodyNone">FailedDependency    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">425   </td><td class="markdownTableBodyNone">TooEarly    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">426   </td><td class="markdownTableBodyNone">UpgradeRequired    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">428   </td><td class="markdownTableBodyNone">PreconditionRequired    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">429   </td><td class="markdownTableBodyNone">TooManyRequests    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">431   </td><td class="markdownTableBodyNone">RequestHeaderFieldsTooLarge    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">451   </td><td class="markdownTableBodyNone">UnavailableForLegalReasons    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">500   </td><td class="markdownTableBodyNone">InternalServerError    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">501   </td><td class="markdownTableBodyNone">NotImplemented    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">502   </td><td class="markdownTableBodyNone">BadGateway    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">503   </td><td class="markdownTableBodyNone">ServiceUnavailable    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">504   </td><td class="markdownTableBodyNone">GatewayTimeout    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">505   </td><td class="markdownTableBodyNone">HTTPVersionNotSupported    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">506   </td><td class="markdownTableBodyNone">VariantAlsoNegotiates    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">507   </td><td class="markdownTableBodyNone">InsufficientStorage    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">508   </td><td class="markdownTableBodyNone">LoopDetected    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">509   </td><td class="markdownTableBodyNone">BandwidthLimitExceeded    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">510   </td><td class="markdownTableBodyNone">NotExtended    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">511   </td><td class="markdownTableBodyNone">NetworkAuthenticationRequired   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md1049"></a>
+License</h1>
+<p>[MIT](LICENSE) </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

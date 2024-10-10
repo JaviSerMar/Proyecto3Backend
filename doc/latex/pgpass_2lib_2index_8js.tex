@@ -1,0 +1,73 @@
+\doxysection{Referencia del archivo node\+\_\+modules/pgpass/lib/index.js}
+\hypertarget{pgpass_2lib_2index_8js}{}\label{pgpass_2lib_2index_8js}\index{node\_modules/pgpass/lib/index.js@{node\_modules/pgpass/lib/index.js}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{pgpass_2lib_2index_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{pgpass_2lib_2index_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}path\textquotesingle{})
+\item 
+var \mbox{\hyperlink{pgpass_2lib_2index_8js_aebcdd70130f7e0b00b39cc981ab0bab0}{fs}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}fs\textquotesingle{})
+\item 
+var \mbox{\hyperlink{pgpass_2lib_2index_8js_a2a67a0b3484dd7c1bee8ce88aa09b9c9}{helper}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./helper.\+js\textquotesingle{})
+\item 
+module \mbox{\hyperlink{pgpass_2lib_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}
+\item 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{pgpass_2lib_2index_8js_abb7ca8358e24ae1be757dfee3cb85b54}{warn\+To}} = helper.\+warn\+To
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{pgpass_2lib_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}\index{index.js@{index.js}!exports@{exports}}
+\index{exports@{exports}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{exports}{exports}}
+{\footnotesize\ttfamily \label{pgpass_2lib_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34} 
+module exports}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(connInfo,\ cb)\ \{}
+\DoxyCodeLine{\ \ \ \ var\ \mbox{\hyperlink{cli_8js_a14523cb74edc3f6175c54e598a379c27}{file}}\ =\ \mbox{\hyperlink{pgpass_2lib_2index_8js_a2a67a0b3484dd7c1bee8ce88aa09b9c9}{helper}}.getFileName();}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{pgpass_2lib_2index_8js_aebcdd70130f7e0b00b39cc981ab0bab0}{fs}}.stat(\mbox{\hyperlink{cli_8js_a14523cb74edc3f6175c54e598a379c27}{file}},\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(err,\ stat)\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (err\ ||\ !\mbox{\hyperlink{pgpass_2lib_2index_8js_a2a67a0b3484dd7c1bee8ce88aa09b9c9}{helper}}.usePgPass(stat,\ \mbox{\hyperlink{cli_8js_a14523cb74edc3f6175c54e598a379c27}{file}}))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cb(\mbox{\hyperlink{get-intrinsic_2index_8js_ae6aa4817f0f49345b718ea6b4abae197}{undefined}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ st\ =\ \mbox{\hyperlink{pgpass_2lib_2index_8js_aebcdd70130f7e0b00b39cc981ab0bab0}{fs}}.createReadStream(\mbox{\hyperlink{cli_8js_a14523cb74edc3f6175c54e598a379c27}{file}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{pgpass_2lib_2index_8js_a2a67a0b3484dd7c1bee8ce88aa09b9c9}{helper}}.getPassword(connInfo,\ st,\ cb);}
+\DoxyCodeLine{\ \ \ \ \});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{pgpass_2lib_2index_8js_aebcdd70130f7e0b00b39cc981ab0bab0}\index{index.js@{index.js}!fs@{fs}}
+\index{fs@{fs}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{fs}{fs}}
+{\footnotesize\ttfamily \label{pgpass_2lib_2index_8js_aebcdd70130f7e0b00b39cc981ab0bab0} 
+var fs = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}fs\textquotesingle{})}
+
+\Hypertarget{pgpass_2lib_2index_8js_a2a67a0b3484dd7c1bee8ce88aa09b9c9}\index{index.js@{index.js}!helper@{helper}}
+\index{helper@{helper}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{helper}{helper}}
+{\footnotesize\ttfamily \label{pgpass_2lib_2index_8js_a2a67a0b3484dd7c1bee8ce88aa09b9c9} 
+var helper = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}./helper.\+js\textquotesingle{})}
+
+\Hypertarget{pgpass_2lib_2index_8js_aa72e0c8a20e6bcc571d3a1c51846e627}\index{index.js@{index.js}!path@{path}}
+\index{path@{path}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{pgpass_2lib_2index_8js_aa72e0c8a20e6bcc571d3a1c51846e627} 
+var path = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}path\textquotesingle{})}
+
+\Hypertarget{pgpass_2lib_2index_8js_ae2475e10618961c050dcba04e8c42331}\index{index.js@{index.js}!strict@{strict}}
+\index{strict@{strict}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{pgpass_2lib_2index_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+\Hypertarget{pgpass_2lib_2index_8js_abb7ca8358e24ae1be757dfee3cb85b54}\index{index.js@{index.js}!warnTo@{warnTo}}
+\index{warnTo@{warnTo}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{warnTo}{warnTo}}
+{\footnotesize\ttfamily \label{pgpass_2lib_2index_8js_abb7ca8358e24ae1be757dfee3cb85b54} 
+module \mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} warn\+To = helper.\+warn\+To}
+

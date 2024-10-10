@@ -1,0 +1,114 @@
+\doxysection{Referencia del archivo node\+\_\+modules/express/lib/view.js}
+\hypertarget{view_8js}{}\label{view_8js}\index{node\_modules/express/lib/view.js@{node\_modules/express/lib/view.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{view_8js_ad2ae2eaf978972e5da25d50e31a24132}{View}} (\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}, options)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{view_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{view_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}path\textquotesingle{})
+\item 
+var \mbox{\hyperlink{view_8js_aebcdd70130f7e0b00b39cc981ab0bab0}{fs}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}fs\textquotesingle{})
+\item 
+var \mbox{\hyperlink{view_8js_afd14f7f68973c8dd137de35459df2184}{basename}} = path.\+basename
+\item 
+var \mbox{\hyperlink{view_8js_a9fe677e64b8a08341d3168b8eb73a56d}{extname}} = path.\+extname
+\item 
+var \mbox{\hyperlink{view_8js_a1b09aaf68c8a94c60f4b0cb28eec4132}{join}} = path.\+join
+\item 
+var \mbox{\hyperlink{view_8js_a2001ea102ec496ebdabe15e68493427a}{resolve}} = path.\+resolve
+\item 
+module \mbox{\hyperlink{view_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} = \mbox{\hyperlink{application_8js_a2aae9db38f1cc0bfe93e61181d3b9a50}{View}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{view_8js_ad2ae2eaf978972e5da25d50e31a24132}\index{view.js@{view.js}!View@{View}}
+\index{View@{View}!view.js@{view.js}}
+\doxysubsubsection{\texorpdfstring{View()}{View()}}
+{\footnotesize\ttfamily \label{view_8js_ad2ae2eaf978972e5da25d50e31a24132} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}}]{}{, }\item[{options}]{}{}\end{DoxyParamCaption})}
+
+Initialize a new {\ttfamily View} with the given {\ttfamily name}.
+
+Options\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily default\+Engine} the default template engine name
+\item {\ttfamily engines} template engine \doxylink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require()} cache
+\item {\ttfamily root} root path for view lookup
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{string\}} & name \\
+\hline
+{\em \{object\}} & options \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{view_8js_afd14f7f68973c8dd137de35459df2184}\index{view.js@{view.js}!basename@{basename}}
+\index{basename@{basename}!view.js@{view.js}}
+\doxysubsubsection{\texorpdfstring{basename}{basename}}
+{\footnotesize\ttfamily \label{view_8js_afd14f7f68973c8dd137de35459df2184} 
+var basename = path.\+basename}
+
+\Hypertarget{view_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}\index{view.js@{view.js}!exports@{exports}}
+\index{exports@{exports}!view.js@{view.js}}
+\doxysubsubsection{\texorpdfstring{exports}{exports}}
+{\footnotesize\ttfamily \label{view_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34} 
+module exports = \mbox{\hyperlink{application_8js_a2aae9db38f1cc0bfe93e61181d3b9a50}{View}}}
+
+Module exports. \Hypertarget{view_8js_a9fe677e64b8a08341d3168b8eb73a56d}\index{view.js@{view.js}!extname@{extname}}
+\index{extname@{extname}!view.js@{view.js}}
+\doxysubsubsection{\texorpdfstring{extname}{extname}}
+{\footnotesize\ttfamily \label{view_8js_a9fe677e64b8a08341d3168b8eb73a56d} 
+var extname = path.\+extname}
+
+\Hypertarget{view_8js_aebcdd70130f7e0b00b39cc981ab0bab0}\index{view.js@{view.js}!fs@{fs}}
+\index{fs@{fs}!view.js@{view.js}}
+\doxysubsubsection{\texorpdfstring{fs}{fs}}
+{\footnotesize\ttfamily \label{view_8js_aebcdd70130f7e0b00b39cc981ab0bab0} 
+var fs = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}fs\textquotesingle{})}
+
+\Hypertarget{view_8js_a1b09aaf68c8a94c60f4b0cb28eec4132}\index{view.js@{view.js}!join@{join}}
+\index{join@{join}!view.js@{view.js}}
+\doxysubsubsection{\texorpdfstring{join}{join}}
+{\footnotesize\ttfamily \label{view_8js_a1b09aaf68c8a94c60f4b0cb28eec4132} 
+var join = path.\+join}
+
+\Hypertarget{view_8js_aa72e0c8a20e6bcc571d3a1c51846e627}\index{view.js@{view.js}!path@{path}}
+\index{path@{path}!view.js@{view.js}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{view_8js_aa72e0c8a20e6bcc571d3a1c51846e627} 
+var path = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}path\textquotesingle{})}
+
+\Hypertarget{view_8js_a2001ea102ec496ebdabe15e68493427a}\index{view.js@{view.js}!resolve@{resolve}}
+\index{resolve@{resolve}!view.js@{view.js}}
+\doxysubsubsection{\texorpdfstring{resolve}{resolve}}
+{\footnotesize\ttfamily \label{view_8js_a2001ea102ec496ebdabe15e68493427a} 
+\mbox{\hyperlink{application_8js_a2aae9db38f1cc0bfe93e61181d3b9a50}{View}} \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{prototype}} resolve = path.\+resolve}
+
+Resolve the file within the given directory.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{string\}} & dir \\
+\hline
+{\em \{string\}} & file \\
+\hline
+\end{DoxyParams}
+\Hypertarget{view_8js_ae2475e10618961c050dcba04e8c42331}\index{view.js@{view.js}!strict@{strict}}
+\index{strict@{strict}!view.js@{view.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{view_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+express Copyright(c) 2009-\/2013 TJ Holowaychuk Copyright(c) 2013 Roman Shtylman Copyright(c) 2014-\/2015 Douglas Christopher Wilson MIT Licensed 

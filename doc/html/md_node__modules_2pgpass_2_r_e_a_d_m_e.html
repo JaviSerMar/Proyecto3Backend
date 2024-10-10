@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: pgpass</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">pgpass</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1551"></a></p>
+<p><a href="https://github.com/hoegaarden/pgpass/actions?query=workflow%3ACI+branch%3Amaster"><img src="https://github.com/hoegaarden/pgpass/workflows/CI/badge.svg?branch=master" alt="Build Status" style="pointer-events: none;" class="inline"/></a></p>
+<h1><a class="anchor" id="autotoc_md1552"></a>
+Install</h1>
+<div class="fragment"><div class="line">npm install pgpass</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1553"></a>
+Usage</h1>
+<div class="fragment"><div class="line">var pgPass = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;pgpass&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">var connInfo = {</div>
+<div class="line">  <span class="stringliteral">&#39;host&#39;</span> : <span class="stringliteral">&#39;pgserver&#39;</span> ,</div>
+<div class="line">  <span class="stringliteral">&#39;user&#39;</span> : <span class="stringliteral">&#39;the_user_name&#39;</span> ,</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line">pgPass(connInfo, <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(pass){</div>
+<div class="line">  conn_info.password = pass;</div>
+<div class="line">  <span class="comment">// connect to postgresql server</span></div>
+<div class="line">});</div>
+<div class="ttc" id="acors_2lib_2index_8js_html_ac2ffb26d6f42d3bbcd7847b0873403f4"><div class="ttname"><a href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a></div><div class="ttdeci">function()</div><div class="ttdef"><b>Definition</b> index.js:1</div></div>
+<div class="ttc" id="atest-core-js_8js_html_a2fc998a372f1531668f7047d0878effe"><div class="ttname"><a href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a></div><div class="ttdeci">require('core-js')</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1554"></a>
+Description</h1>
+<p>This module tries to read the <code>~/.pgpass</code> file (or the equivalent for windows systems). If the environment variable <code>PGPASSFILE</code> is set, this file is used instead. If everything goes right, the password from said file is passed to the callback; if the password cannot be read <code>undefined</code> is passed to the callback.</p>
+<p>Cases where <code>undefined</code> is returned:</p>
+<ul>
+<li>the environment variable <code>PGPASSWORD</code> is set</li>
+<li>the file cannot be read (wrong permissions, no such file, ...)</li>
+<li>for non windows systems: the file is write-/readable by the group or by other users</li>
+<li>there is no matching line for the given connection info</li>
+</ul>
+<p>There should be no need to use this module directly; it is already included in <code>node-postgres</code>.</p>
+<h1><a class="anchor" id="autotoc_md1555"></a>
+Configuration</h1>
+<p>The module reads the environment variable <code>PGPASS_NO_DEESCAPE</code> to decide if the the read tokens from the password file should be de-escaped or not. Default is to do de-escaping. For further information on this see <a href="https://github.com/postgres/postgres/commit/8d15e3ec4fcb735875a8a70a09ec0c62153c3329">this commit</a>.</p>
+<h1><a class="anchor" id="autotoc_md1556"></a>
+Tests</h1>
+<p>There are tests in <code>./test/</code>; including linting and coverage testing. Running <code>npm test</code> runs:</p>
+<ul>
+<li><code>jshint</code></li>
+<li><code>mocha</code> tests</li>
+<li><code>jscoverage</code> and <code>mocha -R html-cov</code></li>
+</ul>
+<p>You can see the coverage report in <code>coverage.html</code>.</p>
+<h1><a class="anchor" id="autotoc_md1557"></a>
+Development, Patches, Bugs, ...</h1>
+<p>If you find Bugs or have improvements, please feel free to open a issue on GitHub. If you provide a pull request, I'm more than happy to merge them, just make sure to add tests for your changes.</p>
+<h1><a class="anchor" id="autotoc_md1558"></a>
+Links</h1>
+<ul>
+<li><a href="https://github.com/hoegaarden/node-pgpass">https://github.com/hoegaarden/node-pgpass</a></li>
+<li><a href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">http://www.postgresql.org/docs/current/static/libpq-pgpass.html</a></li>
+<li><a href="https://wiki.postgresql.org/wiki/Pgpass">https://wiki.postgresql.org/wiki/Pgpass</a></li>
+<li><a href="https://github.com/postgres/postgres/blob/master/src/interfaces/libpq/fe-connect.c">https://github.com/postgres/postgres/blob/master/src/interfaces/libpq/fe-connect.c</a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md1559"></a>
+License</h1>
+<p>Copyright (c) 2013-2016 Hannes Hörl</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

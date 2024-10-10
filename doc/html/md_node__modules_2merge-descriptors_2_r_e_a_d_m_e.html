@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: merge-descriptors</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">merge-descriptors</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1111"></a></p>
+<p><a href="https://npmjs.org/package/merge-descriptors"><img src="https://img.shields.io/npm/v/merge-descriptors.svg" alt="NPM Version" style="pointer-events: none;" class="inline"/></a> <a href="https://npmjs.org/package/merge-descriptors"><img src="https://img.shields.io/npm/dm/merge-descriptors.svg" alt="NPM Downloads" style="pointer-events: none;" class="inline"/></a> <a href="https://travis-ci.org/component/merge-descriptors"><img src="https://img.shields.io/travis/component/merge-descriptors/master.svg" alt="Build Status" style="pointer-events: none;" class="inline"/></a> <a href="https://coveralls.io/r/component/merge-descriptors?branch=master"><img src="https://img.shields.io/coveralls/component/merge-descriptors/master.svg" alt="Test Coverage" style="pointer-events: none;" class="inline"/></a></p>
+<p>Merge objects using descriptors.</p>
+<div class="fragment"><div class="line">var thing = {</div>
+<div class="line">  <a class="code hl_variable" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">get</a> <a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>() {</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="stringliteral">&#39;jon&#39;</span></div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">var animal = {</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_variable" href="application_8js.html#a3fda54bf53a2d62c0f154400825c4b57">merge</a>(animal, thing)</div>
+<div class="line"> </div>
+<div class="line">animal.name === <span class="stringliteral">&#39;jon&#39;</span></div>
+<div class="ttc" id="aapplication_8js_html_a3fda54bf53a2d62c0f154400825c4b57"><div class="ttname"><a href="application_8js.html#a3fda54bf53a2d62c0f154400825c4b57">merge</a></div><div class="ttdeci">var merge</div><div class="ttdef"><b>Definition</b> application.js:29</div></div>
+<div class="ttc" id="ainbound-parser_8test_8js_html_a82922bbd162af030b5deaeafbf18ef0e"><div class="ttname"><a href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a></div><div class="ttdeci">row1 name</div><div class="ttdef"><b>Definition</b> inbound-parser.test.js:48</div></div>
+<div class="ttc" id="aresponse_8js_html_a10d7f5ef6343bd4575249458cf93dd3e"><div class="ttname"><a href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">get</a></div><div class="ttdeci">res get</div><div class="ttdef"><b>Definition</b> response.js:811</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1112"></a>
+API</h1>
+<h2><a class="anchor" id="autotoc_md1113"></a>
+merge(destination, source)</h2>
+<p>Redefines <code>destination</code>'s descriptors with <code>source</code>'s. The return value is the <code>destination</code> object.</p>
+<h2><a class="anchor" id="autotoc_md1114"></a>
+merge(destination, source, false)</h2>
+<p>Defines <code>source</code>'s descriptors on <code>destination</code> if <code>destination</code> does not have a descriptor by the same name. The return value is the <code>destination</code> object.</p>
+<h1><a class="anchor" id="autotoc_md1115"></a>
+License</h1>
+<p>[MIT](LICENSE) </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

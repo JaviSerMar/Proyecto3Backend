@@ -1,0 +1,44 @@
+\chapter{call-\/bind \texorpdfstring{$<$}{<}sup\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}a href="{}https\+://npmjs.\+org/package/call-\/bind"{} \texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}img src="{}https\+://versionbadg.\+es/ljharb/call-\/bind.\+svg"{} alt="{}\+Version Badge"{}/\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/a\texorpdfstring{$>$}{>}\texorpdfstring{$<$}{<}/sup\texorpdfstring{$>$}{>}}
+\hypertarget{md_node__modules_2call-bind_2_r_e_a_d_m_e}{}\label{md_node__modules_2call-bind_2_r_e_a_d_m_e}\index{call-\/bind $<$sup$>$$<$a href="{}https://npmjs.org/package/call-\/bind"{} $>$$<$img src="{}https://versionbadg.es/ljharb/call-\/bind.svg"{} alt="{}Version Badge"{}/$>$$<$/a$>$$<$/sup$>$@{call-\/bind $<$sup$>$$<$a href=""https://npmjs.org/package/call-\/bind"" $>$$<$img src=""https://versionbadg.es/ljharb/call-\/bind.svg"" alt=""Version Badge""/$>$$<$/a$>$$<$/sup$>$}}
+\label{md_node__modules_2call-bind_2_r_e_a_d_m_e_autotoc_md225}%
+\Hypertarget{md_node__modules_2call-bind_2_r_e_a_d_m_e_autotoc_md225}%
+
+
+\href{https://github.com/ljharb/call-bind/actions}{\texttt{ }} \href{https://app.codecov.io/gh/ljharb/call-bind/}{\texttt{ }} \href{https://david-dm.org/ljharb/call-bind}{\texttt{ }} \href{https://david-dm.org/ljharb/call-bind\#info=devDependencies}{\texttt{ }} \mbox{[}\mbox{]}\mbox{[}license-\/url\mbox{]} \href{https://npm-stat.com/charts.html?package=call-bind}{\texttt{ }}
+
+\href{https://npmjs.org/package/call-bind}{\texttt{ }}
+
+Robustly {\ttfamily .call.\+bind()} a function.\hypertarget{md_node__modules_2call-bind_2_r_e_a_d_m_e_autotoc_md226}{}\doxysection{\texorpdfstring{Getting started}{Getting started}}\label{md_node__modules_2call-bind_2_r_e_a_d_m_e_autotoc_md226}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ -\/-\/save\ call-\/bind}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2call-bind_2_r_e_a_d_m_e_autotoc_md227}{}\doxysection{\texorpdfstring{Usage/\+Examples}{Usage/\+Examples}}\label{md_node__modules_2call-bind_2_r_e_a_d_m_e_autotoc_md227}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'assert'});}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{call_bound_8js_a6092383d6d274186edb4b04aec2308ec}{callBind}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'call-\/bind'});}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{test_2call_bound_8js_ab982ba5d35a56e74292f9eccbb3895d8}{callBound}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'call-\/bind/callBound'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ f(a,\ b)\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(\textcolor{keyword}{this},\ 1);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(a,\ 2);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(b,\ 3);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.equal(arguments.length,\ 2);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{const}\ fBound\ =\ \mbox{\hyperlink{call_bound_8js_a6092383d6d274186edb4b04aec2308ec}{callBind}}(f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{express_2lib_2router_2index_8js_acab0c09ac73e7a3c85a21fa773e9b8b0}{slice}}\ =\ \mbox{\hyperlink{test_2call_bound_8js_ab982ba5d35a56e74292f9eccbb3895d8}{callBound}}(\textcolor{stringliteral}{'Array.prototype.slice'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{delete}\ Function.prototype.call;}
+\DoxyCodeLine{\textcolor{keyword}{delete}\ Function.prototype.bind;}
+\DoxyCodeLine{}
+\DoxyCodeLine{fBound(1,\ 2,\ 3);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{writer-tests_8js_a5e95655c9188700b16a5488897cecb90}{assert}}.deepEqual(\mbox{\hyperlink{express_2lib_2router_2index_8js_acab0c09ac73e7a3c85a21fa773e9b8b0}{slice}}([1,\ 2,\ 3,\ 4],\ 1,\ -\/1),\ [2,\ 3]);}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2call-bind_2_r_e_a_d_m_e_autotoc_md228}{}\doxysection{\texorpdfstring{Tests}{Tests}}\label{md_node__modules_2call-bind_2_r_e_a_d_m_e_autotoc_md228}
+Clone the repo, {\ttfamily npm install}, and run {\ttfamily npm test} 

@@ -1,0 +1,141 @@
+\doxysection{Referencia del archivo node\+\_\+modules/express/lib/router/layer.js}
+\hypertarget{layer_8js}{}\label{layer_8js}\index{node\_modules/express/lib/router/layer.js@{node\_modules/express/lib/router/layer.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{layer_8js_a4fa7f272e265be2505fcff815a0fb3b0}{Layer}} (path, options, fn)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{layer_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{layer_8js_a651046067579e48d7f0d03ce38dc7cf8}{debug}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}debug\textquotesingle{})(\textquotesingle{}express\+:router\+:layer\textquotesingle{})
+\item 
+module \mbox{\hyperlink{layer_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} = \mbox{\hyperlink{express_2lib_2router_2index_8js_a8f21692d459dc10b9b630f09a12f6a37}{Layer}}
+\item 
+\mbox{\hyperlink{express_2lib_2router_2index_8js_a8f21692d459dc10b9b630f09a12f6a37}{Layer}} \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{prototype}} \mbox{\hyperlink{layer_8js_a76918439c0c9e11e64060eb4860096ee}{handle\+\_\+error}}
+\item 
+\mbox{\hyperlink{express_2lib_2router_2index_8js_a8f21692d459dc10b9b630f09a12f6a37}{Layer}} \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{prototype}} \mbox{\hyperlink{layer_8js_a2714114224dc5fcc03f6441433b83d7f}{handle\+\_\+request}}
+\item 
+\mbox{\hyperlink{express_2lib_2router_2index_8js_a8f21692d459dc10b9b630f09a12f6a37}{Layer}} \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{prototype}} \mbox{\hyperlink{layer_8js_aee433120cbb9ab29eb32064146e11ef5}{match}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{layer_8js_a4fa7f272e265be2505fcff815a0fb3b0}\index{layer.js@{layer.js}!Layer@{Layer}}
+\index{Layer@{Layer}!layer.js@{layer.js}}
+\doxysubsubsection{\texorpdfstring{Layer()}{Layer()}}
+{\footnotesize\ttfamily \label{layer_8js_a4fa7f272e265be2505fcff815a0fb3b0} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} Layer (\begin{DoxyParamCaption}\item[{path}]{}{, }\item[{options}]{}{, }\item[{fn}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{layer_8js_a651046067579e48d7f0d03ce38dc7cf8}\index{layer.js@{layer.js}!debug@{debug}}
+\index{debug@{debug}!layer.js@{layer.js}}
+\doxysubsubsection{\texorpdfstring{debug}{debug}}
+{\footnotesize\ttfamily \label{layer_8js_a651046067579e48d7f0d03ce38dc7cf8} 
+var debug = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}debug\textquotesingle{})(\textquotesingle{}express\+:router\+:layer\textquotesingle{})}
+
+\Hypertarget{layer_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}\index{layer.js@{layer.js}!exports@{exports}}
+\index{exports@{exports}!layer.js@{layer.js}}
+\doxysubsubsection{\texorpdfstring{exports}{exports}}
+{\footnotesize\ttfamily \label{layer_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34} 
+module exports = \mbox{\hyperlink{express_2lib_2router_2index_8js_a8f21692d459dc10b9b630f09a12f6a37}{Layer}}}
+
+Module exports. \Hypertarget{layer_8js_a76918439c0c9e11e64060eb4860096ee}\index{layer.js@{layer.js}!handle\_error@{handle\_error}}
+\index{handle\_error@{handle\_error}!layer.js@{layer.js}}
+\doxysubsubsection{\texorpdfstring{handle\_error}{handle\_error}}
+{\footnotesize\ttfamily \label{layer_8js_a76918439c0c9e11e64060eb4860096ee} 
+\mbox{\hyperlink{express_2lib_2router_2index_8js_a8f21692d459dc10b9b630f09a12f6a37}{Layer}} \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{prototype}} handle\+\_\+error}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ \mbox{\hyperlink{layer_8js_a76918439c0c9e11e64060eb4860096ee}{handle\_error}}(error,\ \mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ next)\ \{}
+\DoxyCodeLine{\ \ var\ fn\ =\ this.handle;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (fn.length\ !==\ 4)\ \{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ next(error);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\ \ \ \ fn(error,\ \mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ next);}
+\DoxyCodeLine{\ \ \}\ \textcolor{keywordflow}{catch}\ (err)\ \{}
+\DoxyCodeLine{\ \ \ \ next(err);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Handle the error for the layer.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+Error\}} & error \\
+\hline
+{\em \{\+Request\}} & req \\
+\hline
+{\em \{\+Response\}} & res \\
+\hline
+{\em \{function\}} & next @api private \\
+\hline
+\end{DoxyParams}
+\Hypertarget{layer_8js_a2714114224dc5fcc03f6441433b83d7f}\index{layer.js@{layer.js}!handle\_request@{handle\_request}}
+\index{handle\_request@{handle\_request}!layer.js@{layer.js}}
+\doxysubsubsection{\texorpdfstring{handle\_request}{handle\_request}}
+{\footnotesize\ttfamily \label{layer_8js_a2714114224dc5fcc03f6441433b83d7f} 
+\mbox{\hyperlink{express_2lib_2router_2index_8js_a8f21692d459dc10b9b630f09a12f6a37}{Layer}} \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{prototype}} handle\+\_\+request}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ handle(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ next)\ \{}
+\DoxyCodeLine{\ \ var\ fn\ =\ this.handle;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (fn.length\ >\ 3)\ \{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ next();}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\ \ \ \ fn(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ next);}
+\DoxyCodeLine{\ \ \}\ \textcolor{keywordflow}{catch}\ (err)\ \{}
+\DoxyCodeLine{\ \ \ \ next(err);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Handle the request for the layer.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+Request\}} & req \\
+\hline
+{\em \{\+Response\}} & res \\
+\hline
+{\em \{function\}} & next @api private \\
+\hline
+\end{DoxyParams}
+\Hypertarget{layer_8js_aee433120cbb9ab29eb32064146e11ef5}\index{layer.js@{layer.js}!match@{match}}
+\index{match@{match}!layer.js@{layer.js}}
+\doxysubsubsection{\texorpdfstring{match}{match}}
+{\footnotesize\ttfamily \label{layer_8js_aee433120cbb9ab29eb32064146e11ef5} 
+\mbox{\hyperlink{express_2lib_2router_2index_8js_a8f21692d459dc10b9b630f09a12f6a37}{Layer}} \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{prototype}} match}
+
+Check if this route matches {\ttfamily path}, if so populate {\ttfamily .params}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+String\}} & path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{Boolean\} @api private 
+\end{DoxyReturn}
+\Hypertarget{layer_8js_ae2475e10618961c050dcba04e8c42331}\index{layer.js@{layer.js}!strict@{strict}}
+\index{strict@{strict}!layer.js@{layer.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{layer_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+express Copyright(c) 2009-\/2013 TJ Holowaychuk Copyright(c) 2013 Roman Shtylman Copyright(c) 2014-\/2015 Douglas Christopher Wilson MIT Licensed 

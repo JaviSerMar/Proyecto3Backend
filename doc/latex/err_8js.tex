@@ -1,0 +1,46 @@
+\doxysection{Referencia del archivo node\+\_\+modules/object-\/inspect/test/err.js}
+\hypertarget{err_8js}{}\label{err_8js}\index{node\_modules/object-\/inspect/test/err.js@{node\_modules/object-\/inspect/test/err.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{err_8js_ae879a756c238748066ca6d8bdbeb0a42}{test}} (\textquotesingle{}\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}} error\textquotesingle{}, \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(t) \{ t.\+plan(1);var aerr=new Type\+Error();aerr.\+foo=555;aerr.\+bar=\mbox{[}1, 2, 3\mbox{]};var berr=new Type\+Error(\textquotesingle{}tuv\textquotesingle{});berr.\+baz=555;var cerr=new Syntax\+Error();cerr.\+message=\textquotesingle{}whoa\textquotesingle{};cerr\mbox{[}\textquotesingle{}a-\/b\textquotesingle{}\mbox{]}=5;var with\+Cause=new \mbox{\hyperlink{err_8js_af3bccf2fea85269bc9d5ff9b3a929121}{Error\+With\+Cause}}(\textquotesingle{}foo\textquotesingle{}, \{ cause\+:\textquotesingle{}bar\textquotesingle{} \});var with\+Cause\+Plus=new \mbox{\hyperlink{err_8js_af3bccf2fea85269bc9d5ff9b3a929121}{Error\+With\+Cause}}(\textquotesingle{}foo\textquotesingle{}, \{ cause\+:\textquotesingle{}bar\textquotesingle{} \});with\+Cause\+Plus.\+foo=\textquotesingle{}bar\textquotesingle{};var with\+Undefined\+Cause=new \mbox{\hyperlink{err_8js_af3bccf2fea85269bc9d5ff9b3a929121}{Error\+With\+Cause}}(\textquotesingle{}foo\textquotesingle{}, \{ cause\+:undefined \});var with\+Enumerable\+Cause=new \mbox{\hyperlink{class_error}{Error}}(\textquotesingle{}foo\textquotesingle{});with\+Enumerable\+Cause.\+cause=\textquotesingle{}bar\textquotesingle{};var \mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}=\mbox{[}new Type\+Error(), new Type\+Error(\textquotesingle{}xxx\textquotesingle{}), aerr, berr, cerr, with\+Cause, with\+Cause\+Plus, with\+Undefined\+Cause, with\+Enumerable\+Cause\mbox{]};\mbox{\hyperlink{mime_2src_2test_8js_a678b786d8ca72572f8af97bed94a5eb1}{t.\+equal}}(\mbox{\hyperlink{call-bind_2test_2index_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}}(\mbox{\hyperlink{all_8js_ab15a7ef94ea648e0a722a49372614731}{obj}}), \textquotesingle{}\mbox{[}\textquotesingle{}+\mbox{[}\textquotesingle{}\mbox{[}Type\+Error\mbox{]}\textquotesingle{}, \textquotesingle{}\mbox{[}Type\+Error\+:xxx\mbox{]}\textquotesingle{}, \textquotesingle{}\{\mbox{[}Type\+Error\mbox{]} foo\+:555, bar\+:\mbox{[}1, 2, 3\mbox{]} \}\textquotesingle{}, \textquotesingle{}\{\mbox{[}Type\+Error\+:tuv\mbox{]} baz\+:555 \}\textquotesingle{}, \textquotesingle{}\{\mbox{[}Syntax\+Error\+:whoa\mbox{]} message\+:\textbackslash{} \textquotesingle{}whoa\textbackslash{}\textquotesingle{}, \textbackslash{} \textquotesingle{}a-\/b\textbackslash{}\textquotesingle{}\+:5 \}\textquotesingle{}, \textquotesingle{}cause\textquotesingle{} in \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{Error.\+prototype}} ? \textquotesingle{}\mbox{[}Error\+:foo\mbox{]}\textquotesingle{} \+:\textquotesingle{}\{\mbox{[}Error\+:foo\mbox{]}\mbox{[}cause\mbox{]}\+:\textbackslash{} \textquotesingle{}bar\textbackslash{}\textquotesingle{} \}\textquotesingle{}, \textquotesingle{}\{\mbox{[}Error\+:foo\mbox{]} \textquotesingle{}+(\textquotesingle{}cause\textquotesingle{} in \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{Error.\+prototype}} ? \textquotesingle{}\textquotesingle{} \+:\textquotesingle{}\mbox{[}cause\mbox{]}\+:\textbackslash{} \textquotesingle{}bar\textbackslash{}\textquotesingle{}, \textquotesingle{})+ \textquotesingle{}foo\+:\textbackslash{} \textquotesingle{}bar\textbackslash{}\textquotesingle{} \}\textquotesingle{}, \textquotesingle{}cause\textquotesingle{} in \mbox{\hyperlink{internal_8js_a22c3fb2b14bdd9d6de4c61f2778f4444}{Error.\+prototype}} ? \textquotesingle{}\mbox{[}Error\+:foo\mbox{]}\textquotesingle{} \+:\textquotesingle{}\{\mbox{[}Error\+:foo\mbox{]}\mbox{[}cause\mbox{]}\+:\mbox{\hyperlink{get-intrinsic_2index_8js_ae6aa4817f0f49345b718ea6b4abae197}{undefined}} \}\textquotesingle{}, \textquotesingle{}\{\mbox{[}Error\+:foo\mbox{]} cause\+:\textbackslash{} \textquotesingle{}bar\textbackslash{}\textquotesingle{} \}\textquotesingle{}\mbox{]}.\mbox{\hyperlink{buffer-writer_2index_8js_a6224c24496a1edd10ed52a9149e0d28a}{join}}(\textquotesingle{}, \textquotesingle{})+\textquotesingle{}\mbox{]}\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \mbox{\hyperlink{err_8js_a3a897d91c374db023efd4ed28e633ade}{test}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}tape\textquotesingle{})
+\item 
+var \mbox{\hyperlink{err_8js_af3bccf2fea85269bc9d5ff9b3a929121}{Error\+With\+Cause}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}error-\/cause/\mbox{\hyperlink{class_error}{Error}}\textquotesingle{})
+\item 
+var \mbox{\hyperlink{err_8js_ada233bc1a09b3d9309abcd7d4a0baebe}{inspect}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}../\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{err_8js_ae879a756c238748066ca6d8bdbeb0a42}\index{err.js@{err.js}!test@{test}}
+\index{test@{test}!err.js@{err.js}}
+\doxysubsubsection{\texorpdfstring{test()}{test()}}
+{\footnotesize\ttfamily \label{err_8js_ae879a756c238748066ca6d8bdbeb0a42} 
+test (\begin{DoxyParamCaption}\item[{\textquotesingle{}\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}} error\textquotesingle{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{err_8js_af3bccf2fea85269bc9d5ff9b3a929121}\index{err.js@{err.js}!ErrorWithCause@{ErrorWithCause}}
+\index{ErrorWithCause@{ErrorWithCause}!err.js@{err.js}}
+\doxysubsubsection{\texorpdfstring{ErrorWithCause}{ErrorWithCause}}
+{\footnotesize\ttfamily \label{err_8js_af3bccf2fea85269bc9d5ff9b3a929121} 
+var Error\+With\+Cause = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}error-\/cause/\mbox{\hyperlink{class_error}{Error}}\textquotesingle{})}
+
+\Hypertarget{err_8js_ada233bc1a09b3d9309abcd7d4a0baebe}\index{err.js@{err.js}!inspect@{inspect}}
+\index{inspect@{inspect}!err.js@{err.js}}
+\doxysubsubsection{\texorpdfstring{inspect}{inspect}}
+{\footnotesize\ttfamily \label{err_8js_ada233bc1a09b3d9309abcd7d4a0baebe} 
+var inspect = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}../\textquotesingle{})}
+
+\Hypertarget{err_8js_a3a897d91c374db023efd4ed28e633ade}\index{err.js@{err.js}!test@{test}}
+\index{test@{test}!err.js@{err.js}}
+\doxysubsubsection{\texorpdfstring{test}{test}}
+{\footnotesize\ttfamily \label{err_8js_a3a897d91c374db023efd4ed28e633ade} 
+var test = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textquotesingle{}tape\textquotesingle{})}
+

@@ -1,0 +1,19 @@
+\doxysection{Referencia del archivo node\+\_\+modules/pg-\/types/lib/builtins.js}
+\hypertarget{builtins_8js}{}\label{builtins_8js}\index{node\_modules/pg-\/types/lib/builtins.js@{node\_modules/pg-\/types/lib/builtins.js}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+module \mbox{\hyperlink{builtins_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{builtins_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}\index{builtins.js@{builtins.js}!exports@{exports}}
+\index{exports@{exports}!builtins.js@{builtins.js}}
+\doxysubsubsection{\texorpdfstring{exports}{exports}}
+{\footnotesize\ttfamily \label{builtins_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34} 
+module exports}
+
+Following query was used to generate this file\+:
+
+SELECT json\+\_\+object\+\_\+agg(UPPER(PT.\+typname), PT.\+oid\+::int4 ORDER BY pt.\+oid) FROM pg\+\_\+type PT WHERE typnamespace = (SELECT pgn.\+oid FROM pg\+\_\+namespace pgn WHERE nspname = \textquotesingle{}pg\+\_\+catalog\textquotesingle{}) -- Take only builting Postgres types with stable OID (extension types are not guaranted to be stable) AND typtype = \textquotesingle{}b\textquotesingle{} -- Only basic types AND typelem = 0 -- Ignore aliases AND typisdefined -- Ignore undefined types 

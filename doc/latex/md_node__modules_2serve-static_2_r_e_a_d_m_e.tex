@@ -1,0 +1,163 @@
+\chapter{serve-\/static}
+\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e}{}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e}\index{serve-\/static@{serve-\/static}}
+\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2029}%
+\Hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2029}%
+
+
+\href{https://npmjs.org/package/serve-static}{\texttt{ }} \href{https://npmjs.org/package/serve-static}{\texttt{ }} \href{https://github.com/expressjs/serve-static/actions/workflows/ci.yml}{\texttt{ }} \href{https://ci.appveyor.com/project/dougwilson/serve-static}{\texttt{ }} \href{https://coveralls.io/r/expressjs/serve-static?branch=master}{\texttt{ }}\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2030}{}\doxysection{\texorpdfstring{Install}{Install}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2030}
+This is a \href{https://nodejs.org/en/}{\texttt{ Node.\+js}} module available through the \href{https://www.npmjs.com/}{\texttt{ npm registry}}. Installation is done using the \href{https://docs.npmjs.com/getting-started/installing-npm-packages-locally}{\texttt{ {\ttfamily npm install} command}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ install\ serve-\/static}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2031}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2031}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ serveStatic\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'serve-\/static'})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2032}{}\doxysubsection{\texorpdfstring{serve\+Static(root, options)}{serve\+Static(root, options)}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2032}
+Create a new middleware function to serve files from within a given root directory. The file to serve will be determined by combining {\ttfamily req.\+url} with the provided root directory. When a file is not found, instead of sending a 404 response, this module will instead call {\ttfamily next()} to move on to the next middleware, allowing for stacking and fall-\/backs.\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2033}{}\doxysubsubsection{\texorpdfstring{Options}{Options}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2033}
+\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2034}{}\doxysubsubsubsection{\texorpdfstring{accept\+Ranges}{accept\+Ranges}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2034}
+Enable or disable accepting ranged requests, defaults to true. Disabling this will not send {\ttfamily Accept-\/\+Ranges} and ignore the contents of the {\ttfamily Range} request header.\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2035}{}\doxysubsubsubsection{\texorpdfstring{cache\+Control}{cache\+Control}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2035}
+Enable or disable setting {\ttfamily Cache-\/\+Control} response header, defaults to true. Disabling this will ignore the {\ttfamily immutable} and {\ttfamily max\+Age} options.\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2036}{}\doxysubsubsubsection{\texorpdfstring{dotfiles}{dotfiles}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2036}
+Set how "{}dotfiles"{} are treated when encountered. A dotfile is a file or directory that begins with a dot ("{}."{}). Note this check is done on the path itself without checking if the path actually exists on the disk. If {\ttfamily root} is specified, only the dotfiles above the root are checked (i.\+e. the root itself can be within a dotfile when set to "{}deny"{}).
+
+
+\begin{DoxyItemize}
+\item `\textquotesingle{}allow'{\ttfamily No special treatment for dotfiles. -\/}\textquotesingle{}deny\textquotesingle{}{\ttfamily Deny a request for a dotfile and 403/}next(){\ttfamily . -\/}\textquotesingle{}ignore\textquotesingle{}{\ttfamily Pretend like the dotfile does not exist and 404/}next()\`{}.
+\end{DoxyItemize}
+
+The default value is similar to `\textquotesingle{}ignore'\`{}, with the exception that this default will not ignore the files within a directory that begins with a dot.\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2037}{}\doxysubsubsubsection{\texorpdfstring{etag}{etag}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2037}
+Enable or disable etag generation, defaults to true.\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2038}{}\doxysubsubsubsection{\texorpdfstring{extensions}{extensions}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2038}
+Set file extension fallbacks. When set, if a file is not found, the given extensions will be added to the file name and search for. The first that exists will be served. Example\+: `\mbox{[}\textquotesingle{}html', \textquotesingle{}htm\textquotesingle{}\mbox{]}\`{}.
+
+The default value is {\ttfamily false}.\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2039}{}\doxysubsubsubsection{\texorpdfstring{fallthrough}{fallthrough}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2039}
+Set the middleware to have client errors fall-\/through as just unhandled requests, otherwise forward a client error. The difference is that client errors like a bad request or a request to a non-\/existent file will cause this middleware to simply {\ttfamily next()} to your next middleware when this value is {\ttfamily true}. When this value is {\ttfamily false}, these errors (even 404s), will invoke {\ttfamily next(err)}.
+
+Typically {\ttfamily true} is desired such that multiple physical directories can be mapped to the same web address or for routes to fill in non-\/existent files.
+
+The value {\ttfamily false} can be used if this middleware is mounted at a path that is designed to be strictly a single file system directory, which allows for short-\/circuiting 404s for less overhead. This middleware will also reply to all methods.
+
+The default value is {\ttfamily true}.\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2040}{}\doxysubsubsubsection{\texorpdfstring{immutable}{immutable}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2040}
+Enable or disable the {\ttfamily immutable} directive in the {\ttfamily Cache-\/\+Control} response header, defaults to {\ttfamily false}. If set to {\ttfamily true}, the {\ttfamily max\+Age} option should also be specified to enable caching. The {\ttfamily immutable} directive will prevent supported clients from making conditional requests during the life of the {\ttfamily max\+Age} option to check if the file has changed.\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2041}{}\doxysubsubsubsection{\texorpdfstring{index}{index}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2041}
+By default this module will send "{}index.\+html"{} files in response to a request on a directory. To disable this set {\ttfamily false} or to supply a new index pass a string or an array in preferred order.\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2042}{}\doxysubsubsubsection{\texorpdfstring{last\+Modified}{last\+Modified}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2042}
+Enable or disable {\ttfamily Last-\/\+Modified} header, defaults to true. Uses the file system\textquotesingle{}s last modified value.\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2043}{}\doxysubsubsubsection{\texorpdfstring{max\+Age}{max\+Age}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2043}
+Provide a max-\/age in milliseconds for http caching, defaults to 0. This can also be a string accepted by the \href{https://www.npmjs.org/package/ms\#readme}{\texttt{ ms}} module.\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2044}{}\doxysubsubsubsection{\texorpdfstring{redirect}{redirect}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2044}
+Redirect to trailing "{}/"{} when the pathname is a dir. Defaults to {\ttfamily true}.\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2045}{}\doxysubsubsubsection{\texorpdfstring{set\+Headers}{set\+Headers}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2045}
+Function to set custom headers on response. Alterations to the headers need to occur synchronously. The function is called as {\ttfamily fn(res, path, stat)}, where the arguments are\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily res} the response object
+\item {\ttfamily path} the file path that is being sent
+\item {\ttfamily stat} the stat object of the file that is being sent
+\end{DoxyItemize}\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2046}{}\doxysection{\texorpdfstring{Examples}{Examples}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2046}
+\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2047}{}\doxysubsection{\texorpdfstring{Serve files with vanilla node.\+js http server}{Serve files with vanilla node.\+js http server}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2047}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ finalhandler\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'finalhandler'})}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('\mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}')}
+\DoxyCodeLine{var\ serveStatic\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('serve-\/static')}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Serve\ up\ public/ftp\ folder}}
+\DoxyCodeLine{var\ serve\ =\ serveStatic('public/ftp',\ \{\ index:\ [\textcolor{stringliteral}{'index.html'},\ \textcolor{stringliteral}{'index.htm'}]\ \})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ server}}
+\DoxyCodeLine{var\ server\ =\ \mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}.createServer(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ onRequest\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})\ \{}
+\DoxyCodeLine{\ \ serve(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ finalhandler(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}))}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Listen}}
+\DoxyCodeLine{server.listen(3000)}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2048}{}\doxysubsection{\texorpdfstring{Serve all files as downloads}{Serve all files as downloads}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2048}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{express_2lib_2utils_8js_aa1ae8b5aa0df46fcc9f22aba2deb965a}{contentDisposition}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'content-\/disposition'})}
+\DoxyCodeLine{var\ finalhandler\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('finalhandler')}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('\mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}')}
+\DoxyCodeLine{var\ serveStatic\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('serve-\/static')}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Serve\ up\ public/ftp\ folder}}
+\DoxyCodeLine{var\ serve\ =\ serveStatic('public/ftp',\ \{}
+\DoxyCodeLine{\ \ index:\ \textcolor{keyword}{false},}
+\DoxyCodeLine{\ \ setHeaders:\ setHeaders}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Set\ header\ to\ force\ download}}
+\DoxyCodeLine{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ setHeaders\ (\mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ path)\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.setHeader(\textcolor{stringliteral}{'Content-\/Disposition'},\ \mbox{\hyperlink{express_2lib_2utils_8js_aa1ae8b5aa0df46fcc9f22aba2deb965a}{contentDisposition}}(path))}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ server}}
+\DoxyCodeLine{var\ server\ =\ \mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}.createServer(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ onRequest\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})\ \{}
+\DoxyCodeLine{\ \ serve(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ finalhandler(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}))}
+\DoxyCodeLine{\})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Listen}}
+\DoxyCodeLine{server.listen(3000)}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2049}{}\doxysubsection{\texorpdfstring{Serving using express}{Serving using express}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2049}
+\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2050}{}\doxysubsubsection{\texorpdfstring{Simple}{Simple}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2050}
+This is a simple example of using Express.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'express'})}
+\DoxyCodeLine{var\ serveStatic\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('serve-\/static')}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}}(serveStatic('public/ftp',\ \{\ index:\ [\textcolor{stringliteral}{'default.html'},\ \textcolor{stringliteral}{'default.htm'}]\ \}))}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.listen(3000)}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2051}{}\doxysubsubsection{\texorpdfstring{Multiple roots}{Multiple roots}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2051}
+This example shows a simple way to search through multiple directories. Files are searched for in {\ttfamily public-\/optimized/} first, then {\ttfamily public/} second as a fallback.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'express'})}
+\DoxyCodeLine{var\ path\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('path')}
+\DoxyCodeLine{var\ serveStatic\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('serve-\/static')}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}}(serveStatic(path.\mbox{\hyperlink{buffer-writer_2index_8js_a6224c24496a1edd10ed52a9149e0d28a}{join}}(\_\_dirname,\ 'public-\/optimized')))}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}}(serveStatic(path.\mbox{\hyperlink{buffer-writer_2index_8js_a6224c24496a1edd10ed52a9149e0d28a}{join}}(\_\_dirname,\ 'public')))}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.\mbox{\hyperlink{application_8js_a57e630eaf5f2d94b72288e1cef6edc49}{listen}}(3000)}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2052}{}\doxysubsubsection{\texorpdfstring{Different settings for paths}{Different settings for paths}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2052}
+This example shows how to set a different max age depending on the served file type. In this example, HTML files are not cached, while everything else is for 1 day.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'express'})}
+\DoxyCodeLine{var\ path\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('path')}
+\DoxyCodeLine{var\ serveStatic\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('serve-\/static')}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ \mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}\ =\ \mbox{\hyperlink{server_8js_a81e570c198204c57e1ebcace4f4e6dad}{express}}()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}}(serveStatic(path.\mbox{\hyperlink{buffer-writer_2index_8js_a6224c24496a1edd10ed52a9149e0d28a}{join}}(\_\_dirname,\ 'public'),\ \{}
+\DoxyCodeLine{\ \ maxAge:\ \textcolor{stringliteral}{'1d'},}
+\DoxyCodeLine{\ \ setHeaders:\ setCustomCacheControl}
+\DoxyCodeLine{\}))}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.listen(3000)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ setCustomCacheControl\ (\mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}},\ path)\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (serveStatic.mime.lookup(path)\ ===\ \textcolor{stringliteral}{'text/html'})\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Custom\ Cache-\/Control\ for\ HTML\ files}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.setHeader(\textcolor{stringliteral}{'Cache-\/Control'},\ \textcolor{stringliteral}{'public,\ max-\/age=0'})}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2053}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2serve-static_2_r_e_a_d_m_e_autotoc_md2053}
+\mbox{[}MIT\mbox{]}(LICENSE) 

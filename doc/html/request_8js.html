@@ -1,0 +1,923 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: Referencia del archivo node_modules/express/lib/request.js</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_acd06b18086a0dd2ae699b1e0b775be8.html">node_modules</a></li><li class="navelem"><a class="el" href="dir_50b5d50ebc732ec851288c97b42b3c42.html">express</a></li><li class="navelem"><a class="el" href="dir_a7b26f1e9e3dbcc51c0ab7c55e7546be.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo request.js</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aa8986459dff9eac7e866fbfdcadb2018" id="r_aa8986459dff9eac7e866fbfdcadb2018"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8986459dff9eac7e866fbfdcadb2018">defineGetter</a> (<a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, 'protocol', <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> protocol(){ var <a class="el" href="express_8js.html#a930fae672851c7e279583e20638e2228">proto</a>=this.connection.encrypted ? 'https' :'<a class="el" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a>';var trust=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.app.get</a>('trust proxy fn');<a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>(!trust(this.connection.remoteAddress, 0)) { return <a class="el" href="express_8js.html#a930fae672851c7e279583e20638e2228">proto</a>;} var header=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.get</a>('X-Forwarded-Proto')||<a class="el" href="express_8js.html#a930fae672851c7e279583e20638e2228">proto</a> var index=<a class="el" href="object-inspect_2index_8js.html#a68d7a69def043c17acbce4b1b552e522">header.indexOf</a>(',') return index !==-1 ? header.substring(0, index).trim() :header.trim() })</td></tr>
+<tr class="separator:aa8986459dff9eac7e866fbfdcadb2018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addbdc40ef134b678163889aeb4a08949" id="r_addbdc40ef134b678163889aeb4a08949"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addbdc40ef134b678163889aeb4a08949">defineGetter</a> (<a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, 'secure', <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> secure(){ return this.protocol==='https';})</td></tr>
+<tr class="separator:addbdc40ef134b678163889aeb4a08949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84f8183a2221a1a1d9d40bad41bd808" id="r_ab84f8183a2221a1a1d9d40bad41bd808"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab84f8183a2221a1a1d9d40bad41bd808">defineGetter</a> (<a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, 'ip', <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> ip(){ var trust=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.app.get</a>('trust proxy fn');return <a class="el" href="#adccce5d9fde7ce401d03984f2d2a4715">proxyaddr</a>(this, trust);})</td></tr>
+<tr class="separator:ab84f8183a2221a1a1d9d40bad41bd808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56b1c69b34cfaf83a129a46b79ce78be" id="r_a56b1c69b34cfaf83a129a46b79ce78be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56b1c69b34cfaf83a129a46b79ce78be">defineGetter</a> (<a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, 'ips', <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> ips() { var trust=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.app.get</a>('trust proxy fn');var addrs=<a class="el" href="application_8js.html#adb8f173cc9d0f47e38ae05e7bb965c99">proxyaddr.all</a>(this, trust);addrs.reverse().pop() return addrs })</td></tr>
+<tr class="separator:a56b1c69b34cfaf83a129a46b79ce78be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae35cd920979fbf4ed3e969ea48f975d3" id="r_ae35cd920979fbf4ed3e969ea48f975d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae35cd920979fbf4ed3e969ea48f975d3">defineGetter</a> (<a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, 'subdomains', <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> subdomains() { var hostname=this.hostname;<a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>(!hostname) return[];var offset=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.app.get</a>('subdomain offset');var subdomains=!<a class="el" href="#a4a6ff4913d40907f5438cd21c126a33e">isIP</a>(hostname) ? <a class="el" href="helper_8js.html#a02757733e12d272f36eb88bf5eb0df12">hostname.split</a>('.').reverse() :[hostname];return <a class="el" href="express_2lib_2router_2index_8js.html#acab0c09ac73e7a3c85a21fa773e9b8b0">subdomains.slice</a>(offset);})</td></tr>
+<tr class="separator:ae35cd920979fbf4ed3e969ea48f975d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bf2b5521ee03138ed77a0acf32461a9" id="r_a1bf2b5521ee03138ed77a0acf32461a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bf2b5521ee03138ed77a0acf32461a9">defineGetter</a> (<a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, 'path', <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> path() { return <a class="el" href="bytes_2index_8js.html#a28ecd76297a5d556aac05441b295f93c">parse</a>(this).pathname;})</td></tr>
+<tr class="separator:a1bf2b5521ee03138ed77a0acf32461a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc60ab1af739cb8e0059ea5b3bc2e0d3" id="r_acc60ab1af739cb8e0059ea5b3bc2e0d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc60ab1af739cb8e0059ea5b3bc2e0d3">defineGetter</a> (<a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, 'hostname', <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> hostname(){ var trust=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.app.get</a>('trust proxy fn');var host=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.get</a>('X-Forwarded-Host');<a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>(!host||!trust(this.connection.remoteAddress, 0)) { host=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.get</a>('Host');} <a class="el" href="call-bind_2index_8js.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>(<a class="el" href="object-inspect_2index_8js.html#a68d7a69def043c17acbce4b1b552e522">host.indexOf</a>(',') !==-1) { host=host.substring(0, <a class="el" href="object-inspect_2index_8js.html#a68d7a69def043c17acbce4b1b552e522">host.indexOf</a>(',')).trimRight() } <a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>(!host) return;var offset=host[0]==='[' ? <a class="el" href="object-inspect_2index_8js.html#a68d7a69def043c17acbce4b1b552e522">host.indexOf</a>(']')+1 :0;var index=<a class="el" href="object-inspect_2index_8js.html#a68d7a69def043c17acbce4b1b552e522">host.indexOf</a>(':', offset);return index !==-1 ? host.substring(0, index) :host;})</td></tr>
+<tr class="separator:acc60ab1af739cb8e0059ea5b3bc2e0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e24a42739a57e5e2a3871aef1ecac14" id="r_a4e24a42739a57e5e2a3871aef1ecac14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e24a42739a57e5e2a3871aef1ecac14">defineGetter</a> (<a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, 'host', <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">deprecate.function</a>(<a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> host(){ return this.hostname;}, 'req.host:Use req.hostname instead'))</td></tr>
+<tr class="separator:a4e24a42739a57e5e2a3871aef1ecac14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a104698b39d413b08bae5c2f051a6d388" id="r_a104698b39d413b08bae5c2f051a6d388"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a104698b39d413b08bae5c2f051a6d388">defineGetter</a> (<a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, '<a class="el" href="#ac6bf5484b5676a3edfddf7ca77caa54a">fresh</a>', <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(){ var method=this.method;var <a class="el" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>=<a class="el" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">this.res</a> var <a class="el" href="response_8js.html#ad9c73d5a753bd398aeb580443d4c1957">status</a>=res.statusCode <a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>('GET' !==method &amp;&amp; 'HEAD' !==method) return false;<a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>((<a class="el" href="response_8js.html#ad9c73d5a753bd398aeb580443d4c1957">status</a> &gt;=200 &amp;&amp;<a class="el" href="response_8js.html#ad9c73d5a753bd398aeb580443d4c1957">status</a>&lt; 300)||304===<a class="el" href="response_8js.html#ad9c73d5a753bd398aeb580443d4c1957">status</a>) { return <a class="el" href="#ac6bf5484b5676a3edfddf7ca77caa54a">fresh</a>(this.headers, { '<a class="el" href="express_2lib_2utils_8js.html#aa7b4b88130584154c4a863b71b8a3075">etag</a>':<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">res.get</a>('ETag'), 'last-modified':<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">res.get</a>('Last-Modified') }) } return false;})</td></tr>
+<tr class="separator:a104698b39d413b08bae5c2f051a6d388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c0e995f48aa94be6ab194956659b2f7" id="r_a2c0e995f48aa94be6ab194956659b2f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c0e995f48aa94be6ab194956659b2f7">defineGetter</a> (<a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, 'stale', <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> stale(){ return !<a class="el" href="#ac6bf5484b5676a3edfddf7ca77caa54a">this.fresh</a>;})</td></tr>
+<tr class="separator:a2c0e995f48aa94be6ab194956659b2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa265397c19c5cc737cf142a9b4ce4a0a" id="r_aa265397c19c5cc737cf142a9b4ce4a0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa265397c19c5cc737cf142a9b4ce4a0a">defineGetter</a> (<a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, 'xhr', <a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> xhr(){ var val=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.get</a>('X-Requested-With')||'';return val.toLowerCase()==='xmlhttprequest';})</td></tr>
+<tr class="separator:aa265397c19c5cc737cf142a9b4ce4a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ae2475e10618961c050dcba04e8c42331" id="r_ae2475e10618961c050dcba04e8c42331"><td class="memItemLeft" align="right" valign="top"><a class="el" href="application_8js.html#a8192500ed5d08ae60d3778b54729bd51">use</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2475e10618961c050dcba04e8c42331">strict</a></td></tr>
+<tr class="separator:ae2475e10618961c050dcba04e8c42331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfcd119b39526e732877a941ebeed620" id="r_acfcd119b39526e732877a941ebeed620"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfcd119b39526e732877a941ebeed620">deprecate</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('depd')('<a class="el" href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express</a>')</td></tr>
+<tr class="separator:acfcd119b39526e732877a941ebeed620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a6ff4913d40907f5438cd21c126a33e" id="r_a4a6ff4913d40907f5438cd21c126a33e"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a6ff4913d40907f5438cd21c126a33e">isIP</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('net').isIP</td></tr>
+<tr class="separator:a4a6ff4913d40907f5438cd21c126a33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2efc67136068229eaf03e7ae371b6b25" id="r_a2efc67136068229eaf03e7ae371b6b25"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2efc67136068229eaf03e7ae371b6b25">typeis</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('<a class="el" href="cli_8js.html#affea7e61106a6a9da029c8af702aaf20">type</a>-<a class="el" href="#a5e3afd97276cc403924d1a449a83ea84">is</a>')</td></tr>
+<tr class="separator:a2efc67136068229eaf03e7ae371b6b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55f22d498ca401fddca364855629d1d3" id="r_a55f22d498ca401fddca364855629d1d3"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55f22d498ca401fddca364855629d1d3">http</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('http')</td></tr>
+<tr class="separator:a55f22d498ca401fddca364855629d1d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6bf5484b5676a3edfddf7ca77caa54a" id="r_ac6bf5484b5676a3edfddf7ca77caa54a"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6bf5484b5676a3edfddf7ca77caa54a">fresh</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('fresh')</td></tr>
+<tr class="separator:ac6bf5484b5676a3edfddf7ca77caa54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaaf98f51168d5ff2608b0f4752a312f" id="r_aaaaf98f51168d5ff2608b0f4752a312f"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaaf98f51168d5ff2608b0f4752a312f">parseRange</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('<a class="el" href="#ac94e8517738efc3d03aa3ce811e2dee3">range</a>-parser')</td></tr>
+<tr class="separator:aaaaf98f51168d5ff2608b0f4752a312f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb224ef64380e0c03fd28ca64a949ab" id="r_afbb224ef64380e0c03fd28ca64a949ab"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbb224ef64380e0c03fd28ca64a949ab">parse</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('parseurl')</td></tr>
+<tr class="separator:afbb224ef64380e0c03fd28ca64a949ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adccce5d9fde7ce401d03984f2d2a4715" id="r_adccce5d9fde7ce401d03984f2d2a4715"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adccce5d9fde7ce401d03984f2d2a4715">proxyaddr</a> = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('proxy-addr')</td></tr>
+<tr class="separator:adccce5d9fde7ce401d03984f2d2a4715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c43c76081a7df8ae2954f16ee9338b" id="r_a42c43c76081a7df8ae2954f16ee9338b"><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42c43c76081a7df8ae2954f16ee9338b">req</a></td></tr>
+<tr class="separator:a42c43c76081a7df8ae2954f16ee9338b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad590a4c822ccf7a8651345f38de5c34a" id="r_ad590a4c822ccf7a8651345f38de5c34a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad590a4c822ccf7a8651345f38de5c34a">acceptsEncodings</a></td></tr>
+<tr class="separator:ad590a4c822ccf7a8651345f38de5c34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c49f40601e9f31f16471ab9d008ab9" id="r_a35c49f40601e9f31f16471ab9d008ab9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35c49f40601e9f31f16471ab9d008ab9">acceptsEncoding</a></td></tr>
+<tr class="separator:a35c49f40601e9f31f16471ab9d008ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6029d2a4188dac8f6e0ad604166d5c7f" id="r_a6029d2a4188dac8f6e0ad604166d5c7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6029d2a4188dac8f6e0ad604166d5c7f">acceptsCharsets</a></td></tr>
+<tr class="separator:a6029d2a4188dac8f6e0ad604166d5c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e11499c15709433c941a710da04ca4" id="r_a96e11499c15709433c941a710da04ca4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96e11499c15709433c941a710da04ca4">acceptsCharset</a></td></tr>
+<tr class="separator:a96e11499c15709433c941a710da04ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04523be7e11c86fa4d5b3b4b90e1fc2e" id="r_a04523be7e11c86fa4d5b3b4b90e1fc2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04523be7e11c86fa4d5b3b4b90e1fc2e">acceptsLanguages</a></td></tr>
+<tr class="separator:a04523be7e11c86fa4d5b3b4b90e1fc2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5fec45eb1d586bd37a859653922d607" id="r_af5fec45eb1d586bd37a859653922d607"><td class="memItemLeft" align="right" valign="top"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5fec45eb1d586bd37a859653922d607">acceptsLanguage</a></td></tr>
+<tr class="separator:af5fec45eb1d586bd37a859653922d607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94e8517738efc3d03aa3ce811e2dee3" id="r_ac94e8517738efc3d03aa3ce811e2dee3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac94e8517738efc3d03aa3ce811e2dee3">range</a></td></tr>
+<tr class="separator:ac94e8517738efc3d03aa3ce811e2dee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30f03e4827ddd737a83aa6c7e5a5f24" id="r_ac30f03e4827ddd737a83aa6c7e5a5f24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac30f03e4827ddd737a83aa6c7e5a5f24">param</a></td></tr>
+<tr class="separator:ac30f03e4827ddd737a83aa6c7e5a5f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e3afd97276cc403924d1a449a83ea84" id="r_a5e3afd97276cc403924d1a449a83ea84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e3afd97276cc403924d1a449a83ea84">is</a></td></tr>
+<tr class="separator:a5e3afd97276cc403924d1a449a83ea84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a104698b39d413b08bae5c2f051a6d388" name="a104698b39d413b08bae5c2f051a6d388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a104698b39d413b08bae5c2f051a6d388">&#9670;&#160;</a></span>defineGetter() <span class="overload">[1/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">defineGetter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'<a class="el" href="#ac6bf5484b5676a3edfddf7ca77caa54a">fresh</a>'</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(){ var method=this.method;var <a class="el" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>=<a class="el" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">this.res</a> var <a class="el" href="response_8js.html#ad9c73d5a753bd398aeb580443d4c1957">status</a>=res.statusCode <a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>('GET' !==method &amp;&amp; 'HEAD' !==method) return false;<a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>((<a class="el" href="response_8js.html#ad9c73d5a753bd398aeb580443d4c1957">status</a> &gt;=200 &amp;&amp;<a class="el" href="response_8js.html#ad9c73d5a753bd398aeb580443d4c1957">status</a>&lt; 300)||304===<a class="el" href="response_8js.html#ad9c73d5a753bd398aeb580443d4c1957">status</a>) { return <a class="el" href="#ac6bf5484b5676a3edfddf7ca77caa54a">fresh</a>(this.headers, { '<a class="el" href="express_2lib_2utils_8js.html#aa7b4b88130584154c4a863b71b8a3075">etag</a>':<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">res.get</a>('ETag'), 'last-modified':<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">res.get</a>('Last-Modified') }) } return false;}</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the request is fresh, aka Last-Modified and/or the ETag still match.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>{Boolean} </dd></dl>
+
+</div>
+</div>
+<a id="a4e24a42739a57e5e2a3871aef1ecac14" name="a4e24a42739a57e5e2a3871aef1ecac14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e24a42739a57e5e2a3871aef1ecac14">&#9670;&#160;</a></span>defineGetter() <span class="overload">[2/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">defineGetter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'host'</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">deprecate.</td>          <td class="paramname"><span class="paramname"><em>function</em></span>function host(){ return this.hostname;}, 'req.host:Use req.hostname instead'&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc60ab1af739cb8e0059ea5b3bc2e0d3" name="acc60ab1af739cb8e0059ea5b3bc2e0d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc60ab1af739cb8e0059ea5b3bc2e0d3">&#9670;&#160;</a></span>defineGetter() <span class="overload">[3/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">defineGetter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'hostname'</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> hostname(){ var trust=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.app.get</a>('trust proxy fn');var host=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.get</a>('X-Forwarded-Host');<a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>(!host||!trust(this.connection.remoteAddress, 0)) { host=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.get</a>('Host');} <a class="el" href="call-bind_2index_8js.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>(<a class="el" href="object-inspect_2index_8js.html#a68d7a69def043c17acbce4b1b552e522">host.indexOf</a>(',') !==-1) { host=host.substring(0, <a class="el" href="object-inspect_2index_8js.html#a68d7a69def043c17acbce4b1b552e522">host.indexOf</a>(',')).trimRight() } <a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>(!host) return;var offset=host[0]==='[' ? <a class="el" href="object-inspect_2index_8js.html#a68d7a69def043c17acbce4b1b552e522">host.indexOf</a>(']')+1 :0;var index=<a class="el" href="object-inspect_2index_8js.html#a68d7a69def043c17acbce4b1b552e522">host.indexOf</a>(':', offset);return index !==-1 ? host.substring(0, index) :host;}</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Parse the "Host" header field to a hostname.</p>
+<p>When the "trust proxy" setting trusts the socket address, the "X-Forwarded-Host" header field will be trusted.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>{String} </dd></dl>
+
+</div>
+</div>
+<a id="ab84f8183a2221a1a1d9d40bad41bd808" name="ab84f8183a2221a1a1d9d40bad41bd808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab84f8183a2221a1a1d9d40bad41bd808">&#9670;&#160;</a></span>defineGetter() <span class="overload">[4/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">defineGetter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'ip'</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> ip(){ var trust=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.app.get</a>('trust proxy fn');return <a class="el" href="#adccce5d9fde7ce401d03984f2d2a4715">proxyaddr</a>(this, trust);}</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the remote address from the trusted proxy.</p>
+<p>The is the remote address on the socket unless "trust proxy" is set.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>{String} </dd></dl>
+
+</div>
+</div>
+<a id="a56b1c69b34cfaf83a129a46b79ce78be" name="a56b1c69b34cfaf83a129a46b79ce78be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56b1c69b34cfaf83a129a46b79ce78be">&#9670;&#160;</a></span>defineGetter() <span class="overload">[5/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">defineGetter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'ips'</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> ips() { var trust=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.app.get</a>('trust proxy fn');var addrs=<a class="el" href="application_8js.html#adb8f173cc9d0f47e38ae05e7bb965c99">proxyaddr.all</a>(this, trust);addrs.reverse().pop() return addrs }</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>When "trust proxy" is set, trusted proxy addresses + client.</p>
+<p>For example if the value were "client, proxy1, proxy2" you would receive the array <code>["client", "proxy1", "proxy2"]</code> where "proxy2" is the furthest down-stream and "proxy1" and "proxy2" were trusted.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>{Array} </dd></dl>
+
+</div>
+</div>
+<a id="a1bf2b5521ee03138ed77a0acf32461a9" name="a1bf2b5521ee03138ed77a0acf32461a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bf2b5521ee03138ed77a0acf32461a9">&#9670;&#160;</a></span>defineGetter() <span class="overload">[6/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">defineGetter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'path'</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> path() { return <a class="el" href="bytes_2index_8js.html#a28ecd76297a5d556aac05441b295f93c">parse</a>(this).pathname;}</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Short-hand for <code>url.parse(req.url).pathname</code>.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>{String} </dd></dl>
+
+</div>
+</div>
+<a id="aa8986459dff9eac7e866fbfdcadb2018" name="aa8986459dff9eac7e866fbfdcadb2018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8986459dff9eac7e866fbfdcadb2018">&#9670;&#160;</a></span>defineGetter() <span class="overload">[7/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">defineGetter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'protocol'</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> protocol(){ var <a class="el" href="express_8js.html#a930fae672851c7e279583e20638e2228">proto</a>=this.connection.encrypted ? 'https' :'<a class="el" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a>';var trust=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.app.get</a>('trust proxy fn');<a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>(!trust(this.connection.remoteAddress, 0)) { return <a class="el" href="express_8js.html#a930fae672851c7e279583e20638e2228">proto</a>;} var header=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.get</a>('X-Forwarded-Proto')||<a class="el" href="express_8js.html#a930fae672851c7e279583e20638e2228">proto</a> var index=<a class="el" href="object-inspect_2index_8js.html#a68d7a69def043c17acbce4b1b552e522">header.indexOf</a>(',') return index !==-1 ? header.substring(0, index).trim() :header.trim() }</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the protocol string "http" or "https" when requested with TLS. When the "trust proxy" setting trusts the socket address, the "X-Forwarded-Proto" header field will be trusted and used if present.</p>
+<p>If you're running behind a reverse proxy that supplies https for you this may be enabled.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>{String} </dd></dl>
+
+</div>
+</div>
+<a id="addbdc40ef134b678163889aeb4a08949" name="addbdc40ef134b678163889aeb4a08949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addbdc40ef134b678163889aeb4a08949">&#9670;&#160;</a></span>defineGetter() <span class="overload">[8/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">defineGetter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'secure'</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> secure(){ return this.protocol==='https';}</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Short-hand for:</p>
+<p>req.protocol === 'https'</p>
+<dl class="section return"><dt>Devuelve</dt><dd>{Boolean} </dd></dl>
+
+</div>
+</div>
+<a id="a2c0e995f48aa94be6ab194956659b2f7" name="a2c0e995f48aa94be6ab194956659b2f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c0e995f48aa94be6ab194956659b2f7">&#9670;&#160;</a></span>defineGetter() <span class="overload">[9/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">defineGetter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'stale'</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> stale(){ return !<a class="el" href="#ac6bf5484b5676a3edfddf7ca77caa54a">this.fresh</a>;}</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the request is stale, aka "Last-Modified" and / or the "ETag" for the resource has changed.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>{Boolean} </dd></dl>
+
+</div>
+</div>
+<a id="ae35cd920979fbf4ed3e969ea48f975d3" name="ae35cd920979fbf4ed3e969ea48f975d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae35cd920979fbf4ed3e969ea48f975d3">&#9670;&#160;</a></span>defineGetter() <span class="overload">[10/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">defineGetter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'subdomains'</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> subdomains() { var hostname=this.hostname;<a class="el" href="buffer-writer_2index_8js.html#af5573e69e835b9cd97daf36e3072666b">if</a>(!hostname) return[];var offset=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.app.get</a>('subdomain offset');var subdomains=!<a class="el" href="#a4a6ff4913d40907f5438cd21c126a33e">isIP</a>(hostname) ? <a class="el" href="helper_8js.html#a02757733e12d272f36eb88bf5eb0df12">hostname.split</a>('.').reverse() :[hostname];return <a class="el" href="express_2lib_2router_2index_8js.html#acab0c09ac73e7a3c85a21fa773e9b8b0">subdomains.slice</a>(offset);}</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return subdomains as an array.</p>
+<p>Subdomains are the dot-separated parts of the host before the main domain of the app. By default, the domain of the app is assumed to be the last two parts of the host. This can be changed by setting "subdomain offset".</p>
+<p>For example, if the domain is "tobi.ferrets.example.com": If "subdomain offset" is not set, req.subdomains is <code>["ferrets", "tobi"]</code>. If "subdomain offset" is 3, req.subdomains is <code>["tobi"]</code>.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>{Array} </dd></dl>
+
+</div>
+</div>
+<a id="aa265397c19c5cc737cf142a9b4ce4a0a" name="aa265397c19c5cc737cf142a9b4ce4a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa265397c19c5cc737cf142a9b4ce4a0a">&#9670;&#160;</a></span>defineGetter() <span class="overload">[11/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">defineGetter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'xhr'</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> xhr(){ var val=<a class="el" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">this.get</a>('X-Requested-With')||'';return val.toLowerCase()==='xmlhttprequest';}</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the request was an <em>XMLHttpRequest</em>.</p>
+<dl class="section return"><dt>Devuelve</dt><dd>{Boolean} </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="a96e11499c15709433c941a710da04ca4" name="a96e11499c15709433c941a710da04ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e11499c15709433c941a710da04ca4">&#9670;&#160;</a></span>acceptsCharset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a> acceptsCharset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_variable" href="#acfcd119b39526e732877a941ebeed620">deprecate</a>.function(<a class="code hl_variable" href="#a42c43c76081a7df8ae2954f16ee9338b">req</a>.acceptsCharsets,</div>
+<div class="line">  <span class="stringliteral">&#39;req.acceptsCharset: Use acceptsCharsets instead&#39;</span>)</div>
+<div class="ttc" id="arequest_8js_html_a42c43c76081a7df8ae2954f16ee9338b"><div class="ttname"><a href="#a42c43c76081a7df8ae2954f16ee9338b">req</a></div><div class="ttdeci">var req</div><div class="ttdef"><b>Definition</b> request.js:31</div></div>
+<div class="ttc" id="arequest_8js_html_acfcd119b39526e732877a941ebeed620"><div class="ttname"><a href="#acfcd119b39526e732877a941ebeed620">deprecate</a></div><div class="ttdeci">var deprecate</div><div class="ttdef"><b>Definition</b> request.js:17</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6029d2a4188dac8f6e0ad604166d5c7f" name="a6029d2a4188dac8f6e0ad604166d5c7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6029d2a4188dac8f6e0ad604166d5c7f">&#9670;&#160;</a></span>acceptsCharsets</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a> acceptsCharsets</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(){</div>
+<div class="line">  var accept = accepts(<span class="keyword">this</span>);</div>
+<div class="line">  <span class="keywordflow">return</span> accept.charsets.apply(accept, arguments);</div>
+<div class="line">}</div>
+<div class="ttc" id="acors_2lib_2index_8js_html_ac2ffb26d6f42d3bbcd7847b0873403f4"><div class="ttname"><a href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a></div><div class="ttdeci">function()</div><div class="ttdef"><b>Definition</b> index.js:1</div></div>
+</div><!-- fragment --><p>Check if the given <code>charset</code>s are acceptable, otherwise you should respond with 406 "Not Acceptable".</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String}</td><td>...charset </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{String|Array} </dd></dl>
+
+</div>
+</div>
+<a id="a35c49f40601e9f31f16471ab9d008ab9" name="a35c49f40601e9f31f16471ab9d008ab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c49f40601e9f31f16471ab9d008ab9">&#9670;&#160;</a></span>acceptsEncoding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a> acceptsEncoding</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_variable" href="#acfcd119b39526e732877a941ebeed620">deprecate</a>.function(<a class="code hl_variable" href="#a42c43c76081a7df8ae2954f16ee9338b">req</a>.acceptsEncodings,</div>
+<div class="line">  <span class="stringliteral">&#39;req.acceptsEncoding: Use acceptsEncodings instead&#39;</span>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad590a4c822ccf7a8651345f38de5c34a" name="ad590a4c822ccf7a8651345f38de5c34a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad590a4c822ccf7a8651345f38de5c34a">&#9670;&#160;</a></span>acceptsEncodings</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a> acceptsEncodings</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(){</div>
+<div class="line">  var accept = accepts(<span class="keyword">this</span>);</div>
+<div class="line">  <span class="keywordflow">return</span> accept.encodings.apply(accept, arguments);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Check if the given <code>encoding</code>s are accepted.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String}</td><td>...encoding </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{String|Array} </dd></dl>
+
+</div>
+</div>
+<a id="af5fec45eb1d586bd37a859653922d607" name="af5fec45eb1d586bd37a859653922d607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5fec45eb1d586bd37a859653922d607">&#9670;&#160;</a></span>acceptsLanguage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a> acceptsLanguage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_variable" href="#acfcd119b39526e732877a941ebeed620">deprecate</a>.function(<a class="code hl_variable" href="#a42c43c76081a7df8ae2954f16ee9338b">req</a>.acceptsLanguages,</div>
+<div class="line">  <span class="stringliteral">&#39;req.acceptsLanguage: Use acceptsLanguages instead&#39;</span>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a04523be7e11c86fa4d5b3b4b90e1fc2e" name="a04523be7e11c86fa4d5b3b4b90e1fc2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04523be7e11c86fa4d5b3b4b90e1fc2e">&#9670;&#160;</a></span>acceptsLanguages</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a> acceptsLanguages</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a>(){</div>
+<div class="line">  var accept = accepts(<span class="keyword">this</span>);</div>
+<div class="line">  <span class="keywordflow">return</span> accept.languages.apply(accept, arguments);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Check if the given <code>lang</code>s are acceptable, otherwise you should respond with 406 "Not Acceptable".</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String}</td><td>...lang </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{String|Array} </dd></dl>
+
+</div>
+</div>
+<a id="acfcd119b39526e732877a941ebeed620" name="acfcd119b39526e732877a941ebeed620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfcd119b39526e732877a941ebeed620">&#9670;&#160;</a></span>deprecate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var deprecate = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('depd')('<a class="el" href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express</a>')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6bf5484b5676a3edfddf7ca77caa54a" name="ac6bf5484b5676a3edfddf7ca77caa54a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6bf5484b5676a3edfddf7ca77caa54a">&#9670;&#160;</a></span>fresh</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var fresh = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('fresh')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55f22d498ca401fddca364855629d1d3" name="a55f22d498ca401fddca364855629d1d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55f22d498ca401fddca364855629d1d3">&#9670;&#160;</a></span>http</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var http = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('http')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e3afd97276cc403924d1a449a83ea84" name="a5e3afd97276cc403924d1a449a83ea84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e3afd97276cc403924d1a449a83ea84">&#9670;&#160;</a></span>is</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a> is</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="#a5e3afd97276cc403924d1a449a83ea84">is</a>(<a class="code hl_variable" href="build_8js.html#a5802f014ed8e96d3a513f114faa91d12">types</a>) {</div>
+<div class="line">  var arr = <a class="code hl_variable" href="build_8js.html#a5802f014ed8e96d3a513f114faa91d12">types</a>;</div>
+<div class="line"> </div>
+<div class="line">  </div>
+<div class="line">  <span class="keywordflow">if</span> (!Array.isArray(<a class="code hl_variable" href="build_8js.html#a5802f014ed8e96d3a513f114faa91d12">types</a>)) {</div>
+<div class="line">    arr = <span class="keyword">new</span> Array(arguments.length);</div>
+<div class="line">    <span class="keywordflow">for</span> (var i = 0; i &lt; arr.length; i++) {</div>
+<div class="line">      arr[i] = arguments[i];</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code hl_variable" href="#a2efc67136068229eaf03e7ae371b6b25">typeis</a>(<span class="keyword">this</span>, arr);</div>
+<div class="line">}</div>
+<div class="ttc" id="abuild_8js_html_a5802f014ed8e96d3a513f114faa91d12"><div class="ttname"><a href="build_8js.html#a5802f014ed8e96d3a513f114faa91d12">types</a></div><div class="ttdeci">const types</div><div class="ttdef"><b>Definition</b> build.js:46</div></div>
+<div class="ttc" id="arequest_8js_html_a2efc67136068229eaf03e7ae371b6b25"><div class="ttname"><a href="#a2efc67136068229eaf03e7ae371b6b25">typeis</a></div><div class="ttdeci">var typeis</div><div class="ttdef"><b>Definition</b> request.js:19</div></div>
+<div class="ttc" id="arequest_8js_html_a5e3afd97276cc403924d1a449a83ea84"><div class="ttname"><a href="#a5e3afd97276cc403924d1a449a83ea84">is</a></div><div class="ttdeci">req is</div><div class="ttdef"><b>Definition</b> request.js:278</div></div>
+</div><!-- fragment --><p>Check if the incoming request contains the "Content-Type" header field, and it contains the given mime <code>type</code>.</p>
+<p>Examples: </p><pre class="fragment"> // With Content-Type: text/html; charset=utf-8
+ req.is('html');
+ req.is('text/html');
+ req.is('text/*');
+ // =&gt; true
+
+ // When Content-Type is application/json
+ req.is('json');
+ req.is('application/json');
+ req.is('application/*');
+ // =&gt; true
+
+ req.is('html');
+ // =&gt; false
+</pre><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String|Array}</td><td>types... </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{String|false|null} </dd></dl>
+
+</div>
+</div>
+<a id="a4a6ff4913d40907f5438cd21c126a33e" name="a4a6ff4913d40907f5438cd21c126a33e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a6ff4913d40907f5438cd21c126a33e">&#9670;&#160;</a></span>isIP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var isIP = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('net').isIP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac30f03e4827ddd737a83aa6c7e5a5f24" name="ac30f03e4827ddd737a83aa6c7e5a5f24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30f03e4827ddd737a83aa6c7e5a5f24">&#9670;&#160;</a></span>param</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a> param</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="#ac30f03e4827ddd737a83aa6c7e5a5f24">param</a>(<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>, defaultValue) {</div>
+<div class="line">  var params = this.params || {};</div>
+<div class="line">  var body = this.body || {};</div>
+<div class="line">  var <a class="code hl_variable" href="application_8js.html#a3934419f0f9a2068c705a0013b77fab3">query</a> = this.query || {};</div>
+<div class="line"> </div>
+<div class="line">  var args = arguments.length === 1</div>
+<div class="line">    ? <span class="stringliteral">&#39;name&#39;</span></div>
+<div class="line">    : <span class="stringliteral">&#39;name, default&#39;</span>;</div>
+<div class="line">  <a class="code hl_variable" href="#acfcd119b39526e732877a941ebeed620">deprecate</a>(<span class="stringliteral">&#39;req.param(&#39;</span> + args + <span class="stringliteral">&#39;): Use req.params, req.body, or req.query instead&#39;</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (null != params[<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>] &amp;&amp; params.hasOwnProperty(<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>)) <span class="keywordflow">return</span> params[<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>];</div>
+<div class="line">  <span class="keywordflow">if</span> (null != body[<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>]) <span class="keywordflow">return</span> body[<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>];</div>
+<div class="line">  <span class="keywordflow">if</span> (null != <a class="code hl_variable" href="application_8js.html#a3934419f0f9a2068c705a0013b77fab3">query</a>[<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>]) <span class="keywordflow">return</span> <a class="code hl_variable" href="application_8js.html#a3934419f0f9a2068c705a0013b77fab3">query</a>[<a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>];</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> defaultValue;</div>
+<div class="line">}</div>
+<div class="ttc" id="aapplication_8js_html_a3934419f0f9a2068c705a0013b77fab3"><div class="ttname"><a href="application_8js.html#a3934419f0f9a2068c705a0013b77fab3">query</a></div><div class="ttdeci">var query</div><div class="ttdef"><b>Definition</b> application.js:20</div></div>
+<div class="ttc" id="ainbound-parser_8test_8js_html_a82922bbd162af030b5deaeafbf18ef0e"><div class="ttname"><a href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a></div><div class="ttdeci">row1 name</div><div class="ttdef"><b>Definition</b> inbound-parser.test.js:48</div></div>
+<div class="ttc" id="arequest_8js_html_ac30f03e4827ddd737a83aa6c7e5a5f24"><div class="ttname"><a href="#ac30f03e4827ddd737a83aa6c7e5a5f24">param</a></div><div class="ttdeci">req param</div><div class="ttdef"><b>Definition</b> request.js:235</div></div>
+</div><!-- fragment --><p>Return the value of param <code>name</code> when present or <code>defaultValue</code>.</p>
+<ul>
+<li>Checks route placeholders, ex: _/user/:id_</li>
+<li>Checks body params, ex: id=12, {"id":12}</li>
+<li>Checks query string params, ex: ?id=12</li>
+</ul>
+<p>To utilize request bodies, <code>req.body</code> should be an object. This can be done by using the <code><a class="el" href="express_8js.html#a2f18df3edfa1cab06177ab4917a1d17e">bodyParser()</a></code> middleware.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{String}</td><td>name </td></tr>
+    <tr><td class="paramname">{Mixed}</td><td>[defaultValue] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{String} </dd></dl>
+
+</div>
+</div>
+<a id="afbb224ef64380e0c03fd28ca64a949ab" name="afbb224ef64380e0c03fd28ca64a949ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbb224ef64380e0c03fd28ca64a949ab">&#9670;&#160;</a></span>parse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parse = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('parseurl')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaaaf98f51168d5ff2608b0f4752a312f" name="aaaaf98f51168d5ff2608b0f4752a312f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaaf98f51168d5ff2608b0f4752a312f">&#9670;&#160;</a></span>parseRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var parseRange = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('<a class="el" href="#ac94e8517738efc3d03aa3ce811e2dee3">range</a>-parser')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adccce5d9fde7ce401d03984f2d2a4715" name="adccce5d9fde7ce401d03984f2d2a4715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adccce5d9fde7ce401d03984f2d2a4715">&#9670;&#160;</a></span>proxyaddr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var proxyaddr = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('proxy-addr')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac94e8517738efc3d03aa3ce811e2dee3" name="ac94e8517738efc3d03aa3ce811e2dee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac94e8517738efc3d03aa3ce811e2dee3">&#9670;&#160;</a></span>range</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a> range</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> <a class="code hl_variable" href="#ac94e8517738efc3d03aa3ce811e2dee3">range</a>(size, options) {</div>
+<div class="line">  var <a class="code hl_variable" href="#ac94e8517738efc3d03aa3ce811e2dee3">range</a> = this.<a class="code hl_variable" href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">get</a>(<span class="stringliteral">&#39;Range&#39;</span>);</div>
+<div class="line">  <span class="keywordflow">if</span> (!range) <span class="keywordflow">return</span>;</div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code hl_variable" href="#aaaaf98f51168d5ff2608b0f4752a312f">parseRange</a>(size, <a class="code hl_variable" href="#ac94e8517738efc3d03aa3ce811e2dee3">range</a>, options);</div>
+<div class="line">}</div>
+<div class="ttc" id="arequest_8js_html_aaaaf98f51168d5ff2608b0f4752a312f"><div class="ttname"><a href="#aaaaf98f51168d5ff2608b0f4752a312f">parseRange</a></div><div class="ttdeci">var parseRange</div><div class="ttdef"><b>Definition</b> request.js:22</div></div>
+<div class="ttc" id="arequest_8js_html_ac94e8517738efc3d03aa3ce811e2dee3"><div class="ttname"><a href="#ac94e8517738efc3d03aa3ce811e2dee3">range</a></div><div class="ttdeci">req range</div><div class="ttdef"><b>Definition</b> request.js:212</div></div>
+<div class="ttc" id="aresponse_8js_html_a10d7f5ef6343bd4575249458cf93dd3e"><div class="ttname"><a href="response_8js.html#a10d7f5ef6343bd4575249458cf93dd3e">get</a></div><div class="ttdeci">res get</div><div class="ttdef"><b>Definition</b> response.js:811</div></div>
+</div><!-- fragment --><p>Parse Range header field, capping to the given <code>size</code>.</p>
+<p>Unspecified ranges such as "0-" require knowledge of your resource length. In the case of a byte range this is of course the total number of bytes. If the Range header field is not given <code>undefined</code> is returned, <code>-1</code> when unsatisfiable, and <code>-2</code> when syntactically invalid.</p>
+<p>When ranges are returned, the array has a "type" property which is the type of range that is required (most commonly, "bytes"). Each array element is an object with a "start" and "end" property for the portion of the range.</p>
+<p>The "combine" option can be set to <code>true</code> and overlapping &amp; adjacent ranges will be combined into a single range.</p>
+<p>NOTE: remember that ranges are inclusive, so for example "Range: users=0-3" should respond with 4 users when available, not 3.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{number}</td><td>size </td></tr>
+    <tr><td class="paramname">{object}</td><td>[options] </td></tr>
+    <tr><td class="paramname">{boolean}</td><td>[options.combine=false] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>{number|array} </dd></dl>
+
+</div>
+</div>
+<a id="a42c43c76081a7df8ae2954f16ee9338b" name="a42c43c76081a7df8ae2954f16ee9338b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42c43c76081a7df8ae2954f16ee9338b">&#9670;&#160;</a></span>req</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var req</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">= Object.create(<a class="code hl_variable" href="#a55f22d498ca401fddca364855629d1d3">http</a>.IncomingMessage.prototype)</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">module</span>.exports = req</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">req.get =</div>
+<div class="line">req.header = function header(name) {</div>
+<div class="line">  if (!name) {</div>
+<div class="line">    throw new TypeError(&#39;name argument is required to req.get&#39;);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (typeof <a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a> !== <span class="stringliteral">&#39;string&#39;</span>) {</div>
+<div class="line">    <span class="keywordflow">throw</span> <span class="keyword">new</span> TypeError(<span class="stringliteral">&#39;name must be a string to req.get&#39;</span>);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  var lc = <a class="code hl_variable" href="inbound-parser_8test_8js.html#a82922bbd162af030b5deaeafbf18ef0e">name</a>.toLowerCase();</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">switch</span> (lc) {</div>
+<div class="line">    <span class="keywordflow">case</span> <span class="stringliteral">&#39;referer&#39;</span>:</div>
+<div class="line">    <span class="keywordflow">case</span> <span class="stringliteral">&#39;referrer&#39;</span>:</div>
+<div class="line">      <span class="keywordflow">return</span> this.headers.referrer</div>
+<div class="line">        || this.headers.referer;</div>
+<div class="line">    <span class="keywordflow">default</span>:</div>
+<div class="line">      <span class="keywordflow">return</span> this.headers[lc];</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="ttc" id="arequest_8js_html_a55f22d498ca401fddca364855629d1d3"><div class="ttname"><a href="#a55f22d498ca401fddca364855629d1d3">http</a></div><div class="ttdeci">var http</div><div class="ttdef"><b>Definition</b> request.js:20</div></div>
+</div><!-- fragment --><p>Request prototype. </p>
+
+</div>
+</div>
+<a id="ae2475e10618961c050dcba04e8c42331" name="ae2475e10618961c050dcba04e8c42331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2475e10618961c050dcba04e8c42331">&#9670;&#160;</a></span>strict</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="application_8js.html#a8192500ed5d08ae60d3778b54729bd51">use</a> strict</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>express Copyright(c) 2009-2013 TJ Holowaychuk Copyright(c) 2013 Roman Shtylman Copyright(c) 2014-2015 Douglas Christopher Wilson MIT Licensed </p>
+
+</div>
+</div>
+<a id="a2efc67136068229eaf03e7ae371b6b25" name="a2efc67136068229eaf03e7ae371b6b25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2efc67136068229eaf03e7ae371b6b25">&#9670;&#160;</a></span>typeis</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var typeis = <a class="el" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>('<a class="el" href="cli_8js.html#affea7e61106a6a9da029c8af702aaf20">type</a>-<a class="el" href="#a5e3afd97276cc403924d1a449a83ea84">is</a>')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

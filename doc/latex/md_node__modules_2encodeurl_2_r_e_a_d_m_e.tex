@@ -1,0 +1,103 @@
+\chapter{Encode URL}
+\hypertarget{md_node__modules_2encodeurl_2_r_e_a_d_m_e}{}\label{md_node__modules_2encodeurl_2_r_e_a_d_m_e}\index{Encode URL@{Encode URL}}
+\label{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md474}%
+\Hypertarget{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md474}%
+
+
+Encode a URL to a percent-\/encoded form, excluding already-\/encoded sequences.\hypertarget{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md475}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md475}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{npm\ install\ encodeurl}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md476}{}\doxysection{\texorpdfstring{API}{API}}\label{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md476}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{response_8js_a1a34672fc125191a36f71d740b9dcc67}{encodeUrl}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'encodeurl'})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md477}{}\doxysubsection{\texorpdfstring{encode\+Url(url)}{encode\+Url(url)}}\label{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md477}
+Encode a URL to a percent-\/encoded form, excluding already-\/encoded sequences.
+
+This function accepts a URL and encodes all the non-\/\+URL code points (as UTF-\/8 byte sequences). It will not encode the "{}\%"{} character unless it is not part of a valid sequence ({\ttfamily \%20} will be left as-\/is, but {\ttfamily foo} will be encoded as {\ttfamily \%25foo}).
+
+This encode is meant to be "{}safe"{} and does not throw errors. It will try as hard as it can to properly encode the given URL, including replacing any raw, unpaired surrogate pairs with the Unicode replacement character prior to encoding.\hypertarget{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md478}{}\doxysection{\texorpdfstring{Examples}{Examples}}\label{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md478}
+\hypertarget{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md479}{}\doxysubsection{\texorpdfstring{Encode a URL containing user-\/controlled data}{Encode a URL containing user-\/controlled data}}\label{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md479}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{response_8js_a1a34672fc125191a36f71d740b9dcc67}{encodeUrl}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'encodeurl'})}
+\DoxyCodeLine{var\ \mbox{\hyperlink{response_8js_a283453fa28a8c3c50672113793233742}{escapeHtml}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('escape-\/\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}')}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}.createServer(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ onRequest\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ get\ encoded\ form\ of\ inbound\ url}}
+\DoxyCodeLine{\ \ var\ url\ =\ \mbox{\hyperlink{response_8js_a1a34672fc125191a36f71d740b9dcc67}{encodeUrl}}(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}}.url)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ create\ html\ message}}
+\DoxyCodeLine{\ \ var\ body\ =\ '<p>Location\ '\ +\ \mbox{\hyperlink{response_8js_a283453fa28a8c3c50672113793233742}{escapeHtml}}(url)\ +\ '\ not\ found</p>'}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ send\ a\ 404}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.statusCode\ =\ 404}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.setHeader('Content-\/Type',\ 'text/\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}};\ \mbox{\hyperlink{negotiator_2index_8js_a57f5b60955b20f18ba489a7aad60314b}{charset}}=UTF-\/8')}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.setHeader('Content-\/Length',\ String(Buffer.byteLength(body,\ 'utf-\/8')))}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.end(body,\ 'utf-\/8')}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md480}{}\doxysubsection{\texorpdfstring{Encode a URL for use in a header field}{Encode a URL for use in a header field}}\label{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md480}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ \mbox{\hyperlink{response_8js_a1a34672fc125191a36f71d740b9dcc67}{encodeUrl}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}(\textcolor{stringliteral}{'encodeurl'})}
+\DoxyCodeLine{var\ \mbox{\hyperlink{response_8js_a283453fa28a8c3c50672113793233742}{escapeHtml}}\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('escape-\/\mbox{\hyperlink{escape-html_2index_8js_a8f99bc655183db169e126fc155ceb631}{html}}')}
+\DoxyCodeLine{var\ url\ =\ \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}('url')}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{application_8js_a55f22d498ca401fddca364855629d1d3}{http}}.createServer(\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ onRequest\ (\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}},\ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}})\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ parse\ inbound\ url}}
+\DoxyCodeLine{\ \ var\ href\ =\ url.parse(\mbox{\hyperlink{express_8js_a42c43c76081a7df8ae2954f16ee9338b}{req}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ set\ new\ host\ for\ redirect}}
+\DoxyCodeLine{\ \ href.host\ =\ \textcolor{stringliteral}{'localhost'}}
+\DoxyCodeLine{\ \ href.protocol\ =\ \textcolor{stringliteral}{'https:'}}
+\DoxyCodeLine{\ \ href.slashes\ =\ \textcolor{keyword}{true}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ create\ location\ header}}
+\DoxyCodeLine{\ \ var\ \mbox{\hyperlink{response_8js_a75ec03e18914bc8699236700707f598d}{location}}\ =\ \mbox{\hyperlink{response_8js_a1a34672fc125191a36f71d740b9dcc67}{encodeUrl}}(url.format(href))}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ create\ html\ message}}
+\DoxyCodeLine{\ \ var\ body\ =\ \textcolor{stringliteral}{'<p>Redirecting\ to\ new\ site:\ '}\ +\ \mbox{\hyperlink{response_8js_a283453fa28a8c3c50672113793233742}{escapeHtml}}(\mbox{\hyperlink{response_8js_a75ec03e18914bc8699236700707f598d}{location}})\ +\ \textcolor{stringliteral}{'</p>'}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ send\ a\ 301}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.statusCode\ =\ 301}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.setHeader(\textcolor{stringliteral}{'Content-\/Type'},\ \textcolor{stringliteral}{'text/html;\ charset=UTF-\/8'})}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.setHeader(\textcolor{stringliteral}{'Content-\/Length'},\ String(Buffer.byteLength(body,\ \textcolor{stringliteral}{'utf-\/8'})))}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.setHeader(\textcolor{stringliteral}{'Location'},\ \mbox{\hyperlink{response_8js_a75ec03e18914bc8699236700707f598d}{location}})}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{express_8js_abde3c35e3bb7e5225dd7f234c685329c}{res}}.end(body,\ \textcolor{stringliteral}{'utf-\/8'})}
+\DoxyCodeLine{\})}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md481}{}\doxysection{\texorpdfstring{Similarities}{Similarities}}\label{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md481}
+This function is {\itshape similar} to the intrinsic function {\ttfamily encode\+URI}. However, it will not encode\+:
+
+
+\begin{DoxyItemize}
+\item The {\ttfamily \textbackslash{}}, {\ttfamily \texorpdfstring{$^\wedge$}{\string^}}, or {\ttfamily \texorpdfstring{$\vert$}{|}} characters
+\item The {\ttfamily \%} character when it\textquotesingle{}s part of a valid sequence
+\item {\ttfamily \mbox{[}} and {\ttfamily \mbox{]}} (for IPv6 hostnames)
+\item Replaces raw, unpaired surrogate pairs with the Unicode replacement character
+\end{DoxyItemize}
+
+As a result, the encoding aligns closely with the behavior in the \href{https://url.spec.whatwg.org/}{\texttt{ WHATWG URL specification}}. However, this package only encodes strings and does not do any URL parsing or formatting.
+
+It is expected that any output from {\ttfamily new URL(url)} will not change when used with this package, as the output has already been encoded. Additionally, if we were to encode before {\ttfamily new URL(url)}, we do not expect the before and after encoded formats to be parsed any differently.\hypertarget{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md482}{}\doxysection{\texorpdfstring{Testing}{Testing}}\label{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md482}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ npm\ test}
+\DoxyCodeLine{\$\ npm\ run\ lint}
+
+\end{DoxyCode}
+\hypertarget{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md483}{}\doxysection{\texorpdfstring{References}{References}}\label{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md483}
+
+\begin{DoxyItemize}
+\item \href{https://tools.ietf.org/html/rfc3986}{\texttt{ RFC 3986\+: Uniform Resource Identifier (URI)\+: Generic Syntax}}
+\item \href{https://url.spec.whatwg.org/}{\texttt{ WHATWG URL Living Standard}}
+\end{DoxyItemize}\hypertarget{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md484}{}\doxysection{\texorpdfstring{License}{License}}\label{md_node__modules_2encodeurl_2_r_e_a_d_m_e_autotoc_md484}
+\mbox{[}MIT\mbox{]}(LICENSE) 

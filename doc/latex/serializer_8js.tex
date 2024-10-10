@@ -1,0 +1,478 @@
+\doxysection{Referencia del archivo node\+\_\+modules/pg-\/protocol/dist/serializer.js}
+\hypertarget{serializer_8js}{}\label{serializer_8js}\index{node\_modules/pg-\/protocol/dist/serializer.js@{node\_modules/pg-\/protocol/dist/serializer.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+Object \mbox{\hyperlink{serializer_8js_a28b393256d5d3dc5b7d5940192da33e5}{define\+Property}} (\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}, "{}\+\_\+\+\_\+es\+Module"{}, \{ value\+:true \})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{serializer_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{serializer_8js_a72453e6e469378a513d2fd26e1f55365}{serialize}} = void 0
+\item 
+const \mbox{\hyperlink{serializer_8js_a49f79dea54536ec6be7c7c79f96531bc}{buffer\+\_\+writer\+\_\+1}} = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}./buffer-\/writer"{})
+\item 
+const \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}} = new buffer\+\_\+writer\+\_\+1.\+Writer()
+\item 
+const \mbox{\hyperlink{serializer_8js_abe585285fff0307895f7958fb6e98461}{startup}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a884bedaa11b44b0e09480ae659482c7e}{request\+Ssl}}
+\item 
+const \mbox{\hyperlink{serializer_8js_abd7c13acac876da8bdefce825ee1fa0b}{password}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a82e94c0096a2e59f653a1977b6a7e7fb}{send\+SASLInitial\+Response\+Message}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a52ca4ef0aec482eb94224883bb36d8b7}{send\+SCRAMClient\+Final\+Message}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a66fbac7f28669ee8b0caa854d04635d7}{query}}
+\item 
+const \mbox{\hyperlink{serializer_8js_aa0016f0425ef403404a1587772d07689}{empty\+Array}} = \mbox{[}$\,$\mbox{]}
+\item 
+const \mbox{\hyperlink{serializer_8js_acb4cf70b040105b213ab0dc040e707c7}{parse}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a26dea746b37b490b52363fc0117b72fc}{param\+Writer}} = new buffer\+\_\+writer\+\_\+1.\+Writer()
+\item 
+const \mbox{\hyperlink{serializer_8js_a7c4c531f2f62bf78c841bb426e698925}{write\+Values}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a23342b8ee8ce1978419010682a4e74d3}{bind}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a8b45bcdb0b2c4796f7d21f9eddd7f586}{empty\+Execute}} = Buffer.\+from(\mbox{[}69 , 0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x00, 0x00\mbox{]})
+\item 
+const \mbox{\hyperlink{serializer_8js_a7bb631ea5074772da19bba60c7b62e1c}{execute}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a12e7b3f78596b6f5e334cdb142cc4d9e}{cancel}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a763afa9ac3888b86ea3ca70c106f6d7f}{cstring\+Message}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a909d400cf19a1e86f6d9c67fcc31aeeb}{empty\+Describe\+Portal}} = \mbox{\hyperlink{buffer-writer_2index_8js_a510dc464cb30a26be6720b7761e2720a}{writer.\+add\+CString}}(\textquotesingle{}P\textquotesingle{}).\mbox{\hyperlink{buffer-writer_2index_8js_afe6e70a15173927fd9e01bbf2412294b}{flush}}(68 )
+\item 
+const \mbox{\hyperlink{serializer_8js_a926738cfec3c4cee8bcdfd7db9e6554c}{empty\+Describe\+Statement}} = \mbox{\hyperlink{buffer-writer_2index_8js_a510dc464cb30a26be6720b7761e2720a}{writer.\+add\+CString}}(\textquotesingle{}\mbox{\hyperlink{es-errors_2test_2index_8js_a8bab16140cede5f71c657e8dc46c1887}{S}}\textquotesingle{}).\mbox{\hyperlink{buffer-writer_2index_8js_afe6e70a15173927fd9e01bbf2412294b}{flush}}(68 )
+\item 
+const \mbox{\hyperlink{serializer_8js_a3a96e405b0f405dfaea25b99c006e437}{describe}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a93f002a9606f3afb8031576a6e66bcca}{close}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a2cfedf9409d2ba03632554098c4bc6d9}{copy\+Data}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a79db02478f83e6a0c62043d144ed73c9}{copy\+Fail}}
+\item 
+const \mbox{\hyperlink{serializer_8js_a98b9b10cd4347df63a24f6d454f7c7f9}{code\+Only\+Buffer}} = (code) =$>$ Buffer.\+from(\mbox{[}code, 0x00, 0x00, 0x00, 0x04\mbox{]})
+\item 
+const \mbox{\hyperlink{serializer_8js_a6fc91b691f793d0b7ebdb3fcce782481}{flush\+Buffer}} = \mbox{\hyperlink{serializer_8js_a98b9b10cd4347df63a24f6d454f7c7f9}{code\+Only\+Buffer}}(72 )
+\item 
+const \mbox{\hyperlink{serializer_8js_a836772dfe320c3248a987b17601250d7}{sync\+Buffer}} = \mbox{\hyperlink{serializer_8js_a98b9b10cd4347df63a24f6d454f7c7f9}{code\+Only\+Buffer}}(83 )
+\item 
+const \mbox{\hyperlink{serializer_8js_a5e64c6daf16f984133f9824fc4208c75}{end\+Buffer}} = \mbox{\hyperlink{serializer_8js_a98b9b10cd4347df63a24f6d454f7c7f9}{code\+Only\+Buffer}}(88 )
+\item 
+const \mbox{\hyperlink{serializer_8js_af6b9dc41c05e574d216fd0c845532679}{copy\+Done\+Buffer}} = \mbox{\hyperlink{serializer_8js_a98b9b10cd4347df63a24f6d454f7c7f9}{code\+Only\+Buffer}}(99 )
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{serializer_8js_a28b393256d5d3dc5b7d5940192da33e5}\index{serializer.js@{serializer.js}!defineProperty@{defineProperty}}
+\index{defineProperty@{defineProperty}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{defineProperty()}{defineProperty()}}
+{\footnotesize\ttfamily \label{serializer_8js_a28b393256d5d3dc5b7d5940192da33e5} 
+Object define\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}}]{}{, }\item[{"{}\+\_\+\+\_\+es\+Module"{}}]{}{, }\item[{\{ value\+:true \}}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{serializer_8js_a23342b8ee8ce1978419010682a4e74d3}\index{serializer.js@{serializer.js}!bind@{bind}}
+\index{bind@{bind}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{bind}{bind}}
+{\footnotesize\ttfamily \label{serializer_8js_a23342b8ee8ce1978419010682a4e74d3} 
+const bind}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (config\ =\ \{\})\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ portal\ =\ config.portal\ ||\ \textcolor{stringliteral}{''};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ statement\ =\ config.statement\ ||\ \textcolor{stringliteral}{''};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ binary\ =\ config.binary\ ||\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ values\ =\ config.values\ ||\ \mbox{\hyperlink{serializer_8js_aa0016f0425ef403404a1587772d07689}{emptyArray}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ len\ =\ values.length;}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addCString(portal).addCString(statement);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addInt16(len);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{serializer_8js_a7c4c531f2f62bf78c841bb426e698925}{writeValues}}(values,\ config.valueMapper);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addInt16(len);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.add(\mbox{\hyperlink{serializer_8js_a26dea746b37b490b52363fc0117b72fc}{paramWriter}}.flush());}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addInt16(binary\ ?\ 1\ \ :\ 0\ );}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.flush(66\ );}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_a49f79dea54536ec6be7c7c79f96531bc}\index{serializer.js@{serializer.js}!buffer\_writer\_1@{buffer\_writer\_1}}
+\index{buffer\_writer\_1@{buffer\_writer\_1}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{buffer\_writer\_1}{buffer\_writer\_1}}
+{\footnotesize\ttfamily \label{serializer_8js_a49f79dea54536ec6be7c7c79f96531bc} 
+const buffer\+\_\+writer\+\_\+1 = \mbox{\hyperlink{test-core-js_8js_a2fc998a372f1531668f7047d0878effe}{require}}("{}./buffer-\/writer"{})}
+
+\Hypertarget{serializer_8js_a12e7b3f78596b6f5e334cdb142cc4d9e}\index{serializer.js@{serializer.js}!cancel@{cancel}}
+\index{cancel@{cancel}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{cancel}{cancel}}
+{\footnotesize\ttfamily \label{serializer_8js_a12e7b3f78596b6f5e334cdb142cc4d9e} 
+const cancel}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (processID,\ secretKey)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}\ =\ Buffer.allocUnsafe(16);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}.writeInt32BE(16,\ 0);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}.writeInt16BE(1234,\ 4);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}.writeInt16BE(5678,\ 6);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}.writeInt32BE(processID,\ 8);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}.writeInt32BE(secretKey,\ 12);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_a93f002a9606f3afb8031576a6e66bcca}\index{serializer.js@{serializer.js}!close@{close}}
+\index{close@{close}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{close}{close}}
+{\footnotesize\ttfamily \label{serializer_8js_a93f002a9606f3afb8031576a6e66bcca} 
+const close}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (msg)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ text\ =\ \`{}\$\{msg.type\}\$\{msg.name\ ||\ \textcolor{stringliteral}{''}\}\`{};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{serializer_8js_a763afa9ac3888b86ea3ca70c106f6d7f}{cstringMessage}}(67\ ,\ text);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_a98b9b10cd4347df63a24f6d454f7c7f9}\index{serializer.js@{serializer.js}!codeOnlyBuffer@{codeOnlyBuffer}}
+\index{codeOnlyBuffer@{codeOnlyBuffer}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{codeOnlyBuffer}{codeOnlyBuffer}}
+{\footnotesize\ttfamily \label{serializer_8js_a98b9b10cd4347df63a24f6d454f7c7f9} 
+const code\+Only\+Buffer = (code) =$>$ Buffer.\+from(\mbox{[}code, 0x00, 0x00, 0x00, 0x04\mbox{]})}
+
+\Hypertarget{serializer_8js_a2cfedf9409d2ba03632554098c4bc6d9}\index{serializer.js@{serializer.js}!copyData@{copyData}}
+\index{copyData@{copyData}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{copyData}{copyData}}
+{\footnotesize\ttfamily \label{serializer_8js_a2cfedf9409d2ba03632554098c4bc6d9} 
+const copy\+Data}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (chunk)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.add(chunk).flush(100\ );}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_af6b9dc41c05e574d216fd0c845532679}\index{serializer.js@{serializer.js}!copyDoneBuffer@{copyDoneBuffer}}
+\index{copyDoneBuffer@{copyDoneBuffer}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{copyDoneBuffer}{copyDoneBuffer}}
+{\footnotesize\ttfamily \label{serializer_8js_af6b9dc41c05e574d216fd0c845532679} 
+const copy\+Done\+Buffer = \mbox{\hyperlink{serializer_8js_a98b9b10cd4347df63a24f6d454f7c7f9}{code\+Only\+Buffer}}(99 )}
+
+\Hypertarget{serializer_8js_a79db02478f83e6a0c62043d144ed73c9}\index{serializer.js@{serializer.js}!copyFail@{copyFail}}
+\index{copyFail@{copyFail}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{copyFail}{copyFail}}
+{\footnotesize\ttfamily \label{serializer_8js_a79db02478f83e6a0c62043d144ed73c9} 
+const copy\+Fail}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (message)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{serializer_8js_a763afa9ac3888b86ea3ca70c106f6d7f}{cstringMessage}}(102\ ,\ message);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_a763afa9ac3888b86ea3ca70c106f6d7f}\index{serializer.js@{serializer.js}!cstringMessage@{cstringMessage}}
+\index{cstringMessage@{cstringMessage}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{cstringMessage}{cstringMessage}}
+{\footnotesize\ttfamily \label{serializer_8js_a763afa9ac3888b86ea3ca70c106f6d7f} 
+const cstring\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (code,\ string)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ stringLen\ =\ Buffer.byteLength(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ len\ =\ 4\ +\ stringLen\ +\ 1;}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}\ =\ Buffer.allocUnsafe(1\ +\ len);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}[0]\ =\ code;}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}.writeInt32BE(len,\ 1);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}.write(\textcolor{keywordtype}{string},\ 5,\ \textcolor{stringliteral}{'utf-\/8'});}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}[len]\ =\ 0;\ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_a3a96e405b0f405dfaea25b99c006e437}\index{serializer.js@{serializer.js}!describe@{describe}}
+\index{describe@{describe}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{describe}{describe}}
+{\footnotesize\ttfamily \label{serializer_8js_a3a96e405b0f405dfaea25b99c006e437} 
+const describe}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (msg)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ msg.name}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ?\ \mbox{\hyperlink{serializer_8js_a763afa9ac3888b86ea3ca70c106f6d7f}{cstringMessage}}(68\ ,\ \`{}\$\{msg.type\}\$\{msg.name\ ||\ \textcolor{stringliteral}{''}\}\`{})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ :\ msg.\mbox{\hyperlink{cli_8js_affea7e61106a6a9da029c8af702aaf20}{type}}\ ===\ \textcolor{stringliteral}{'P'}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ?\ \mbox{\hyperlink{serializer_8js_a909d400cf19a1e86f6d9c67fcc31aeeb}{emptyDescribePortal}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{serializer_8js_a926738cfec3c4cee8bcdfd7db9e6554c}{emptyDescribeStatement}};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_aa0016f0425ef403404a1587772d07689}\index{serializer.js@{serializer.js}!emptyArray@{emptyArray}}
+\index{emptyArray@{emptyArray}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{emptyArray}{emptyArray}}
+{\footnotesize\ttfamily \label{serializer_8js_aa0016f0425ef403404a1587772d07689} 
+const empty\+Array = \mbox{[}$\,$\mbox{]}}
+
+\Hypertarget{serializer_8js_a909d400cf19a1e86f6d9c67fcc31aeeb}\index{serializer.js@{serializer.js}!emptyDescribePortal@{emptyDescribePortal}}
+\index{emptyDescribePortal@{emptyDescribePortal}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{emptyDescribePortal}{emptyDescribePortal}}
+{\footnotesize\ttfamily \label{serializer_8js_a909d400cf19a1e86f6d9c67fcc31aeeb} 
+const empty\+Describe\+Portal = \mbox{\hyperlink{buffer-writer_2index_8js_a510dc464cb30a26be6720b7761e2720a}{writer.\+add\+CString}}(\textquotesingle{}P\textquotesingle{}).\mbox{\hyperlink{buffer-writer_2index_8js_afe6e70a15173927fd9e01bbf2412294b}{flush}}(68 )}
+
+\Hypertarget{serializer_8js_a926738cfec3c4cee8bcdfd7db9e6554c}\index{serializer.js@{serializer.js}!emptyDescribeStatement@{emptyDescribeStatement}}
+\index{emptyDescribeStatement@{emptyDescribeStatement}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{emptyDescribeStatement}{emptyDescribeStatement}}
+{\footnotesize\ttfamily \label{serializer_8js_a926738cfec3c4cee8bcdfd7db9e6554c} 
+const empty\+Describe\+Statement = \mbox{\hyperlink{buffer-writer_2index_8js_a510dc464cb30a26be6720b7761e2720a}{writer.\+add\+CString}}(\textquotesingle{}\mbox{\hyperlink{es-errors_2test_2index_8js_a8bab16140cede5f71c657e8dc46c1887}{S}}\textquotesingle{}).\mbox{\hyperlink{buffer-writer_2index_8js_afe6e70a15173927fd9e01bbf2412294b}{flush}}(68 )}
+
+\Hypertarget{serializer_8js_a8b45bcdb0b2c4796f7d21f9eddd7f586}\index{serializer.js@{serializer.js}!emptyExecute@{emptyExecute}}
+\index{emptyExecute@{emptyExecute}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{emptyExecute}{emptyExecute}}
+{\footnotesize\ttfamily \label{serializer_8js_a8b45bcdb0b2c4796f7d21f9eddd7f586} 
+const empty\+Execute = Buffer.\+from(\mbox{[}69 , 0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x00, 0x00\mbox{]})}
+
+\Hypertarget{serializer_8js_a5e64c6daf16f984133f9824fc4208c75}\index{serializer.js@{serializer.js}!endBuffer@{endBuffer}}
+\index{endBuffer@{endBuffer}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{endBuffer}{endBuffer}}
+{\footnotesize\ttfamily \label{serializer_8js_a5e64c6daf16f984133f9824fc4208c75} 
+const end\+Buffer = \mbox{\hyperlink{serializer_8js_a98b9b10cd4347df63a24f6d454f7c7f9}{code\+Only\+Buffer}}(88 )}
+
+\Hypertarget{serializer_8js_a7bb631ea5074772da19bba60c7b62e1c}\index{serializer.js@{serializer.js}!execute@{execute}}
+\index{execute@{execute}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{execute}{execute}}
+{\footnotesize\ttfamily \label{serializer_8js_a7bb631ea5074772da19bba60c7b62e1c} 
+const execute}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (config)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (!config\ ||\ (!config.portal\ \&\&\ !config.rows))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{serializer_8js_a8b45bcdb0b2c4796f7d21f9eddd7f586}{emptyExecute}};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ portal\ =\ config.portal\ ||\ \textcolor{stringliteral}{''};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ rows\ =\ config.rows\ ||\ 0;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ portalLength\ =\ Buffer.byteLength(portal);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ len\ =\ 4\ +\ portalLength\ +\ 1\ +\ 4;}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ buff\ =\ Buffer.allocUnsafe(1\ +\ len);}
+\DoxyCodeLine{\ \ \ \ buff[0]\ =\ 69\ ;}
+\DoxyCodeLine{\ \ \ \ buff.writeInt32BE(len,\ 1);}
+\DoxyCodeLine{\ \ \ \ buff.write(portal,\ 5,\ \textcolor{stringliteral}{'utf-\/8'});}
+\DoxyCodeLine{\ \ \ \ buff[portalLength\ +\ 5]\ =\ 0;\ }
+\DoxyCodeLine{\ \ \ \ buff.writeUInt32BE(rows,\ buff.length\ -\/\ 4);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ buff;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_a6fc91b691f793d0b7ebdb3fcce782481}\index{serializer.js@{serializer.js}!flushBuffer@{flushBuffer}}
+\index{flushBuffer@{flushBuffer}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{flushBuffer}{flushBuffer}}
+{\footnotesize\ttfamily \label{serializer_8js_a6fc91b691f793d0b7ebdb3fcce782481} 
+const flush\+Buffer = \mbox{\hyperlink{serializer_8js_a98b9b10cd4347df63a24f6d454f7c7f9}{code\+Only\+Buffer}}(72 )}
+
+\Hypertarget{serializer_8js_a26dea746b37b490b52363fc0117b72fc}\index{serializer.js@{serializer.js}!paramWriter@{paramWriter}}
+\index{paramWriter@{paramWriter}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{paramWriter}{paramWriter}}
+{\footnotesize\ttfamily \label{serializer_8js_a26dea746b37b490b52363fc0117b72fc} 
+const param\+Writer = new buffer\+\_\+writer\+\_\+1.\+Writer()}
+
+\Hypertarget{serializer_8js_acb4cf70b040105b213ab0dc040e707c7}\index{serializer.js@{serializer.js}!parse@{parse}}
+\index{parse@{parse}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{parse}{parse}}
+{\footnotesize\ttfamily \label{serializer_8js_acb4cf70b040105b213ab0dc040e707c7} 
+const parse}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\mbox{\hyperlink{serializer_8js_a66fbac7f28669ee8b0caa854d04635d7}{query}})\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}\ =\ \mbox{\hyperlink{serializer_8js_a66fbac7f28669ee8b0caa854d04635d7}{query}}.name\ ||\ \textcolor{stringliteral}{''};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}.length\ >\ 63)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ console.error(\textcolor{stringliteral}{'Warning!\ Postgres\ only\ supports\ 63\ characters\ for\ query\ names.'});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ console.error(\textcolor{stringliteral}{'You\ supplied\ \%s\ (\%s)'},\ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}},\ \mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}}.length);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ console.error(\textcolor{stringliteral}{'This\ can\ cause\ conflicts\ and\ silent\ errors\ executing\ queries'});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{build_8js_a5802f014ed8e96d3a513f114faa91d12}{types}}\ =\ \mbox{\hyperlink{serializer_8js_a66fbac7f28669ee8b0caa854d04635d7}{query}}.types\ ||\ \mbox{\hyperlink{serializer_8js_aa0016f0425ef403404a1587772d07689}{emptyArray}};}
+\DoxyCodeLine{\ \ \ \ var\ len\ =\ \mbox{\hyperlink{build_8js_a5802f014ed8e96d3a513f114faa91d12}{types}}.length;}
+\DoxyCodeLine{\ \ \ \ var\ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}\ =\ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .addCString(\mbox{\hyperlink{inbound-parser_8test_8js_a82922bbd162af030b5deaeafbf18ef0e}{name}})\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .addCString(\mbox{\hyperlink{serializer_8js_a66fbac7f28669ee8b0caa854d04635d7}{query}}.text)\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .addInt16(len);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ len;\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{b_8js_aad851473247e961d3bd53eea92dabe1d}{buffer}}.addInt32(\mbox{\hyperlink{build_8js_a5802f014ed8e96d3a513f114faa91d12}{types}}[i]);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.flush(80\ );}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_abd7c13acac876da8bdefce825ee1fa0b}\index{serializer.js@{serializer.js}!password@{password}}
+\index{password@{password}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily \label{serializer_8js_abd7c13acac876da8bdefce825ee1fa0b} 
+const password}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\mbox{\hyperlink{serializer_8js_abd7c13acac876da8bdefce825ee1fa0b}{password}})\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addCString(\mbox{\hyperlink{serializer_8js_abd7c13acac876da8bdefce825ee1fa0b}{password}}).flush(112\ );}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_a66fbac7f28669ee8b0caa854d04635d7}\index{serializer.js@{serializer.js}!query@{query}}
+\index{query@{query}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{query}{query}}
+{\footnotesize\ttfamily \label{serializer_8js_a66fbac7f28669ee8b0caa854d04635d7} 
+const query}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (text)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addCString(text).flush(81\ );}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_a884bedaa11b44b0e09480ae659482c7e}\index{serializer.js@{serializer.js}!requestSsl@{requestSsl}}
+\index{requestSsl@{requestSsl}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{requestSsl}{requestSsl}}
+{\footnotesize\ttfamily \label{serializer_8js_a884bedaa11b44b0e09480ae659482c7e} 
+const request\+Ssl}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{express_8js_ae7104b681e73125e8f941d3522d5a1c6}{response}}\ =\ Buffer.allocUnsafe(8);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{express_8js_ae7104b681e73125e8f941d3522d5a1c6}{response}}.writeInt32BE(8,\ 0);}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{express_8js_ae7104b681e73125e8f941d3522d5a1c6}{response}}.writeInt32BE(80877103,\ 4);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{express_8js_ae7104b681e73125e8f941d3522d5a1c6}{response}};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_a82e94c0096a2e59f653a1977b6a7e7fb}\index{serializer.js@{serializer.js}!sendSASLInitialResponseMessage@{sendSASLInitialResponseMessage}}
+\index{sendSASLInitialResponseMessage@{sendSASLInitialResponseMessage}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{sendSASLInitialResponseMessage}{sendSASLInitialResponseMessage}}
+{\footnotesize\ttfamily \label{serializer_8js_a82e94c0096a2e59f653a1977b6a7e7fb} 
+const send\+SASLInitial\+Response\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (mechanism,\ initialResponse)\ \{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addCString(mechanism).addInt32(Buffer.byteLength(initialResponse)).addString(initialResponse);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.flush(112\ );}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_a52ca4ef0aec482eb94224883bb36d8b7}\index{serializer.js@{serializer.js}!sendSCRAMClientFinalMessage@{sendSCRAMClientFinalMessage}}
+\index{sendSCRAMClientFinalMessage@{sendSCRAMClientFinalMessage}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{sendSCRAMClientFinalMessage}{sendSCRAMClientFinalMessage}}
+{\footnotesize\ttfamily \label{serializer_8js_a52ca4ef0aec482eb94224883bb36d8b7} 
+const send\+SCRAMClient\+Final\+Message}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (additionalData)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addString(additionalData).flush(112\ );}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_a72453e6e469378a513d2fd26e1f55365}\index{serializer.js@{serializer.js}!serialize@{serialize}}
+\index{serialize@{serialize}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{serialize}{serialize}}
+{\footnotesize\ttfamily \label{serializer_8js_a72453e6e469378a513d2fd26e1f55365} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} serialize = void 0}
+
+\Hypertarget{serializer_8js_abe585285fff0307895f7958fb6e98461}\index{serializer.js@{serializer.js}!startup@{startup}}
+\index{startup@{startup}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{startup}{startup}}
+{\footnotesize\ttfamily \label{serializer_8js_abe585285fff0307895f7958fb6e98461} 
+const startup}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (opts)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addInt16(3).addInt16(0);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ key\ of\ Object.keys(opts))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addCString(key).addCString(opts[key]);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addCString(\textcolor{stringliteral}{'client\_encoding'}).addCString(\textcolor{stringliteral}{'UTF8'});}
+\DoxyCodeLine{\ \ \ \ var\ bodyBuffer\ =\ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addCString(\textcolor{stringliteral}{''}).flush();}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ var\ length\ =\ bodyBuffer.length\ +\ 4;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{serializer_8js_a49f79dea54536ec6be7c7c79f96531bc}{buffer\_writer\_1}}.Writer().addInt32(length).add(bodyBuffer).flush();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{serializer_8js_ae2475e10618961c050dcba04e8c42331}\index{serializer.js@{serializer.js}!strict@{strict}}
+\index{strict@{strict}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{serializer_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+
+\Hypertarget{serializer_8js_a836772dfe320c3248a987b17601250d7}\index{serializer.js@{serializer.js}!syncBuffer@{syncBuffer}}
+\index{syncBuffer@{syncBuffer}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{syncBuffer}{syncBuffer}}
+{\footnotesize\ttfamily \label{serializer_8js_a836772dfe320c3248a987b17601250d7} 
+const sync\+Buffer = \mbox{\hyperlink{serializer_8js_a98b9b10cd4347df63a24f6d454f7c7f9}{code\+Only\+Buffer}}(83 )}
+
+\Hypertarget{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}\index{serializer.js@{serializer.js}!writer@{writer}}
+\index{writer@{writer}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{writer}{writer}}
+{\footnotesize\ttfamily \label{serializer_8js_aefd709b7442e9da06b25149e2b2ef442} 
+const writer = new buffer\+\_\+writer\+\_\+1.\+Writer()}
+
+\Hypertarget{serializer_8js_a7c4c531f2f62bf78c841bb426e698925}\index{serializer.js@{serializer.js}!writeValues@{writeValues}}
+\index{writeValues@{writeValues}!serializer.js@{serializer.js}}
+\doxysubsubsection{\texorpdfstring{writeValues}{writeValues}}
+{\footnotesize\ttfamily \label{serializer_8js_a7c4c531f2f62bf78c841bb426e698925} 
+const write\+Values}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ (values,\ valueMapper)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (let\ i\ =\ 0;\ i\ <\ values.length;\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ mappedVal\ =\ valueMapper\ ?\ valueMapper(values[i],\ i)\ :\ values[i];}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mappedVal\ ==\ null)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addInt16(0\ );}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{serializer_8js_a26dea746b37b490b52363fc0117b72fc}{paramWriter}}.addInt32(-\/1);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mappedVal\ instanceof\ Buffer)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addInt16(1\ );}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{serializer_8js_a26dea746b37b490b52363fc0117b72fc}{paramWriter}}.addInt32(mappedVal.length);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{serializer_8js_a26dea746b37b490b52363fc0117b72fc}{paramWriter}}.add(mappedVal);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{serializer_8js_aefd709b7442e9da06b25149e2b2ef442}{writer}}.addInt16(0\ );}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{serializer_8js_a26dea746b37b490b52363fc0117b72fc}{paramWriter}}.addInt32(Buffer.byteLength(mappedVal));}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{serializer_8js_a26dea746b37b490b52363fc0117b72fc}{paramWriter}}.addString(mappedVal);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

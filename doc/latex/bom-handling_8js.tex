@@ -1,0 +1,73 @@
+\doxysection{Referencia del archivo node\+\_\+modules/iconv-\/lite/lib/bom-\/handling.js}
+\hypertarget{bom-handling_8js}{}\label{bom-handling_8js}\index{node\_modules/iconv-\/lite/lib/bom-\/handling.js@{node\_modules/iconv-\/lite/lib/bom-\/handling.js}}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} \mbox{\hyperlink{bom-handling_8js_aa79346a0d2038acb162505b02078fc22}{Strip\+BOMWrapper}} (\mbox{\hyperlink{dbcs-codec_8js_ad3d625998d0232650afb4cf3c50dc9f1}{decoder}}, options)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} \mbox{\hyperlink{bom-handling_8js_ae2475e10618961c050dcba04e8c42331}{strict}}
+\item 
+var \mbox{\hyperlink{bom-handling_8js_a260b6dcf74b290fa0d77e3b425367591}{BOMChar}} = \textquotesingle{}\textbackslash{}u\+FEFF\textquotesingle{}
+\item 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} \mbox{\hyperlink{bom-handling_8js_afda1556f5986dc9fc1236312e484a6af}{Prepend\+BOM}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{bom-handling_8js_aa79346a0d2038acb162505b02078fc22}\index{bom-\/handling.js@{bom-\/handling.js}!StripBOMWrapper@{StripBOMWrapper}}
+\index{StripBOMWrapper@{StripBOMWrapper}!bom-\/handling.js@{bom-\/handling.js}}
+\doxysubsubsection{\texorpdfstring{StripBOMWrapper()}{StripBOMWrapper()}}
+{\footnotesize\ttfamily \label{bom-handling_8js_aa79346a0d2038acb162505b02078fc22} 
+\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}} Strip\+BOMWrapper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{dbcs-codec_8js_ad3d625998d0232650afb4cf3c50dc9f1}{decoder}}}]{}{, }\item[{options}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{bom-handling_8js_a260b6dcf74b290fa0d77e3b425367591}\index{bom-\/handling.js@{bom-\/handling.js}!BOMChar@{BOMChar}}
+\index{BOMChar@{BOMChar}!bom-\/handling.js@{bom-\/handling.js}}
+\doxysubsubsection{\texorpdfstring{BOMChar}{BOMChar}}
+{\footnotesize\ttfamily \label{bom-handling_8js_a260b6dcf74b290fa0d77e3b425367591} 
+var BOMChar = \textquotesingle{}\textbackslash{}u\+FEFF\textquotesingle{}}
+
+\Hypertarget{bom-handling_8js_afda1556f5986dc9fc1236312e484a6af}\index{bom-\/handling.js@{bom-\/handling.js}!PrependBOM@{PrependBOM}}
+\index{PrependBOM@{PrependBOM}!bom-\/handling.js@{bom-\/handling.js}}
+\doxysubsubsection{\texorpdfstring{PrependBOM}{PrependBOM}}
+{\footnotesize\ttfamily \label{bom-handling_8js_afda1556f5986dc9fc1236312e484a6af} 
+\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}} Prepend\+BOM}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ PrependBOMWrapper}
+\DoxyCodeLine{\mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}\ PrependBOMWrapper(\mbox{\hyperlink{dbcs-codec_8js_a2e3d2e577cc69881c4ec00c7b8005e35}{encoder}},\ options)\ \{}
+\DoxyCodeLine{\ \ \ \ this.\mbox{\hyperlink{dbcs-codec_8js_a2e3d2e577cc69881c4ec00c7b8005e35}{encoder}}\ =\ \mbox{\hyperlink{dbcs-codec_8js_a2e3d2e577cc69881c4ec00c7b8005e35}{encoder}};}
+\DoxyCodeLine{\ \ \ \ this.addBOM\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{PrependBOMWrapper.prototype.write\ =\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}(str)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (this.addBOM)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ str\ =\ \mbox{\hyperlink{bom-handling_8js_a260b6dcf74b290fa0d77e3b425367591}{BOMChar}}\ +\ str;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ this.addBOM\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ this.\mbox{\hyperlink{dbcs-codec_8js_a2e3d2e577cc69881c4ec00c7b8005e35}{encoder}}.write(str);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{PrependBOMWrapper.prototype.end\ =\ \mbox{\hyperlink{cors_2lib_2index_8js_ac2ffb26d6f42d3bbcd7847b0873403f4}{function}}()\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ this.\mbox{\hyperlink{dbcs-codec_8js_a2e3d2e577cc69881c4ec00c7b8005e35}{encoder}}.end();}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{bytes_2index_8js_aa4072ba4b6b56b0fb6f4801f17ab2b34}{exports}}.StripBOM\ =\ \mbox{\hyperlink{bom-handling_8js_aa79346a0d2038acb162505b02078fc22}{StripBOMWrapper}}}
+
+\end{DoxyCode}
+\Hypertarget{bom-handling_8js_ae2475e10618961c050dcba04e8c42331}\index{bom-\/handling.js@{bom-\/handling.js}!strict@{strict}}
+\index{strict@{strict}!bom-\/handling.js@{bom-\/handling.js}}
+\doxysubsubsection{\texorpdfstring{strict}{strict}}
+{\footnotesize\ttfamily \label{bom-handling_8js_ae2475e10618961c050dcba04e8c42331} 
+\mbox{\hyperlink{application_8js_a8192500ed5d08ae60d3778b54729bd51}{use}} strict}
+

@@ -1,0 +1,46 @@
+\doxysection{Referencia del archivo node\+\_\+modules/utils-\/merge/index.js}
+\hypertarget{utils-merge_2index_8js}{}\label{utils-merge_2index_8js}\index{node\_modules/utils-\/merge/index.js@{node\_modules/utils-\/merge/index.js}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{utils-merge_2index_8js_af2836014938e5fb6078778620cb19081}{exports}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{utils-merge_2index_8js_af2836014938e5fb6078778620cb19081}\index{index.js@{index.js}!exports@{exports}}
+\index{exports@{exports}!index.js@{index.js}}
+\doxysubsubsection{\texorpdfstring{exports}{exports}}
+{\footnotesize\ttfamily \label{utils-merge_2index_8js_af2836014938e5fb6078778620cb19081} 
+exports}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{module}.exports\ =\ function(a,\ b)\{}
+\DoxyCodeLine{\ \ if\ (a\ \&\&\ b)\ \{}
+\DoxyCodeLine{\ \ \ \ for\ (var\ key\ in\ b)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ a[key]\ =\ b[key];}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ a;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Merge object b with object a. \begin{DoxyVerb}var a = { foo: 'bar' }
+  , b = { bar: 'baz' };
+
+merge(a, b);
+// => { foo: 'bar', bar: 'baz' }
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parámetros}
+{\em \{\+Object\}} & a \\
+\hline
+{\em \{\+Object\}} & b \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\{Object\} @api public 
+\end{DoxyReturn}

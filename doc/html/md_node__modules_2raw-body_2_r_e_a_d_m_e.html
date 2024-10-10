@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>documentacion_backend: raw-body</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">documentacion_backend
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">raw-body</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md1784"></a></p>
+<p><a href="https://npmjs.org/package/raw-body"><img src="https://img.shields.io/npm/v/raw-body.svg" alt="NPM Version" style="pointer-events: none;" class="inline"/></a> <a href="https://npmjs.org/package/raw-body"><img src="https://img.shields.io/npm/dm/raw-body.svg" alt="NPM Downloads" style="pointer-events: none;" class="inline"/></a> <a href="https://nodejs.org/en/download/"><img src="https://img.shields.io/node/v/raw-body.svg" alt="Node.js Version" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/jshttp/stream-utils/raw-body?query=workflow%3Aci"><img src="https://img.shields.io/github/actions/workflow/status/stream-utils/raw-body/ci.yml?branch=master&amp;label=ci" alt="Build status" class="inline"/></a> <a href="https://coveralls.io/r/stream-utils/raw-body?branch=master"><img src="https://img.shields.io/coveralls/stream-utils/raw-body/master.svg" alt="Test coverage" style="pointer-events: none;" class="inline"/></a></p>
+<p>Gets the entire buffer of a stream either as a <code>Buffer</code> or a string. Validates the stream's length against an expected length and maximum limit. Ideal for parsing request bodies.</p>
+<h1><a class="anchor" id="autotoc_md1785"></a>
+Install</h1>
+<p>This is a <a href="https://nodejs.org/en/">Node.js</a> module available through the <a href="https://www.npmjs.com/">npm registry</a>. Installation is done using the <a href="https://docs.npmjs.com/getting-started/installing-npm-packages-locally"><code>npm install</code> command</a>:</p>
+<div class="fragment"><div class="line">$ npm install raw-body</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1786"></a>
+TypeScript</h2>
+<p>This module includes a <a href="https://www.typescriptlang.org/">TypeScript</a> declaration file to enable auto complete in compatible editors and type information for TypeScript projects. This module depends on the Node.js types, so install <code>@types/node</code>:</p>
+<div class="fragment"><div class="line">$ npm install @types/node</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1787"></a>
+API</h1>
+<div class="fragment"><div class="line">var getRawBody = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;raw-body&#39;</span>)</div>
+<div class="ttc" id="atest-core-js_8js_html_a2fc998a372f1531668f7047d0878effe"><div class="ttname"><a href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a></div><div class="ttdeci">require('core-js')</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1788"></a>
+getRawBody(stream, [options], [callback])</h2>
+<p><b>Returns a promise if no callback specified and global <code>Promise</code> exists.</b></p>
+<p>Options:</p>
+<ul>
+<li><code>length</code> - The length of the stream. If the contents of the stream do not add up to this length, an <code>400</code> error code is returned.</li>
+<li><code>limit</code> - The byte limit of the body. This is the number of bytes or any string format supported by <a href="https://www.npmjs.com/package/bytes">bytes</a>, for example <code>1000</code>, &lsquo;'500kb&rsquo;<code>or</code>'3mb'<code>. If the body ends up being larger than this limit, a</code>413<code>error code is returned. -</code>encoding<code>- The encoding to use to decode the body into a string. By default, a</code>Buffer<code>instance will be returned when no encoding is specified. Most likely, you want</code>utf-8<code>, so setting</code>encoding<code>to</code>true<code>will decode as</code>utf-8`. You can use any type of encoding supported by <a href="https://www.npmjs.org/package/iconv-lite#readme">iconv-lite</a>.</li>
+</ul>
+<p>You can also pass a string in place of options to just specify the encoding.</p>
+<p>If an error occurs, the stream will be paused, everything unpiped, and you are responsible for correctly disposing the stream. For HTTP requests, you may need to finish consuming the stream if you want to keep the socket open for future requests. For streams that use file descriptors, you should <code>stream.destroy()</code> or <code>stream.close()</code> to prevent leaks.</p>
+<h1><a class="anchor" id="autotoc_md1789"></a>
+Errors</h1>
+<p>This module creates errors depending on the error condition during reading. The error may be an error from the underlying Node.js implementation, but is otherwise an error created by this module, which has the following attributes:</p>
+<ul>
+<li><code>limit</code> - the limit in bytes</li>
+<li><code>length</code> and <code>expected</code> - the expected length of the stream</li>
+<li><code>received</code> - the received bytes</li>
+<li><code>encoding</code> - the invalid encoding</li>
+<li><code>status</code> and <code>statusCode</code> - the corresponding status code for the error</li>
+<li><code>type</code> - the error type</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md1790"></a>
+Types</h2>
+<p>The errors from this module have a <code>type</code> property which allows for the programmatic determination of the type of error returned.</p>
+<h3><a class="anchor" id="autotoc_md1791"></a>
+encoding.unsupported</h3>
+<p>This error will occur when the <code>encoding</code> option is specified, but the value does not map to an encoding supported by the <a href="https://www.npmjs.org/package/iconv-lite#readme">iconv-lite</a> module.</p>
+<h3><a class="anchor" id="autotoc_md1792"></a>
+entity.too.large</h3>
+<p>This error will occur when the <code>limit</code> option is specified, but the stream has an entity that is larger.</p>
+<h3><a class="anchor" id="autotoc_md1793"></a>
+request.aborted</h3>
+<p>This error will occur when the request stream is aborted by the client before reading the body has finished.</p>
+<h3><a class="anchor" id="autotoc_md1794"></a>
+request.size.invalid</h3>
+<p>This error will occur when the <code>length</code> option is specified, but the stream has emitted more bytes.</p>
+<h3><a class="anchor" id="autotoc_md1795"></a>
+stream.encoding.set</h3>
+<p>This error will occur when the given stream has an encoding set on it, making it a decoded stream. The stream should not have an encoding set and is expected to emit <code>Buffer</code> objects.</p>
+<h3><a class="anchor" id="autotoc_md1796"></a>
+stream.not.readable</h3>
+<p>This error will occur when the given stream is not readable.</p>
+<h1><a class="anchor" id="autotoc_md1797"></a>
+Examples</h1>
+<h2><a class="anchor" id="autotoc_md1798"></a>
+Simple Express example</h2>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="response_8js.html#aaa70baea2218f3239c21c4a23f9569e3">contentType</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;content-type&#39;</span>)</div>
+<div class="line">var <a class="code hl_variable" href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;<a class="code hl_variable" href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express</a>&#39;)</div>
+<div class="line">var getRawBody = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;<a class="code hl_variable" href="express_8js.html#a6fddf0a674d03300188e5ba3195c9a00">raw</a>-body&#39;)</div>
+<div class="line"> </div>
+<div class="line">var <a class="code hl_variable" href="application_8js.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> = <a class="code hl_variable" href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express</a>()</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_variable" href="application_8js.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.<a class="code hl_variable" href="application_8js.html#a8192500ed5d08ae60d3778b54729bd51">use</a>(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> (<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>, next) {</div>
+<div class="line">  getRawBody(<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, {</div>
+<div class="line">    length: <a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>.headers[<span class="stringliteral">&#39;content-length&#39;</span>],</div>
+<div class="line">    <a class="code hl_variable" href="qs_2lib_2utils_8js.html#abcb5d8b4a4a1f3baf285ff81dae46fdf">limit</a>: <span class="stringliteral">&#39;1mb&#39;</span>,</div>
+<div class="line">    <a class="code hl_variable" href="negotiator_2index_8js.html#a9ad8213a7626ee07aef47950752cac18">encoding</a>: <a class="code hl_variable" href="response_8js.html#aaa70baea2218f3239c21c4a23f9569e3">contentType</a>.parse(<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>).parameters.charset</div>
+<div class="line">  }, <a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> (err, <span class="keywordtype">string</span>) {</div>
+<div class="line">    <span class="keywordflow">if</span> (err) <span class="keywordflow">return</span> next(err)</div>
+<div class="line">    <a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>.text = <span class="keywordtype">string</span></div>
+<div class="line">    next()</div>
+<div class="line">  })</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// now access req.text</span></div>
+<div class="ttc" id="aapplication_8js_html_a7b225fcb720e4d5ed2bbf60e28a25e6d"><div class="ttname"><a href="application_8js.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a></div><div class="ttdeci">var app</div><div class="ttdef"><b>Definition</b> application.js:45</div></div>
+<div class="ttc" id="aapplication_8js_html_a8192500ed5d08ae60d3778b54729bd51"><div class="ttname"><a href="application_8js.html#a8192500ed5d08ae60d3778b54729bd51">use</a></div><div class="ttdeci">app use</div><div class="ttdef"><b>Definition</b> application.js:194</div></div>
+<div class="ttc" id="acors_2lib_2index_8js_html_ac2ffb26d6f42d3bbcd7847b0873403f4"><div class="ttname"><a href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a></div><div class="ttdeci">function()</div><div class="ttdef"><b>Definition</b> index.js:1</div></div>
+<div class="ttc" id="aexpress_8js_html_a42c43c76081a7df8ae2954f16ee9338b"><div class="ttname"><a href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a></div><div class="ttdeci">var req</div><div class="ttdef"><b>Definition</b> express.js:21</div></div>
+<div class="ttc" id="aexpress_8js_html_a6fddf0a674d03300188e5ba3195c9a00"><div class="ttname"><a href="express_8js.html#a6fddf0a674d03300188e5ba3195c9a00">raw</a></div><div class="ttdeci">exports raw</div><div class="ttdef"><b>Definition</b> express.js:80</div></div>
+<div class="ttc" id="aexpress_8js_html_abde3c35e3bb7e5225dd7f234c685329c"><div class="ttname"><a href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a></div><div class="ttdeci">var res</div><div class="ttdef"><b>Definition</b> express.js:22</div></div>
+<div class="ttc" id="anegotiator_2index_8js_html_a9ad8213a7626ee07aef47950752cac18"><div class="ttname"><a href="negotiator_2index_8js.html#a9ad8213a7626ee07aef47950752cac18">encoding</a></div><div class="ttdeci">Negotiator prototype encoding</div><div class="ttdef"><b>Definition</b> index.js:47</div></div>
+<div class="ttc" id="aqs_2lib_2utils_8js_html_abcb5d8b4a4a1f3baf285ff81dae46fdf"><div class="ttname"><a href="qs_2lib_2utils_8js.html#abcb5d8b4a4a1f3baf285ff81dae46fdf">limit</a></div><div class="ttdeci">var limit</div><div class="ttdef"><b>Definition</b> utils.js:125</div></div>
+<div class="ttc" id="aresponse_8js_html_aaa70baea2218f3239c21c4a23f9569e3"><div class="ttname"><a href="response_8js.html#aaa70baea2218f3239c21c4a23f9569e3">contentType</a></div><div class="ttdeci">res contentType</div><div class="ttdef"><b>Definition</b> response.js:618</div></div>
+<div class="ttc" id="aserver_8js_html_a81e570c198204c57e1ebcace4f4e6dad"><div class="ttname"><a href="server_8js.html#a81e570c198204c57e1ebcace4f4e6dad">express</a></div><div class="ttdeci">const express</div><div class="ttdef"><b>Definition</b> server.js:2</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1799"></a>
+Simple Koa example</h2>
+<div class="fragment"><div class="line">var <a class="code hl_variable" href="response_8js.html#aaa70baea2218f3239c21c4a23f9569e3">contentType</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;content-type&#39;</span>)</div>
+<div class="line">var getRawBody = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;<a class="code hl_variable" href="express_8js.html#a6fddf0a674d03300188e5ba3195c9a00">raw</a>-body&#39;)</div>
+<div class="line">var koa = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;koa&#39;)</div>
+<div class="line"> </div>
+<div class="line">var <a class="code hl_variable" href="application_8js.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a> = koa()</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_variable" href="application_8js.html#a7b225fcb720e4d5ed2bbf60e28a25e6d">app</a>.<a class="code hl_variable" href="application_8js.html#a8192500ed5d08ae60d3778b54729bd51">use</a>(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> * (next) {</div>
+<div class="line">  this.text = yield getRawBody(this.req, {</div>
+<div class="line">    length: this.req.headers[<span class="stringliteral">&#39;content-length&#39;</span>],</div>
+<div class="line">    <a class="code hl_variable" href="qs_2lib_2utils_8js.html#abcb5d8b4a4a1f3baf285ff81dae46fdf">limit</a>: <span class="stringliteral">&#39;1mb&#39;</span>,</div>
+<div class="line">    <a class="code hl_variable" href="negotiator_2index_8js.html#a9ad8213a7626ee07aef47950752cac18">encoding</a>: <a class="code hl_variable" href="response_8js.html#aaa70baea2218f3239c21c4a23f9569e3">contentType</a>.parse(this.req).parameters.charset</div>
+<div class="line">  })</div>
+<div class="line">  yield next</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// now access this.text</span></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1800"></a>
+Using as a promise</h2>
+<p>To use this library as a promise, simply omit the <code>callback</code> and a promise is returned, provided that a global <code>Promise</code> is defined.</p>
+<div class="fragment"><div class="line">var getRawBody = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(<span class="stringliteral">&#39;raw-body&#39;</span>)</div>
+<div class="line">var <a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a> = <a class="code hl_function" href="test-core-js_8js.html#a2fc998a372f1531668f7047d0878effe">require</a>(&#39;<a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a>&#39;)</div>
+<div class="line"> </div>
+<div class="line">var server = <a class="code hl_variable" href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a>.createServer(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> (<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>, <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>) {</div>
+<div class="line">  getRawBody(<a class="code hl_variable" href="express_8js.html#a42c43c76081a7df8ae2954f16ee9338b">req</a>)</div>
+<div class="line">    .then(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> (buf) {</div>
+<div class="line">      <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.statusCode = 200</div>
+<div class="line">      <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.end(buf.length + <span class="stringliteral">&#39; bytes submitted&#39;</span>)</div>
+<div class="line">    })</div>
+<div class="line">    .<span class="keywordflow">catch</span>(<a class="code hl_function" href="cors_2lib_2index_8js.html#ac2ffb26d6f42d3bbcd7847b0873403f4">function</a> (err) {</div>
+<div class="line">      <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.statusCode = 500</div>
+<div class="line">      <a class="code hl_variable" href="express_8js.html#abde3c35e3bb7e5225dd7f234c685329c">res</a>.end(err.message)</div>
+<div class="line">    })</div>
+<div class="line">})</div>
+<div class="line"> </div>
+<div class="line">server.listen(3000)</div>
+<div class="ttc" id="aapplication_8js_html_a55f22d498ca401fddca364855629d1d3"><div class="ttname"><a href="application_8js.html#a55f22d498ca401fddca364855629d1d3">http</a></div><div class="ttdeci">var http</div><div class="ttdef"><b>Definition</b> application.js:23</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md1801"></a>
+Using with TypeScript</h2>
+<div class="fragment"><div class="line">import * as getRawBody from &#39;raw-body&#39;;</div>
+<div class="line">import * as http from &#39;http&#39;;</div>
+<div class="line"> </div>
+<div class="line">const server = http.createServer((req, res) =&gt; {</div>
+<div class="line">  getRawBody(req)</div>
+<div class="line">  .then((buf) =&gt; {</div>
+<div class="line">    res.statusCode = 200;</div>
+<div class="line">    res.end(buf.length + &#39; bytes submitted&#39;);</div>
+<div class="line">  })</div>
+<div class="line">  .catch((err) =&gt; {</div>
+<div class="line">    res.statusCode = err.statusCode;</div>
+<div class="line">    res.end(err.message);</div>
+<div class="line">  });</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">server.listen(3000);</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md1802"></a>
+License</h1>
+<p>[MIT](LICENSE) </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
