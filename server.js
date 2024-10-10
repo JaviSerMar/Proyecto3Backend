@@ -10,12 +10,19 @@ app.use(express.json())
 
 
 
+
+/**
+ * @brief Crea las tablas necesarias en la base de datos.
+ * 
+ * Esta ruta maneja las solicitudes GET a '/setup' y crea la tabla "sensors"
+ * en la base de datos si no existe. 
+ * 
+ * @return JSON con un mensaje de éxito o error.
+ */
+
 // Crear tablas (setup)
 app.get('/setup', async (req, res) => {
     try {
-        
-        await pool.query(`DROP TABLE IF EXISTS schools;`);
-        console.log("Tabla 'schools' eliminada si existía.");
     
         // Crear la tabla "sensors" si no existe
         await pool.query(`
@@ -34,6 +41,18 @@ app.get('/setup', async (req, res) => {
 });
 
 
+
+
+
+/**
+ * @brief Obtiene las últimas mediciones de temperatura y CO2.
+ * 
+ * Esta ruta maneja las solicitudes GET a '/latest' y devuelve la última
+ * medición de temperatura y CO2 almacenada en la base de datos.
+ * 
+ * @return JSON con los datos de la última medición de temperatura y CO2,
+ * o un mensaje de error en caso de fallo.
+ */
 // Obtener las últimas mediciones de temperatura y CO2
 app.get('/latest', async (req, res) => {
     try {
@@ -64,12 +83,29 @@ app.get('/latest', async (req, res) => {
 
 
 
+
+
+
+
+/**
+ * @brief Inserta un nuevo dato de sensor en la base de datos.
+ * 
+ * Esta ruta maneja las solicitudes POST a '/' y permite insertar una nueva
+ * medición de sensor. Verifica que el tipo de sensor y el valor sean válidos
+ * antes de proceder a la inserción.
+ * 
+ * @param req.body.type El tipo de sensor (temperatura o CO2).
+ * @param req.body.value El valor de la medición.
+ * @param req.body.timestamp La marca de tiempo de la medición.
+ * 
+ * @return JSON con un mensaje de éxito o error.
+ */
 // Insertar un sensor (medición)
 app.post('/', async (req, res) => {
     const { type, value, timestamp } = req.body; 
 
     // **********************************************************************
-    //                 ESTO ME DA MIEDO, SI NO VA LO QUITO
+    //                 Validación de datos del sensor
     // **********************************************************************
     if (!['temperature', 'CO2'].includes(type) || typeof value !== 'number') {
         return res.status(400).send({ message: "Invalid sensor data" });
@@ -86,7 +122,16 @@ app.post('/', async (req, res) => {
 });
 
 
-
+/**
+ * @brief Elimina los registros de sensor por tipo.
+ * 
+ * Esta ruta maneja las solicitudes DELETE a '/:type', permitiendo eliminar
+ * todos los registros de un tipo de sensor específico.
+ * 
+ * @param req.params.type El tipo de sensor a eliminar.
+ * 
+ * @return JSON con un mensaje de éxito o error.
+ */
 app.delete('/:type', async (req, res) => {
     const { type } = req.params; // Eliminar por tipo de sensor
     try {
